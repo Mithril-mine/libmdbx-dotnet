@@ -19,9 +19,6 @@
     <None Update="native\windows\x64\mdbx.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="native\windows\x86\mdbx.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 <!--

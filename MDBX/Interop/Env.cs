@@ -115,7 +115,7 @@ namespace MDBX.Interop
             UIntPtr bytes = UIntPtr.Add(UIntPtr.Zero, Marshal.SizeOf(stat));
             int err = _statDelegate(env, ref stat, bytes);
             if (err != 0)
-                throw new MdbxException("mdbx_env_stat", err);
+                throw new MdbxException("mdbx_env_stat_ex", err);
             return stat;
         }
 

@@ -10,6 +10,14 @@ namespace MDBX
         Unspecific = 0,
 
         /// <summary>
+        /// Start read-write transaction.
+        ///
+        /// Only one write transaction may be active at a time.Writes are fully
+        /// serialized, which guarantees that writers can never deadlock. */
+        /// </summary>
+        ReadWrite = Constant.MDBX_TXN_READWRITE,
+
+        /// <summary>
         /// Flush system buffers to disk only once per transaction, omit the metadata flush.
         /// Defer that until the system flushes files to disk,
         /// or next non-MDBX_RDONLY commit or mdbx_env_sync().
@@ -43,6 +51,13 @@ namespace MDBX
         /// This transaction will not perform any write operations.
         /// </summary>
         ReadOnly = Constant.MDBX_RDONLY,
+
+        /// <summary>
+        /// Prepare but not start read-only transaction.
+        //  Transaction will not be started immediately, but created transaction handle will be ready for use with mdbx_txn_renew().
+        //  This flag allows to preallocate memory and assign a reader slot, thus avoiding these operations at the next start of the transaction.
+        /// </summary>
+        ReadonlyPrepare = Constant.MDBX_TXN_RDONLY_PREPARE,
 
         /// <summary>
         /// Do not block when starting a write transaction
