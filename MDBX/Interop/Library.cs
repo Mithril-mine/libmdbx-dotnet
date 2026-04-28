@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -14,18 +14,39 @@ namespace MDBX.Interop
         private static extern IntPtr dlsym(IntPtr handle, string symbol);
 
         const int RTLD_NOW = 2; // for dlopen's flags 
+        private const int LOAD_LIBRARY_SEARCH_APPLICATION_DIR = 0x00000400;
 
 
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Ansi)]
         private static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)]string lpFileName);
 
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        private static extern IntPtr LoadLibraryEx(string lpFileName, IntPtr hFile, int dwFlags);
+
         [DllImport("kernel32.dll", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
         private static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
 
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool SetDefaultDllDirectories(int DirectoryFlags);
+
+        private const int LOAD_LIBRARY_SEARCH_DEFAULT_DIRS = 0x00001000;
+
         private static IntPtr _libPtr = IntPtr.Zero;
 
+        static Library()
+        {
+            try
+            {
+                SetDefaultDllDirectories(LOAD_LIBRARY_SEARCH_DEFAULT_DIRS);
+            }
+            catch
+            {
+                // Ignore if not supported on this OS version
+            }
+        }
 
-        internal static Delegate GetProcAddress<T>(string procName)
+
+        internal static T GetProcAddress<T>(string procName) where T : Delegate
         {
             IntPtr ptr = IntPtr.Zero;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -34,7 +55,7 @@ namespace MDBX.Interop
                 ptr = dlsym(_libPtr, procName);
             if (ptr != IntPtr.Zero)
             {
-                return Marshal.GetDelegateForFunctionPointer(ptr, typeof(T));
+                return Marshal.GetDelegateForFunctionPointer<T>(ptr);
             }
 
             throw new BadImageFormatException($"MDBX failed to bind '{procName}' function.");
@@ -62,12 +83,12 @@ namespace MDBX.Interop
             else
                 throw new PlatformNotSupportedException($"Unsupported OS platform : {RuntimeInformation.OSDescription}");
 
-            string filepath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
-                , "native"
-                , platform.ToLowerInvariant()
-                , RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant()
-                , filename
-                );
+             string filepath = Path.Combine(AppContext.BaseDirectory
+                 , "native"
+                 , platform.ToLowerInvariant()
+                 , RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant()
+                 , filename
+                 );
 
             if (!File.Exists(filepath))
                 throw new FileNotFoundException($"MDBX cannot find the library at {filepath}", filepath);

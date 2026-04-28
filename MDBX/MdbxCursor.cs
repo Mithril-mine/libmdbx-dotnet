@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -58,7 +58,7 @@ namespace MDBX
             if (key != null)
                 keyPtr = Marshal.AllocHGlobal(key.Length);
             if( value != null )
-                valuePtr = Marshal.AllocHGlobal(key.Length);
+                valuePtr = Marshal.AllocHGlobal(value.Length);
 
             try
             {
@@ -157,7 +157,7 @@ namespace MDBX
             if (key != null)
                 keyPtr = Marshal.AllocHGlobal(key.Length);
             if (value != null)
-                valuePtr = Marshal.AllocHGlobal(key.Length);
+                valuePtr = Marshal.AllocHGlobal(value.Length);
 
             try
             {

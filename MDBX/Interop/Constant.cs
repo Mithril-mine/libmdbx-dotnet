@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,7 +84,7 @@ namespace MDBX.Interop
         public const int MDBX_ACCEDE = 0x40000000;
 
         /// <summary>
-        /// РћС‚РІСЏР·С‹РІР°РµС‚ С‚СЂР°РЅР·Р°РєС†РёРё РѕС‚ РїРѕС‚РѕРєРѕРІ/threads РЅР°СЃРєРѕР»СЊРєРѕ СЌС‚Рѕ РІРѕР·РјРѕР¶РЅРѕ.
+        /// Отвязывает транзакции от потоков/threads насколько это возможно.
         /// </summary>
         public const int MDBX_NOSTICKYTHREADS = 0x200000;
 

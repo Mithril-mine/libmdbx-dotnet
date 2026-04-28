@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Security;
+using MDBX;
 
 namespace MDBX.Interop
 {
@@ -179,7 +180,7 @@ namespace MDBX.Interop
             uint flags;
             int err = _getFlagsDelegate(env, out flags);
             if (err != 0)
-                throw new MdbxException("mdbx_env_set_flags", err);
+                throw new MdbxException("mdbx_env_get_flags", err);
             return (EnvironmentFlag)flags;
         }
 
@@ -231,26 +232,31 @@ namespace MDBX.Interop
 
         public static int GetMaxKeySize(IntPtr env)
         {
-            return _getMaxKeySizeDelegate(env);
+            int result = _getMaxKeySizeDelegate(env);
+            if (result < 0)
+            {
+                throw new MdbxException("mdbx_env_get_maxkeysize", MdbxCode.MDBX_INVALID);
+            }
+            return result;
         }
 
 
         internal static void Bind()
         {
-            _createDelegate = Library.GetProcAddress<CreateDelegate>("mdbx_env_create") as CreateDelegate;
-            _closeDelegate = Library.GetProcAddress<CloseDelegate>("mdbx_env_close") as CloseDelegate;
-            _closeExDelegate = Library.GetProcAddress<CloseExDelegate>("mdbx_env_close_ex") as CloseExDelegate;
-            _openDelegate = Library.GetProcAddress<OpenDelegate>("mdbx_env_open") as OpenDelegate;
-            _statDelegate = Library.GetProcAddress<StatDelegate>("mdbx_env_stat") as StatDelegate;
-            _infoDelegate = Library.GetProcAddress<InfoDelegate>("mdbx_env_info") as InfoDelegate;
-            _syncDelegate = Library.GetProcAddress<SyncDelegate>("mdbx_env_sync") as SyncDelegate;
-            _setMaxDbsDelegate = Library.GetProcAddress<SetMaxDbsDelegate>("mdbx_env_set_maxdbs") as SetMaxDbsDelegate;
-            _setFlagsDelegate = Library.GetProcAddress<SetFlagsDelegate>("mdbx_env_set_flags") as SetFlagsDelegate;
-            _getFlagsDelegate = Library.GetProcAddress<GetFlagsDelegate>("mdbx_env_get_flags") as GetFlagsDelegate;
-            _setMapSizeDelegate = Library.GetProcAddress<SetMapSizeDelegate>("mdbx_env_set_mapsize") as SetMapSizeDelegate;
-            _setMaxReadersDelegate = Library.GetProcAddress<SetMaxReadersDelegate>("mdbx_env_set_maxreaders") as SetMaxReadersDelegate;
-            _getMaxReadersDelegate = Library.GetProcAddress<GetMaxReadersDelegate>("mdbx_env_get_maxreaders") as GetMaxReadersDelegate;
-            _getMaxKeySizeDelegate = Library.GetProcAddress<GetMaxKeySizeDelegate>("mdbx_env_get_maxkeysize") as GetMaxKeySizeDelegate;
+            _createDelegate = Library.GetProcAddress<CreateDelegate>("mdbx_env_create");
+            _closeDelegate = Library.GetProcAddress<CloseDelegate>("mdbx_env_close");
+            _closeExDelegate = Library.GetProcAddress<CloseExDelegate>("mdbx_env_close_ex");
+            _openDelegate = Library.GetProcAddress<OpenDelegate>("mdbx_env_open");
+            _statDelegate = Library.GetProcAddress<StatDelegate>("mdbx_env_stat");
+            _infoDelegate = Library.GetProcAddress<InfoDelegate>("mdbx_env_info");
+            _syncDelegate = Library.GetProcAddress<SyncDelegate>("mdbx_env_sync");
+            _setMaxDbsDelegate = Library.GetProcAddress<SetMaxDbsDelegate>("mdbx_env_set_maxdbs");
+            _setFlagsDelegate = Library.GetProcAddress<SetFlagsDelegate>("mdbx_env_set_flags");
+            _getFlagsDelegate = Library.GetProcAddress<GetFlagsDelegate>("mdbx_env_get_flags");
+            _setMapSizeDelegate = Library.GetProcAddress<SetMapSizeDelegate>("mdbx_env_set_mapsize");
+            _setMaxReadersDelegate = Library.GetProcAddress<SetMaxReadersDelegate>("mdbx_env_set_maxreaders");
+            _getMaxReadersDelegate = Library.GetProcAddress<GetMaxReadersDelegate>("mdbx_env_get_maxreaders");
+            _getMaxKeySizeDelegate = Library.GetProcAddress<GetMaxKeySizeDelegate>("mdbx_env_get_maxkeysize");
         }
 
     }

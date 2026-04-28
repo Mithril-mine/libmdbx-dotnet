@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -30,7 +30,7 @@ namespace MDBX.Interop
 
         internal static void Bind()
         {
-            _stringErrorDelegate = Library.GetProcAddress<StringErrorDelegate>("mdbx_strerror") as StringErrorDelegate;
+            _stringErrorDelegate = Library.GetProcAddress<StringErrorDelegate>("mdbx_strerror");
         }
 
     }

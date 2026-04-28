@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace MDBX
 {
@@ -17,12 +17,20 @@ namespace MDBX
             {
                 if (disposing)
                 {
-                    // TODO: dispose managed state (managed objects).
+                    // No managed resources to dispose.
+                    Close();
                 }
-
-                // free unmanaged resources (unmanaged objects) and override a finalizer below.
-                Close();
-
+                else
+                {
+                    try
+                    {
+                        Close();
+                    }
+                    catch
+                    {
+                        // Suppress exceptions during finalization.
+                    }
+                }
                 disposedValue = true;
             }
         }
@@ -42,6 +50,7 @@ namespace MDBX
         #endregion
 
         internal readonly IntPtr _envPtr = IntPtr.Zero;
+        private readonly object _syncRoot = new object();
 
         static MdbxEnvironment()
         {
@@ -55,10 +64,11 @@ namespace MDBX
 
         public void Close(bool dontSync = false)
         {
-            if(!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                closed = true;
+                if (closed) return;
                 Env.Close(_envPtr, dontSync);
+                closed = true;
             }
         }
 
@@ -82,7 +92,13 @@ namespace MDBX
         /// <param name="mode"></param>
         public void Open(string path, EnvironmentFlag flags, int mode)
         {
-            Env.Open(_envPtr, path, flags, mode);
+            if (string.IsNullOrEmpty(path))
+                throw new ArgumentException("Path cannot be null or empty.", nameof(path));
+            lock(_syncRoot)
+            {
+                if (closed) throw new InvalidOperationException("MDBX environment is closed.");
+                Env.Open(_envPtr, path, flags, mode);
+            }
         }
 
 
@@ -99,12 +115,15 @@ namespace MDBX
         /// <returns></returns>
         public MdbxTransaction BeginTransaction(TransactionOption flags = TransactionOption.Unspecific)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                IntPtr ptr = Txn.Begin(_envPtr, IntPtr.Zero, flags);
-                return new MdbxTransaction(this, ptr);
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    IntPtr ptr = Txn.Begin(_envPtr, IntPtr.Zero, flags);
+                    return new MdbxTransaction(this, ptr);
+                }
+                throw new InvalidOperationException("MDBX environment is not open.");
             }
-            throw new InvalidOperationException("MDBX environment is not open.");            
         }
 
         /// <summary>
@@ -113,11 +132,14 @@ namespace MDBX
         /// <returns></returns>
         public EnvInfo Info()
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                return Env.Info(_envPtr);
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    return Env.Info(_envPtr);
+                }
+                throw new InvalidOperationException("MDBX environment is not open.");
             }
-            throw new InvalidOperationException("MDBX environment is not open.");
         }
 
         /// <summary>
@@ -126,11 +148,14 @@ namespace MDBX
         /// <returns></returns>
         public EnvStat Stat()
         {
-            if( !closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                return Env.Stat(_envPtr);
+                if( !closed && _envPtr != IntPtr.Zero)
+                {
+                    return Env.Stat(_envPtr);
+                }
+                throw new InvalidOperationException("MDBX environment is not open.");
             }
-            throw new InvalidOperationException("MDBX environment is not open.");
         }
 
 
@@ -150,13 +175,16 @@ namespace MDBX
         /// </param>
         public void Sync(bool force)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                Env.Sync(_envPtr, force);
-            }
-            else
-            {
-                throw new InvalidOperationException("MDBX environment is not open.");
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    Env.Sync(_envPtr, force);
+                }
+                else
+                {
+                    throw new InvalidOperationException("MDBX environment is not open.");
+                }
             }
         }
 
@@ -172,13 +200,18 @@ namespace MDBX
         /// <param name="num"></param>
         public MdbxEnvironment SetMaxDatabases(uint num)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            if (num == 0)
+                throw new ArgumentOutOfRangeException(nameof(num), "Number of databases must be greater than zero.");
+            lock(_syncRoot)
             {
-                Env.SetMaxDBs(_envPtr, num);
-            }
-            else
-            {
-                throw new InvalidOperationException("MDBX environment is not open.");
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    Env.SetMaxDBs(_envPtr, num);
+                }
+                else
+                {
+                    throw new InvalidOperationException("MDBX environment is not open.");
+                }
             }
             return this;
         }
@@ -198,13 +231,18 @@ namespace MDBX
         /// <returns></returns>
         public MdbxEnvironment SetMaxReaders(uint num)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            if (num == 0)
+                throw new ArgumentOutOfRangeException(nameof(num), "Number of readers must be greater than zero.");
+            lock(_syncRoot)
             {
-                Env.SetMaxReaders(_envPtr, num);
-            }
-            else
-            {
-                throw new InvalidOperationException("MDBX environment is not open.");
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    Env.SetMaxReaders(_envPtr, num);
+                }
+                else
+                {
+                    throw new InvalidOperationException("MDBX environment is not open.");
+                }
             }
             return this;
         }
@@ -239,13 +277,18 @@ namespace MDBX
         /// <returns></returns>
         public MdbxEnvironment SetMapSize(uint num)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            if (num == 0)
+                throw new ArgumentOutOfRangeException(nameof(num), "Map size must be greater than zero.");
+            lock(_syncRoot)
             {
-                Env.SetMapSize(_envPtr, num);
-            }
-            else
-            {
-                throw new InvalidOperationException("MDBX environment is not open.");
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    Env.SetMapSize(_envPtr, num);
+                }
+                else
+                {
+                    throw new InvalidOperationException("MDBX environment is not open.");
+                }
             }
             return this;
         }
@@ -253,24 +296,27 @@ namespace MDBX
 
         public void SetFlags(EnvironmentFlag flags, SetOption option = SetOption.Add)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                Env.SetFlags(_envPtr, flags, option == SetOption.Add);
-            }
-            else
-            {
-                throw new InvalidOperationException("MDBX environment is not open.");
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    Env.SetFlags(_envPtr, flags, option == SetOption.Add);
+                }
+                else
+                {
+                    throw new InvalidOperationException("MDBX environment is not open.");
+                }
             }
         }
 
         public EnvironmentFlag GetFlags()
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                return Env.GetFlags(_envPtr);
-            }
-            else
-            {
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    return Env.GetFlags(_envPtr);
+                }
                 throw new InvalidOperationException("MDBX environment is not open.");
             }
         }
@@ -281,12 +327,12 @@ namespace MDBX
         /// <returns></returns>
         public int GetMaxReaders()
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                return Env.GetMaxReaders(_envPtr);
-            }
-            else
-            {
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    return Env.GetMaxReaders(_envPtr);
+                }
                 throw new InvalidOperationException("MDBX environment is not open.");
             }
         }
@@ -297,12 +343,12 @@ namespace MDBX
         /// <returns></returns>
         public int GetMaxKeySize()
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            lock(_syncRoot)
             {
-                return Env.GetMaxKeySize(_envPtr);
-            }
-            else
-            {
+                if (!closed && _envPtr != IntPtr.Zero)
+                {
+                    return Env.GetMaxKeySize(_envPtr);
+                }
                 throw new InvalidOperationException("MDBX environment is not open.");
             }
         }

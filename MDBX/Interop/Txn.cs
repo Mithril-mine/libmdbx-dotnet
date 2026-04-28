@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
@@ -101,12 +101,12 @@ namespace MDBX.Interop
 
         internal static void Bind()
         {
-            _beginDelegate = Library.GetProcAddress<BeginDelegate>("mdbx_txn_begin") as BeginDelegate;
-            _commitDelegate = Library.GetProcAddress<CommitDelegate>("mdbx_txn_commit") as CommitDelegate;
-            _abortDelegate = Library.GetProcAddress<AbortDelegate>("mdbx_txn_abort") as AbortDelegate;
-            _resetDelegate = Library.GetProcAddress<ResetDelegate>("mdbx_txn_reset") as ResetDelegate;
-            _renewDelegate = Library.GetProcAddress<RenewDelegate>("mdbx_txn_renew") as RenewDelegate;
-            _getTxnIdDelegate = Library.GetProcAddress<GetTxnIdDelegate>("mdbx_txn_id") as GetTxnIdDelegate;
+            _beginDelegate = Library.GetProcAddress<BeginDelegate>("mdbx_txn_begin");
+            _commitDelegate = Library.GetProcAddress<CommitDelegate>("mdbx_txn_commit");
+            _abortDelegate = Library.GetProcAddress<AbortDelegate>("mdbx_txn_abort");
+            _resetDelegate = Library.GetProcAddress<ResetDelegate>("mdbx_txn_reset");
+            _renewDelegate = Library.GetProcAddress<RenewDelegate>("mdbx_txn_renew");
+            _getTxnIdDelegate = Library.GetProcAddress<GetTxnIdDelegate>("mdbx_txn_id");
         }
     }
 }

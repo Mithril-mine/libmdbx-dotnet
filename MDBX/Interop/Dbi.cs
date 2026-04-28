@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
@@ -110,12 +110,12 @@ namespace MDBX.Interop
 
         internal static void Bind()
         {
-            _openDelegate = Library.GetProcAddress<OpenDelegate>("mdbx_dbi_open") as OpenDelegate;
-            _closeDelegate = Library.GetProcAddress<CloseDelegate>("mdbx_dbi_close") as CloseDelegate;
-            _putDelegate = Library.GetProcAddress<PutDelegate>("mdbx_put") as PutDelegate;
-            _getDelegate = Library.GetProcAddress<GetDelegate>("mdbx_get") as GetDelegate;
-            _delDelegate = Library.GetProcAddress<DelDelegate>("mdbx_del") as DelDelegate;
-            _dropDelegate = Library.GetProcAddress<DropDelegate>("mdbx_drop") as DropDelegate;
+            _openDelegate = Library.GetProcAddress<OpenDelegate>("mdbx_dbi_open");
+            _closeDelegate = Library.GetProcAddress<CloseDelegate>("mdbx_dbi_close");
+            _putDelegate = Library.GetProcAddress<PutDelegate>("mdbx_put");
+            _getDelegate = Library.GetProcAddress<GetDelegate>("mdbx_get");
+            _delDelegate = Library.GetProcAddress<DelDelegate>("mdbx_del");
+            _dropDelegate = Library.GetProcAddress<DropDelegate>("mdbx_drop");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MDBX.UnitTest;
+namespace MDBX.UnitTest;
 
 public class CountryModel
 {

@@ -3,3 +3,4 @@ MDBX.UnitTest/bin
 MDBX/obj
 MDBX/bin
 .vs/
+*.log

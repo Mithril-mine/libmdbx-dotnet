@@ -1,8 +1,8 @@
 # mdbx.NET
 
-.NET bindings(.NET Standard 2.1) of [libmdbx](https://github.com/leo-yuriev/libmdbx), succeeder of LMDB(Lightning Memory-Mapped Database).
+.NET bindings(dotnet) of [libmdbx](https://libmdbx.dqdkfa.ru/), succeeder of LMDB(Lightning Memory-Mapped Database).
 
-[![Build status](https://ci.appveyor.com/api/projects/status/7nyn3s6fspk8j6o2/branch/master?svg=true)](https://ci.appveyor.com/project/wangjia184/mdbx-net/branch/master) [![NuGet version](https://img.shields.io/nuget/v/mdbx.NET.svg)](https://www.nuget.org/packages/mdbx.NET/) 
+
 
 ### License
 
@@ -32,10 +32,8 @@ The `libmdbx` library is not shipped with this assembly. And the assembly will l
 
 ## How to Use
 
-NuGet package  is available, first install.
-```
-Install-Package mdbx.NET
-```
+NuGet package  is available soon
+
 
 Here is an example of basic operations.
 ```csharp

@@ -151,12 +151,13 @@ namespace MDBX.UnitTest
                     .SetMapSize(10485760*10)
                     .Open(path, flags, Convert.ToInt32("666", 8));
 
+                DatabaseOption createOption = DatabaseOption.Create | DatabaseOption.IntegerKey;
+                DatabaseOption openOption = DatabaseOption.IntegerKey;
 
-                DatabaseOption option = DatabaseOption.Create | DatabaseOption.IntegerKey;
                 // add some values
                 using (MdbxTransaction tran = env.BeginTransaction())
                 {
-                    MdbxDatabase db = tran.OpenDatabase("cursor_test3", option);
+                    MdbxDatabase db = tran.OpenDatabase("cursor_test3", createOption);
 
                     for ( long i = 0; i < 1000000; i++)
                     {
@@ -168,7 +169,7 @@ namespace MDBX.UnitTest
 
                 using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
                 {
-                    MdbxDatabase db = tran.OpenDatabase("cursor_test3", option);
+                    MdbxDatabase db = tran.OpenDatabase("cursor_test3", openOption);
                     using (MdbxCursor cursor = db.OpenCursor())
                     {
                         long key = 0;
