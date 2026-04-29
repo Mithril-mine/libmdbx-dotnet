@@ -1,6 +1,3 @@
-using System;
-using System.IO;
-using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace MDBX.Interop
@@ -18,7 +15,7 @@ namespace MDBX.Interop
 
 
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Ansi)]
-        private static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)]string lpFileName);
+        private static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)] string lpFileName);
 
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
         private static extern IntPtr LoadLibraryEx(string lpFileName, IntPtr hFile, int dwFlags);
@@ -63,8 +60,8 @@ namespace MDBX.Interop
 
         internal static void Load()
         {
-            string platform = null;
-            string filename = null;
+            string? platform = null;
+            string? filename = null;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 platform = "windows";
@@ -83,12 +80,12 @@ namespace MDBX.Interop
             else
                 throw new PlatformNotSupportedException($"Unsupported OS platform : {RuntimeInformation.OSDescription}");
 
-             string filepath = Path.Combine(AppContext.BaseDirectory
-                 , "native"
-                 , platform.ToLowerInvariant()
-                 , RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant()
-                 , filename
-                 );
+            string filepath = Path.Combine(AppContext.BaseDirectory
+                , "native"
+                , platform.ToLowerInvariant()
+                , RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant()
+                , filename
+                );
 
             if (!File.Exists(filepath))
                 throw new FileNotFoundException($"MDBX cannot find the library at {filepath}", filepath);
@@ -98,7 +95,7 @@ namespace MDBX.Interop
             else
                 _libPtr = dlopen(filepath, RTLD_NOW);
 
-            if(_libPtr == IntPtr.Zero )
+            if (_libPtr == IntPtr.Zero)
                 throw new FileNotFoundException($"MDBX failed to load library at {filepath}", filepath);
 
             Misc.Bind();

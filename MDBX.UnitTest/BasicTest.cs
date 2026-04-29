@@ -20,10 +20,8 @@ public class BasicTest
 
     public BasicTest() => CheckDataBasePath();
 
-    [Fact(DisplayName = "Mdbx put")]
-    public void MdbxPut1()
+    private void MdbxPut()
     {
-
         using MdbxEnvironment mdbxEnvironment = new();
 
         mdbxEnvironment.SetMaxDatabases(1).Open(dataBasePath, EnvironmentFlags, Convert.ToInt32("666", 8));
@@ -46,12 +44,20 @@ public class BasicTest
         }
 
         mdbxEnvironment.Close();
+    }
+
+    [Fact(DisplayName = "Mdbx put")]
+    public void MdbxPut1()
+    {
+
+        MdbxPut();
 
     }
 
     [Fact(DisplayName = "Mdbx get")]
     public void MdbxGet1()
     {
+        MdbxPut();
 
         using MdbxEnvironment mdbxEnvironment = new();
 

@@ -1,10 +1,12 @@
-using System;
 using System.Runtime.InteropServices;
 
 
 
 namespace MDBX.Interop
 {
+    /// <summary>
+    /// EnvInfo.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     public struct EnvInfo
     {

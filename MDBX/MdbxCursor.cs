@@ -1,15 +1,19 @@
-using System;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// Представляет курсор для навигации по данным в базе данных MDBX.
+    /// </summary>
     public class MdbxCursor : IDisposable
     {
         private bool closed = false;
 
+        /// <summary>
+        /// Освобождает ресурсы, используемые курсором.
+        /// </summary>
         public void Dispose()
         {
             Close();
@@ -37,7 +41,7 @@ namespace MDBX
         /// </summary>
         void Close()
         {
-            if(!closed)
+            if (!closed)
             {
                 closed = true;
                 Cursor.Close(_cursorPtr);
@@ -51,18 +55,18 @@ namespace MDBX
         /// <param name="key"></param>
         /// <param name="value"></param>
         /// <param name="op"></param>
-        public bool Get(ref byte[] key,ref byte[] value, CursorOp op)
+        public bool Get(ref byte[] key, ref byte[] value, CursorOp op)
         {
             IntPtr keyPtr = IntPtr.Zero;
             IntPtr valuePtr = IntPtr.Zero;
             if (key != null)
                 keyPtr = Marshal.AllocHGlobal(key.Length);
-            if( value != null )
+            if (value != null)
                 valuePtr = Marshal.AllocHGlobal(value.Length);
 
             try
             {
-                if(key != null && key.Length > 0)
+                if (key != null && key.Length > 0)
                     Marshal.Copy(key, 0, keyPtr, key.Length);
                 if (value != null && value.Length > 0)
                     Marshal.Copy(value, 0, valuePtr, value.Length);
@@ -72,7 +76,7 @@ namespace MDBX
 
                 Cursor.Get(_cursorPtr, ref dbKey, ref dbValue, op);
 
-                if( dbKey.Address != IntPtr.Zero)
+                if (dbKey.Address != IntPtr.Zero)
                 {
                     if (key == null || key.Length != dbKey.Length)
                         key = new byte[dbKey.Length];
@@ -80,9 +84,9 @@ namespace MDBX
                 }
                 else
                 {
-                    key = null;
+                    key = null!;
                 }
-                if ( dbValue.Address != IntPtr.Zero)
+                if (dbValue.Address != IntPtr.Zero)
                 {
                     if (value == null || value.Length != dbValue.Length)
                         value = new byte[dbValue.Length];
@@ -90,10 +94,10 @@ namespace MDBX
                 }
                 else
                 {
-                    value = null;
+                    value = null!;
                 }
             }
-            catch(MdbxException ex)
+            catch (MdbxException ex)
             {
                 if (ex.ErrorNumber == MdbxCode.MDBX_NOTFOUND)
                     return false;
@@ -132,12 +136,12 @@ namespace MDBX
                 if (keyBytes != null)
                     key = keySerializer.Deserialize(keyBytes);
                 else
-                    key = default(K);
+                    key = default!;
 
                 if (valueBytes != null)
                     value = valueSerializer.Deserialize(valueBytes);
                 else
-                    value = default(V);
+                    value = default!;
             }
             return found;
         }

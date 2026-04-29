@@ -1,16 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// MdbxException.
+    /// </summary>
     public class MdbxException : Exception
     {
+        /// <summary>
+        /// ErrorNumber.
+        /// </summary>
         public int ErrorNumber { get { return _errorNumber; } }
         private readonly int _errorNumber;
-        internal MdbxException(string method, int errNum) : 
+        internal MdbxException(string method, int errNum) :
             base(GetMessage(method, errNum))
         {
             _errorNumber = errNum;

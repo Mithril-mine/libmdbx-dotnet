@@ -1,12 +1,16 @@
-using System;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// Опции для открытия базы данных в MDBX.
+    /// </summary>
     [Flags]
     public enum DatabaseOption : int
     {
+        /// <summary>
+        /// Нет специальных опций.
+        /// </summary>
         Unspecific = 0,
 
         /// <summary>

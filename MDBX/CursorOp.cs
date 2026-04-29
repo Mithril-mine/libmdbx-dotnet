@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
+    /// <summary>
+    /// Операции для курсора MDBX.
+    /// </summary>
     public enum CursorOp
     {
         /// <summary>

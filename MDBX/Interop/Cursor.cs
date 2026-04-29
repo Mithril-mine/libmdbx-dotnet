@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
@@ -12,10 +11,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int OpenDelegate(IntPtr txn, uint dbi, out IntPtr cursor);
 
-        private static OpenDelegate _openDelegate = null;
+        private static OpenDelegate? _openDelegate = null;
 
         internal static IntPtr Open(IntPtr txn, uint dbi)
         {
+            if (_openDelegate is null)
+                throw new InvalidOperationException("Cursor.Open called before Library.Load()");
             IntPtr ptr;
             int err = _openDelegate(txn, dbi, out ptr);
             if (err != 0)
@@ -29,10 +30,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate void CloseDelegate(IntPtr cursor);
 
-        private static CloseDelegate _closeDelegate = null;
+        private static CloseDelegate? _closeDelegate = null;
 
         internal static void Close(IntPtr cursor)
         {
+            if (_closeDelegate is null)
+                throw new InvalidOperationException("Cursor.Close called before Library.Load()");
             _closeDelegate(cursor);
         }
 
@@ -42,11 +45,13 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int GetDelegate(IntPtr cursor, ref DbValue key, ref DbValue value, CursorOp op);
 
-        private static GetDelegate _getDelegate = null;
+        private static GetDelegate? _getDelegate = null;
 
         internal static void Get(IntPtr cursor, ref DbValue key, ref DbValue value, CursorOp op)
         {
-            int err = _getDelegate(cursor,ref key,ref value, op);
+            if (_getDelegate is null)
+                throw new InvalidOperationException("Cursor.Get called before Library.Load()");
+            int err = _getDelegate(cursor, ref key, ref value, op);
             if (err != 0)
                 throw new MdbxException("mdbx_cursor_get", err);
         }
@@ -56,10 +61,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int PutDelegate(IntPtr cursor, ref DbValue key, ref DbValue value, CursorPutOption option);
 
-        private static PutDelegate _putDelegate = null;
+        private static PutDelegate? _putDelegate = null;
 
         internal static void Put(IntPtr cursor, ref DbValue key, ref DbValue value, CursorPutOption option)
         {
+            if (_putDelegate is null)
+                throw new InvalidOperationException("Cursor.Put called before Library.Load()");
             int err = _putDelegate(cursor, ref key, ref value, option);
             if (err != 0)
                 throw new MdbxException("mdbx_cursor_put", err);
@@ -71,10 +78,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int DelDelegate(IntPtr cursor, CursorDelOption option);
 
-        private static DelDelegate _delDelegate = null;
+        private static DelDelegate? _delDelegate = null;
 
         internal static void Del(IntPtr cursor, CursorDelOption option)
         {
+            if (_delDelegate is null)
+                throw new InvalidOperationException("Cursor.Del called before Library.Load()");
             int err = _delDelegate(cursor, option);
             if (err != 0)
                 throw new MdbxException("mdbx_cursor_del", err);
@@ -86,10 +95,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int CountDelegate(IntPtr cursor, ref IntPtr count);
 
-        private static CountDelegate _countDelegate = null;
+        private static CountDelegate? _countDelegate = null;
 
         internal static int Count(IntPtr cursor)
         {
+            if (_countDelegate is null)
+                throw new InvalidOperationException("Cursor.Count called before Library.Load()");
             IntPtr count = IntPtr.Zero;
             int err = _countDelegate(cursor, ref count);
             if (err != 0)

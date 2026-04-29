@@ -1,16 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// CursorDelOption.
+    /// </summary>
     [Flags]
     public enum CursorDelOption : int
     {
-        Unspecific = 0,
+        /// <summary>
+        /// None
+        /// </summary>
+        None = 0,
 
+        /// <summary>
+        /// Нет специальных опций.
+        /// </summary>
+        Unspecific = None,
 
         /// <summary>
         /// Enter the new key/data pair only if it does not already appear in the

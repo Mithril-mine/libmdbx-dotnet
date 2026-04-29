@@ -1,9 +1,10 @@
-using System;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// Представляет среду базы данных MDBX.
+    /// </summary>
     public class MdbxEnvironment : IDisposable
     {
 
@@ -11,6 +12,10 @@ namespace MDBX
         private bool disposedValue = false; // To detect redundant calls
         private bool closed = false;
 
+        /// <summary>
+        /// Освобождает протектированные и непротектированные ресурсы.
+        /// </summary>
+        /// <param name="disposing">true если метод вызван из специальных ресурсов.</param>
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
@@ -36,12 +41,19 @@ namespace MDBX
         }
 
         // override a finalizer because Dispose(bool disposing) above has code to free unmanaged resources.
-        ~MdbxEnvironment() {
-           // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-           Dispose(false);
+        /// <summary>
+        /// Освобождает необработанные ресурсы при вырывании жизни объекта.
+        /// </summary>
+        ~MdbxEnvironment()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(false);
         }
 
         // This code added to correctly implement the disposable pattern.
+        /// <summary>
+        /// Освобождает ресурсы, используемые средой.
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
@@ -57,14 +69,21 @@ namespace MDBX
             Library.Load();
         }
 
+        /// <summary>
+        /// Обыкновенный конструктор для создания новых экземпляров MdbxEnvironment.
+        /// </summary>
         public MdbxEnvironment()
         {
             _envPtr = Env.Create();
         }
 
+        /// <summary>
+        /// Закрывает среду базы данных.
+        /// </summary>
+        /// <param name="dontSync">Если тrue, то синхронизация не будет проведена.</param>
         public void Close(bool dontSync = false)
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (closed) return;
                 Env.Close(_envPtr, dontSync);
@@ -94,7 +113,7 @@ namespace MDBX
         {
             if (string.IsNullOrEmpty(path))
                 throw new ArgumentException("Path cannot be null or empty.", nameof(path));
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (closed) throw new InvalidOperationException("MDBX environment is closed.");
                 Env.Open(_envPtr, path, flags, mode);
@@ -115,7 +134,7 @@ namespace MDBX
         /// <returns></returns>
         public MdbxTransaction BeginTransaction(TransactionOption flags = TransactionOption.Unspecific)
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -132,7 +151,7 @@ namespace MDBX
         /// <returns></returns>
         public EnvInfo Info()
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -148,9 +167,9 @@ namespace MDBX
         /// <returns></returns>
         public EnvStat Stat()
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
-                if( !closed && _envPtr != IntPtr.Zero)
+                if (!closed && _envPtr != IntPtr.Zero)
                 {
                     return Env.Stat(_envPtr);
                 }
@@ -175,7 +194,7 @@ namespace MDBX
         /// </param>
         public void Sync(bool force)
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -202,7 +221,7 @@ namespace MDBX
         {
             if (num == 0)
                 throw new ArgumentOutOfRangeException(nameof(num), "Number of databases must be greater than zero.");
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -233,7 +252,7 @@ namespace MDBX
         {
             if (num == 0)
                 throw new ArgumentOutOfRangeException(nameof(num), "Number of readers must be greater than zero.");
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -279,7 +298,7 @@ namespace MDBX
         {
             if (num == 0)
                 throw new ArgumentOutOfRangeException(nameof(num), "Map size must be greater than zero.");
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -294,9 +313,14 @@ namespace MDBX
         }
 
 
+        /// <summary>
+        /// Устанавливает или изменяет флаги среды.
+        /// </summary>
+        /// <param name="flags">Флаги для задания.</param>
+        /// <param name="option">На что операция для флагов.</param>
         public void SetFlags(EnvironmentFlag flags, SetOption option = SetOption.Add)
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -309,9 +333,13 @@ namespace MDBX
             }
         }
 
+        /// <summary>
+        /// Получает текущие флаги среды.
+        /// </summary>
+        /// <returns>Текущие флаги среды.</returns>
         public EnvironmentFlag GetFlags()
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -327,7 +355,7 @@ namespace MDBX
         /// <returns></returns>
         public int GetMaxReaders()
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {
@@ -343,7 +371,7 @@ namespace MDBX
         /// <returns></returns>
         public int GetMaxKeySize()
         {
-            lock(_syncRoot)
+            lock (_syncRoot)
             {
                 if (!closed && _envPtr != IntPtr.Zero)
                 {

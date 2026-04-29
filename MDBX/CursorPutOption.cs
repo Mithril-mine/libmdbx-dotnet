@@ -1,15 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// CursorPutOption;
+    /// </summary>
     [Flags]
     public enum CursorPutOption : int
     {
-        Unspecific = 0,
+        /// <summary>
+        /// None
+        /// </summary>
+        None = 0,
+
+        /// <summary>
+        /// Нет специальных опций.
+        /// </summary>
+        Unspecific = None,
 
         /// <summary>
         /// Replace the item at the current cursor position. The key parameter

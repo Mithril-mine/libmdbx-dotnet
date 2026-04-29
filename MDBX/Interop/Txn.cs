@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
@@ -18,10 +17,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int BeginDelegate(IntPtr env, IntPtr parent, [MarshalAs(UnmanagedType.U4)] int flags, out IntPtr txn);
 
-        private static BeginDelegate _beginDelegate = null;
+        private static BeginDelegate? _beginDelegate = null;
 
         internal static IntPtr Begin(IntPtr env, IntPtr parent, TransactionOption flags)
         {
+            if (_beginDelegate is null)
+                throw new InvalidOperationException("Txn.Begin called before Library.Load()");
             IntPtr ptr;
             int err = _beginDelegate(env, parent, (int)flags, out ptr);
             if (err != 0)
@@ -34,10 +35,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int CommitDelegate(IntPtr txn);
 
-        private static CommitDelegate _commitDelegate = null;
+        private static CommitDelegate? _commitDelegate = null;
 
         internal static void Commit(IntPtr txn)
         {
+            if (_commitDelegate is null)
+                throw new InvalidOperationException("Txn.Commit called before Library.Load()");
             int err = _commitDelegate(txn);
             if (err != 0)
                 throw new MdbxException("mdbx_txn_commit", err);
@@ -48,10 +51,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int AbortDelegate(IntPtr txn);
 
-        private static AbortDelegate _abortDelegate = null;
+        private static AbortDelegate? _abortDelegate = null;
 
         internal static void Abort(IntPtr txn)
         {
+            if (_abortDelegate is null)
+                throw new InvalidOperationException("Txn.Abort called before Library.Load()");
             int err = _abortDelegate(txn);
             if (err != 0)
                 throw new MdbxException("mdbx_txn_abort", err);
@@ -62,10 +67,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int ResetDelegate(IntPtr txn);
 
-        private static ResetDelegate _resetDelegate = null;
+        private static ResetDelegate? _resetDelegate = null;
 
         internal static void Reset(IntPtr txn)
         {
+            if (_resetDelegate is null)
+                throw new InvalidOperationException("Txn.Reset called before Library.Load()");
             int err = _resetDelegate(txn);
             if (err != 0)
                 throw new MdbxException("mdbx_txn_reset", err);
@@ -76,10 +83,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int RenewDelegate(IntPtr txn);
 
-        private static RenewDelegate _renewDelegate = null;
+        private static RenewDelegate? _renewDelegate = null;
 
         internal static void Renew(IntPtr txn)
         {
+            if (_renewDelegate is null)
+                throw new InvalidOperationException("Txn.Renew called before Library.Load()");
             int err = _renewDelegate(txn);
             if (err != 0)
                 throw new MdbxException("mdbx_txn_renew", err);
@@ -91,10 +100,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate ulong GetTxnIdDelegate(IntPtr txn);
 
-        private static GetTxnIdDelegate _getTxnIdDelegate = null;
+        private static GetTxnIdDelegate? _getTxnIdDelegate = null;
 
         internal static ulong GetID(IntPtr txn)
         {
+            if (_getTxnIdDelegate is null)
+                throw new InvalidOperationException("Txn.GetID called before Library.Load()");
             return _getTxnIdDelegate(txn);
         }
 

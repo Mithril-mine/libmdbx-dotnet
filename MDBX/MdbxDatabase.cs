@@ -1,6 +1,4 @@
-using System;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace MDBX
 {
@@ -60,11 +58,17 @@ namespace MDBX
             Dbi.Drop(_tran._txnPtr, _dbi, false);
         }
 
-        public void Put(byte[] key, byte[] value, PutOption option = PutOption.Unspecific)
+        /// <summary>
+        /// Добавляет или обновляет значение по ключу в базе данных.
+        /// </summary>
+        /// <param name="key">Ключ для вставки.</param>
+        /// <param name="value">Значение для вставки.</param>
+        /// <param name="option">Опции для операции Put.</param>
+        public void Put(byte[] key, byte[] value, PutOption option = PutOption.None)
         {
             IntPtr keyPtr = Marshal.AllocHGlobal(key.Length);
             IntPtr valuePtr = Marshal.AllocHGlobal(value.Length);
-            
+
             try
             {
                 Marshal.Copy(key, 0, keyPtr, key.Length);
@@ -82,7 +86,15 @@ namespace MDBX
             }
         }
 
-        public void Put<K, V>(K key, V value, PutOption option = PutOption.Unspecific)
+        /// <summary>
+        /// Добавляет или обновляет значение по ключу, используя сериализаторы.
+        /// </summary>
+        /// <typeparam name="K">Тип ключа.</typeparam>
+        /// <typeparam name="V">Тип значения.</typeparam>
+        /// <param name="key">Ключ для вставки.</param>
+        /// <param name="value">Значение для вставки.</param>
+        /// <param name="option">Опции для операции Put.</param>
+        public void Put<K, V>(K key, V value, PutOption option = PutOption.None)
         {
             ISerializer<K> keySerializer = SerializerRegistry.Get<K>();
             ISerializer<V> valueSerializer = SerializerRegistry.Get<V>();
@@ -105,22 +117,22 @@ namespace MDBX
                 DbValue dbKey = new DbValue(keyPtr, key.Length);
                 DbValue dbValue = Dbi.Get(_tran._txnPtr, _dbi, dbKey);
 
-                byte[] buffer = null;
+                byte[]? buffer = null;
                 if (dbValue.Address != IntPtr.Zero && dbValue.Length >= 0)
                 {
                     buffer = new byte[dbValue.Length];
-                    if(dbValue.Length > 0)
+                    if (dbValue.Length > 0)
                     {
                         Marshal.Copy(dbValue.Address, buffer, 0, buffer.Length);
                     }
                 }
 
-                return buffer;
+                return buffer ?? [];
             }
-            catch(MdbxException ex)
+            catch (MdbxException ex)
             {
                 if (ex.ErrorNumber == MdbxCode.MDBX_NOTFOUND)
-                    return null; // key not found
+                    return [];
                 throw;
             }
             finally
@@ -140,9 +152,9 @@ namespace MDBX
         {
             ISerializer<K> keySerializer = SerializerRegistry.Get<K>();
             ISerializer<V> valueSerializer = SerializerRegistry.Get<V>();
-            byte[] buffer = Get(keySerializer.Serialize(key));
-            if (buffer == null)
-                return default(V);
+            byte[]? buffer = Get(keySerializer.Serialize(key));
+            if (buffer == null || buffer.Length == 0)
+                return default(V)!;
             return valueSerializer.Deserialize(buffer);
         }
 

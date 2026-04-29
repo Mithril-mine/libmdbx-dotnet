@@ -1,14 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// Represents a transaction in the MDBX database.
+    /// </summary>
     public class MdbxTransaction : IDisposable
     {
         #region IDisposable Support
+        /// <summary>
+        /// Disposes the transaction by aborting it.
+        /// </summary>
         public void Dispose()
         {
             Abort();
@@ -51,7 +53,7 @@ namespace MDBX
         /// </summary>
         public void Abort()
         {
-            if(!_released)
+            if (!_released)
             {
                 _released = true;
                 Txn.Abort(_txnPtr);
@@ -108,9 +110,9 @@ namespace MDBX
         /// <param name="name"></param>
         /// <param name="option"></param>
         /// <returns></returns>
-        public MdbxDatabase OpenDatabase(string name = null, DatabaseOption option = DatabaseOption.Unspecific)
+        public MdbxDatabase OpenDatabase(string? name = null, DatabaseOption option = DatabaseOption.Unspecific)
         {
-            return new MdbxDatabase(_env, this, Dbi.Open(_txnPtr, name, option));
+            return new MdbxDatabase(_env, this, Dbi.Open(_txnPtr, name ?? string.Empty, option));
         }
 
         /// <summary>

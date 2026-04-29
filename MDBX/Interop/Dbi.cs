@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
@@ -14,10 +13,12 @@ namespace MDBX.Interop
             , [MarshalAs(UnmanagedType.U4)] int flags
             , out uint dbi);
 
-        private static OpenDelegate _openDelegate = null;
+        private static OpenDelegate? _openDelegate = null;
 
         internal static uint Open(IntPtr txn, string name, DatabaseOption options)
         {
+            if (_openDelegate is null)
+                throw new InvalidOperationException("Dbi.Open called before Library.Load()");
             uint dbi;
             int err = _openDelegate(txn, name, (int)options, out dbi);
             if (err != 0)
@@ -30,10 +31,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int CloseDelegate(IntPtr env, uint dbi);
 
-        private static CloseDelegate _closeDelegate = null;
+        private static CloseDelegate? _closeDelegate = null;
 
         internal static void Close(IntPtr env, uint dbi)
         {
+            if (_closeDelegate is null)
+                throw new InvalidOperationException("Dbi.Close called before Library.Load()");
             int err = _closeDelegate(env, dbi);
             if (err != 0)
                 throw new MdbxException("mdbx_dbi_close", err);
@@ -48,10 +51,12 @@ namespace MDBX.Interop
             , ref DbValue value
             , [MarshalAs(UnmanagedType.U4)] uint flags);
 
-        private static PutDelegate _putDelegate = null;
+        private static PutDelegate? _putDelegate = null;
 
         internal static void Put(IntPtr txn, uint dbi, DbValue key, DbValue value, PutOption options)
         {
+            if (_putDelegate is null)
+                throw new InvalidOperationException("Dbi.Put called before Library.Load()");
             int err = _putDelegate(txn, dbi, ref key, ref value, (uint)options);
             if (err != 0)
                 throw new MdbxException("mdbx_put", err);
@@ -65,10 +70,12 @@ namespace MDBX.Interop
             , ref DbValue key
             , IntPtr value);
 
-        private static DelDelegate _delDelegate = null;
+        private static DelDelegate? _delDelegate = null;
 
         internal static void Del(IntPtr txn, uint dbi, DbValue key, IntPtr value)
         {
+            if (_delDelegate is null)
+                throw new InvalidOperationException("Dbi.Del called before Library.Load()");
             int err = _delDelegate(txn, dbi, ref key, value);
             if (err != 0)
                 throw new MdbxException("mdbx_del", err);
@@ -82,10 +89,12 @@ namespace MDBX.Interop
             , ref DbValue key
             , ref DbValue value);
 
-        private static GetDelegate _getDelegate = null;
+        private static GetDelegate? _getDelegate = null;
 
         internal static DbValue Get(IntPtr txn, uint dbi, DbValue key)
         {
+            if (_getDelegate is null)
+                throw new InvalidOperationException("Dbi.Get called before Library.Load()");
             DbValue value = new DbValue();
             int err = _getDelegate(txn, dbi, ref key, ref value);
             if (err != 0)
@@ -99,10 +108,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int DropDelegate(IntPtr txn, uint dbi, int del);
 
-        private static DropDelegate _dropDelegate = null;
+        private static DropDelegate? _dropDelegate = null;
 
         internal static void Drop(IntPtr txn, uint dbi, bool del)
         {
+            if (_dropDelegate is null)
+                throw new InvalidOperationException("Dbi.Drop called before Library.Load()");
             int err = _dropDelegate(txn, dbi, del ? 1 : 0);
             if (err != 0)
                 throw new MdbxException("mdbx_drop", err);

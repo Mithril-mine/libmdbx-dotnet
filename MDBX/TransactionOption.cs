@@ -1,13 +1,28 @@
-using System;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// TransactionOption.
+    /// </summary>
     [Flags]
+#pragma warning disable S4070
+#pragma warning disable S2342
     public enum TransactionOption : int
+#pragma warning restore S2342
+#pragma warning restore S4070
     {
-        Unspecific = 0,
+
+
+        /// <summary>
+        /// None.
+        /// </summary>
+        None = 0,
+
+        /// <summary>
+        /// Нет специальных опций.
+        /// </summary>
+        Unspecific = None,
 
         /// <summary>
         /// Start read-write transaction.
@@ -54,8 +69,8 @@ namespace MDBX
 
         /// <summary>
         /// Prepare but not start read-only transaction.
-        //  Transaction will not be started immediately, but created transaction handle will be ready for use with mdbx_txn_renew().
-        //  This flag allows to preallocate memory and assign a reader slot, thus avoiding these operations at the next start of the transaction.
+        /// Transaction will not be started immediately, but created transaction handle will be ready for use with mdbx_txn_renew().
+        /// This flag allows to preallocate memory and assign a reader slot, thus avoiding these operations at the next start of the transaction.
         /// </summary>
         ReadonlyPrepare = Constant.MDBX_TXN_RDONLY_PREPARE,
 

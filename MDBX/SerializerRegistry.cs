@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MDBX
 {
+    /// <summary>
+    /// Реестр для регистрации и получения сериализаторов типов данных.
+    /// </summary>
     public static class SerializerRegistry
     {
         private static readonly Dictionary<Type, object> _dic = new Dictionary<Type, object>()
@@ -26,10 +26,10 @@ namespace MDBX
 
         internal static ISerializer<T> Get<T>()
         {
-            object obj;
+            object? obj;
             _dic.TryGetValue(typeof(T), out obj);
-            ISerializer<T> serializer = obj as ISerializer<T>;
-            if( serializer == null)
+            ISerializer<T>? serializer = obj as ISerializer<T>;
+            if (serializer == null)
             {
                 throw new KeyNotFoundException($"Unable to find serializer of {typeof(T).Name}, please use `SerializerRegistry.Register` to register.");
             }

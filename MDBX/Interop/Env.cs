@@ -1,7 +1,5 @@
-using System;
 using System.Runtime.InteropServices;
 using System.Security;
-using MDBX;
 
 namespace MDBX.Interop
 {
@@ -16,10 +14,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int CreateDelegate(out IntPtr env);
 
-        private static CreateDelegate _createDelegate = null;
+        private static CreateDelegate? _createDelegate = null;
 
         internal static IntPtr Create()
         {
+            if (_createDelegate is null)
+                throw new InvalidOperationException("Env.Create called before Library.Load()");
             IntPtr ptr;
             int err = _createDelegate(out ptr);
             if (err != 0)
@@ -36,10 +36,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int CloseDelegate(IntPtr env);
 
-        private static CloseDelegate _closeDelegate = null;
+        private static CloseDelegate? _closeDelegate = null;
 
         internal static void Close(IntPtr env)
         {
+            if (_closeDelegate is null)
+                throw new InvalidOperationException("Env.Close called before Library.Load()");
             int err = _closeDelegate(env);
             if (err != 0)
                 throw new MdbxException("mdbx_env_close", err);
@@ -56,10 +58,12 @@ namespace MDBX.Interop
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int CloseExDelegate(IntPtr env, [MarshalAs(UnmanagedType.I4)] int dont_sync);
 
-        private static CloseExDelegate _closeExDelegate = null;
+        private static CloseExDelegate? _closeExDelegate = null;
 
         internal static void Close(IntPtr env, bool dontSync)
         {
+            if (_closeExDelegate is null)
+                throw new InvalidOperationException("Env.Close called before Library.Load()");
             int err = _closeExDelegate(env, dontSync ? 1 : 0);
             if (err != 0)
                 throw new MdbxException("mdbx_env_close_ex", err);
@@ -74,10 +78,12 @@ namespace MDBX.Interop
             , [MarshalAs(UnmanagedType.U4)] int flags
             , [MarshalAs(UnmanagedType.I4)] int mode
             );
-        private static OpenDelegate _openDelegate = null;
+        private static OpenDelegate? _openDelegate = null;
 
         public static void Open(IntPtr env, string path, EnvironmentFlag flags, int mode)
         {
+            if (_openDelegate is null)
+                throw new InvalidOperationException("Env.Open called before Library.Load()");
             int err = _openDelegate(env, path, (int)flags, mode);
             if (err != 0)
                 throw new MdbxException("mdbx_env_open", err);
@@ -90,10 +96,12 @@ namespace MDBX.Interop
         private delegate int SetMaxDbsDelegate(IntPtr env
             , [MarshalAs(UnmanagedType.U4)] uint dbs
             );
-        private static SetMaxDbsDelegate _setMaxDbsDelegate = null;
+        private static SetMaxDbsDelegate? _setMaxDbsDelegate = null;
 
         public static void SetMaxDBs(IntPtr env, uint dbs)
         {
+            if (_setMaxDbsDelegate is null)
+                throw new InvalidOperationException("Env.SetMaxDBs called before Library.Load()");
             int err = _setMaxDbsDelegate(env, dbs);
             if (err != 0)
                 throw new MdbxException("mdbx_env_set_maxdbs", err);
@@ -108,10 +116,12 @@ namespace MDBX.Interop
             , ref EnvStat stat
             , UIntPtr bytes
             );
-        private static StatDelegate _statDelegate = null;
+        private static StatDelegate? _statDelegate = null;
 
         public static EnvStat Stat(IntPtr env)
         {
+            if (_statDelegate is null)
+                throw new InvalidOperationException("Env.Stat called before Library.Load()");
             EnvStat stat = new EnvStat();
             UIntPtr bytes = UIntPtr.Add(UIntPtr.Zero, Marshal.SizeOf(stat));
             int err = _statDelegate(env, ref stat, bytes);
@@ -128,10 +138,12 @@ namespace MDBX.Interop
             , ref EnvInfo info
             , UIntPtr bytes
             );
-        private static InfoDelegate _infoDelegate = null;
+        private static InfoDelegate? _infoDelegate = null;
 
         public static EnvInfo Info(IntPtr env)
         {
+            if (_infoDelegate is null)
+                throw new InvalidOperationException("Env.Info called before Library.Load()");
             EnvInfo info = new EnvInfo();
             UIntPtr bytes = UIntPtr.Add(UIntPtr.Zero, Marshal.SizeOf(info));
             int err = _infoDelegate(env, ref info, bytes);
@@ -145,10 +157,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int SyncDelegate(IntPtr env, int force);
-        private static SyncDelegate _syncDelegate = null;
+        private static SyncDelegate? _syncDelegate = null;
 
         public static void Sync(IntPtr env, bool force)
         {
+            if (_syncDelegate is null)
+                throw new InvalidOperationException("Env.Sync called before Library.Load()");
             int err = _syncDelegate(env, force ? 1 : 0);
             if (err != 0)
                 throw new MdbxException("mdbx_env_sync", err);
@@ -159,10 +173,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int SetFlagsDelegate(IntPtr env, uint flags, int onoff);
-        private static SetFlagsDelegate _setFlagsDelegate = null;
+        private static SetFlagsDelegate? _setFlagsDelegate = null;
 
         public static void SetFlags(IntPtr env, EnvironmentFlag flags, bool onoff)
         {
+            if (_setFlagsDelegate is null)
+                throw new InvalidOperationException("Env.SetFlags called before Library.Load()");
             int err = _setFlagsDelegate(env, (uint)flags, onoff ? 1 : 0);
             if (err != 0)
                 throw new MdbxException("mdbx_env_set_flags", err);
@@ -173,10 +189,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int GetFlagsDelegate(IntPtr env, out uint flags);
-        private static GetFlagsDelegate _getFlagsDelegate = null;
+        private static GetFlagsDelegate? _getFlagsDelegate = null;
 
         public static EnvironmentFlag GetFlags(IntPtr env)
         {
+            if (_getFlagsDelegate is null)
+                throw new InvalidOperationException("Env.GetFlags called before Library.Load()");
             uint flags;
             int err = _getFlagsDelegate(env, out flags);
             if (err != 0)
@@ -188,10 +206,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int SetMapSizeDelegate(IntPtr env, UIntPtr size);
-        private static SetMapSizeDelegate _setMapSizeDelegate = null;
+        private static SetMapSizeDelegate? _setMapSizeDelegate = null;
 
         public static void SetMapSize(IntPtr env, uint size)
         {
+            if (_setMapSizeDelegate is null)
+                throw new InvalidOperationException("Env.SetMapSize called before Library.Load()");
             int err = _setMapSizeDelegate(env, UIntPtr.Add(UIntPtr.Zero, (int)size));
             if (err != 0)
                 throw new MdbxException("mdbx_env_set_mapsize", err);
@@ -201,10 +221,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int SetMaxReadersDelegate(IntPtr env, uint readers);
-        private static SetMaxReadersDelegate _setMaxReadersDelegate = null;
+        private static SetMaxReadersDelegate? _setMaxReadersDelegate = null;
 
         public static void SetMaxReaders(IntPtr env, uint readers)
         {
+            if (_setMaxReadersDelegate is null)
+                throw new InvalidOperationException("Env.SetMaxReaders called before Library.Load()");
             int err = _setMaxReadersDelegate(env, readers);
             if (err != 0)
                 throw new MdbxException("mdbx_env_set_maxreaders", err);
@@ -213,10 +235,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int GetMaxReadersDelegate(IntPtr env, out uint readers);
-        private static GetMaxReadersDelegate _getMaxReadersDelegate = null;
+        private static GetMaxReadersDelegate? _getMaxReadersDelegate = null;
 
         public static int GetMaxReaders(IntPtr env)
         {
+            if (_getMaxReadersDelegate is null)
+                throw new InvalidOperationException("Env.GetMaxReaders called before Library.Load()");
             uint readers;
             int err = _getMaxReadersDelegate(env, out readers);
             if (err != 0)
@@ -228,10 +252,12 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int GetMaxKeySizeDelegate(IntPtr env);
-        private static GetMaxKeySizeDelegate _getMaxKeySizeDelegate = null;
+        private static GetMaxKeySizeDelegate? _getMaxKeySizeDelegate = null;
 
         public static int GetMaxKeySize(IntPtr env)
         {
+            if (_getMaxKeySizeDelegate is null)
+                throw new InvalidOperationException("Env.GetMaxKeySize called before Library.Load()");
             int result = _getMaxKeySizeDelegate(env);
             if (result < 0)
             {

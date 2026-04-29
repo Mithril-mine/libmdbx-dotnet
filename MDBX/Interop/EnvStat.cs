@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 
 
@@ -36,26 +35,26 @@ namespace MDBX.Interop
         /// <summary>
         /// Depth (height) of the B-tree
         /// </summary>
-        public uint Depth { get { return _depth;} }
+        public uint Depth { get { return _depth; } }
 
         /// <summary>
         /// Number of internal (non-leaf) pages
         /// </summary>
-        public ulong BranchPages { get { return _branchPages;} }
+        public ulong BranchPages { get { return _branchPages; } }
 
         /// <summary>
         /// Number of leaf pages
         /// </summary>
-        public ulong LeafPages { get { return _leafPages;} }
+        public ulong LeafPages { get { return _leafPages; } }
 
         /// <summary>
         /// Number of overflow pages
         /// </summary>
-        public ulong OverflowPages { get { return _overflowPages;} }
+        public ulong OverflowPages { get { return _overflowPages; } }
 
         /// <summary>
         /// Number of data items
         /// </summary>
-        public ulong Entries { get { return _entries;} }
+        public ulong Entries { get { return _entries; } }
     }
 }

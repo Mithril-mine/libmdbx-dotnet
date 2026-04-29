@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
+    /// <summary>
+    /// Опции для задания флагов.
+    /// </summary>
     public enum SetOption
     {
         /// <summary>

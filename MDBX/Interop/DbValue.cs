@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 
 namespace MDBX.Interop
@@ -8,7 +7,7 @@ namespace MDBX.Interop
     {
         internal IntPtr Address { get; }
         private readonly IntPtr _size;
-        
+
         internal int Length { get { return _size.ToInt32(); } }
 
         internal DbValue(IntPtr addr, int length)

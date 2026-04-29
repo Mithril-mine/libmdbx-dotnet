@@ -1,15 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MDBX
 {
     using Interop;
 
+    /// <summary>
+    /// Опции для операции Put в MDBX.
+    /// </summary>
     [Flags]
     public enum PutOption : int
     {
-        Unspecific = 0,
+        /// <summary>
+        /// Нет специальных опций.
+        /// </summary>
+        None = 0,
 
         /// <summary>
         /// Enter the new key/data pair only if it does not already appear in the
