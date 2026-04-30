@@ -3,7 +3,7 @@ namespace MDBX
     using Interop;
 
     /// <summary>
-    /// TransactionOption.
+    /// Опции транзакции.
     /// </summary>
     [Flags]
 #pragma warning disable S4070
@@ -15,7 +15,7 @@ namespace MDBX
 
 
         /// <summary>
-        /// None.
+        /// Нет специальных опций.
         /// </summary>
         None = 0,
 
@@ -25,57 +25,61 @@ namespace MDBX
         Unspecific = None,
 
         /// <summary>
-        /// Start read-write transaction.
+        /// Начать транзакцию чтения-записи.
         ///
-        /// Only one write transaction may be active at a time.Writes are fully
-        /// serialized, which guarantees that writers can never deadlock. */
+        /// Только одна транзакция записи может быть активна в один момент времени.
+        /// Записи полностью сериализованы, что гарантирует отсутствие взаимоблокировок у записывающих операций.
         /// </summary>
         ReadWrite = Constant.MDBX_TXN_READWRITE,
 
         /// <summary>
-        /// Flush system buffers to disk only once per transaction, omit the metadata flush.
-        /// Defer that until the system flushes files to disk,
-        /// or next non-MDBX_RDONLY commit or mdbx_env_sync().
-        /// 
-        /// This optimization maintains database integrity, 
-        /// but a system crash may undo the last committed transaction.
-        /// I.e. it preserves the ACI (atomicity,consistency, isolation) but not D (durability) database property.
-        /// This flag may be changed at any time using mdbx_env_set_flags().
+        /// Сбрасывать системные буферы на диск только один раз за транзакцию, пропуская сброс метаданных.
+        /// Отложить сброс до тех пор, пока система сбросит файлы на диск,
+        /// или до следующей не-только-для-чтения фиксации или вызова mdbx_env_sync().
+        ///
+        /// Эта оптимизация сохраняет целостность базы данных,
+        /// но сбой системы может откатить последнюю зафиксированную транзакцию.
+        /// То есть сохраняются свойства ACI (атомарность, согласованность, изолированность), но не D (долговечность) базы данных.
+        /// Этот флаг может быть изменен в любое время с помощью mdbx_env_set_flags().
         /// </summary>
         NoMetaSync = Constant.MDBX_NOMETASYNC,
 
         /// <summary>
-        /// Don't flush system buffers to disk when committing a transaction.
-        /// This optimization means a system crash can corrupt the database or 
-        /// lose the last transactions if buffers are not yet flushed to disk.
-        /// 
-        /// The risk is governed by how often the system flushes dirty buffers
-        /// to disk and how often mdbx_env_sync() is called.  However, if the
-        /// filesystem preserves write order and the MDBX_WRITEMAP and/or
-        /// LIFORECLAIM flags are not used, transactions exhibit ACI(atomicity, consistency, isolation)
-        /// properties and only lose D(durability) 
-        /// I.e. database integrity is maintained, but a system crash may undo the final transactions.
-        /// 
-        /// Note that (MDBX_NOSYNC | MDBX_WRITEMAP) leaves the system with no hint for when to write transactions to disk.
-        /// Therefore the (MDBX_MAPASYNC | MDBX_WRITEMAP) may be preferable.
-        /// This flag may be changed at any time using mdbx_env_set_flags().
+        /// Не сбрасывать системные буферы на диск при фиксации транзакции.
+        /// Эта оптимизация означает, что сбой системы может повредить базу данных или
+        /// потерять последние транзакции, если буферы еще не были сброшены на диск.
+        ///
+        /// Риск определяется тем, как часто система сбрасывает грязные буферы
+        /// на диск и как часто вызывается mdbx_env_sync(). Однако, если файловая
+        /// система сохраняет порядок записи и флаги MDBX_WRITEMAP и/или
+        /// MDBX_LIFORECLAIM не используются, транзакции exhibiting ACI
+        /// (атомарность, согласованность, изолированность) свойства и теряют только D
+        /// (долговечность). То есть целостность базы данных сохраняется, но сбой системы
+        /// может откатить финальные транзакции.
+        ///
+        /// Обратите внимание, что (MDBX_NOSYNC | MDBX_WRITEMAP) оставляет систему без подсказки,
+        /// когда записывать транзакции на диск.
+        /// Поэтому (MDBX_MAPASYNC | MDBX_WRITEMAP) может быть предпочтительнее.
+        /// Этот флаг может быть изменен в любое время с помощью mdbx_env_set_flags().
         /// </summary>
         NoSync = Constant.MDBX_NOSYNC,
 
         /// <summary>
-        /// This transaction will not perform any write operations.
+        /// Эта транзакция не будет выполнять никаких операций записи.
         /// </summary>
         ReadOnly = Constant.MDBX_RDONLY,
 
         /// <summary>
-        /// Prepare but not start read-only transaction.
-        /// Transaction will not be started immediately, but created transaction handle will be ready for use with mdbx_txn_renew().
-        /// This flag allows to preallocate memory and assign a reader slot, thus avoiding these operations at the next start of the transaction.
+        /// Подготовить, но не начать транзакцию только для чтения.
+        /// Транзакция не будет запущена сразу, но созданный дескриптор транзакции будет готов
+        /// для использования с mdbx_txn_renew().
+        /// Этот флаг позволяет предварительно выделить память и занять слот читателя,
+        /// избегая этих операций при следующем запуске транзакции.
         /// </summary>
         ReadonlyPrepare = Constant.MDBX_TXN_RDONLY_PREPARE,
 
         /// <summary>
-        /// Do not block when starting a write transaction
+        /// Не блокировать при запуске транзакции записи
         /// </summary>
         Try = Constant.MDBX_TRYTXN,
     }

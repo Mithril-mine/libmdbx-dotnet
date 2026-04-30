@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace MDBX.Interop
 {
     /// <summary>
-    /// EnvInfoGeo.
+    /// Информация о геометрии (размерах) окружения базы данных MDBX.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     public struct EnvInfoGeo

@@ -6,10 +6,10 @@ namespace MDBX.Interop
     internal static class Misc
     {
         /// <summary>
-        /// char *mdbx_strerror_r(int errnum, char *buf, size_t buflen)
+        /// Получает строковое описание ошибки в базе данных MDBX.
         /// </summary>
-        /// <param name="err"></param>
-        /// <returns></returns>
+        /// <param name="err">Код ошибки для получения описания.</param>
+        /// <returns>Описание ошибки или null.</returns>
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate IntPtr StringErrorDelegate(int err);

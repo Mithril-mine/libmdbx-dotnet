@@ -1,60 +1,59 @@
 using System.Runtime.InteropServices;
 
 
-namespace MDBX.Interop
+namespace MDBX.Interop;
+
+/// <summary>
+/// Statistics for a database in the environment
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct EnvStat
 {
+    [MarshalAs(UnmanagedType.U4)]
+    private uint _pageSize;
+
+    [MarshalAs(UnmanagedType.U4)]
+    private uint _depth;
+
+    [MarshalAs(UnmanagedType.U8)]
+    private ulong _branchPages;
+
+    [MarshalAs(UnmanagedType.U8)]
+    private ulong _leafPages;
+
+    [MarshalAs(UnmanagedType.U8)]
+    private ulong _overflowPages;
+
+    [MarshalAs(UnmanagedType.U8)]
+    private ulong _entries;
+
     /// <summary>
-    /// Statistics for a database in the environment
+    /// Размер страницы базы данных. В настоящее время одинаков для всех баз данных.
     /// </summary>
-    [StructLayout(LayoutKind.Sequential)]
-    public struct EnvStat
-    {
-        [MarshalAs(UnmanagedType.U4)]
-        private uint _pageSize;
+    public readonly uint PageSize { get { return _pageSize; } }
 
-        [MarshalAs(UnmanagedType.U4)]
-        private uint _depth;
+    /// <summary>
+    /// Глубина (высота) B-дерева
+    /// </summary>
+    public readonly uint Depth { get { return _depth; } }
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _branchPages;
+    /// <summary>
+    /// Количество внутренних (нелистовых) страниц
+    /// </summary>
+    public readonly ulong BranchPages { get { return _branchPages; } }
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _leafPages;
+    /// <summary>
+    /// Количество листовых страниц
+    /// </summary>
+    public readonly ulong LeafPages { get { return _leafPages; } }
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _overflowPages;
+    /// <summary>
+    /// Количество переполняющих страниц
+    /// </summary>
+    public readonly ulong OverflowPages { get { return _overflowPages; } }
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _entries;
-
-        /// <summary>
-        /// Size of a database page. This is currently the same for all databases.
-        /// </summary>
-        public uint PageSize { get { return _pageSize; } }
-
-        /// <summary>
-        /// Depth (height) of the B-tree
-        /// </summary>
-        public uint Depth { get { return _depth; } }
-
-        /// <summary>
-        /// Number of internal (non-leaf) pages
-        /// </summary>
-        public ulong BranchPages { get { return _branchPages; } }
-
-        /// <summary>
-        /// Number of leaf pages
-        /// </summary>
-        public ulong LeafPages { get { return _leafPages; } }
-
-        /// <summary>
-        /// Number of overflow pages
-        /// </summary>
-        public ulong OverflowPages { get { return _overflowPages; } }
-
-        /// <summary>
-        /// Number of data items
-        /// </summary>
-        public ulong Entries { get { return _entries; } }
-    }
+    /// <summary>
+    /// Количество элементов данных
+    /// </summary>
+    public readonly ulong Entries { get { return _entries; } }
 }

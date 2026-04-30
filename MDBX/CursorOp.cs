@@ -6,101 +6,101 @@ namespace MDBX
     public enum CursorOp
     {
         /// <summary>
-        /// Position at first key/data item
+        /// Позиционироваться на первый элемент ключ/данные
         /// </summary>
         First,
 
         /// <summary>
-        /// MDBX_DUPSORT-only: Position at first data item of current key.
+        /// Только MDBX_DUPSORT: позиционироваться на первый элемент данных текущего ключа.
         /// </summary>
         FirstDup,
 
         /// <summary>
-        /// MDBX_DUPSORT-only: Position at key/data pair.
+        /// Только MDBX_DUPSORT: позиционироваться на паре ключ/данные.
         /// </summary>
         GetBoth,
 
         /// <summary>
-        /// MDBX_DUPSORT-only: position at key, nearest data.
+        /// Только MDBX_DUPSORT: позиционироваться на ключе, ближайшие данные.
         /// </summary>
         GetBothRange,
 
         /// <summary>
-        /// Return key/data at current cursor position
+        /// Вернуть ключ/данные в текущей позиции курсора
         /// </summary>
         GetCurrent,
 
         /// <summary>
-        /// MDBX_DUPFIXED-only: Return up to a page of duplicate
-        /// data items from current cursor position.
-        /// Move cursor to prepare for MDBX_NEXT_MULTIPLE.
+        /// Только MDBX_DUPFIXED: вернуть до страницы дублирующих
+        /// элементов данных из текущей позиции курсора.
+        /// Переместить курсор для подготовки к MDBX_NEXT_MULTIPLE.
         /// </summary>
         GetMultiple,
 
         /// <summary>
-        /// Position at last key/data item
+        /// Позиционироваться на последний элемент ключ/данные
         /// </summary>
         Last,
 
         /// <summary>
-        /// MDBX_DUPSORT-only: Position at last data item of current key.
+        /// Только MDBX_DUPSORT: Позиционироваться на последний элемент данных текущего ключа.
         /// </summary>
         LastDup,
 
         /// <summary>
-        /// Position at next data item 
+        /// Позиционироваться на следующий элемент данных
         /// </summary>
         Next,
 
         /// <summary>
-        /// MDBX_DUPSORT-only: Position at next data item of current key.
+        /// Только MDBX_DUPSORT: Позиционироваться на следующий элемент данных текущего ключа.
         /// </summary>
         NextDup,
 
         /// <summary>
-        /// MDBX_DUPFIXED-only: Return up to a page of duplicate 
-        /// data items from next cursor position.
-        /// Move cursor to prepare for MDBX_NEXT_MULTIPLE.
+        /// Только MDBX_DUPFIXED: Вернуть до страницы дублирующих
+        /// элементов данных из следующей позиции курсора.
+        /// Переместить курсор для подготовки к MDBX_NEXT_MULTIPLE.
         /// </summary>
         NextMultiple,
 
         /// <summary>
-        /// Position at first data item of next key
+        /// Позиционироваться на первый элемент данных следующего ключа
         /// </summary>
         NextNoDup,
 
         /// <summary>
-        /// Position at previous data item
+        /// Позиционироваться на предыдущий элемент данных
         /// </summary>
         Prev,
 
         /// <summary>
-        /// MDBX_DUPSORT-only: Position at previous data item of current key.
+        /// Только MDBX_DUPSORT: Позиционироваться на предыдущий элемент данных текущего ключа.
         /// </summary>
         PrevDup,
 
         /// <summary>
-        /// Position at last data item of previous key
+        /// Позиционироваться на последний элемент данных предыдущего ключа
         /// </summary>
         PrevNoDup,
 
         /// <summary>
-        /// Position at specified key
+        /// Позиционироваться на указанный ключ
         /// </summary>
         Set,
 
         /// <summary>
-        /// Position at specified key, return both key and data
+        /// Позиционироваться на указанный ключ, вернуть и ключ и данные
         /// </summary>
         SetKey,
 
         /// <summary>
-        /// Position at first key greater than or equal to specified key
+        /// Позиционироваться на первый ключ больше или равный указанному ключу
         /// </summary>
         SetRange,
 
         /// <summary>
-        /// MDBX_DUPFIXED-only: Position at previous page and return up to a page of duplicate data items.
+        /// Только MDBX_DUPFIXED: Позиционироваться на предыдущую страницу и вернуть до страницы дублирующих элементов данных.
         /// </summary>
         PrevMultiple,
     }

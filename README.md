@@ -47,13 +47,13 @@ using MDBX;
 
 using (MdbxEnvironment env = new MdbxEnvironment())
 {
-    env.SetMaxDatabases(10) /* allow us to use a different db for testing */
-        .Open(path, EnvironmentFlag.NoTLS/* flags */, Convert.ToInt32("666", 8)/* permission */ );
+    env.SetMaxDatabases(10) /* разрешить использовать другую бд для тестирования */
+        .Open(path, EnvironmentFlag.NoTLS/* флаги */, Convert.ToInt32("666", 8)/* права доступа */ );
 
-    DatabaseOption option = DatabaseOption.Create /* needed to create a new db if not exists */
-        | DatabaseOption.IntegerKey/* opitimized for fixed-size int/long key */;
+    DatabaseOption option = DatabaseOption.Create /* нужно для создания новой бд если не существует */
+        | DatabaseOption.IntegerKey/* оптимизировано для фиксированного размера int/long ключа */;
 
-    // mdbx_put
+    // mdbx_put - добавление/обновление записи
     using (MdbxTransaction tran = env.BeginTransaction())
     {
         MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
@@ -67,7 +67,7 @@ using (MdbxEnvironment env = new MdbxEnvironment())
     }
 
 
-    // mdbx_get
+    // mdbx_get - получение записи
     using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
     {
         MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
@@ -77,7 +77,7 @@ using (MdbxEnvironment env = new MdbxEnvironment())
         Assert.Equal("million", text);
     }
 
-    // mdbx_del
+    // mdbx_del - удаление записи
     using (MdbxTransaction tran = env.BeginTransaction())
     {
         MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
@@ -89,7 +89,7 @@ using (MdbxEnvironment env = new MdbxEnvironment())
     }
 
 
-    // mdbx_get
+    // mdbx_get - проверка что запись удалена
     using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
     {
         MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);

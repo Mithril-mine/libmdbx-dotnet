@@ -19,77 +19,96 @@
         Unspecific = None,
 
         /// <summary>
-        /// By default, MDBX creates its environment in a directory whose
-        /// pathname is given in path, and creates its data and lock files
-        /// under that directory. With this option, path is used as-is for
-        /// the database main data file. The database lock file is the path
-        /// with "-lock" appended.
+        /// Defaults.
+        /// </summary>
+        EnvDefaults = None,
+
+        /** Extra validation of DB structure and pages content.
+        *
+        * The `MDBX_VALIDATION` enabled the simple safe/careful mode for working
+        * with damaged or untrusted DB. However, a notable performance
+        * degradation should be expected.
+        * */
+        Validation = Constant.MDBX_VALIDATION,
+
+        /// <summary>
+        /// По умолчанию MDBX создаёт свою среду в директории, путь к которой
+        /// задан в path, и создаёт свои файлы данных и блокировок в этой директории.
+        /// С этой опцией, path используется как есть для основного файла данных базы.
+        /// Файл блокировок будет иметь схожий путь с суффиксом "-lock".
         /// </summary>
         NoSubDir = Constant.MDBX_NOSUBDIR,
 
         /// <summary>
-        /// Open the environment in read-only mode. No write operations will
-        /// be allowed. MDBX will still modify the lock file - except on
-        /// read-only filesystems, where MDBX does not use locks.
+        /// Открыть среду в режиме только для чтения. Операции записи не будут
+        /// разрешены. MDBX всё равно будет модифицировать файл блокировок - кроме
+        /// файловых систем только для чтения, где MDBX не использует блокировки.
         /// </summary>
         ReadOnly = Constant.MDBX_RDONLY,
 
         /// <summary>
-        /// Use a writeable memory map unless MDBX_RDONLY is set. This uses fewer
-        ///  mallocs but loses protection from application bugs like wild pointer
-        ///  writes and other bad updates into the database.
-        ///  This may be slightly faster for DBs that fit entirely in RAM,
-        ///  but is slower for DBs larger than RAM.
-        ///  Incompatible with nested transactions.
-        ///  Do not mix processes with and without MDBX_WRITEMAP on the same
-        ///  environment.  This can defeat durability (mdbx_env_sync etc).
-        ///  with MDBX_WRITEMAP = all data will be mapped into memory in the read-write mode. This offers a significant performance benefit, since the data will be modified directly in mapped memory and then flushed to disk by single system call, without any memory management nor copying.
-        ///  without MDBX_WRITEMAP = data will be mapped into memory in the read-only mode. This requires stocking all modified database pages in memory and then writing them to disk through file operations.
+        /// Использовать записываемое отображение в памяти, если MDBX_RDONLY не установлен.
+        /// Это использует меньше вызовов malloc, но теряет защиту от ошибок приложения,
+        /// таких как дикие указатели и другие некорректные обновления в базе данных.
+        /// Это может быть немного быстрее для БД, которые полностью помещаются в ОЗУ,
+        /// но медленнее для БД больших чем ОЗУ.
+        /// Несовместимо с вложенными транзакциями.
+        /// Не смешивать процессы с и без MDBX_WRITEMAP в одной среде.
+        /// Это может нарушить долговечность (mdbx_env_sync и т.д.).
+        /// с MDBX_WRITEMAP = все данные будут отображены в память в режиме чтения-записи.
+        /// Это даёт значительное повышение производительности, поскольку данные будут изменяться
+        /// непосредственно в отображённой памяти и затем сброшены на диск одним системным вызовом,
+        /// без любого управления памятью и копирования.
+        /// без MDBX_WRITEMAP = данные будут отображены в память в режиме только для чтения.
+        /// Это требует хранения всех изменённых страниц базы данных в памяти, а затем записи их
+        /// на диск через файловые операции.
         /// </summary>
         WriteMap = Constant.MDBX_WRITEMAP,
 
         /// <summary>
-        ///  Flush system buffers to disk only once per transaction, omit the
-        ///  metadata flush. Defer that until the system flushes files to disk,
-        ///  or next non-MDBX_RDONLY commit or mdbx_env_sync(). This optimization
-        ///  maintains database integrity, but a system crash may undo the last
-        ///  committed transaction. I.e. it preserves the ACI (atomicity,
-        ///  consistency, isolation) but not D (durability) database property.
-        ///  This flag may be changed at any time using mdbx_env_set_flags().
+        /// Сбрасывать системные буферы на диск только один раз за транзакцию, опуская
+        /// сброс метаданных. Отложить это до момента, когда система сбросит файлы на диск,
+        /// или до следующей фиксации не-MDBX_RDONLY или mdbx_env_sync().
+        /// Эта оптимизация поддерживает целостность базы данных, но сбой системы
+        /// может отменить последнюю зафиксированную транзакцию.
+        /// Т.е. это сохраняет свойства ACI (атомарность, согласованность, изоляция),
+        /// но не D (долговечность) базы данных.
+        /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
         /// </summary>
         NoMetaSync = Constant.MDBX_NOMETASYNC,
 
         /// <summary>
-        ///  Don't flush system buffers to disk when committing a transaction.
-        ///  This optimization means a system crash can corrupt the database or
-        ///  lose the last transactions if buffers are not yet flushed to disk.
-        ///  The risk is governed by how often the system flushes dirty buffers
-        ///  to disk and how often mdbx_env_sync() is called.  However, if the
-        ///  filesystem preserves write order and the MDBX_WRITEMAP and/or
-        ///  MDBX_LIFORECLAIM flags are not used, transactions exhibit ACI
-        ///  (atomicity, consistency, isolation) properties and only lose D
-        ///  (durability).  I.e. database integrity is maintained, but a system
-        ///  crash may undo the final transactions.
-        ///  
-        ///  Note that (MDBX_NOSYNC | MDBX_WRITEMAP) leaves the system with no
-        ///  hint for when to write transactions to disk.
-        ///  Therefore the (MDBX_MAPASYNC | MDBX_WRITEMAP) may be preferable.
-        ///  This flag may be changed at any time using mdbx_env_set_flags().
+        /// Не сбрасывать системные буферы на диск при фиксации транзакции.
+        /// Эта оптимизация означает, что сбой системы может повредить базу данных или
+        /// потерять последние транзакции, если буферы ещё не сброшены на диск.
+        /// Риск зависит от того, как часто система сбрасывает грязные буферы
+        /// на диск и как часто вызывается mdbx_env_sync().
+        /// Однако, если файловая система сохраняет порядок записи и флаги
+        /// MDBX_WRITEMAP и/или MDBX_LIFORECLAIM не используются, транзакции проявляют
+        /// свойства ACI (атомарность, согласованность, изоляция) и теряют только D
+        /// (долговечность). Т.е. целостность базы данных сохраняется, но сбой системы
+        /// может отменить последние транзакции.
+        ///
+        /// Обратите внимание, что (MDBX_NOSYNC | MDBX_WRITEMAP) оставляет систему без
+        /// подсказки, когда записывать транзакции на диск.
+        /// Поэтому (MDBX_MAPASYNC | MDBX_WRITEMAP) может быть предпочтительнее.
+        /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
         /// </summary>
         NoSync = Constant.MDBX_NOSYNC,
 
         /// <summary>
-        /// When using MDBX_WRITEMAP, use asynchronous flushes to disk. As with
-        /// MDBX_NOSYNC, a system crash can then corrupt the database or lose
-        /// the last transactions. Calling mdbx_env_sync() ensures on-disk
-        /// database integrity until next commit. This flag may be changed at
-        /// any time using mdbx_env_set_flags().
-        /// 
-        /// Obsolete
-        /// Please use MDBX_SAFE_NOSYNC instead of MDBX_MAPASYNC.
-        /// 
-        /// Since version 0.9.x the MDBX_MAPASYNC is deprecated and has the same effect as MDBX_SAFE_NOSYNC with MDBX_WRITEMAP. 
-        /// This just API simplification is for convenience and clarity.
+        /// При использовании MDBX_WRITEMAP, использовать асинхронные сбросы на диск.
+        /// Как и с MDBX_NOSYNC, сбой системы может затем повредить базу данных или
+        /// потерять последние транзакции. Вызов mdbx_env_sync() гарантирует целостность
+        /// базы данных на диске до следующей фиксации.
+        /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
+        ///
+        /// Устарел.
+        /// Пожалуйста, используйте MDBX_SAFE_NOSYNC вместо MDBX_MAPASYNC.
+        ///
+        /// Начиная с версии 0.9.x MDBX_MAPASYNC устарел и имеет тот же эффект,
+        /// что и MDBX_SAFE_NOSYNC с MDBX_WRITEMAP.
+        /// Это просто упрощение API для удобства и ясности.
         /// </summary>
 #pragma warning disable S1133
         [Obsolete("Please use MDBX_SAFE_NOSYNC instead of MDBX_MAPASYNC.")]
@@ -106,79 +125,98 @@
         /// application must also serialize the write transactions in an OS
         /// thread, since MDBX's write locking is unaware of the user threads.
         /// </summary>
+#pragma warning disable S1133
+        [Obsolete("Please use MDBX_NOSTICKYTHREADS")]
+#pragma warning restore S1133
         NoTLS = Constant.MDBX_NOTLS,
 
         /// <summary>
-        /// Turn off readahead. Most operating systems perform readahead on 
-        /// read requests by default. This option turns it off if the OS
-        /// supports it. Turning it off may help random read performance
-        /// when the DB is larger than RAM and system RAM is full.
+        /// Отключить readahead. Большинство операционных систем по умолчанию выполняют
+        /// readahead при чтении. Эта опция отключает это, если ОС поддерживает.
+        /// Отключение может улучшить производительность случайного чтения, когда
+        /// БД больше чем ОЗУ и системная RAM заполнена.
         /// </summary>
         NoReadAhead = Constant.MDBX_NORDAHEAD,
 
         /// <summary>
-        /// Don't initialize malloc'd memory before writing to unused spaces
-        /// in the data file. By default, memory for pages written to the data
-        /// file is obtained using malloc. While these pages may be reused in
-        /// subsequent transactions, freshly malloc'd pages will be initialized
-        /// to zeroes before use.This avoids persisting leftover data from other
-        /// code(that used the heap and subsequently freed the memory) into the
-        /// data file.Note that many other system libraries may allocate and free
-        /// memory from the heap for arbitrary uses.E.g., stdio may use the heap
-        /// for file I/O buffers. This initialization step has a modest performance
-        /// cost so some applications may want to disable it using this flag.This
-        /// option can be a problem for applications which handle sensitive data
-        /// like passwords, and it makes memory checkers like Valgrind noisy. This
-        /// flag is not needed with MDBX_WRITEMAP, which writes directly to the
-        /// mmap instead of using malloc for pages.The initialization is also
-        /// skipped if MDBX_RESERVE is used; the caller is expected to overwrite
-        /// all of the memory that was reserved in that case. This flag may be
-        /// changed at any time using mdbx_env_set_flags().
+        /// Не инициализировать память, выделенную через malloc, перед записью в
+        /// неиспользуемые пространства файла данных. По умолчанию память для
+        /// страниц, записываемых в файл данных, получается с помощью malloc.
+        /// Хотя эти страницы могут быть повторно использованы в последующих
+        /// транзакциях, свежевыделенные страницы будут инициализированы нулями
+        /// перед использованием. Это избегает сохранения оставшихся данных из других
+        /// частей кода (которые использовали кучу и впоследствии освободили память)
+        /// в файл данных. Обратите внимание, что многие другие системные библиотеки
+        /// могут выделять и освобождать память из кучи для произвольных целей.
+        /// Например, stdio может использовать кучу для буферов файлового ввода-вывода.
+        /// Этот шаг инициализации имеет умеренную производительность,
+        /// поэтому некоторые приложения могут захотеть отключить его с помощью этого флага.
+        /// Эта опция может быть проблемой для приложений, которые обрабатывают
+        /// конфиденциальные данные, такие как пароли, и делает проверщики памяти
+        /// вроде Valgrind шумными. Этот флаг не нужен с MDBX_WRITEMAP, который
+        /// записывает напрямую в mmap вместо использования malloc для страниц.
+        /// Инициализация также пропускается, если используется MDBX_RESERVE;
+        /// вызывающий должен перезаписать всю зарезервированную память в этом случае.
+        /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
         /// </summary>
         NoMemInit = Constant.MDBX_NOMEMINIT,
 
         /// <summary>
-        /// Aim to coalesce records while reclaiming FreeDB. This flag may be
-        /// changed at any time using mdbx_env_set_flags().
+        /// Стремиться coalesce записи при освобождении FreeDB.
+        /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
         /// </summary>
         Coalesce = Constant.MDBX_COALESCE,
 
         /// <summary>
-        /// LIFO policy for reclaiming FreeDB records. This significantly reduce
-        /// write IPOs in case MDBX_NOSYNC with periodically checkpoints.
+        /// Политика LIFO для освобождения записей FreeDB.
+        /// Это значительно снижает write IPOs в случае MDBX_NOSYNC с периодическими контрольными точками.
         /// </summary>
         LifoReclaim = Constant.MDBX_LIFORECLAIM,
 
         /// <summary>
-        /// Open environment in exclusive/monopolistic mode.
-        /// MDBX_EXCLUSIVE flag can be used as a replacement for MDB_NOLOCK, 
-        /// which don't supported by MDBX. 
-        /// In this way, you can get the minimal overhead, but with the correct multi-process and multi-thread locking.
-        /// 
-        /// with MDBX_EXCLUSIVE = open environment in exclusive/monopolistic mode or return MDBX_BUSY if environment already used by other process. 
-        /// The main feature of the exclusive mode is the ability to open the environment placed on a network share.
-        /// 
-        /// without MDBX_EXCLUSIVE = open environment in cooperative mode, i.e. for multi-process access/interaction/cooperation. The main requirements of the cooperative mode are:
-        /// data files MUST be placed in the LOCAL file system, but NOT on a network share.
-        /// environment MUST be opened only by LOCAL processes, but NOT over a network.
-        /// OS kernel (i.e. file system and memory mapping implementation) and all processes that open the given environment MUST be running in the physically single RAM with cache-coherency.
-        /// The only exception for cache-consistency requirement is Linux on MIPS architecture, but this case has not been tested for a long time).
-        /// This flag affects only at environment opening but can't be changed after.
-        /// 
+        /// Открыть среду в эксклюзивном/монопольном режиме.
+        /// Флаг MDBX_EXCLUSIVE может быть использован как замена MDB_NOLOCK,
+        /// который не поддерживается MDBX.
+        /// Таким образом, вы можете получить минимальные накладные расходы,
+        /// но с корректной многопроцессной и многопоточной блокировкой.
+        ///
+        /// с MDBX_EXCLUSIVE = открыть среду в эксклюзивном режиме или вернуть MDBX_BUSY,
+        /// если среда уже используется другим процессом.
+        /// Основная особенность эксклюзивного режима - возможность открыть среду,
+        /// размещённую на сетевом ресурсе.
+        ///
+        /// без MDBX_EXCLUSIVE = открыть среду в кооперативном режиме, т.е. для
+        /// многопроцессного доступа/взаимодействия/кооперации. Основные требования
+        /// кооперативного режима:
+        /// - файлы данных ДОЛЖНЫ быть размещены в ЛОКАЛЬНОЙ файловой системе, но НЕ на сетевом ресурсе.
+        /// - среда ДОЛЖНА быть открыта только ЛОКАЛЬНЫМИ процессами, но НЕ по сети.
+        /// - ядро ОС (т.е. реализация файловой системы и отображения памяти) и все процессы,
+        ///   которые открывают данную среду, ДОЛЖНЫ выполняться в физически одной ОЗУ
+        ///   с когерентностью кэша.
+        ///   Единственное исключение из требования когерентности кэша - Linux на архитектуре MIPS,
+        ///   но этот случай давно не тестировался.
+        /// Этот флаг действует только при открытии среды и не может быть изменён после.
+        ///
         /// </summary>
         Exclusive = Constant.MDBX_EXCLUSIVE,
 
         /// <summary>
-        /// Using database/environment which already opened by another process(es).
-        /// 
-        /// The MDBX_ACCEDE flag is useful to avoid MDBX_INCOMPATIBLE error while opening the database/environment which is already used by another process(es) with unknown mode/flags. In such cases, if there is a difference in the specified flags (MDBX_NOMETASYNC, MDBX_SAFE_NOSYNC, MDBX_UTTERLY_NOSYNC, MDBX_LIFORECLAIM and MDBX_NORDAHEAD), instead of returning an error, the database will be opened in a compatibility with the already used mode.
-        /// MDBX_ACCEDE has no effect if the current process is the only one either opening the DB in read-only mode or other process(es) uses the DB in read-only mode.
-        /// 
+        /// Использовать базу данных/среду, которая уже открыта другим(и) процессом(ами).
+        ///
+        /// Флаг MDBX_ACCEDE полезен для avoidance ошибки MDBX_INCOMPATIBLE при открытии
+        /// базы данных/среды, которая уже используется другим(и) процессом(ами) с
+        /// неизвестными режимами/флагами. В таких случаях, если есть разница в указанных
+        /// флагах (MDBX_NOMETASYNC, MDBX_SAFE_NOSYNC, MDBX_UTTERLY_NOSYNC,
+        /// MDBX_LIFORECLAIM и MDBX_NORDAHEAD), вместо возврата ошибки, база данных
+        /// будет открыта в режиме совместимости с уже используемым режимом.
+        /// MDBX_ACCEDE не имеет эффекта, если текущий процесс единственный, открывающий
+        /// БД в режиме только-чтения или другие процессы используют БД в режиме только-чтения.
+        ///
         /// </summary>
         Accede = Constant.MDBX_ACCEDE,
 
         /// <summary>
-        /// Отвязывает транзакции от потоков/threads насколько это возможно.
+        /// Отвязывает транзакции от потоков насколько это возможно.
         ///
         /// Опция предназначена для приложений, которые мультиплексируют множество
         /// пользовательских легковесных потоков выполнения по отдельным потокам
@@ -186,7 +224,7 @@
         /// GoLang и Rust. Таким приложениям также рекомендуется сериализовать
         /// транзакции записи в одном потоке операционной системы, поскольку блокировка
         /// записи MDBX использует базовые системные примитивы синхронизации и ничего
-        /// не знает о пользовательских потоках и/или легковесных потоков среды
+        /// не знает о пользовательских потоках и/или легковесных потоках среды
         /// выполнения. Как минимум, обязательно требуется обеспечить завершение каждой
         /// пишущей транзакции строго в том же потоке операционной системы где она была
         /// запущена.
@@ -239,7 +277,7 @@
         ///
         /// Для пишущих транзакций не выполняется проверка соответствия текущего потока
         /// выполнения и потока создавшего транзакцию. Однако, фиксация или прерывание
-        /// пишущих транзакций должны выполняться строго в потоке запустившим
+        /// пишущих транзакций должны выполняться строго в потоке запустившем
         /// транзакцию, так как эти операции связаны с захватом и освобождением
         /// примитивов синхронизации (мьютексов, критических секций), для которых
         /// большинство операционных систем требует освобождение только потоком
@@ -256,154 +294,154 @@
         PagePerTurb = Constant.MDBX_PAGEPERTURB,
 
         /// <summary>
-        /// /* SYNC MODES****************************************************************/
-        /// \defgroup sync_modes SYNC MODES
-        /// 
-        /// \attention Using any combination of \ref MDBX_SAFE_NOSYNC, \ref
-        /// MDBX_NOMETASYNC and especially \ref MDBX_UTTERLY_NOSYNC is always a deal to
-        /// reduce durability for gain write performance. You must know exactly what
-        /// you are doing and what risks you are taking!
-        /// 
-        /// \note for LMDB users: \ref MDBX_SAFE_NOSYNC is NOT similar to LMDB_NOSYNC,
-        /// but \ref MDBX_UTTERLY_NOSYNC is exactly match LMDB_NOSYNC. See details
-        /// below.
-        /// 
-        /// THE SCENE:
-        /// - The DAT-file contains several MVCC-snapshots of B-tree at same time,
-        ///   each of those B-tree has its own root page.
-        /// - Each of meta pages at the beginning of the DAT file contains a
-        ///   pointer to the root page of B-tree which is the result of the particular
-        ///   transaction, and a number of this transaction.
-        /// - For data durability, MDBX must first write all MVCC-snapshot data
-        ///   pages and ensure that are written to the disk, then update a meta page
-        ///   with the new transaction number and a pointer to the corresponding new
-        ///   root page, and flush any buffers yet again.
-        /// - Thus during commit a I/O buffers should be flushed to the disk twice;
-        ///   i.e. fdatasync(), FlushFileBuffers() or similar syscall should be
-        ///   called twice for each commit. This is very expensive for performance,
-        ///   but guaranteed durability even on unexpected system failure or power
-        ///   outage. Of course, provided that the operating system and the
-        ///   underlying hardware (e.g. disk) work correctly.
-        /// 
-        /// TRADE-OFF:
-        /// By skipping some stages described above, you can significantly benefit in
-        /// speed, while partially or completely losing in the guarantee of data
-        /// durability and/or consistency in the event of system or power failure.
-        /// Moreover, if for any reason disk write order is not preserved, then at
-        /// moment of a system crash, a meta-page with a pointer to the new B-tree may
-        /// be written to disk, while the itself B-tree not yet. In that case, the
-        /// database will be corrupted!
-        /// 
+        /// /* РЕЖИМЫ СИНХРОНИЗАЦИИ***********************************************************/
+        /// \defgroup sync_modes РЕЖИМЫ СИНХРОНИЗАЦИИ (SYNC MODES)
+        ///
+        /// \attention Использование любой комбинации \ref MDBX_SAFE_NOSYNC, \ref
+        /// MDBX_NOMETASYNC и особенно \ref MDBX_UTTERLY_NOSYNC всегда является сделкой
+        /// для уменьшения долговечности ради увеличения производительности записи.
+        /// Вы должны точно знать, что делаете и какие риски принимаете!
+        ///
+        /// \note для пользователей LMDB: \ref MDBX_SAFE_NOSYNC НЕ аналогичен LMDB_NOSYNC,
+        /// но \ref MDBX_UTTERLY_NOSYNC точно соответствует LMDB_NOSYNC. Смотрите детали
+        /// ниже.
+        ///
+        /// СЦЕНАРИЙ:
+        /// - DAT-файл содержит несколько MVCC-снимков B-дерева одновременно,
+        ///   каждое из этих B-деревьев имеет свою корневую страницу.
+        /// - Каждая из мета-страниц в начале DAT-файла содержит
+        ///   указатель на корневую страницу B-дерева, которое является результатом конкретной
+        ///   транзакции, и номер этой транзакции.
+        /// - Для долговечности данных, MDBX сначала должна записать все страницы данных
+        ///   MVCC-снимка и убедиться, что они записаны на диск, затем обновить мета-страницу
+        ///   новым номером транзакции и указателем на соответствующее новое
+        ///   корневое дерево, и снова сбросить все буферы.
+        /// - Таким образом, при фиксации буферы ввода-вывода должны быть сброшены на диск дважды;
+        ///   т.е. fdatasync(), FlushFileBuffers() или аналогичный системный вызов должен быть
+        ///   вызван дважды для каждой фиксации. Это очень дорого для производительности,
+        ///   но гарантирует долговечность даже при неожиданном сбое системы или отключении
+        ///   питания. Конечно, при условии, что операционная система и
+        ///   базовое оборудование (например, диск) работают корректно.
+        ///
+        /// КОМПРОМИСС:
+        /// Пропуская некоторые этапы, описанные выше, вы можете значительно выиграть в
+        /// скорости, при этом частично или полностью теряя гарантию долговечности
+        /// данных и/или согласованности при сбое системы или питания.
+        /// Более того, если по какой-либо причине порядок записи на диск не сохраняется, то в
+        /// момент сбоя системы, мета-страница с указателем на новое B-дерево может
+        /// быть записана на диск, а само B-дерево еще нет. В этом случае база
+        /// данных будет повреждена!
+        ///
         /// \see MDBX_SYNC_DURABLE \see MDBX_NOMETASYNC \see MDBX_SAFE_NOSYNC
         /// \see MDBX_UTTERLY_NOSYNC
-        ///* Default robust and durable sync mode.
         ///
-        /// Metadata is written and flushed to disk after a data is written and
-        /// flushed, which guarantees the integrity of the database in the event
-        /// of a crash at any time.
+        /// РЕЖИМ ПО УМОЛЧАНИЮ: надёжный и долговечный режим синхронизации.
         ///
-        /// \attention Please do not use other modes until you have studied all the
-        /// details and are sure. Otherwise, you may lose your users' data, as happens
-        /// in [Miranda NG](https://www.miranda-ng.org/) messenger. */
+        /// Метаданные записываются и сбрасываются на диск после того как данные
+        /// записаны и сброшены, что гарантирует целостность базы данных при
+        /// сбое в любое время.
+        ///
+        /// \attention Пожалуйста, не используйте другие режимы, пока вы не изучили все
+        /// детали и не уверены. В противном случае вы можете потерять данные ваших пользователей, как это
+        /// произошло в мессенджере [Miranda NG](https://www.miranda-ng.org/). */
         /// </summary>
         SyncDurable = Constant.MDBX_SYNC_DURABLE,
 
         /// <summary>
-        ///  
-        ///  Don't sync anything but keep previous steady commits.
-        ///  
-        ///  Like \ref MDBX_UTTERLY_NOSYNC the `MDBX_SAFE_NOSYNC` flag disable similarly
-        ///  flush system buffers to disk when committing a transaction. But there is a
-        ///  huge difference in how are recycled the MVCC snapshots corresponding to
-        ///  previous "steady" transactions (see below).
-        ///  
-        ///  With \ref MDBX_WRITEMAP the `MDBX_SAFE_NOSYNC` instructs MDBX to use
-        ///  asynchronous mmap-flushes to disk. Asynchronous mmap-flushes means that
-        ///  actually all writes will scheduled and performed by operation system on it
-        ///  own manner, i.e. unordered. MDBX itself just notify operating system that
-        ///  it would be nice to write data to disk, but no more.
-        ///  
-        ///  Depending on the platform and hardware, with `MDBX_SAFE_NOSYNC` you may get
-        ///  a multiple increase of write performance, even 10 times or more.
-        ///  
-        ///  In contrast to \ref MDBX_UTTERLY_NOSYNC mode, with `MDBX_SAFE_NOSYNC` flag
-        ///  MDBX will keeps untouched pages within B-tree of the last transaction
-        ///  "steady" which was synced to disk completely. This has big implications for
-        ///  both data durability and (unfortunately) performance:
-        ///   - a system crash can't corrupt the database, but you will lose the last
-        ///     transactions; because MDBX will rollback to last steady commit since it
-        ///     kept explicitly.
-        ///   - the last steady transaction makes an effect similar to "long-lived" read
-        ///     transaction (see above in the \ref restrictions section) since prevents
-        ///     reuse of pages freed by newer write transactions, thus the any data
-        ///     changes will be placed in newly allocated pages.
-        ///   - to avoid rapid database growth, the system will sync data and issue
-        ///     a steady commit-point to resume reuse pages, each time there is
-        ///     insufficient space and before increasing the size of the file on disk.
-        ///  
-        ///  In other words, with `MDBX_SAFE_NOSYNC` flag MDBX insures you from the
-        ///  whole database corruption, at the cost increasing database size and/or
-        ///  number of disk IOPs. So, `MDBX_SAFE_NOSYNC` flag could be used with
-        ///  \ref mdbx_env_sync() as alternatively for batch committing or nested
-        ///  transaction (in some cases). As well, auto-sync feature exposed by
-        ///  \ref mdbx_env_set_syncbytes() and \ref mdbx_env_set_syncperiod() functions
-        ///  could be very useful with `MDBX_SAFE_NOSYNC` flag.
-        ///  
-        ///  The number and volume of disk IOPs with MDBX_SAFE_NOSYNC flag will
-        ///  exactly the as without any no-sync flags. However, you should expect a
-        ///  larger process's [work set](https://bit.ly/2kA2tFX) and significantly worse
-        ///  a [locality of reference](https://bit.ly/2mbYq2J), due to the more
-        ///  intensive allocation of previously unused pages and increase the size of
-        ///  the database.
-        ///  
-        ///  `MDBX_SAFE_NOSYNC` flag may be changed at any time using
-        ///  \ref mdbx_env_set_flags() or by passing to \ref mdbx_txn_begin() for
-        ///  particular write transaction. 
+        ///
+        /// Не синхронизировать ничего, но сохранять предыдущие steady-коммиты.
+        ///
+        /// Как и \ref MDBX_UTTERLY_NOSYNC флаг `MDBX_SAFE_NOSYNC` отключает
+        /// сброс системных буферов на диск при фиксации транзакции. Но есть
+        /// огромная разница в том, как перерабатываются MVCC-снимки, соответствующие
+        /// предыдущим "устойчивым" транзакциям (см. ниже).
+        ///
+        /// С \ref MDBX_WRITEMAP `MDBX_SAFE_NOSYNC` инструктирует MDBX использовать
+        /// асинхронные mmap-сбросы на диск. Асинхронные mmap-сбросы означают, что
+        /// фактически все записи будут запланированы и выполнены операционной системой
+        /// в её собственном порядке, т.е. неупорядоченно. Сама MDBX только уведомляет
+        /// операционную систему, что было бы неплохо записать данные на диск, но не более.
+        ///
+        /// В зависимости от платформы и оборудования, с `MDBX_SAFE_NOSYNC` вы можете получить
+        /// многократное увеличение производительности записи, даже в 10 раз или больше.
+        ///
+        /// В отличие от режима \ref MDBX_UTTERLY_NOSYNC, с флагом `MDBX_SAFE_NOSYNC`
+        /// MDBX сохранит неизменённые страницы внутри B-дерева последней транзакции
+        /// "steady", которая была полностью синхронизирована на диск. Это имеет большие
+        /// последствия как для долговечности данных, так и (к сожалению) для производительности:
+        ///  - сбой системы не может повредить базу данных, но вы потеряете последние
+        ///    транзакции; потому что MDBX откатится к последнему steady-коммиту, который
+        ///    был явно сохранён.
+        ///  - последняя steady-транзакция имеет эффект, аналогичный "долгоживущей" read
+        ///    транзакции (см. выше в разделе \ref restrictions), поскольку предотвращает
+        ///    повторное использование страниц, освобождённых более новыми пишущими транзакциями,
+        ///    поэтому любые изменения данных будут размещены в недавно выделённых страницах.
+        ///  - чтобы избествовать быстрого роста базы данных, система будет синхронизировать
+        ///    данные и issue steady commit-point для возобновления повторного использования
+        ///    страниц каждый раз, когда не хватает места и перед увеличением размера файла на диске.
+        ///
+        /// Другими словами, с флагом `MDBX_SAFE_NOSYNC` MDBX страхует вас от
+        /// повреждения всей базы данных, за счёт увеличения размера базы данных и/или
+        /// количества дисковых IOPs. Поэтому флаг `MDBX_SAFE_NOSYNC` может быть использован
+        /// с \ref mdbx_env_sync() как альтернатива для пакетной фиксации или вложенных
+        /// транзакций (в некоторых случаях). Также, функция авто-синхронизации, доступная
+        /// через \ref mdbx_env_set_syncbytes() и \ref mdbx_env_set_syncperiod() функции,
+        /// может быть очень полезна с флагом `MDBX_SAFE_NOSYNC`.
+        ///
+        /// Количество и объём дисковых IOPs с флагом MDBX_SAFE_NOSYNC будет
+        /// точно таким же как без каких-либо no-sync флагов. Однако, вы должны ожидать
+        /// больший [рабочий набор процесса](https://bit.ly/2kA2tFX) и значительно худшую
+        /// [локальность ссылок](https://bit.ly/2mbYq2J), из-за более интенсивного
+        /// выделения ранее неиспользуемых страниц и увеличения размера базы данных.
+        ///
+        /// Флаг `MDBX_SAFE_NOSYNC` может быть изменён в любой момент с помощью
+        /// \ref mdbx_env_set_flags() или передав в \ref mdbx_txn_begin() для
+        /// конкретной пишущей транзакции.
         /// </summary>
         SafeNoSync = Constant.MDBX_SAFE_NOSYNC,
 
         /// <summary>
-        /// Don't sync anything and wipe previous steady commits.
+        /// Не синхронизировать ничего и отменить предыдущие steady-коммиты.
         ///
-        /// Don't flush system buffers to disk when committing a transaction. This
-        /// optimization means a system crash can corrupt the database, if buffers are
-        /// not yet flushed to disk. Depending on the platform and hardware, with
-        /// `MDBX_UTTERLY_NOSYNC` you may get a multiple increase of write performance,
-        /// even 100 times or more.
+        /// Не сбрасывать системные буферы на диск при фиксации транзакции.
+        /// Эта оптимизация означает, что сбой системы может повредить базу данных,
+        /// если буферы ещё не сброшены на диск.
+        /// В зависимости от платформы и оборудования, с `MDBX_UTTERLY_NOSYNC` вы можете
+        /// получить многократное увеличение производительности записи, даже в 100 раз или более.
         ///
-        /// If the filesystem preserves write order (which is rare and never provided
-        /// unless explicitly noted) and the \ref MDBX_WRITEMAP and \ref
-        /// MDBX_LIFORECLAIM flags are not used, then a system crash can't corrupt the
-        /// database, but you can lose the last transactions, if at least one buffer is
-        /// not yet flushed to disk. The risk is governed by how often the system
-        /// flushes dirty buffers to disk and how often \ref mdbx_env_sync() is called.
-        /// So, transactions exhibit ACI (atomicity, consistency, isolation) properties
-        /// and only lose `D` (durability). I.e. database integrity is maintained, but
-        /// a system crash may undo the final transactions.
+        /// Если файловая система сохраняет порядок записи (что редко и никогда не
+        /// обеспечивается без явного указания) и флаги \ref MDBX_WRITEMAP и \ref
+        /// MDBX_LIFORECLAIM не используются, то сбой системы не может повредить базу
+        /// данных, но вы можете потерять последние транзакции, если хотя бы один буфер
+        /// ещё не сброшен на диск. Риск зависит от того, как часто система сбрасывает
+        /// грязные буферы на диск и как часто вызывается \ref mdbx_env_sync().
+        /// Таким образом, транзакции проявляют свойства ACI (атомарность, согласованность, изоляция)
+        /// и теряют только `D` (долговечность). Т.е. целостность базы данных сохраняется,
+        /// но сбой системы может отменить последние транзакции.
         ///
-        /// Otherwise, if the filesystem not preserves write order (which is
-        /// typically) or \ref MDBX_WRITEMAP or \ref MDBX_LIFORECLAIM flags are used,
-        /// you should expect the corrupted database after a system crash.
+        /// В противном случае, если файловая система не сохраняет порядок записи
+        /// (что обычно) или используются флаги \ref MDBX_WRITEMAP или \ref MDBX_LIFORECLAIM,
+        /// вы должны ожидать повреждения базы данных после сбоя системы.
         ///
-        /// So, most important thing about `MDBX_UTTERLY_NOSYNC`:
-        ///  - a system crash immediately after commit the write transaction
-        ///    high likely lead to database corruption.
-        ///  - successful completion of mdbx_env_sync(force = true) after one or
-        ///    more committed transactions guarantees consistency and durability.
-        ///  - BUT by committing two or more transactions you back database into
-        ///    a weak state, in which a system crash may lead to database corruption!
-        ///    In case single transaction after mdbx_env_sync, you may lose transaction
-        ///    itself, but not a whole database.
+        /// Поэтому самое важное в `MDBX_UTTERLY_NOSYNC`:
+        ///  - сбой системы сразу после фиксации пишущей транзакции
+        ///    с высокой вероятностью приведёт к повреждению базы данных.
+        ///  - успешное завершение mdbx_env_sync(force = true) после одной или
+        ///    нескольких зафиксированных транзакций гарантирует согласованность и долговечность.
+        ///  - НО при фиксации двух или более транзакций база данных возвращается в
+        ///    слабое состояние, в котором сбой системы может привести к повреждению базы данных!
+        ///    В случае одной транзакции после mdbx_env_sync, вы можете потерять саму
+        ///    транзакцию, но не всю базу данных.
         ///
-        /// Nevertheless, `MDBX_UTTERLY_NOSYNC` provides "weak" durability in case
-        /// of an application crash (but no durability on system failure), and
-        /// therefore may be very useful in scenarios where data durability is
-        /// not required over a system failure (e.g for short-lived data), or if you
-        /// can take such risk.
+        /// Тем не менее, `MDBX_UTTERLY_NOSYNC` обеспечивает "слабую" долговечность
+        /// при сбое приложения (но отсутствие долговечности при сбое системы), и поэтому
+        /// может быть очень полезно в сценариях, где долговечность данных не требуется
+        /// при сбое системы (например, для кратковременных данных), или если вы можете
+        /// пойти на такой риск.
         ///
-        /// `MDBX_UTTERLY_NOSYNC` flag may be changed at any time using
-        /// \ref mdbx_env_set_flags(), but don't has effect if passed to
-        /// \ref mdbx_txn_begin() for particular write transaction. \see sync_modes */
+        /// Флаг `MDBX_UTTERLY_NOSYNC` может быть изменён в любой момент с помощью
+        /// \ref mdbx_env_set_flags(), но не имеет эффекта, если передан в
+        /// \ref mdbx_txn_begin() для конкретной пишущей транзакции. \see sync_modes */
         /// </summary>
         UtterlyNoSync = Constant.MDBX_UTTERLY_NOSYNC,
     }

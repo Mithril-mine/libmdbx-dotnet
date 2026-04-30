@@ -80,7 +80,7 @@ namespace MDBX
         /// <summary>
         /// Закрывает среду базы данных.
         /// </summary>
-        /// <param name="dontSync">Если тrue, то синхронизация не будет проведена.</param>
+        /// <param name="dontSync">Если true, то синхронизация не будет проведена.</param>
         public void Close(bool dontSync = false)
         {
             lock (_syncRoot)
@@ -92,23 +92,21 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Open an environment handle.
-        /// 
-        /// This function allocates memory for a MDBX_env structure. To release
-        /// the allocated memory and discard the handle, call mdbx_env_close().
-        /// possible exceptions are:
-        ///    - MDBX_VERSION_MISMATCH - the version of the MDBX library doesn't match the
-        ///                              version that created the database environment.
-        ///    - MDBX_INVALID  - the environment file headers are corrupted.
-        ///    - MDBX_ENOENT   - the directory specified by the path parameter
-        ///                      doesn't exist.
-        ///    - MDBX_EACCES   - the user didn't have permission to access
-        ///                      the environment files.
-        ///    - MDBX_EAGAIN   - the environment was locked by another process. 
+        /// Открыть дескриптор среды.
+        ///
+        /// Эта функция выделяет память для структуры MDBX_env. Для освобождения
+        /// выделенной памяти и отмены дескриптора, вызовите mdbx_env_close().
+        /// Возможные исключения:
+        ///    - MDBX_VERSION_MISMATCH - версия библиотеки MDBX не соответствует
+        ///      версии, которая создала среду базы данных.
+        ///    - MDBX_INVALID  - заголовки файла среды повреждены.
+        ///    - MDBX_ENOENT   - директория, указанная параметром path, не существует.
+        ///    - MDBX_EACCES   - у пользователя нет прав на доступ к файлам среды.
+        ///    - MDBX_EAGAIN   - среда была заблокирована другим процессом.
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="flags"></param>
-        /// <param name="mode"></param>
+        /// <param name="path">Путь к среде.</param>
+        /// <param name="flags">Флаги окружения.</param>
+        /// <param name="mode">Права доступа к файлам (в стиле POSIX).</param>
         public void Open(string path, EnvironmentFlag flags, int mode)
         {
             if (string.IsNullOrEmpty(path))
@@ -122,16 +120,16 @@ namespace MDBX
 
 
         /// <summary>
-        /// Create a transaction for use with the environment.
-        /// 
-        /// The transaction handle may be discarded using Abort() or Commit();
-        /// NOTE: A transaction and its cursors must only be used by a single
-        /// thread, and a thread may only have a single transaction at a time.
-        /// If MDBX_NOTLS is in use, this does not apply to read-only transactions.
-        /// NOTE: Cursors may not span transactions.
+        /// Создать транзакцию для использования в среде.
+        ///
+        /// Дескриптор транзакции может быть отменён с помощью Abort() или Commit();
+        /// ПРИМЕЧАНИЕ: Транзакция и её курсоры должны использоваться только одним
+        /// потоком, и поток может иметь только одну транзакцию одновременно.
+        /// Если используется MDBX_NOTLS, это не применяется к транзакциям только для чтения.
+        /// ПРИМЕЧАНИЕ: Курсоры не могут пересекать транзакции.
         /// </summary>
-        /// <param name="flags"></param>
-        /// <returns></returns>
+        /// <param name="flags">Флаги транзакции.</param>
+        /// <returns>Созданная транзакция.</returns>
         public MdbxTransaction BeginTransaction(TransactionOption flags = TransactionOption.Unspecific)
         {
             lock (_syncRoot)
@@ -146,9 +144,9 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Return information about the MDBX environment.
+        /// Возвращает информацию о среде MDBX.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Информация о среде.</returns>
         public EnvInfo Info()
         {
             lock (_syncRoot)
@@ -162,9 +160,9 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Return statistics about the MDBX environment.
+        /// Возвращает статистику о среде MDBX.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Статистика среды.</returns>
         public EnvStat Stat()
         {
             lock (_syncRoot)
@@ -179,18 +177,18 @@ namespace MDBX
 
 
         /// <summary>
-        /// Flush the data buffers to disk.
-        /// 
-        /// Data is always written to disk when mdbx_txn_commit() is called,
-        /// but the operating system may keep it buffered. MDBX always flushes
-        /// the OS buffers upon commit as well, unless the environment was
-        /// opened with MDBX_NOSYNC or in part MDBX_NOMETASYNC. This call is
-        /// not valid if the environment was opened with MDBX_RDONLY.
+        /// Сбросить буферы данных на диск.
+        ///
+        /// Данные всегда записываются на диск при вызове mdbx_txn_commit(),
+        /// но операционная система может их буферизировать. MDBX всегда сбрасывает
+        /// буферы ОС при фиксации также, если только среда не была открыта
+        /// с флагом MDBX_NOSYNC или частично с MDBX_NOMETASYNC.
+        /// Этот вызов недопустим, если среда была открыта с MDBX_RDONLY.
         /// </summary>
         /// <param name="force">
-        /// If non-zero, force a synchronous flush.  Otherwise if the
-        /// environment has the MDBX_NOSYNC flag set the flushes will be
-        /// omitted, and with MDBX_MAPASYNC they will be asynchronous.
+        /// Если ненулевое, выполнить принудительный синхронный сброс. В противном случае,
+        /// если среда имеет установленный флаг MDBX_NOSYNC, сбросы будут опущены,
+        /// а с MDBX_MAPASYNC они будут асинхронными.
         /// </param>
         public void Sync(bool force)
         {
@@ -208,15 +206,16 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Set the maximum number of named databases for the environment.
-        /// This function is only needed if multiple databases will be used in the
-        /// environment. Simpler applications that use the environment as a single
-        /// unnamed database can ignore this option.
-        /// 
-        /// This function may only be called after mdbx_env_create() and before
+        /// Установить максимальное количество именованных баз данных для среды.
+        /// Эта функция нужна только если несколько баз данных будут использоваться
+        /// в среде. Более простые приложения, которые используют среду как одну
+        /// безымянную базу данных, могут игнорировать эту опцию.
+        ///
+        /// Эта функцию может быть вызвана только после mdbx_env_create() и перед
         /// mdbx_env_open().
         /// </summary>
-        /// <param name="num"></param>
+        /// <param name="num">Максимальное количество баз данных.</param>
+        /// <returns>this для цепочки вызовов.</returns>
         public MdbxEnvironment SetMaxDatabases(uint num)
         {
             if (num == 0)
@@ -236,18 +235,18 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Set the maximum number of threads/reader slots for the environment.
-        /// 
-        /// This defines the number of slots in the lock table that is used to track
-        /// readers in the the environment. The default is 61.
-        /// Starting a read-only transaction normally ties a lock table slot to the
-        /// current thread until the environment closes or the thread exits. If
-        /// MDBX_NOTLS is in use, mdbx_txn_begin() instead ties the slot to the
-        /// MDBX_txn object until it or the MDBX_env object is destroyed.
-        /// This function may only be called after mdbx_env_create() and before Open()
+        /// Установить максимальное количество слотов для потоков-читателей в среде.
+        ///
+        /// Это определяет количество слотов в таблице блокировок, которая используется
+        /// для отслеживания читателей в среде. Значение по умолчанию - 61.
+        /// Запуск транзакции только для чтения обычно привязывает слот таблицы
+        /// блокировок к текущему потоку до закрытия среды или завершения потока.
+        /// Если используется MDBX_NOTLS, mdbx_txn_begin() вместо этого привязывает
+        /// слот к объекту MDBX_txn до его уничтожения или уничтожения объекта MDBX_env.
+        /// Эта функция может быть вызвана только после mdbx_env_create() и перед Open().
         /// </summary>
-        /// <param name="num"></param>
-        /// <returns></returns>
+        /// <param name="num">Максимальное количество читателей.</param>
+        /// <returns>this для цепочки вызовов.</returns>
         public MdbxEnvironment SetMaxReaders(uint num)
         {
             if (num == 0)
@@ -267,33 +266,33 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Set the size of the memory map to use for this environment.
-        /// 
-        /// The size should be a multiple of the OS page size. The default is
-        /// 10485760 bytes. The size of the memory map is also the maximum size
-        /// of the database. The value should be chosen as large as possible,
-        /// to accommodate future growth of the database.
-        /// 
-        /// This function should be called before Open()
-        /// It may be called at later times if no transactions
-        /// are active in this process. Note that the library does not check for
-        /// this condition, the caller must ensure it explicitly.
-        /// 
-        /// The new size takes effect immediately for the current process but
-        /// will not be persisted to any others until a write transaction has been
-        /// committed by the current process. Also, only mapsize increases are
-        /// persisted into the environment.
-        /// 
-        /// If the mapsize is increased by another process, and data has grown
-        /// beyond the range of the current mapsize, mdbx_txn_begin() will
-        /// return MDBX_MAP_RESIZED. This function may be called with a size
-        /// of zero to adopt the new size.
-        /// 
-        /// Any attempt to set a size smaller than the space already consumed by the
-        /// environment will be silently changed to the current size of the used space.
+        /// Установить размер области памяти (memory map) для этой среды.
+        ///
+        /// Размер должен быть кратен размеру страницы ОС. По умолчанию -
+        /// 10485760 байт. Размер memory map также является максимальным размером
+        /// базы данных. Значение должно выбираться как можно большим,
+        /// чтобы вместить будущий рост базы данных.
+        ///
+        /// Эту функцию следует вызывать перед Open().
+        /// Её можно вызывать позже, если в этом процессе нет активных транзакций.
+        /// Обратите внимание, что библиотека не проверяет это условие, вызывающий
+        /// должен обеспечить его явно.
+        ///
+        /// Новый размер вступает в силу немедленно для текущего процесса, но
+        /// не будет сохранён в других до тех пор, пока пишущая транзакция не будет
+        /// зафиксирована текущим процессом. Также, только увеличения mapsize
+        /// сохраняются в среде.
+        ///
+        /// Если mapsize увеличен другим процессом и данные выросли
+        /// за пределы текущего mapsize, mdbx_txn_begin() вернёт
+        /// MDBX_MAP_RESIZED. Эту функцию можно вызвать с размером
+        /// равным нулю, чтобы принять новый размер.
+        ///
+        /// Любая попытка установить размер меньше, чем пространство, уже занятое средой,
+        /// будет тихо изменена на текущий размер используемого пространства.
         /// </summary>
-        /// <param name="num"></param>
-        /// <returns></returns>
+        /// <param name="num">Новый размер в байтах.</param>
+        /// <returns>this для цепочки вызовов.</returns>
         public MdbxEnvironment SetMapSize(uint num)
         {
             if (num == 0)
@@ -350,9 +349,9 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Get the maximum number of threads/reader slots for the environment.
+        /// Получить текущее максимальное количество потоков-читателей для среды.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Максимальное количество читателей.</returns>
         public int GetMaxReaders()
         {
             lock (_syncRoot)
@@ -366,9 +365,9 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Get the maximum size of keys and MDBX_DUPSORT data we can write.
+        /// Получить максимальный размер ключей и данных MDBX_DUPSORT, которые можно записать.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Максимальный размер ключа в байтах.</returns>
         public int GetMaxKeySize()
         {
             lock (_syncRoot)

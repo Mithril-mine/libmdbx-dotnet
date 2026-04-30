@@ -5,16 +5,16 @@ namespace MDBX
     using Interop;
 
     /// <summary>
-    /// A table handle denotes the name and parameters of a table, independently
-    /// of whether such a table exists.The table handle may be discarded by
-    /// calling mdbx_dbi_close(). The old table handle is returned if the table
-    /// was already open.The handle may only be closed once.
-    /// 
-    /// The table handle will be private to the current transaction until
-    /// the transaction is successfully committed.If the transaction is
-    /// aborted the handle will be closed automatically.
-    /// After a successful commit the handle will reside in the shared
-    /// environment, and may be used by other transactions.
+    /// Дескриптор таблицы обозначает имя и параметры таблицы, независимо от
+    /// того, существует ли такая таблица. Дескриптор таблицы может быть отменён
+    /// вызовом mdbx_dbi_close(). Старый дескриптор таблицы возвращается, если таблица
+    /// уже была открыта. Дескриптор может быть закрыт только один раз.
+    ///
+    /// Дескриптор таблицы будет приватным для текущей транзакции до тех пор,
+    /// пока транзакция не будет успешно зафиксирована. Если транзакция
+    /// прервана, дескриптор будет закрыт автоматически.
+    /// После успешной фиксации дескриптор будет находиться в общей
+    /// среде и может использоваться другими транзакциями.
     /// </summary>
     public class MdbxDatabase
     {
@@ -31,10 +31,10 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Close a database handle. Normally unnecessary.
-        /// Closing a database handle is not necessary, but lets mdbx_dbi_open()
-        /// reuse the handle value.  Usually it's better to set a bigger
-        /// mdbx_env_set_maxdbs(), unless that value would be large.
+        /// Закрыть дескриптор базы данных. Обычно не требуется.
+        /// Закрытие дескриптора базы данных не обязательно, но позволяет mdbx_dbi_open()
+        /// повторно использовать значение дескриптора. Обычно лучше установить большее
+        /// значение mdbx_env_set_maxdbs(), если только это значение не будет очень большим.
         /// </summary>
         public void Close()
         {
@@ -43,7 +43,7 @@ namespace MDBX
 
 
         /// <summary>
-        /// Drop this database
+        /// Удалить эту базу данных.
         /// </summary>
         public void Drop()
         {
@@ -51,7 +51,7 @@ namespace MDBX
         }
 
         /// <summary>
-        /// delete all keys in this database to empty it
+        /// Удалить все ключи в этой базе данных, чтобы опустошить её.
         /// </summary>
         public void Empty()
         {
@@ -103,10 +103,10 @@ namespace MDBX
 
 
         /// <summary>
-        /// Get a single key
+        /// Получить один ключ.
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns>null if key is not found</returns>
+        /// <param name="key">Ключ для поиска.</param>
+        /// <returns>null если ключ не найден</returns>
         public byte[] Get(byte[] key)
         {
             IntPtr keyPtr = Marshal.AllocHGlobal(key.Length);
@@ -142,12 +142,12 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Get a single key
+        /// Получить один ключ.
         /// </summary>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
-        /// <param name="key"></param>
-        /// <returns></returns>
+        /// <typeparam name="K">Тип ключа.</typeparam>
+        /// <typeparam name="V">Тип значения.</typeparam>
+        /// <param name="key">Ключ для поиска.</param>
+        /// <returns>Значение или default(V) если не найдено.</returns>
         public V Get<K, V>(K key)
         {
             ISerializer<K> keySerializer = SerializerRegistry.Get<K>();
@@ -159,21 +159,21 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Get a single key
+        /// Получить один ключ.
         /// </summary>
-        /// <typeparam name="K"></typeparam>
-        /// <param name="key"></param>
-        /// <returns></returns>
+        /// <typeparam name="K">Тип ключа.</typeparam>
+        /// <param name="key">Ключ для поиска.</param>
+        /// <returns>Массив байтов со значением или пустой массив если не найдено.</returns>
         public byte[] Get<K>(K key)
         {
             return Get<K, byte[]>(key);
         }
 
         /// <summary>
-        /// Delete a specific key
+        /// Удалить конкретный ключ.
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns>true if deleted successfully; false means not-found</returns>
+        /// <param name="key">Ключ для удаления.</param>
+        /// <returns>true если удалено успешно; false означает не найдено</returns>
         public bool Del(byte[] key)
         {
             IntPtr keyPtr = Marshal.AllocHGlobal(key.Length);
@@ -200,10 +200,11 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Delete a specific key
+        /// Удалить конкретный ключ.
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns>true if deleted successfully; false means not-found</returns>
+        /// <typeparam name="K">Тип ключа.</typeparam>
+        /// <param name="key">Ключ для удаления.</param>
+        /// <returns>true если удалено успешно; false означает не найдено</returns>
         public bool Del<K>(K key)
         {
             ISerializer<K> keySerializer = SerializerRegistry.Get<K>();
@@ -212,18 +213,17 @@ namespace MDBX
 
 
         /// <summary>
-        /// Create a cursor handle.
-        /// 
-        /// A cursor is associated with a specific transaction and database.
-        /// A cursor cannot be used when its database handle is closed.  Nor
-        /// when its transaction has ended, except with mdbx_cursor_renew().
-        /// It can be discarded with mdbx_cursor_close().
-        /// 
-        /// A cursor must be closed explicitly always, before
-        /// or after its transaction ends. It can be reused with
-        /// mdbx_cursor_renew() before finally closing it.
+        /// Создать дескриптор курсора.
+        ///
+        /// Курсор ассоциирован с конкретной транзакцией и базой данных.
+        /// Курсор не может быть использован, когда его дескриптор базы данных закрыт.
+        /// Также, когда его транзакция завершена, кроме как с mdbx_cursor_renew().
+        /// Может быть отменён с mdbx_cursor_close().
+        ///
+        /// Курсор должен быть закрыт явно всегда, до или после завершения его транзакции.
+        /// Может быть повторно использован с mdbx_cursor_renew() перед окончательным закрытием.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Новый курсор для этой базы данных.</returns>
         public MdbxCursor OpenCursor()
         {
             IntPtr ptr = Cursor.Open(_tran._txnPtr, _dbi);

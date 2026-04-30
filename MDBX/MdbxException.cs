@@ -3,12 +3,12 @@ namespace MDBX
     using Interop;
 
     /// <summary>
-    /// MdbxException.
+    /// Исключение MDBX.
     /// </summary>
     public class MdbxException : Exception
     {
         /// <summary>
-        /// ErrorNumber.
+        /// Номер ошибки.
         /// </summary>
         public int ErrorNumber { get { return _errorNumber; } }
         private readonly int _errorNumber;

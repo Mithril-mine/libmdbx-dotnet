@@ -22,7 +22,7 @@ namespace MDBX.UnitTest
             {
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
-                    .Open(path, EnvironmentFlag.NoTLS, Convert.ToInt32("666", 8));
+                    .Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
 
 
                 using (MdbxTransaction tran = env.BeginTransaction())
@@ -81,14 +81,14 @@ namespace MDBX.UnitTest
             {
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
-                    .Open(path, EnvironmentFlag.NoTLS, Convert.ToInt32("666", 8));
+                    .Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
 
 
                 using (MdbxTransaction tran = env.BeginTransaction())
                 {
-                    MdbxDatabase db = tran.OpenDatabase("cursor_test2", DatabaseOption.Create 
-                        | DatabaseOption.IntegerKey /*opitimized for fixed size int or long key*/
-                        );
+                     MdbxDatabase db = tran.OpenDatabase("cursor_test2", DatabaseOption.Create
+                         | DatabaseOption.IntegerKey /* оптимизировано для фиксированного размера int или long ключа */
+                         );
                     db.Empty(); // clean this data table for test
 
                     // add some keys
@@ -142,7 +142,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                EnvironmentFlag flags = EnvironmentFlag.NoTLS |
+                EnvironmentFlag flags = EnvironmentFlag.NoStickyThreads |
                     EnvironmentFlag.NoMetaSync |
                     EnvironmentFlag.Coalesce |
                     EnvironmentFlag.LifoReclaim;
