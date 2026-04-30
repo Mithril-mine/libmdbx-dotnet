@@ -1,9 +1,11 @@
+using MDBX.Interop.Mdbx;
+using MDBX.Options;
 using System.Runtime.InteropServices;
 using System.Security;
 
 namespace MDBX.Interop
 {
-    internal static class Env
+    internal static class Environment
     {
         /// <summary>
         /// int mdbx_env_create(MDBX_env **penv)
@@ -113,16 +115,16 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int StatDelegate(IntPtr env
-            , ref EnvStat stat
+            , ref EnvironmentStat stat
             , UIntPtr bytes
             );
         private static StatDelegate? _statDelegate = null;
 
-        public static EnvStat Stat(IntPtr env)
+        public static EnvironmentStat Stat(IntPtr env)
         {
             if (_statDelegate is null)
                 throw new InvalidOperationException("Env.Stat called before Library.Load()");
-            EnvStat stat = new EnvStat();
+            EnvironmentStat stat = new EnvironmentStat();
             UIntPtr bytes = UIntPtr.Add(UIntPtr.Zero, Marshal.SizeOf(stat));
             int err = _statDelegate(env, ref stat, bytes);
             if (err != 0)
@@ -135,16 +137,16 @@ namespace MDBX.Interop
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate int InfoDelegate(IntPtr env
-            , ref EnvInfo info
+            , ref EnvironmentInfo info
             , UIntPtr bytes
             );
         private static InfoDelegate? _infoDelegate = null;
 
-        public static EnvInfo Info(IntPtr env)
+        public static EnvironmentInfo Info(IntPtr env)
         {
             if (_infoDelegate is null)
                 throw new InvalidOperationException("Env.Info called before Library.Load()");
-            EnvInfo info = new EnvInfo();
+            EnvironmentInfo info = new EnvironmentInfo();
             UIntPtr bytes = UIntPtr.Add(UIntPtr.Zero, Marshal.SizeOf(info));
             int err = _infoDelegate(env, ref info, bytes);
             if (err != 0)
@@ -269,20 +271,20 @@ namespace MDBX.Interop
 
         internal static void Bind()
         {
-            _createDelegate = Library.GetProcAddress<CreateDelegate>("mdbx_env_create");
-            _closeDelegate = Library.GetProcAddress<CloseDelegate>("mdbx_env_close");
-            _closeExDelegate = Library.GetProcAddress<CloseExDelegate>("mdbx_env_close_ex");
-            _openDelegate = Library.GetProcAddress<OpenDelegate>("mdbx_env_open");
-            _statDelegate = Library.GetProcAddress<StatDelegate>("mdbx_env_stat");
-            _infoDelegate = Library.GetProcAddress<InfoDelegate>("mdbx_env_info");
-            _syncDelegate = Library.GetProcAddress<SyncDelegate>("mdbx_env_sync");
-            _setMaxDbsDelegate = Library.GetProcAddress<SetMaxDbsDelegate>("mdbx_env_set_maxdbs");
-            _setFlagsDelegate = Library.GetProcAddress<SetFlagsDelegate>("mdbx_env_set_flags");
-            _getFlagsDelegate = Library.GetProcAddress<GetFlagsDelegate>("mdbx_env_get_flags");
-            _setMapSizeDelegate = Library.GetProcAddress<SetMapSizeDelegate>("mdbx_env_set_mapsize");
-            _setMaxReadersDelegate = Library.GetProcAddress<SetMaxReadersDelegate>("mdbx_env_set_maxreaders");
-            _getMaxReadersDelegate = Library.GetProcAddress<GetMaxReadersDelegate>("mdbx_env_get_maxreaders");
-            _getMaxKeySizeDelegate = Library.GetProcAddress<GetMaxKeySizeDelegate>("mdbx_env_get_maxkeysize");
+            _createDelegate = NativeLibraryLoader.GetProcAddress<CreateDelegate>(MdbxFunctions.Environment.Create);
+            _closeDelegate = NativeLibraryLoader.GetProcAddress<CloseDelegate>(MdbxFunctions.Environment.Close);
+            _closeExDelegate = NativeLibraryLoader.GetProcAddress<CloseExDelegate>(MdbxFunctions.Environment.CloseEx);
+            _openDelegate = NativeLibraryLoader.GetProcAddress<OpenDelegate>(MdbxFunctions.Environment.Open);
+            _statDelegate = NativeLibraryLoader.GetProcAddress<StatDelegate>(MdbxFunctions.Environment.Stat);
+            _infoDelegate = NativeLibraryLoader.GetProcAddress<InfoDelegate>(MdbxFunctions.Environment.Info);
+            _syncDelegate = NativeLibraryLoader.GetProcAddress<SyncDelegate>(MdbxFunctions.Environment.Sync);
+            _setMaxDbsDelegate = NativeLibraryLoader.GetProcAddress<SetMaxDbsDelegate>(MdbxFunctions.Environment.SetMaxDbs);
+            _setFlagsDelegate = NativeLibraryLoader.GetProcAddress<SetFlagsDelegate>(MdbxFunctions.Environment.SetFlags);
+            _getFlagsDelegate = NativeLibraryLoader.GetProcAddress<GetFlagsDelegate>(MdbxFunctions.Environment.GetFlags);
+            _setMapSizeDelegate = NativeLibraryLoader.GetProcAddress<SetMapSizeDelegate>(MdbxFunctions.Environment.SetMapSize);
+            _setMaxReadersDelegate = NativeLibraryLoader.GetProcAddress<SetMaxReadersDelegate>(MdbxFunctions.Environment.SetMaxReaders);
+            _getMaxReadersDelegate = NativeLibraryLoader.GetProcAddress<GetMaxReadersDelegate>(MdbxFunctions.Environment.GetMaxReaders);
+            _getMaxKeySizeDelegate = NativeLibraryLoader.GetProcAddress<GetMaxKeySizeDelegate>(MdbxFunctions.Environment.GetMaxKeySize);
         }
 
     }

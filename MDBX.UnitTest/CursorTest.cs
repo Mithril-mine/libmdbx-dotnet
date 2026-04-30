@@ -1,3 +1,4 @@
+using MDBX.Options;
 using System;
 using System.IO;
 using System.Reflection;
@@ -50,13 +51,13 @@ namespace MDBX.UnitTest
                     using (MdbxCursor cursor = db.OpenCursor())
                     {
                         string key = null, value = null;
-                        cursor.Get(ref key, ref value, CursorOp.First);
+                        cursor.Get(ref key, ref value, CursorOption.First);
 
                         char c = 'A';
                         Assert.Equal(c.ToString(), key);
                         Assert.Equal(c.ToString(), value);
 
-                        while(cursor.Get(ref key, ref value, CursorOp.Next))
+                        while (cursor.Get(ref key, ref value, CursorOption.Next))
                         {
                             c = (char)((int)c + 1);
                             Assert.Equal(c.ToString(), key);
@@ -86,14 +87,14 @@ namespace MDBX.UnitTest
 
                 using (MdbxTransaction tran = env.BeginTransaction())
                 {
-                     MdbxDatabase db = tran.OpenDatabase("cursor_test2", DatabaseOption.Create
-                         | DatabaseOption.IntegerKey /* оптимизировано для фиксированного размера int или long ключа */
-                         );
+                    MdbxDatabase db = tran.OpenDatabase("cursor_test2", DatabaseOption.Create
+                        | DatabaseOption.IntegerKey /* оптимизировано для фиксированного размера int или long ключа */
+                        );
                     db.Empty(); // clean this data table for test
 
                     // add some keys
                     for (int i = 0; i < 5; i++)
-                        db.Put(i+1, (i+1).ToString());
+                        db.Put(i + 1, (i + 1).ToString());
 
                     tran.Commit();
                 }
@@ -107,7 +108,7 @@ namespace MDBX.UnitTest
 
                         int key = 0;
                         string value = null;
-                        cursor.Get(ref key, ref value, CursorOp.Next); // move to next
+                        cursor.Get(ref key, ref value, CursorOption.Next); // move to next
 
                         Assert.Equal(3, key);
 
@@ -115,12 +116,12 @@ namespace MDBX.UnitTest
 
                         key = 0;
                         value = null;
-                        cursor.Get(ref key, ref value, CursorOp.GetCurrent);
+                        cursor.Get(ref key, ref value, CursorOption.GetCurrent);
                         Assert.Equal(4, key);
 
                         key = 0;
                         value = null;
-                        cursor.Get(ref key, ref value, CursorOp.Prev);
+                        cursor.Get(ref key, ref value, CursorOption.Prev);
                         Assert.Equal(2, key);
                         Assert.Equal("2a", value);
                     }
@@ -148,7 +149,7 @@ namespace MDBX.UnitTest
                     EnvironmentFlag.LifoReclaim;
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
-                    .SetMapSize(10485760*10)
+                    .SetMapSize(10485760 * 10)
                     .Open(path, flags, Convert.ToInt32("666", 8));
 
                 DatabaseOption createOption = DatabaseOption.Create | DatabaseOption.IntegerKey;
@@ -159,7 +160,7 @@ namespace MDBX.UnitTest
                 {
                     MdbxDatabase db = tran.OpenDatabase("cursor_test3", createOption);
 
-                    for ( long i = 0; i < 1000000; i++)
+                    for (long i = 0; i < 1000000; i++)
                     {
                         db.Put(i, Guid.NewGuid().ToByteArray());
                     }
@@ -174,14 +175,14 @@ namespace MDBX.UnitTest
                     {
                         long key = 0;
                         byte[] value = null;
-                        cursor.Get(ref key, ref value, CursorOp.First);
+                        cursor.Get(ref key, ref value, CursorOption.First);
 
                         long index = 0;
                         Assert.Equal(index, key);
 
                         key = 0;
                         value = null;
-                        while (cursor.Get(ref key, ref value, CursorOp.Next))
+                        while (cursor.Get(ref key, ref value, CursorOption.Next))
                         {
                             index++;
                             Assert.Equal(index, key);

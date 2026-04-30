@@ -7,7 +7,7 @@ namespace MDBX.Interop;
 /// Statistics for a database in the environment
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public struct EnvStat
+public struct EnvironmentStat
 {
     [MarshalAs(UnmanagedType.U4)]
     private uint _pageSize;
