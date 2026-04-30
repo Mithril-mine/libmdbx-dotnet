@@ -1,8 +1,14 @@
-# mdbx.NET
+# mdbx-dotnet
 
-.NET bindings(dotnet) of [libmdbx](https://libmdbx.dqdkfa.ru/), succeeder of LMDB(Lightning Memory-Mapped Database).
+.NET bindings(dotnet) of [libmdbx](https://libmdbx.dqdkfa.ru/)
 
+libmdbx — это чрезвычайно быстрая, компактная, мощная встраиваемая транзакционная база данных «ключ-значение» под лицензией Apache 2.0. libmdbx обладает особым набором свойств и возможностей, ориентированных на создание уникальных легковесных решений.
 
+★ Превосходит легендарную LMDB по надежности, возможностям и производительности 
+
+★ Используется в сотнях открытых проектах, в том числе в Ethereum.
+
+По сути, libmdbx — это глубоко переработанный и расширенный вариант легендарной базы данных с отображением в памяти Lightning Memory-Mapped Database. libmdbx унаследовала все преимущества LMDB, но при этом решила ряд проблем и добавила множество улучшений.
 
 ### License
 
