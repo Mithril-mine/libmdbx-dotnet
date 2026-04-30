@@ -6,72 +6,154 @@ namespace MDBX.Interop;
 /// </summary>
 internal static class Constant
 {
-    /* no environment directory */
+    /// <summary>
+    /// Отсутствие директории для среды.
+    /// </summary>
     public const int MDBX_NOSUBDIR = 0x4000;
-    /* don't fsync after commit */
+
+    /// <summary>
+    /// Не выполнять fsync после фиксации.
+    /// </summary>
     public const int MDBX_NOSYNC = 0x10000;
-    /* read only */
+
+    /// <summary>
+    /// Только для чтения.
+    /// </summary>
     public const int MDBX_RDONLY = 0x20000;
-    /* don't fsync metapage after commit */
+
+    /// <summary>
+    /// Не выполнять fsync метастраниц после фиксации.
+    /// </summary>
     public const int MDBX_NOMETASYNC = 0x40000;
-    /* use writable mmap */
+
+    /// <summary>
+    /// Использовать writable mmap.
+    /// </summary>
     public const int MDBX_WRITEMAP = 0x80000;
-    /* use asynchronous msync when MDBX_WRITEMAP is used */
+
+    /// <summary>
+    /// Использовать асинхронный msync когда MDBX_WRITEMAP используется.
+    /// </summary>
     public const int MDBX_MAPASYNC = 0x100000;
-    /* tie reader locktable slots to MDBX_txn objects instead of to threads */
+
+    /// <summary>
+    /// Привязывать слоты таблицы блокировок читателей к объектам MDBX_txn вместо потоков.
+    /// </summary>
     public const int MDBX_NOTLS = 0x200000;
-    /* open DB in exclusive/monopolistic mode. */
+
+    /// <summary>
+    /// Открыть БД в эксклюзивном/монопольном режиме.
+    /// </summary>
     public const int MDBX_EXCLUSIVE = 0x400000;
-    /* don't do readahead */
+
+    /// <summary>
+    /// Не выполнять readahead.
+    /// </summary>
     public const int MDBX_NORDAHEAD = 0x800000;
-    /* don't initialize malloc'd memory before writing to datafile */
+
+    /// <summary>
+    /// Не инициализировать память, выделенную через malloc, перед записью в файл данных.
+    /// </summary>
     public const int MDBX_NOMEMINIT = 0x1000000;
-    /* aim to coalesce FreeDB records */
+
+    /// <summary>
+    /// Стремиться coalesce записи в FreeDB.
+    /// </summary>
     public const int MDBX_COALESCE = 0x2000000;
-    /* LIFO policy for reclaiming FreeDB records */
+
+    /// <summary>
+    /// Политика LIFO для освобождения записей в FreeDB.
+    /// </summary>
     public const int MDBX_LIFORECLAIM = 0x4000000;
-    /* make a steady-sync only on close and explicit env-sync */
+
+    /// <summary>
+    /// Выполнять steady-sync только при закрытии и явном env-sync.
+    /// </summary>
     public const int MDBX_UTTERLY_NOSYNC = (MDBX_NOSYNC | MDBX_MAPASYNC);
-    /* debuging option; fill/perturb released pages */
+
+    /// <summary>
+    /// Опция отладки; заполнять/возмущать освобождаемые страницы.
+    /// </summary>
     public const int MDBX_PAGEPERTURB = 0x8000000;
-    /* Do not block when starting a write transaction */
+
+    /// <summary>
+    /// Не блокироваться при запуске пишущей транзакции.
+    /// </summary>
     public const int MDBX_TRYTXN = 0x10000000;
 
-    /* use reverse string keys */
+    /// <summary>
+    /// Использовать обратные строковые ключи.
+    /// </summary>
     public const int MDBX_REVERSEKEY = 0x02;
-    /* use sorted duplicates */
+
+    /// <summary>
+    /// Использовать отсортированные дубликаты.
+    /// </summary>
     public const int MDBX_DUPSORT = 0x04;
-    /* numeric keys in native byte order, either uint32_t or uint64_t.
-     * The keys must all be of the same size. */
+
+    /// <summary>
+    /// Числовые ключи в нативном порядке байт, либо uint32_t либо uint64_t.
+    /// Все ключи должны быть одинакового размера.
+    /// </summary>
     public const int MDBX_INTEGERKEY = 0x08;
-    /* with MDBX_DUPSORT, sorted dup items have fixed size */
+
+    /// <summary>
+    /// С MDBX_DUPSORT, отсортированные элементы дубликатов имеют фиксированный размер.
+    /// </summary>
     public const int MDBX_DUPFIXED = 0x10;
-    /* with MDBX_DUPSORT, dups are MDBX_INTEGERKEY-style integers */
+
+    /// <summary>
+    /// С MDBX_DUPSORT, дубликаты - это целые числа в стиле MDBX_INTEGERKEY.
+    /// </summary>
     public const int MDBX_INTEGERDUP = 0x20;
-    /* with MDBX_DUPSORT, use reverse string dups */
+
+    /// <summary>
+    /// С MDBX_DUPSORT, использовать обратные строковые дубликаты.
+    /// </summary>
     public const int MDBX_REVERSEDUP = 0x40;
-    /* create DB if not already existing */
+
+    /// <summary>
+    /// Создать БД если она не существует.
+    /// </summary>
     public const int MDBX_CREATE = 0x40000;
 
 
-    /* For put: Don't write if the key already exists. */
+    /// <summary>
+    /// Для put: не записывать если ключ уже существует.
+    /// </summary>
     public const int MDBX_NOOVERWRITE = 0x10;
-    /* Only for MDBX_DUPSORT
-     * For put: don't write if the key and data pair already exist.
-     * For mdbx_cursor_del: remove all duplicate data items. */
+
+    /// <summary>
+    /// Только для MDBX_DUPSORT. Для put: не записывать если пара ключ/данные уже существует.
+    /// Для mdbx_cursor_del: удалить все элементы дубликатов.
+    /// </summary>
     public const int MDBX_NODUPDATA = 0x20;
-    /* For mdbx_cursor_put: overwrite the current key/data pair
-     * MDBX allows this flag for mdbx_put() for explicit overwrite/update without
-     * insertion. */
+
+    /// <summary>
+    /// Для mdbx_cursor_put: перезаписать текущую пару ключ/данные.
+    /// MDBX позволяет этот флаг для mdbx_put() для явного перезаписи/обновления без вставки.
+    /// </summary>
     public const int MDBX_CURRENT = 0x40;
-    /* For put: Just reserve space for data, don't copy it. Return a
-     * pointer to the reserved space. */
+
+    /// <summary>
+    /// Для put: только зарезервировать место для данных, не копировать их.
+    /// Вернуть указатель на зарезервированное пространство.
+    /// </summary>
     public const int MDBX_RESERVE = 0x10000;
-    /* Data is being appended, don't split full pages. */
+
+    /// <summary>
+    /// Данные добавляются, не разбивать полные страницы.
+    /// </summary>
     public const int MDBX_APPEND = 0x20000;
-    /* Duplicate data is being appended, don't split full pages. */
+
+    /// <summary>
+    /// Дублирующие данные добавляются, не разбивать полные страницы.
+    /// </summary>
     public const int MDBX_APPENDDUP = 0x40000;
-    /* Store multiple data items in one call. Only for MDBX_DUPFIXED. */
+
+    /// <summary>
+    /// Хранить несколько элементов данных в одном вызове. Только для MDBX_DUPFIXED.
+    /// </summary>
     public const int MDBX_MULTIPLE = 0x80000;
 
     /// <summary>
@@ -80,64 +162,64 @@ internal static class Constant
     public const int MDBX_ACCEDE = 0x40000000;
 
     /// <summary>
-    /// ���������� ���������� �� �������/threads ��������� ��� ��������.
+    /// Отвязывает транзакции от потоков/threads насколько это возможно.
     /// </summary>
     public const int MDBX_NOSTICKYTHREADS = 0x200000;
 
 
     /// <summary>
-    /// /* SYNC MODES****************************************************************/
-    ///* \defgroup sync_modes SYNC MODES
+    /// /* РЕЖИМЫ СИНХРОНИЗАЦИ****************************************************************/
+    ///* \defgroup sync_modes РЕЖИМЫ СИНХРОНИЗАЦИИ (SYNC MODES)
     ///
-    /// \attention Using any combination of \ref MDBX_SAFE_NOSYNC, \ref
-    /// MDBX_NOMETASYNC and especially \ref MDBX_UTTERLY_NOSYNC is always a deal to
-    /// reduce durability for gain write performance. You must know exactly what
-    /// you are doing and what risks you are taking!
+    /// \attention Использование любой комбинации \ref MDBX_SAFE_NOSYNC, \ref
+    /// MDBX_NOMETASYNC и особенно \ref MDBX_UTTERLY_NOSYNC всегда является сделкой
+    /// для уменьшения долговечности ради увеличения производительности записи.
+    /// Вы должны точно знать, что делаете и какие риски принимаете!
     ///
-    /// \note for LMDB users: \ref MDBX_SAFE_NOSYNC is NOT similar to LMDB_NOSYNC,
-    /// but \ref MDBX_UTTERLY_NOSYNC is exactly match LMDB_NOSYNC. See details
-    /// below.
+    /// \note для пользователей LMDB: \ref MDBX_SAFE_NOSYNC НЕ аналогичен LMDB_NOSYNC,
+    /// но \ref MDBX_UTTERLY_NOSYNC точно соответствует LMDB_NOSYNC. Смотрите детали
+    /// ниже.
     ///
-    /// THE SCENE:
-    /// - The DAT-file contains several MVCC-snapshots of B-tree at same time,
-    ///   each of those B-tree has its own root page.
-    /// - Each of meta pages at the beginning of the DAT file contains a
-    ///   pointer to the root page of B-tree which is the result of the particular
-    ///   transaction, and a number of this transaction.
-    /// - For data durability, MDBX must first write all MVCC-snapshot data
-    ///   pages and ensure that are written to the disk, then update a meta page
-    ///   with the new transaction number and a pointer to the corresponding new
-    ///   root page, and flush any buffers yet again.
-    /// - Thus during commit a I/O buffers should be flushed to the disk twice;
-    ///   i.e. fdatasync(), FlushFileBuffers() or similar syscall should be
-    ///   called twice for each commit. This is very expensive for performance,
-    ///   but guaranteed durability even on unexpected system failure or power
-    ///   outage. Of course, provided that the operating system and the
-    ///   underlying hardware (e.g. disk) work correctly.
+    /// СЦЕНАРИЙ:
+    /// - DAT-файл содержит несколько MVCC-снимков B-дерева одновременно,
+    ///   каждое из этих B-деревьев имеет свою корневую страницу.
+    /// - Каждая из мета-страниц в начале DAT-файла содержит
+    ///   указатель на корневую страницу B-дерева, которое является результатом конкретной
+    ///   транзакции, и номер этой транзакции.
+    /// - Для долговечности данных, MDBX сначала должна записать все страницы данных
+    ///   MVCC-снимка и убедиться, что они записаны на диск, затем обновить мета-страницу
+    ///   новым номером транзакции и указателем на соответствующее новое
+    ///   корневое дерево, и снова сбросить все буферы.
+    /// - Таким образом, при фиксации буферы ввода-вывода должны быть сброшены на диск дважды;
+    ///   т.е. fdatasync(), FlushFileBuffers() или аналогичный системный вызов должен быть
+    ///   вызван дважды для каждой фиксации. Это очень дорого для производительности,
+    ///   но гарантирует долговечность даже при неожиданном сбое системы или отключении
+    ///   питания. Конечно, при условии, что операционная система и
+    ///   базовое оборудование (например, диск) работают корректно.
     ///
-    /// TRADE-OFF:
-    /// By skipping some stages described above, you can significantly benefit in
-    /// speed, while partially or completely losing in the guarantee of data
-    /// durability and/or consistency in the event of system or power failure.
-    /// Moreover, if for any reason disk write order is not preserved, then at
-    /// moment of a system crash, a meta-page with a pointer to the new B-tree may
-    /// be written to disk, while the itself B-tree not yet. In that case, the
-    /// database will be corrupted!
+    /// КОМПРОМИСС:
+    /// Пропуская некоторые этапы, описанные выше, вы можете значительно выиграть в
+    /// скорости, при этом частично или полностью теряя гарантию долговечности
+    /// данных и/или согласованности при сбое системы или питания.
+    /// Более того, если по какой-либо причине порядок записи на диск не сохраняется, то в
+    /// момент сбоя системы, мета-страница с указателем на новое B-дерево может
+    /// быть записана на диск, а само B-дерево еще нет. В этом случае база
+    /// данных будет повреждена!
     ///
     /// \see MDBX_SYNC_DURABLE \see MDBX_NOMETASYNC \see MDBX_SAFE_NOSYNC
     /// \see MDBX_UTTERLY_NOSYNC
     ///
     /// @{ */
     ///
-    ///* Default robust and durable sync mode.
+    ///* РЕЖИМ ПО УМОЛЧАНИЮ: надёжный и долговечный режим синхронизации.
     ///
-    /// Metadata is written and flushed to disk after a data is written and
-    /// flushed, which guarantees the integrity of the database in the event
-    /// of a crash at any time.
+    /// Метаданные записываются и сбрасываются на диск после записи и сброса
+    /// данных, что гарантирует целостность базы данных при
+    /// сбое в любое время.
     ///
-    /// \attention Please do not use other modes until you have studied all the
-    /// details and are sure. Otherwise, you may lose your users' data, as happens
-    /// in [Miranda NG](https://www.miranda-ng.org/) messenger. */
+    /// \attention Пожалуйста, не используйте другие режимы, пока вы не изучили все
+    /// детали и не уверены. В противном случае вы можете потерять данные ваших пользователей, как это
+    /// произошло в мессенджере [Miranda NG](https://www.miranda-ng.org/). */
     /// </summary>
     public const int MDBX_SYNC_DURABLE = 0;
 
@@ -208,4 +290,14 @@ internal static class Constant
     /// This flag allows to preallocate memory and assign a reader slot, thus avoiding these operations at the next start of the transaction.
     /// </summary>
     public const int MDBX_TXN_RDONLY_PREPARE = MDBX_RDONLY | MDBX_NOMEMINIT;
+
+
+    /** 
+      * Extra validation of DB structure and pages content.
+      *
+      * The `MDBX_VALIDATION` enabled the simple safe/careful mode for working
+      * with damaged or untrusted DB. However, a notable performance
+      * degradation should be expected. 
+      */
+    public const int MDBX_VALIDATION = 0x00002000;
 }

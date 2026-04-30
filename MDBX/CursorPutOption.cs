@@ -3,7 +3,7 @@ namespace MDBX
     using Interop;
 
     /// <summary>
-    /// CursorPutOption;
+    /// Опции для операции Put через курсор.
     /// </summary>
     [Flags]
     public enum CursorPutOption : int
@@ -19,64 +19,63 @@ namespace MDBX
         Unspecific = None,
 
         /// <summary>
-        /// Replace the item at the current cursor position. The key parameter
-        /// must still be provided, and must match it, otherwise the function
-        /// return MDBX_EKEYMISMATCH.
-        /// 
-        /// NOTE: MDBX unlike LMDB allows you to change the size of the data and
-        /// automatically handles reordering for sorted duplicates (MDBX_DUPSORT).
+        /// Заменить элемент в текущей позиции курсора. Параметр key всё ещё должен
+        /// быть предоставлен и должен соответствовать, иначе функция вернёт MDBX_EKEYMISMATCH.
+        ///
+        /// ПРИМЕЧАНИЕ: MDBX в отличие от LMDB позволяет изменять размер данных и
+        /// автоматически обрабатывает переordering для отсортированных дубликатов (MDBX_DUPSORT).
         /// </summary>
         Current = Constant.MDBX_CURRENT,
 
         /// <summary>
-        /// Enter the new key/data pair only if it does not already appear in the
-        /// database. This flag may only be specified if the database was opened
-        /// with MDBX_DUPSORT. The function will return MDBX_KEYEXIST if the
-        /// key/data pair already appears in the database.
+        /// Ввести новую пару ключ/данные только если она еще не появилась в
+        /// базе данных. Этот флаг может быть указан только если база данных была открыта
+        /// с MDBX_DUPSORT. Функция вернет MDBX_KEYEXIST, если пара
+        /// ключ/данные уже присутствует в базе данных.
         /// </summary>
         NoDupData = Constant.MDBX_NODUPDATA,
 
         /// <summary>
-        /// Enter the new key/data pair only if the key does not already appear
-        /// in the database. The function will return MDBX_KEYEXIST if the key
-        /// already appears in the database, even if the database supports
-        /// duplicates (MDBX_DUPSORT).
+        /// Ввести новую пару ключ/данные только если ключ еще не появился
+        /// в базе данных. Функция вернет MDBX_KEYEXIST, если ключ
+        /// уже присутствует в базе данных, даже если база данных поддерживает
+        /// дубликаты (MDBX_DUPSORT).
         /// </summary>
         NoOverwrite = Constant.MDBX_NOOVERWRITE,
 
         /// <summary>
-        /// Reserve space for data of the given size, but don't copy the given
-        /// data. Instead, return a pointer to the reserved space, which the
-        /// caller can fill in later - before the next update operation or the
-        /// transaction ends. This saves an extra memcpy if the data is being
-        /// generated later. This flag must not be specified if the database
-        /// was opened with MDBX_DUPSORT.
+        /// Зарезервировать пространство для данных заданного размера, но не копировать данные.
+        /// Вместо этого вернуть указатель на зарезервированное пространство, который
+        /// вызывающий может заполнить позже - перед следующей операцией обновления или
+        /// завершением транзакции. Это экономит дополнительный memcpy, если данные будут
+        /// сгенерированы позже. Этот флаг не должен указываться, если база данных
+        /// была открыта с MDBX_DUPSORT.
         /// </summary>
         Reserve = Constant.MDBX_RESERVE,
 
         /// <summary>
-        /// Append the given key/data pair to the end of the database. No key
-        /// comparisons are performed. This option allows fast bulk loading when
-        /// keys are already known to be in the correct order. Loading unsorted
-        /// keys with this flag will cause a MDBX_KEYEXIST error.
+        /// Добавить данную пару ключ/данные в конец базы данных. Никаких сравнений
+        /// ключей не выполняется. Эта опция позволяет быструю пакетную загрузку, когда
+        /// ключи уже находятся в правильном порядке. Загрузка несортированных
+        /// ключей с этим флагом вызовет ошибку MDBX_KEYEXIST.
         /// </summary>
         Append = Constant.MDBX_APPEND,
 
         /// <summary>
-        /// Same as Append, but for sorted dup data.
+        /// Аналогично Append, но для отсортированных данных-дубликатов.
         /// </summary>
         AppendDup = Constant.MDBX_APPENDDUP,
 
         /// <summary>
-        /// Store multiple contiguous data elements in a single request. This flag
-        /// may only be specified if the database was opened with MDBX_DUPFIXED.
-        /// The data argument must be an array of two MDBX_vals. The iov_len of the
-        /// first MDBX_val must be the size of a single data element. The iov_base
-        /// of the first MDBX_val must point to the beginning of the array of
-        /// contiguous data elements. The iov_len of the second MDBX_val must be
-        /// the count of the number of data elements to store. On return this
-        /// field will be set to the count of the number of elements actually
-        /// written. The iov_base of the second MDBX_val is unused.
+        /// Хранить несколько смежных элементов данных в одном запросе. Этот флаг
+        /// может быть указан только если база данных была открыта с MDBX_DUPFIXED.
+        /// Аргумент данных должен быть массивом из двух MDBX_vals. Поле iov_len первого
+        /// MDBX_val должно быть размером одного элемента данных. Поле iov_base
+        /// первого MDBX_val должно указывать на начало массива
+        /// смежных элементов данных. Поле iov_len второго MDBX_val должно быть
+        /// количеством элементов данных для хранения. При возврате это поле
+        /// будет установлено в фактическое количество записанных элементов.
+        /// Поле iov_base второго MDBX_val не используется.
         /// </summary>
         Multiple = Constant.MDBX_MULTIPLE,
     }

@@ -34,10 +34,10 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Close a cursor handle.
-        /// 
-        /// The cursor handle will be freed and must not be used again after this call.
-        /// Its transaction must still be live if it is a write-transaction.
+        /// Закрыть дескриптор курсора.
+        ///
+        /// Дескриптор курсора будет освобождён и не должен использоваться после этого вызова.
+        /// Его транзакция всё ещё должна быть жива, если это пишущая транзакция.
         /// </summary>
         void Close()
         {
@@ -50,11 +50,12 @@ namespace MDBX
 
 
         /// <summary>
-        /// Get items from a database.
+        /// Получить элементы из базы данных.
         /// </summary>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <param name="op"></param>
+        /// <param name="key">Буфер для ключа.</param>
+        /// <param name="value">Буфер для значения.</param>
+        /// <param name="op">Операция курсора.</param>
+        /// <returns>true если элемент найден, иначе false.</returns>
         public bool Get(ref byte[] key, ref byte[] value, CursorOp op)
         {
             IntPtr keyPtr = IntPtr.Zero;
@@ -114,14 +115,14 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Get items from a database.
+        /// Получить элементы из базы данных.
         /// </summary>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <param name="op"></param>
-        /// <returns>false if not found.</returns>
+        /// <typeparam name="K">Тип ключа.</typeparam>
+        /// <typeparam name="V">Тип значения.</typeparam>
+        /// <param name="key">Переменная для ключа.</param>
+        /// <param name="value">Переменная для значения.</param>
+        /// <param name="op">Операция курсора.</param>
+        /// <returns>false если не найдено.</returns>
         public bool Get<K, V>(ref K key, ref V value, CursorOp op)
         {
             ISerializer<K> keySerializer = SerializerRegistry.Get<K>();
@@ -147,13 +148,13 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Store by cursor.
-        /// This function stores key/data pairs into the database. The cursor is
-        /// positioned at the new item, or on failure usually near it.
+        /// Записать через курсор.
+        /// Эта функция сохраняет пары ключ/значение в базу данных. Курсор
+        /// позиционируется на новый элемент, или при ошибке обычно рядом с ним.
         /// </summary>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <param name="option"></param>
+        /// <param name="key">Ключ для записи.</param>
+        /// <param name="value">Значение для записи.</param>
+        /// <param name="option">Опции операции.</param>
         public void Put(byte[] key, byte[] value, CursorPutOption option)
         {
             IntPtr keyPtr = IntPtr.Zero;
@@ -185,15 +186,15 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Store by cursor.
-        /// This function stores key/data pairs into the database. The cursor is
-        /// positioned at the new item, or on failure usually near it.
+        /// Записать через курсор.
+        /// Эта функция сохраняет пары ключ/значение в базу данных. Курсор
+        /// позиционируется на новый элемент, или при ошибке обычно рядом с ним.
         /// </summary>
-        /// <typeparam name="K"></typeparam>
-        /// <typeparam name="V"></typeparam>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <param name="option"></param>
+        /// <typeparam name="K">Тип ключа.</typeparam>
+        /// <typeparam name="V">Тип значения.</typeparam>
+        /// <param name="key">Ключ для записи.</param>
+        /// <param name="value">Значение для записи.</param>
+        /// <param name="option">Опции операции.</param>
         public void Put<K, V>(K key, V value, CursorPutOption option = CursorPutOption.Unspecific)
         {
             ISerializer<K> keySerializer = SerializerRegistry.Get<K>();
@@ -206,14 +207,14 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Delete current key/data pair
-        /// 
-        /// This function deletes the key/data pair to which the cursor refers.
-        /// This does not invalidate the cursor, so operations such as MDBX_NEXT
-        /// can still be used on it. Both MDBX_NEXT and MDBX_GET_CURRENT will return
-        /// the same record after this operation.
+        /// Удалить текущую пару ключ/данные.
+        ///
+        /// Эта функция удаляет пару ключ/данные, на которую ссылается курсор.
+        /// Это не делает курсор невалидным, поэтому операции такие как MDBX_NEXT
+        /// всё ещё могут быть использованы на нем. И MDBX_NEXT и MDBX_GET_CURRENT
+        /// вернут ту же запись после этой операции.
         /// </summary>
-        /// <param name="option"></param>
+        /// <param name="option">Опции удаления.</param>
         public void Del(CursorDelOption option = CursorDelOption.Unspecific)
         {
             Cursor.Del(_cursorPtr, option);
@@ -221,11 +222,12 @@ namespace MDBX
 
 
         /// <summary>
-        /// Return count of duplicates for current key.
-        /// 
-        /// This call is only valid on databases that support sorted duplicate data items MDBX_DUPSORT.
+        /// Возвращает количество дубликатов для текущего ключа.
+        ///
+        /// Этот вызов допустим только для баз данных, поддерживающих отсортированные
+        /// дублирующиеся элементы данных MDBX_DUPSORT.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Количество дубликатов.</returns>
         public int Count()
         {
             return Cursor.Count(_cursorPtr);

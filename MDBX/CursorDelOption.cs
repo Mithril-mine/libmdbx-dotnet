@@ -3,13 +3,13 @@ namespace MDBX
     using Interop;
 
     /// <summary>
-    /// CursorDelOption.
+    /// Опции для операции удаления курсора.
     /// </summary>
     [Flags]
     public enum CursorDelOption : int
     {
         /// <summary>
-        /// None
+        /// Нет специальных опций.
         /// </summary>
         None = 0,
 
@@ -19,10 +19,10 @@ namespace MDBX
         Unspecific = None,
 
         /// <summary>
-        /// Enter the new key/data pair only if it does not already appear in the
-        /// database. This flag may only be specified if the database was opened
-        /// with MDBX_DUPSORT. The function will return MDBX_KEYEXIST if the
-        /// key/data pair already appears in the database.
+        /// Ввести новую пару ключ/данные только если она еще не появилась в
+        /// базе данных. Этот флаг может быть указан только если база данных была открыта
+        /// с MDBX_DUPSORT. Функция вернет MDBX_KEYEXIST, если пара
+        /// ключ/данные уже присутствует в базе данных.
         /// </summary>
         NoDupData = Constant.MDBX_NODUPDATA,
     }

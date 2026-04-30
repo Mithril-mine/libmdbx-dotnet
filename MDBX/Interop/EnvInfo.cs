@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace MDBX.Interop
 {
     /// <summary>
-    /// EnvInfo.
+    /// Информация о среде.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     public struct EnvInfo

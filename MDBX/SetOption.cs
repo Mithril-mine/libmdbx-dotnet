@@ -6,12 +6,12 @@ namespace MDBX
     public enum SetOption
     {
         /// <summary>
-        /// Add the flag if non-existed
+        /// Добавить флаг, если он не существует
         /// </summary>
         Add,
 
         /// <summary>
-        /// Clear the flag if exists
+        /// Снять флаг, если он существует
         /// </summary>
         Clear,
     }

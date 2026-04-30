@@ -6,7 +6,9 @@ namespace MDBX
     /// Опции для открытия базы данных в MDBX.
     /// </summary>
     [Flags]
+#pragma warning disable S2346
     public enum DatabaseOption : int
+#pragma warning restore S2346
     {
         /// <summary>
         /// Нет специальных опций.
@@ -14,52 +16,52 @@ namespace MDBX
         Unspecific = 0,
 
         /// <summary>
-        /// Keys are strings to be compared in reverse order, from the end
-        /// of the strings to the beginning. By default, Keys are treated as
-        /// strings and compared from beginning to end.
+        /// Ключи - это строки, которые сравниваются в обратном порядке, от конца
+        /// строк к началу. По умолчанию ключи обрабатываются как строки и сравниваются
+        /// от начала к концу.
         /// </summary>
         ReverseKey = Constant.MDBX_REVERSEKEY,
 
         /// <summary>
-        /// Duplicate keys may be used in the table. Or, from another point of
-        /// view, keys may have multiple data items, stored in sorted order. By
-        /// default keys must be unique and may have only a single data item.
+        /// Дублирующиеся ключи могут использоваться в таблице. Или, с другой точки
+        /// зрения, ключи могут иметь несколько элементов данных, хранящихся в отсортированном порядке.
+        /// По умолчанию ключи должны быть уникальными и могут иметь только один элемент данных.
         /// </summary>
         DupSort = Constant.MDBX_DUPSORT,
 
         /// <summary>
-        /// Keys are binary integers in native byte order, either uin32_t or
-        /// uint64_t, and will be sorted as such. The keys must all be of the
-        /// same size
+        /// Ключи - это двоичные целые числа в нативном порядке байт, либо uint32_t или
+        /// uint64_t, и будут сортироваться соответственно. Все ключи должны быть
+        /// одинакового размера.
         /// </summary>
         IntegerKey = Constant.MDBX_INTEGERKEY,
 
         /// <summary>
-        ///  This flag may only be used in combination with MDBX_DUPSORT. This
-        ///  option tells the library that the data items for this database are
-        ///  all the same size, which allows further optimizations in storage and
-        ///  retrieval. When all data items are the same size, the MDBX_GET_MULTIPLE,
-        ///  MDBX_NEXT_MULTIPLE and MDBX_PREV_MULTIPLE cursor operations may be used
-        ///  to retrieve multiple items at once.
+        /// Этот флаг может использоваться только в комбинации с MDBX_DUPSORT.
+        /// Эта опция сообщает библиотеке, что элементы данных для этой базы данных
+        /// все одного и того же размера, что позволяет дальнейшие оптимизации при
+        /// хранении и извлечении. Когда все элементы данных одинакового размера,
+        /// операции курсора MDBX_GET_MULTIPLE, MDBX_NEXT_MULTIPLE и
+        /// MDBX_PREV_MULTIPLE могут быть использованы для извлечения нескольких
+        /// элементов одновременно.
         /// </summary>
         DupFixed = Constant.MDBX_DUPFIXED,
 
         /// <summary>
-        ///  This option specifies that duplicate data items are binary integers,
-        ///  similar to MDBX_INTEGERKEY keys.
+        /// Эта опция указывает, что дублирующие элементы данных являются двоичными
+        /// целыми числами, аналогично ключам MDBX_INTEGERKEY.
         /// </summary>
         IntegerDup = Constant.MDBX_INTEGERDUP,
 
         /// <summary>
-        /// This option specifies that duplicate data items should be compared as
-        /// strings in reverse order (the comparison is performed in the direction
-        /// from the last byte to the first).
+        /// Эта опция указывает, что дублирующие элементы данных должны сравниваться как
+        /// строки в обратном порядке (сравнение выполняется от последнего байта к первому).
         /// </summary>
         ReverseDup = Constant.MDBX_REVERSEDUP,
 
         /// <summary>
-        /// Create the named database if it doesn't exist. This option is not
-        /// allowed in a read-only transaction or a read-only environment.
+        /// Создать именованную базу данных, если она не существует. Эта опция не
+        /// разрешена в транзакции только для чтения или среде только для чтения.
         /// </summary>
         Create = Constant.MDBX_CREATE,
     }

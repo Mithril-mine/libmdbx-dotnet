@@ -3,13 +3,13 @@ namespace MDBX
     using Interop;
 
     /// <summary>
-    /// Represents a transaction in the MDBX database.
+    /// Представляет транзакцию в базе данных MDBX.
     /// </summary>
     public class MdbxTransaction : IDisposable
     {
         #region IDisposable Support
         /// <summary>
-        /// Disposes the transaction by aborting it.
+        /// Освобождает транзакцию путем отката.
         /// </summary>
         public void Dispose()
         {
@@ -30,10 +30,10 @@ namespace MDBX
         }
 
         /// <summary>
-        ///  Commit all the operations of a transaction into the database.
-        ///  
-        /// The transaction handle is freed. It and its cursors must not be used
-        /// again after this call, except with mdbx_cursor_renew().
+        /// Фиксирует все операции транзакции в базе данных.
+        ///
+        /// Дескриптор транзакции освобождается. Он и его курсоры больше не должны
+        /// использоваться после этого вызова, кроме как с mdbx_cursor_renew().
         /// </summary>
         public void Commit()
         {
@@ -49,7 +49,7 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Abandon all the operations of the transaction instead of saving them.
+        /// Отменить все операции транзакции вместо их сохранения.
         /// </summary>
         public void Abort()
         {
@@ -61,15 +61,16 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Reset a read-only transaction.
-        /// 
-        /// Abort the transaction like Abort(), but keep the transaction
-        /// handle. Therefore Renew() may reuse the handle. This saves
-        /// allocation overhead if the process will start a new read-only transaction
-        /// soon, and also locking overhead if MDBX_NOTLS is in use. The reader table
-        /// lock is released, but the table slot stays tied to its thread or
-        /// MDBX_txn. Use mdbx_txn_abort() to discard a reset handle, and to free
-        /// its lock table slot if MDBX_NOTLS is in use.
+        /// Сбросить транзакцию только для чтения.
+        ///
+        /// Прервать транзакцию как Abort(), но сохранить дескриптор транзакции.
+        /// Поэтому Renew() может повторно использовать дескриптор. Это экономит
+        /// накладные расходы на выделение памяти, если процесс скоро начнёт новую
+        /// транзакцию только для чтения, а также накладные расходы на блокировку,
+        /// если используется MDBX_NOTLS. Блокировка таблицы читателей освобождается,
+        /// но слот таблицы остаётся привязанным к他的 потоку или MDBX_txn.
+        /// Используйте mdbx_txn_abort() для отмены сброшенного дескриптора и
+        /// освобождения слота таблицы блокировок, если используется MDBX_NOTLS.
         /// </summary>
         public void Reset()
         {
@@ -77,11 +78,11 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Renew a read-only transaction.
-        /// 
-        /// This acquires a new reader lock for a transaction handle that had been
-        /// released by mdbx_txn_reset(). It must be called before a reset transaction
-        /// may be used again.
+        /// Обновить транзакцию только для чтения.
+        ///
+        /// Это приобретает новую блокировку читателя для дескриптора транзакции,
+        /// который был освобождён mdbx_txn_reset(). Должно быть вызвано перед тем,
+        /// как сброшенная транзакция может быть использована снова.
         /// </summary>
         public void Renew()
         {
@@ -89,38 +90,38 @@ namespace MDBX
         }
 
         /// <summary>
-        /// Open a table in the environment.
-        /// 
-        /// A table handle denotes the name and parameters of a table, independently
-        /// of whether such a table exists. The table handle may be discarded by
-        /// calling mdbx_dbi_close(). The old table handle is returned if the table
-        /// was already open. The handle may only be closed once.
-        /// 
-        /// The table handle will be private to the current transaction until
-        /// the transaction is successfully committed. If the transaction is
-        /// aborted the handle will be closed automatically.
-        /// After a successful commit the handle will reside in the shared
-        /// environment, and may be used by other transactions.
-        /// 
-        /// This function must not be called from multiple concurrent
-        /// transactions in the same process. A transaction that uses
-        /// this function must finish (either commit or abort) before
-        /// any other transaction in the process may use this function.
+        /// Открыть таблицу в среде.
+        ///
+        /// Дескриптор таблицы обозначает имя и параметры таблицы, независимо от
+        /// того, существует ли такая таблица. Дескриптор таблицы может быть отменён
+        /// вызовом mdbx_dbi_close(). Старый дескриптор таблицы возвращается, если таблица
+        /// уже была открыта. Дескриптор может быть закрыт только один раз.
+        ///
+        /// Дескриптор таблицы будет приватным для текущей транзакции до тех пор,
+        /// пока транзакция не будет успешно зафиксирована. Если транзакция
+        /// прервана, дескриптор будет закрыт автоматически.
+        /// После успешной фиксации дескриптор будет находиться в общей
+        /// среде и может использоваться другими транзакциями.
+        ///
+        /// Эта функция не должна вызываться из нескольких конкурентных
+        /// транзакций в одном процессе. Транзакция, использующая эту функцию,
+        /// должна завершиться (либо фиксацией, либо прерыванием) до того,
+        /// как любая другая транзакция в процессе может использовать эту функцию.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="option"></param>
-        /// <returns></returns>
+        /// <param name="name">Имя таблицы (может быть null для безымянной БД).</param>
+        /// <param name="option">Опции открытия базы данных.</param>
+        /// <returns>Дескриптор базы данных.</returns>
         public MdbxDatabase OpenDatabase(string? name = null, DatabaseOption option = DatabaseOption.Unspecific)
         {
             return new MdbxDatabase(_env, this, Dbi.Open(_txnPtr, name ?? string.Empty, option));
         }
 
         /// <summary>
-        /// This returns the identifier associated with this transaction. For a
-        /// read-only transaction, this corresponds to the snapshot being read;
-        /// concurrent readers will frequently have the same transaction ID.
+        /// Возвращает идентификатор, связанный с этой транзакцией.
+        /// Для транзакции только для чтения это соответствует снимку, который читается;
+        /// concurrent readers часто будут иметь одинаковый идентификатор транзакции.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Идентификатор транзакции.</returns>
         public ulong GetID()
         {
             return Txn.GetID(_txnPtr);
