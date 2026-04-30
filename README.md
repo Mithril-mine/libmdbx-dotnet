@@ -2,6 +2,8 @@
 
 .NET bindings(dotnet) of [libmdbx](https://libmdbx.dqdkfa.ru/)
 
+<img alt="pipeline status" src="http://git.amsoft.spb.ru/devops/deploy/libmdbx/badges/libmdbx-dotnet/pipeline.svg" />
+
 libmdbx — это чрезвычайно быстрая, компактная, мощная встраиваемая транзакционная база данных «ключ-значение» под лицензией Apache 2.0. libmdbx обладает особым набором свойств и возможностей, ориентированных на создание уникальных легковесных решений.
 
 ★ Превосходит легендарную LMDB по надежности, возможностям и производительности 
