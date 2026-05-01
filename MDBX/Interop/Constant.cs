@@ -197,4 +197,19 @@ internal static class Constant
     /// Включает безопасный режим работы с повреждённой или ненадёжной БД.
     /// </summary>
     public const int MDBX_VALIDATION = 0x00002000;
+
+    /// <summary>
+    /// Транзакция только на чтение.
+    /// </summary>
+    public const int MDBX_TXN_RDONLY = MDBX_RDONLY;
+
+    /// <summary>
+    /// Не блокировать при запуске транзакции записи.
+    /// </summary>
+    public const int MDBX_TXN_TRY = 0x10000000;
+
+    /// <summary>
+    /// Не снижать надежность транзакции, а использовать режим работы среды.
+    /// </summary>
+    public const int MDBX_TXN_NOWEAKING = 0;
 }

@@ -2,6 +2,12 @@ using System.Runtime.InteropServices;
 
 namespace MDBX.Interop;
 
+internal class LibraryLoadInfo
+{
+    internal required string FileName {get;set;}
+    internal required string Platform { get; set; }
+}
+
 /// <summary>
 /// Загрузка и привязка нативной библиотеки MDBX.
 /// </summary>
@@ -91,16 +97,49 @@ internal static partial class NativeLibraryLoader
     internal static T GetProcAddress<T>(string procName) where T : Delegate
     {
         IntPtr ptr = IntPtr.Zero;
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            ptr = GetProcAddress(_libPtr, procName);
-        else
-            ptr = dlsym(_libPtr, procName);
-        if (ptr != IntPtr.Zero)
-        {
-            return Marshal.GetDelegateForFunctionPointer<T>(ptr);
-        }
+
+        if (MdbxDotNetPlatform.IsWindows) ptr = GetProcAddress(_libPtr, procName);
+
+        if (MdbxDotNetPlatform.IsLinux) ptr = dlsym(_libPtr, procName);
+
+        if (!ptr.Equals(IntPtr.Zero)) return Marshal.GetDelegateForFunctionPointer<T>(ptr);
 
         throw new BadImageFormatException($"MDBX failed to bind '{procName}' function.");
+    }
+
+    /// <summary>
+    /// Получить информацию о платформе и библиотеке libmdbx.
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="PlatformNotSupportedException"></exception>
+    private static LibraryLoadInfo GetLibraryLoadInfo()
+    {
+        switch (MdbxDotNetPlatform.GetPlatform())
+        {
+            case MdbxDotNetSupportedPlatform.Windows:
+                return new LibraryLoadInfo() { FileName = "mdbx.dll", Platform = "windows" };
+            case MdbxDotNetSupportedPlatform.Linux:
+                return new LibraryLoadInfo() { FileName = "libmdbx.so", Platform = "linux" };
+            default: throw new PlatformNotSupportedException($"Unsupported OS platform : {RuntimeInformation.OSDescription}");
+        }
+    }
+
+    private static string GetLibraryFullPath(LibraryLoadInfo info)
+    {
+        var filePath =  Path.Combine(
+          AppContext.BaseDirectory
+          , "native"
+          , info.Platform.ToLowerInvariant()
+          , MdbxDotNetPlatform.ProcessArchitecture
+          , info.FileName
+        );
+
+        if (filePath == null || filePath == string.Empty) throw new FileNotFoundException("MDBX-DOTNET File path unspecified");
+
+        if (!File.Exists(filePath))
+            throw new FileNotFoundException($"MDBX cannot find the library at {filePath}", filePath);
+
+        return filePath;
     }
 
     /// <summary>
@@ -110,43 +149,20 @@ internal static partial class NativeLibraryLoader
     /// <exception cref="FileNotFoundException">Библиотека не найдена или не загружена.</exception>
     internal static void Load()
     {
-        string? platform = null;
-        string? filename = null;
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        var info = GetLibraryLoadInfo();
+
+        string filepath = GetLibraryFullPath(info);
+
+        switch (MdbxDotNetPlatform.GetPlatform())
         {
-            platform = "windows";
-            filename = "mdbx.dll";
+            case MdbxDotNetSupportedPlatform.Windows:
+                _libPtr = LoadLibrary(filepath);
+                break;
+            case MdbxDotNetSupportedPlatform.Linux:
+                _libPtr = dlopen(filepath, RTLD_NOW);
+                break;
+            default: throw new FileNotFoundException($"MDBX failed to load library at {filepath}", filepath);
         }
-        else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-        {
-            platform = "linux";
-            filename = "libmdbx.so";
-        }
-        else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-        {
-            platform = "osx";
-            filename = "libmdbx.so";
-        }
-        else
-            throw new PlatformNotSupportedException($"Unsupported OS platform : {RuntimeInformation.OSDescription}");
-
-        string filepath = Path.Combine(AppContext.BaseDirectory
-            , "native"
-            , platform.ToLowerInvariant()
-            , RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant()
-            , filename
-            );
-
-        if (!File.Exists(filepath))
-            throw new FileNotFoundException($"MDBX cannot find the library at {filepath}", filepath);
-
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            _libPtr = LoadLibrary(filepath);
-        else
-            _libPtr = dlopen(filepath, RTLD_NOW);
-
-        if (_libPtr == IntPtr.Zero)
-            throw new FileNotFoundException($"MDBX failed to load library at {filepath}", filepath);
 
         Misc.Bind();
         Environment.Bind();
