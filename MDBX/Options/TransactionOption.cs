@@ -1,4 +1,4 @@
-namespace MDBX
+namespace MDBX.Options
 {
     using Interop;
 

@@ -8,7 +8,7 @@ namespace MDBX.Interop
     /// Информация о геометрии (размерах) окружения базы данных MDBX.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public struct EnvInfoGeo
+    public struct EnvironmentInfoGeo
     {
         [MarshalAs(UnmanagedType.U8)]
         private ulong _lower;
@@ -26,27 +26,27 @@ namespace MDBX.Interop
         private ulong _grow;
 
         /// <summary>
-        /// lower limit for datafile size
+        /// Нижняя граница для размера файла данных.
         /// </summary>
         public ulong LowerLimit { get { return _lower; } }
 
         /// <summary>
-        /// upper limit for datafile size
+        /// Верхняя граница для размера файла данных.
         /// </summary>
         public ulong UpperLimit { get { return _upper; } }
 
         /// <summary>
-        /// current datafile size
+        /// Текущий размер файла данных.
         /// </summary>
         public ulong CurrentSize { get { return _current; } }
 
         /// <summary>
-        /// shrink threshold for datafile
+        /// Порог сжатия для файла данных.
         /// </summary>
         public ulong ShrinkThreshold { get { return _shrink; } }
 
         /// <summary>
-        /// growth step for datafile
+        /// Шаг увеличения размера файла данных.
         /// </summary>
         public ulong GrowStep { get { return _grow; } }
     }

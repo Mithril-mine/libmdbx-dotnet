@@ -1,3 +1,4 @@
+using MDBX.Options;
 using System;
 using System.IO;
 using System.Reflection;
@@ -78,7 +79,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                env.SetMapSize(1024*1024*10)
+                env.SetMapSize(1024 * 1024 * 10)
                     .SetMaxDatabases(2)
                     .SetMaxReaders(100)
                     .Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
