@@ -1,4 +1,4 @@
-﻿namespace MDBX.Interop.Mdbx;
+﻿namespace MDBX.Interop;
 
 internal static class MdbxFunctions
 {
@@ -7,6 +7,10 @@ internal static class MdbxFunctions
         internal static readonly string Create = "mdbx_env_create";
         internal static readonly string Close = "mdbx_env_close";
         internal static readonly string CloseEx = "mdbx_env_close_ex";
+        /// <summary>
+        /// Open an environment instance.
+        /// On Windows the mdbx_env_openW() is recommended to use.
+        /// </summary>
         internal static readonly string Open = Platform.IsWindows ? "mdbx_env_openW": "mdbx_env_open";
         internal static readonly string Stat = "mdbx_env_stat";
         internal static readonly string Info = "mdbx_env_info";
