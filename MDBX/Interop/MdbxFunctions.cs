@@ -7,7 +7,7 @@ internal static class MdbxFunctions
         internal static readonly string Create = "mdbx_env_create";
         internal static readonly string Close = "mdbx_env_close";
         internal static readonly string CloseEx = "mdbx_env_close_ex";
-        internal static readonly string Open = "mdbx_env_open";
+        internal static readonly string Open = Platform.IsWindows ? "mdbx_env_openW": "mdbx_env_open";
         internal static readonly string Stat = "mdbx_env_stat";
         internal static readonly string Info = "mdbx_env_info";
         internal static readonly string Sync = "mdbx_env_info";
