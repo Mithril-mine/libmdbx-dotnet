@@ -20,7 +20,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                env.Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                env.Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 var stat = env.Stat();
 
@@ -38,7 +38,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                env.Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                env.Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 var stat = env.Info();
 
@@ -58,7 +58,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                env.Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                env.Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 EnvironmentFlag flags = env.GetFlags();
 
@@ -82,7 +82,7 @@ namespace MDBX.UnitTest
                 env.SetMapSize(1024 * 1024 * 10)
                     .SetMaxDatabases(2)
                     .SetMaxReaders(100)
-                    .Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 env.Close();
             }
@@ -98,7 +98,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                env.Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                env.Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 int maxKeySize = env.GetMaxKeySize();
                 int maxReaders = env.GetMaxReaders();
@@ -117,7 +117,7 @@ namespace MDBX.UnitTest
 
             using (MdbxEnvironment env = new MdbxEnvironment())
             {
-                env.Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                env.Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
                 {

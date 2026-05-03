@@ -103,14 +103,14 @@ public class MdbxEnvironment : IDisposable
     /// <param name="path">Путь к среде.</param>
     /// <param name="flags">Флаги окружения.</param>
     /// <param name="mode">Права доступа к файлам (в стиле POSIX).</param>
-    public void Open(string path, EnvironmentFlag flags, int mode)
+    public void Open(string path, EnvironmentFlag flags, UnixFileMode mode)
     {
         if (string.IsNullOrEmpty(path))
             throw new ArgumentException("Path cannot be null or empty.", nameof(path));
         lock (_syncRoot)
         {
             if (closed) throw new InvalidOperationException("MDBX environment is closed.");
-            Environment.Open(_envPtr, path, flags, mode);
+            Environment.Open(_envPtr, path, flags, (int)mode);
         }
     }
 

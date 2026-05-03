@@ -23,7 +23,7 @@ namespace MDBX.UnitTest
             {
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
-                    .Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
 
                 using (MdbxTransaction tran = env.BeginTransaction())
@@ -82,7 +82,7 @@ namespace MDBX.UnitTest
             {
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
-                    .Open(path, EnvironmentFlag.NoStickyThreads, Convert.ToInt32("666", 8));
+                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
 
                 using (MdbxTransaction tran = env.BeginTransaction())
@@ -150,7 +150,7 @@ namespace MDBX.UnitTest
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
                     .SetMapSize(10485760 * 10)
-                    .Open(path, flags, Convert.ToInt32("666", 8));
+                    .Open(path, flags, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
                 DatabaseOption createOption = DatabaseOption.Create | DatabaseOption.IntegerKey;
                 DatabaseOption openOption = DatabaseOption.IntegerKey;

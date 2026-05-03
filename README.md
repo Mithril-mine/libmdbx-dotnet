@@ -18,108 +18,55 @@ This project is licensed under the [Apache License, Version 2.0](http://www.apac
 
 The `libmdbx` library is not shipped with this assembly. And the assembly will load `libmdbx` from the location below according to your platform and OS.
 ```
-/mdbx.NET.dll
-/native
-  ├──/windows
-  │   ├──/x86/mdbx.dll
-  │   ├──/x64/mdbx.dll
-  │   ├──/arm/mdbx.dll
-  │   └──/arm64/mdbx.dll
-  ├──/linux
-  │   ├──/x86/libmdbx.so
-  │   ├──/x64/libmdbx.so
-  │   ├──/arm/libmdbx.so
-  │   └──/arm64/libmdbx.so
-  └──/osx
-      ├──/x86/libmdbx.so
-      ├──/x64/libmdbx.so
-      ├──/arm/libmdbx.so
-      └──/arm64/libmdbx.so
-```
 
 
-## How to Use
+## Использование
 
-NuGet package  is available soon
+### Запись, чтение, удаление.
 
-
-Here is an example of basic operations.
 ```csharp
+
 using MDBX;
+using MDBX.Options;
 
-using (MdbxEnvironment env = new MdbxEnvironment())
-{
-    env.SetMaxDatabases(10) /* разрешить использовать другую бд для тестирования */
-        .Open(path, EnvironmentFlag.NoTLS/* флаги */, Convert.ToInt32("666", 8)/* права доступа */ );
+// окружение.
+using MdbxEnvironment mdbxEnvironment = new();
 
-    DatabaseOption option = DatabaseOption.Create /* нужно для создания новой бд если не существует */
-        | DatabaseOption.IntegerKey/* оптимизировано для фиксированного размера int/long ключа */;
+// настройка окружения.
+mdbxEnvironment
+  .SetMaxDatabases(1)
+  .Open(
+    "path/to/db", 
+    EnvironmentFlag.Exclusive, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite
+);
 
-    // mdbx_put - добавление/обновление записи
-    using (MdbxTransaction tran = env.BeginTransaction())
-    {
-        MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
-        db.Put(10L, "ten");
-        db.Put(1000L, "thousand");
-        db.Put(1000000000L, "billion");
-        db.Put(1000000L, "million");
-        db.Put(100L, "hundred");
-        db.Put(1L, "one");
-        tran.Commit();
-    }
+// Запись.
+using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite)) {
+  var db = transaction.OpenDatabase("dataBaseName", DatabaseOption.IntegerKey | DatabaseOption.Create);
 
+  for (int i = 0; i < 1_000_000; i++) {
+    db.Put(i, $"entry {i}");
+  }
 
-    // mdbx_get - получение записи
-    using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
-    {
-        MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
-
-        string text = db.Get<long, string>(1000000L);
-        Assert.NotNull(text);
-        Assert.Equal("million", text);
-    }
-
-    // mdbx_del - удаление записи
-    using (MdbxTransaction tran = env.BeginTransaction())
-    {
-        MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
-        bool deleted = db.Del(100L);
-        Assert.True(deleted);
-        deleted = db.Del(100L);
-        Assert.False(deleted);
-        tran.Commit();
-    }
-
-
-    // mdbx_get - проверка что запись удалена
-    using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
-    {
-        MdbxDatabase db = tran.OpenDatabase("basic_op_test", option);
-
-        string text = db.Get<long, string>(100L);
-        Assert.Null(text);
-    }
+  transaction.Commit();
 }
-```
 
-Here is an example of using cursor
-
-```csharp
-using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
-{
-    MdbxDatabase db = tran.OpenDatabase("cursor_test1");
-    using (MdbxCursor cursor = db.OpenCursor())
-    {
-        string key = null, value = null;
-        cursor.Get(ref key, ref value, CursorOp.First);
-        // ...
-        
-        while(cursor.Get(ref key, ref value, CursorOp.Next))
-        {
-            // ...
-        }
-    }
+// Чтение.
+using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite)) {
+  for (int i = 0; i < 1_000_000; i++) {
+    var result = db.Get<int, string>(i);
+  }
 }
-```
 
-Please check unit test for more examples
+// Удаление.
+using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite)) {
+  for (int i = 0; i < 1_000_000; i++) {
+    var result = db.Del<int, string>(i);
+  }
+
+  transaction.Commit();
+}
+
+mdbxEnvironment.Close();
+
+```
