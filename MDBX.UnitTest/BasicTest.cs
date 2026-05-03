@@ -31,7 +31,7 @@ public class BasicTest
 
         mdbxEnvironment
             .SetMaxDatabases(1)
-            .Open(dataBasePath, EnvironmentFlags, Convert.ToInt32("666", 8));
+            .Open(dataBasePath, EnvironmentFlags, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
         using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite))
         {
@@ -77,7 +77,7 @@ public class BasicTest
                 Assert.True(res);
             }
 
-            db.Drop();
+            transaction.Commit();
 
         }
 
@@ -93,7 +93,7 @@ public class BasicTest
         mdbxEnvironment
             .SetMaxDatabases(1)
             .Open(dataBasePathForSingle,
-             EnvironmentFlag.WriteMap, Convert.ToInt32("666", 8))
+             EnvironmentFlag.WriteMap, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite)
             ;
 
         var dbName = Guid.NewGuid().ToString();
@@ -130,7 +130,7 @@ public class BasicTest
 
         mdbxEnvironment
             .SetMaxDatabases(1)
-            .Open(dataBasePath, EnvironmentFlags, Convert.ToInt32("666", 8));
+            .Open(dataBasePath, EnvironmentFlags, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
 
         using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite))
         {
