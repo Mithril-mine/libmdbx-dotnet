@@ -17,15 +17,12 @@ libmdbx — это чрезвычайно быстрая, компактная, 
 This project is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 The `libmdbx` library is not shipped with this assembly. And the assembly will load `libmdbx` from the location below according to your platform and OS.
-```
-
 
 ## Использование
 
 ### Запись, чтение, удаление.
 
 ```csharp
-
 using MDBX;
 using MDBX.Options;
 
