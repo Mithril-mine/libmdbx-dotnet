@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Libmdbx</RootNamespace>
+    <AssemblyName>libmdbx-dotnet</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageId>libmdbx-dotnet</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Mithril-mine</Authors>
+    <Description>.NET bindings of libmdbx, successor of LMDB (Lightning Memory-Mapped Database)</Description>
+    <PackageTags>libmdbx;mdbx;lmdb;key-value;database;embedded;nosql</PackageTags>
+    <RepositoryUrl>https://github.com/Mithril-mine/libmdbx-dotnet</RepositoryUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <!-- Copy native libraries to the output directory -->
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)..\..\runtimes\**\*"
+             CopyToOutputDirectory="PreserveNewest"
+             Link="runtimes\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>

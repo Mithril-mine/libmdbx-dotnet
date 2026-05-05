@@ -1,0 +1,20 @@
+## .NET / C# artefacts
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+*.nupkg
+*.snupkg
+TestResults/
+
+## OS-specific
+.DS_Store
+Thumbs.db
+
+## Rider / JetBrains
+.idea/
+
+## Native build artefacts (keep only the pre-built runtimes/ binaries)
+/tmp/

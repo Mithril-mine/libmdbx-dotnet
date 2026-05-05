@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/libmdbx-dotnet/libmdbx-dotnet.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/libmdbx-dotnet.Tests/libmdbx-dotnet.Tests.csproj" />
+  </Folder>
+</Solution>
