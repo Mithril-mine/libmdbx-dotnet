@@ -135,10 +135,8 @@ internal static class Environment
 
     [SuppressUnmanagedCodeSecurity]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    private delegate int InfoDelegate(IntPtr env
-        , ref EnvironmentInfo info
-        , UIntPtr bytes
-        );
+    private delegate int InfoDelegate(IntPtr env, ref EnvironmentInfo info, UIntPtr bytes);
+
     private static InfoDelegate? _infoDelegate = null;
 
     public static EnvironmentInfo Info(IntPtr env)

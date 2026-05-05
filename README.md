@@ -74,6 +74,7 @@ docfx docfx.json --serve
 
 # Статус готовности привязок функций C API
 
+- ⏳ mdbx_gc_info
 - ⏳ mdbx_canary_get
 - ⏳ mdbx_canary_put
 - ⏳ mdbx_cursor_bind
@@ -135,7 +136,8 @@ docfx docfx.json --serve
 - ⏳ mdbx_env_get_pathW
 - ⏳ mdbx_env_get_userctx
 - ⏳ mdbx_env_get_valsize4page_max
-- ⏳ mdbx_env_info_ex
+- ❌ mdbx_env_info_ex
+- ✅ mdbx_env_info
 - ✅ mdbx_env_open
 - ⏳ mdbx_env_open_for_recovery
 - ✅ mdbx_env_openW

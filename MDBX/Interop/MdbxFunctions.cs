@@ -1,7 +1,13 @@
 ﻿namespace MDBX.Interop;
 
+/// <summary>
+/// Функции libmdbx C API.
+/// </summary>
 internal static class MdbxFunctions
 {
+    /// <summary>
+    /// Функции для работы с окружением libmdbx.
+    /// </summary>
     internal static class Environment
     {
         internal static readonly string Create = "mdbx_env_create";
@@ -13,8 +19,11 @@ internal static class MdbxFunctions
         /// </summary>
         internal static readonly string Open = MdbxDotNetPlatform.IsWindows ? "mdbx_env_openW": "mdbx_env_open";
         internal static readonly string Stat = "mdbx_env_stat";
+        /// <summary>
+        /// Возвращает информацию о среде MDBX.
+        /// </summary>
         internal static readonly string Info = "mdbx_env_info";
-        internal static readonly string Sync = "mdbx_env_info";
+        internal static readonly string Sync = "mdbx_env_sync";
         internal static readonly string SetMaxDbs = "mdbx_env_set_maxdbs";
         internal static readonly string SetFlags = "mdbx_env_set_flags";
         internal static readonly string GetFlags = "mdbx_env_get_flags";
