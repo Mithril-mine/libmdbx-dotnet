@@ -4,3 +4,5 @@ MDBX/obj
 MDBX/bin
 .vs/
 *.log
+docs/_site
+docs/api/*.yml
