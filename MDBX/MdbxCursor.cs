@@ -31,7 +31,6 @@ public class MdbxCursor : IDisposable
 
     internal MdbxCursor(MdbxEnvironment env, MdbxTransaction tran, MdbxDatabase db, IntPtr cursorPtr)
     {
-        string a = System.Environment.StackTrace;
         _env = env;
         _tran = tran;
         _db = db;
@@ -105,7 +104,7 @@ public class MdbxCursor : IDisposable
         }
         catch (MdbxException ex)
         {
-            if (ex.ErrorNumber == MdbxCode.MDBX_NOTFOUND)
+            if (ex.ErrorNumber == Constant.MDBX_NOTFOUND)
                 return false;
             throw;
         }

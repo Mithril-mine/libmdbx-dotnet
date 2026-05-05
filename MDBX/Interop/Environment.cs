@@ -260,7 +260,7 @@ internal static class Environment
         int result = _getMaxKeySizeDelegate(env);
         if (result < 0)
         {
-            throw new MdbxException("mdbx_env_get_maxkeysize", MdbxCode.MDBX_INVALID);
+            throw new MdbxException("mdbx_env_get_maxkeysize", Constant.MDBX_INVALID);
         }
         return result;
     }

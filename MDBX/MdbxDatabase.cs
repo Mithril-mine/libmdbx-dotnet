@@ -133,7 +133,7 @@ public class MdbxDatabase
         }
         catch (MdbxException ex)
         {
-            if (ex.ErrorNumber == MdbxCode.MDBX_NOTFOUND)
+            if (ex.ErrorNumber == Constant.MDBX_NOTFOUND)
                 return [];
             throw;
         }
@@ -191,7 +191,7 @@ public class MdbxDatabase
         }
         catch (MdbxException ex)
         {
-            if (ex.ErrorNumber == MdbxCode.MDBX_NOTFOUND)
+            if (ex.ErrorNumber == Constant.MDBX_NOTFOUND)
                 return false; // key not found
             throw;
         }
