@@ -10,18 +10,33 @@ namespace MDBX.Interop
     [StructLayout(LayoutKind.Sequential)]
     public struct EnvironmentInfoGeo
     {
+        /// <summary>
+        /// Lower limit for datafile size.
+        /// </summary>
         [MarshalAs(UnmanagedType.U8)]
         private ulong _lower;
 
+        /// <summary>
+        /// Upper limit for datafile size
+        /// </summary>
         [MarshalAs(UnmanagedType.U8)]
         private ulong _upper;
 
+        /// <summary>
+        /// Current datafile size.
+        /// </summary>
         [MarshalAs(UnmanagedType.U8)]
         private ulong _current;
 
+        /// <summary>
+        /// Shrink threshold for datafile.
+        /// </summary>
         [MarshalAs(UnmanagedType.U8)]
         private ulong _shrink;
 
+        /// <summary>
+        /// Growth step for datafile.
+        /// </summary>
         [MarshalAs(UnmanagedType.U8)]
         private ulong _grow;
 

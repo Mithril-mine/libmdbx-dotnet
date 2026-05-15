@@ -9,51 +9,24 @@ namespace MDBX.Interop;
 [StructLayout(LayoutKind.Sequential)]
 public struct EnvironmentStat
 {
-    [MarshalAs(UnmanagedType.U4)]
-    private uint _pageSize;
+    /// <summary>Размер страницы таблицы в байтах. Данное значение одинаково для всех таблиц в рамках одной базы данных.</summary>
+    public uint MsPsize;
 
-    [MarshalAs(UnmanagedType.U4)]
-    private uint _depth;
+    /// <summary>Глубина (высота) дерева B-tree.</summary>
+    public uint MsDepth;
 
-    [MarshalAs(UnmanagedType.U8)]
-    private ulong _branchPages;
+    /// <summary>Количество внутренних (ветвевых, нелистовых) страниц дерева.</summary>
+    public ulong MsBranchPages;
 
-    [MarshalAs(UnmanagedType.U8)]
-    private ulong _leafPages;
+    /// <summary>Количество листовых (leaf) страниц дерева.</summary>
+    public ulong MsLeafPages;
 
-    [MarshalAs(UnmanagedType.U8)]
-    private ulong _overflowPages;
+    /// <summary>Количество больших страниц или страниц переполнения (overflow pages).</summary>
+    public ulong MsOverflowPages;
 
-    [MarshalAs(UnmanagedType.U8)]
-    private ulong _entries;
+    /// <summary>Общее количество элементов данных (записей), хранящихся в таблице.</summary>
+    public ulong MsEntries;
 
-    /// <summary>
-    /// Размер страницы базы данных. В настоящее время одинаков для всех баз данных.
-    /// </summary>
-    public readonly uint PageSize { get { return _pageSize; } }
-
-    /// <summary>
-    /// Глубина (высота) B-дерева
-    /// </summary>
-    public readonly uint Depth { get { return _depth; } }
-
-    /// <summary>
-    /// Количество внутренних (нелистовых) страниц
-    /// </summary>
-    public readonly ulong BranchPages { get { return _branchPages; } }
-
-    /// <summary>
-    /// Количество листовых страниц
-    /// </summary>
-    public readonly ulong LeafPages { get { return _leafPages; } }
-
-    /// <summary>
-    /// Количество переполняющих страниц
-    /// </summary>
-    public readonly ulong OverflowPages { get { return _overflowPages; } }
-
-    /// <summary>
-    /// Количество элементов данных
-    /// </summary>
-    public readonly ulong Entries { get { return _entries; } }
+    /// <summary>Идентификатор (ID) транзакции, которой было зафиксировано последнее изменение в этой таблице.</summary>
+    public ulong MsModTxnid;
 }

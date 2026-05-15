@@ -82,14 +82,13 @@ namespace MDBX.UnitTest
             {
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
-                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
-
+                    .Open(path, EnvironmentFlag.NoMetaSync, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+                
+                var dbName = $"cursor_test2_{Guid.NewGuid().ToString()}";
 
                 using (MdbxTransaction tran = env.BeginTransaction())
                 {
-                    MdbxDatabase db = tran.OpenDatabase("cursor_test2", DatabaseOption.Create
-                        | DatabaseOption.IntegerKey /* оптимизировано для фиксированного размера int или long ключа */
-                        );
+                    MdbxDatabase db = tran.OpenDatabase(dbName, DatabaseOption.Create);
                     db.Empty(); // clean this data table for test
 
                     // add some keys
@@ -101,7 +100,7 @@ namespace MDBX.UnitTest
 
                 using (MdbxTransaction tran = env.BeginTransaction())
                 {
-                    MdbxDatabase db = tran.OpenDatabase("cursor_test2");
+                    MdbxDatabase db = tran.OpenDatabase(dbName);
                     using (MdbxCursor cursor = db.OpenCursor())
                     {
                         cursor.Put(2, "2a"); // update by key

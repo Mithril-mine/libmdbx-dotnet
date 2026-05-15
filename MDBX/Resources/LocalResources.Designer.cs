@@ -59,5 +59,14 @@ namespace MDBX.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &quot;{0}&quot; called before Library.Load().
+        /// </summary>
+        internal static string ERROR_NATIVE_LIB_LOADER_CALL {
+            get {
+                return ResourceManager.GetString("ERROR_NATIVE_LIB_LOADER_CALL", resourceCulture);
+            }
+        }
     }
 }

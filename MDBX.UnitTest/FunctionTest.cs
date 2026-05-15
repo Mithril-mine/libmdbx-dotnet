@@ -28,22 +28,29 @@ namespace MDBX.UnitTest
             }
         }
 
-        [Fact(DisplayName = "mdbx_env_info")]
+        [Fact(DisplayName = "mdbx_env_info_ex")]
         public void Test2()
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "mdbx");
+            const string dataBaseName = "mdbx_env_info_ex";
+
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), dataBaseName);
+           
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
 
-            using (MdbxEnvironment env = new MdbxEnvironment())
-            {
-                env.Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+            using MdbxEnvironment env = new();
 
-                var stat = env.Info();
+            env
+                .SetMaxDatabases(10)
+                .Open(path, EnvironmentFlag.EnvDefaults, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite)
+                
+                ;
 
-                env.Close();
-            }
+
+            var stat = env.InfoEx();
+
+            env.Close();
         }
 
 
