@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 
 
-namespace MDBX.Interop
+namespace MDBX.Interop.Models
 {
     /// <summary>
     /// Информация о геометрии (размерах) окружения базы данных MDBX.

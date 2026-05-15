@@ -18,21 +18,21 @@ public enum DatabaseOption : int
     /// строк к началу. По умолчанию ключи обрабатываются как строки и сравниваются
     /// от начала к концу.
     /// </summary>
-    ReverseKey = Constant.MDBX_REVERSEKEY,
+    ReverseKey = Constants.MDBX_REVERSEKEY,
 
     /// <summary>
     /// Дублирующиеся ключи могут использоваться в таблице. Или, с другой точки
     /// зрения, ключи могут иметь несколько элементов данных, хранящихся в отсортированном порядке.
     /// По умолчанию ключи должны быть уникальными и могут иметь только один элемент данных.
     /// </summary>
-    DupSort = Constant.MDBX_DUPSORT,
+    DupSort = Constants.MDBX_DUPSORT,
 
     /// <summary>
     /// Ключи - это двоичные целые числа в нативном порядке байт, либо uint32_t или
     /// uint64_t, и будут сортироваться соответственно. Все ключи должны быть
     /// одинакового размера.
     /// </summary>
-    IntegerKey = Constant.MDBX_INTEGERKEY,
+    IntegerKey = Constants.MDBX_INTEGERKEY,
 
     /// <summary>
     /// Этот флаг может использоваться только в комбинации с MDBX_DUPSORT.
@@ -43,23 +43,23 @@ public enum DatabaseOption : int
     /// MDBX_PREV_MULTIPLE могут быть использованы для извлечения нескольких
     /// элементов одновременно.
     /// </summary>
-    DupFixed = Constant.MDBX_DUPFIXED,
+    DupFixed = Constants.MDBX_DUPFIXED,
 
     /// <summary>
     /// Эта опция указывает, что дублирующие элементы данных являются двоичными
     /// целыми числами, аналогично ключам MDBX_INTEGERKEY.
     /// </summary>
-    IntegerDup = Constant.MDBX_INTEGERDUP,
+    IntegerDup = Constants.MDBX_INTEGERDUP,
 
     /// <summary>
     /// Эта опция указывает, что дублирующие элементы данных должны сравниваться как
     /// строки в обратном порядке (сравнение выполняется от последнего байта к первому).
     /// </summary>
-    ReverseDup = Constant.MDBX_REVERSEDUP,
+    ReverseDup = Constants.MDBX_REVERSEDUP,
 
     /// <summary>
     /// Создать именованную базу данных, если она не существует. Эта опция не
     /// разрешена в транзакции только для чтения или среде только для чтения.
     /// </summary>
-    Create = Constant.MDBX_CREATE,
+    Create = Constants.MDBX_CREATE,
 }

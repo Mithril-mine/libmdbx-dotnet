@@ -1,7 +1,7 @@
 /// <summary>
 /// Константы MDBX.
 /// </summary>
-internal static class Constant
+internal static class Constants
 {
     /// <summary>
     /// Среда не создаст поддиректорию для данных.

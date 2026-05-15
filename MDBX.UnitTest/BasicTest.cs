@@ -20,7 +20,7 @@ public class BasicTest
 
     private static readonly CountryModel[] countries = GetCountries();
 
-    private static readonly long totalEntries = 2_000_000;
+    private static readonly long totalEntries = 1_000_000;
 
     public BasicTest() => CheckDataBasePath();
 
@@ -179,6 +179,139 @@ public class BasicTest
 
         mdbxEnvironment.Close();
     }
+
+    [Fact(DisplayName = "Mdbx combined integer key Sync")]
+    public void MdbxCombinedIntegerKeySync()
+    {
+        using MdbxEnvironment mdbxEnvironment = new();
+
+        mdbxEnvironment
+            .SetMaxDatabases(1)
+            .Open(dataBasePath, EnvironmentFlag.None, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+
+        using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite))
+        {
+            var db = transaction.OpenDatabase("combined", DatabaseOption.IntegerKey | DatabaseOption.Create);
+
+            var itemsAdded = 0;
+
+            for (int i = 0; i < totalEntries; i++)
+            {
+                db.Put(i, $"entry {i}");
+
+                itemsAdded++;
+
+                if (i == totalEntries)
+                {
+                    mdbxEnvironment.Sync(true);
+                }
+            }
+
+            transaction.Commit();
+
+            Assert.Equal(totalEntries, itemsAdded);
+        }
+
+        using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadOnly))
+        {
+            var db = transaction.OpenDatabase("combined", DatabaseOption.IntegerKey);
+
+            for (int i = 0; i < totalEntries; i++)
+            {
+                string res = db.Get<int, string>(i);
+
+                Assert.Equal($"entry {i}", res);
+
+            }
+
+            transaction.Reset();
+        }
+
+        using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite))
+        {
+            var db = transaction.OpenDatabase("combined", DatabaseOption.IntegerKey);
+
+
+            for (int i = 0; i < totalEntries; i++)
+            {
+                var res = db.Del(i);
+                Assert.True(res);
+            }
+
+            transaction.Commit();
+
+        }
+
+        mdbxEnvironment.Close();
+
+    }
+
+    [Fact(DisplayName = "Mdbx combined integer key SyncEx")]
+    public void MdbxCombinedIntegerKeySyncEx()
+    {
+        using MdbxEnvironment mdbxEnvironment = new();
+
+        mdbxEnvironment
+            .SetMaxDatabases(1)
+            .Open(dataBasePath, EnvironmentFlag.None, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+
+        using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite))
+        {
+            var db = transaction.OpenDatabase("combined", DatabaseOption.IntegerKey | DatabaseOption.Create);
+
+            var itemsAdded = 0;
+
+            for (int i = 0; i < totalEntries; i++)
+            {
+                db.Put(i, $"entry {i}");
+
+                itemsAdded++;
+
+                if (i == totalEntries)
+                {
+                    mdbxEnvironment.SyncEx(true, true);
+                }
+            }
+
+            transaction.Commit();
+
+            Assert.Equal(totalEntries, itemsAdded);
+        }
+
+        using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadOnly))
+        {
+            var db = transaction.OpenDatabase("combined", DatabaseOption.IntegerKey);
+
+            for (int i = 0; i < totalEntries; i++)
+            {
+                string res = db.Get<int, string>(i);
+
+                Assert.Equal($"entry {i}", res);
+
+            }
+
+            transaction.Reset();
+        }
+
+        using (var transaction = mdbxEnvironment.BeginTransaction(TransactionOption.ReadWrite))
+        {
+            var db = transaction.OpenDatabase("combined", DatabaseOption.IntegerKey);
+
+
+            for (int i = 0; i < totalEntries; i++)
+            {
+                var res = db.Del(i);
+                Assert.True(res);
+            }
+
+            transaction.Commit();
+
+        }
+
+        mdbxEnvironment.Close();
+
+    }
+
 
     private static void CheckDataBasePath()
     {

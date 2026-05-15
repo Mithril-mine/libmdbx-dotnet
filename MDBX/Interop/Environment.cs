@@ -1,3 +1,5 @@
+using MDBX.Interop.Functions;
+
 namespace MDBX.Interop;
 
 internal static partial class Environment
@@ -18,5 +20,6 @@ internal static partial class Environment
         _setMaxReadersDelegate = NativeLibraryLoader.GetProcAddress<SetMaxReadersDelegate>(MdbxFunctions.Environment.SetMaxReaders);
         _statDelegate = NativeLibraryLoader.GetProcAddress<StatDelegate>(MdbxFunctions.Environment.StatEx);
         _syncDelegate = NativeLibraryLoader.GetProcAddress<SyncDelegate>(MdbxFunctions.Environment.Sync);
+        _syncExDelegate = NativeLibraryLoader.GetProcAddress<SyncExDelegate>(MdbxFunctions.Environment.SyncEx);
     }
 }

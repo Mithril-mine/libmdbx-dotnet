@@ -27,7 +27,7 @@ public enum EnvironmentFlag : int
     * with damaged or untrusted DB. However, a notable performance
     * degradation should be expected.
     * */
-    Validation = Constant.MDBX_VALIDATION,
+    Validation = Constants.MDBX_VALIDATION,
 
     /// <summary>
     /// По умолчанию MDBX создаёт свою среду в директории, путь к которой
@@ -35,14 +35,14 @@ public enum EnvironmentFlag : int
     /// С этой опцией, path используется как есть для основного файла данных базы.
     /// Файл блокировок будет иметь схожий путь с суффиксом "-lock".
     /// </summary>
-    NoSubDir = Constant.MDBX_NOSUBDIR,
+    NoSubDir = Constants.MDBX_NOSUBDIR,
 
     /// <summary>
     /// Открыть среду в режиме только для чтения. Операции записи не будут
     /// разрешены. MDBX всё равно будет модифицировать файл блокировок - кроме
     /// файловых систем только для чтения, где MDBX не использует блокировки.
     /// </summary>
-    ReadOnly = Constant.MDBX_RDONLY,
+    ReadOnly = Constants.MDBX_RDONLY,
 
     /// <summary>
     /// Использовать записываемое отображение в памяти, если MDBX_RDONLY не установлен.
@@ -61,7 +61,7 @@ public enum EnvironmentFlag : int
     /// Это требует хранения всех изменённых страниц базы данных в памяти, а затем записи их
     /// на диск через файловые операции.
     /// </summary>
-    WriteMap = Constant.MDBX_WRITEMAP,
+    WriteMap = Constants.MDBX_WRITEMAP,
 
     /// <summary>
     /// Сбрасывать системные буферы на диск только один раз за транзакцию, опуская
@@ -73,7 +73,7 @@ public enum EnvironmentFlag : int
     /// но не D (долговечность) базы данных.
     /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
     /// </summary>
-    NoMetaSync = Constant.MDBX_NOMETASYNC,
+    NoMetaSync = Constants.MDBX_NOMETASYNC,
 
     /// <summary>
     /// Не сбрасывать системные буферы на диск при фиксации транзакции.
@@ -92,7 +92,7 @@ public enum EnvironmentFlag : int
     /// Поэтому (MDBX_MAPASYNC | MDBX_WRITEMAP) может быть предпочтительнее.
     /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
     /// </summary>
-    NoSync = Constant.MDBX_NOSYNC,
+    NoSync = Constants.MDBX_NOSYNC,
 
     /// <summary>
     /// При использовании MDBX_WRITEMAP, использовать асинхронные сбросы на диск.
@@ -111,7 +111,7 @@ public enum EnvironmentFlag : int
 #pragma warning disable S1133
     [Obsolete("Please use MDBX_SAFE_NOSYNC instead of MDBX_MAPASYNC.")]
 #pragma warning restore S1133
-    MapAsync = Constant.MDBX_MAPASYNC,
+    MapAsync = Constants.MDBX_MAPASYNC,
 
     /// <summary>
     /// Don't use Thread-Local Storage. Tie reader locktable slots to
@@ -126,7 +126,7 @@ public enum EnvironmentFlag : int
 #pragma warning disable S1133
     [Obsolete("Please use MDBX_NOSTICKYTHREADS")]
 #pragma warning restore S1133
-    NoTLS = Constant.MDBX_NOTLS,
+    NoTLS = Constants.MDBX_NOTLS,
 
     /// <summary>
     /// Отключить readahead. Большинство операционных систем по умолчанию выполняют
@@ -134,7 +134,7 @@ public enum EnvironmentFlag : int
     /// Отключение может улучшить производительность случайного чтения, когда
     /// БД больше чем ОЗУ и системная RAM заполнена.
     /// </summary>
-    NoReadAhead = Constant.MDBX_NORDAHEAD,
+    NoReadAhead = Constants.MDBX_NORDAHEAD,
 
     /// <summary>
     /// Не инициализировать память, выделенную через malloc, перед записью в
@@ -157,19 +157,19 @@ public enum EnvironmentFlag : int
     /// вызывающий должен перезаписать всю зарезервированную память в этом случае.
     /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
     /// </summary>
-    NoMemInit = Constant.MDBX_NOMEMINIT,
+    NoMemInit = Constants.MDBX_NOMEMINIT,
 
     /// <summary>
     /// Стремиться coalesce записи при освобождении FreeDB.
     /// Этот флаг может быть изменён в любой момент с помощью mdbx_env_set_flags().
     /// </summary>
-    Coalesce = Constant.MDBX_COALESCE,
+    Coalesce = Constants.MDBX_COALESCE,
 
     /// <summary>
     /// Политика LIFO для освобождения записей FreeDB.
     /// Это значительно снижает write IPOs в случае MDBX_NOSYNC с периодическими контрольными точками.
     /// </summary>
-    LifoReclaim = Constant.MDBX_LIFORECLAIM,
+    LifoReclaim = Constants.MDBX_LIFORECLAIM,
 
     /// <summary>
     /// Открыть среду в эксклюзивном/монопольном режиме.
@@ -196,7 +196,7 @@ public enum EnvironmentFlag : int
     /// Этот флаг действует только при открытии среды и не может быть изменён после.
     ///
     /// </summary>
-    Exclusive = Constant.MDBX_EXCLUSIVE,
+    Exclusive = Constants.MDBX_EXCLUSIVE,
 
     /// <summary>
     /// Использовать базу данных/среду, которая уже открыта другим(и) процессом(ами).
@@ -211,7 +211,7 @@ public enum EnvironmentFlag : int
     /// БД в режиме только-чтения или другие процессы используют БД в режиме только-чтения.
     ///
     /// </summary>
-    Accede = Constant.MDBX_ACCEDE,
+    Accede = Constants.MDBX_ACCEDE,
 
     /// <summary>
     /// Отвязывает транзакции от потоков насколько это возможно.
@@ -284,12 +284,12 @@ public enum EnvironmentFlag : int
     /// Этот флаг вступает в силу при открытии среды и не может быть изменен после.
     ///
     /// </summary>
-    NoStickyThreads = Constant.MDBX_NOSTICKYTHREADS,
+    NoStickyThreads = Constants.MDBX_NOSTICKYTHREADS,
 
     /// <summary>
     /// Debugging option, fill/perturb released pages.
     /// </summary>
-    PagePerTurb = Constant.MDBX_PAGEPERTURB,
+    PagePerTurb = Constants.MDBX_PAGEPERTURB,
 
     /// <summary>
     /// /* РЕЖИМЫ СИНХРОНИЗАЦИИ***********************************************************/
@@ -343,7 +343,7 @@ public enum EnvironmentFlag : int
     /// детали и не уверены. В противном случае вы можете потерять данные ваших пользователей, как это
     /// произошло в мессенджере [Miranda NG](https://www.miranda-ng.org/). */
     /// </summary>
-    SyncDurable = Constant.MDBX_SYNC_DURABLE,
+    SyncDurable = Constants.MDBX_SYNC_DURABLE,
 
     /// <summary>
     ///
@@ -396,7 +396,7 @@ public enum EnvironmentFlag : int
     /// \ref mdbx_env_set_flags() или передав в \ref mdbx_txn_begin() для
     /// конкретной пишущей транзакции.
     /// </summary>
-    SafeNoSync = Constant.MDBX_SAFE_NOSYNC,
+    SafeNoSync = Constants.MDBX_SAFE_NOSYNC,
 
     /// <summary>
     /// Не синхронизировать ничего и отменить предыдущие steady-коммиты.
@@ -441,5 +441,5 @@ public enum EnvironmentFlag : int
     /// \ref mdbx_env_set_flags(), но не имеет эффекта, если передан в
     /// \ref mdbx_txn_begin() для конкретной пишущей транзакции. \see sync_modes */
     /// </summary>
-    UtterlyNoSync = Constant.MDBX_UTTERLY_NOSYNC,
+    UtterlyNoSync = Constants.MDBX_UTTERLY_NOSYNC,
 }

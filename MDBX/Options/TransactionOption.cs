@@ -30,12 +30,12 @@ namespace MDBX.Options
         /// Только одна транзакция записи может быть активна в один момент времени.
         /// Записи полностью сериализованы, что гарантирует отсутствие взаимоблокировок у записывающих операций.
         /// </summary>
-        ReadWrite = Constant.MDBX_TXN_READWRITE,
+        ReadWrite = Constants.MDBX_TXN_READWRITE,
 
         /// <summary>
         /// Начать транзакцию только на чтение.
         /// </summary>
-        ReadOnly = Constant.MDBX_TXN_RDONLY,
+        ReadOnly = Constants.MDBX_TXN_RDONLY,
 
         /// <summary>
         /// Подготовить, но не начать транзакцию только для чтения.
@@ -44,17 +44,17 @@ namespace MDBX.Options
         /// Этот флаг позволяет предварительно выделить память и занять слот читателя,
         /// избегая этих операций при следующем запуске транзакции.
         /// </summary>
-        ReadonlyPrepare = Constant.MDBX_TXN_RDONLY_PREPARE,
+        ReadonlyPrepare = Constants.MDBX_TXN_RDONLY_PREPARE,
 
         /// <summary>
         /// Не блокировать при запуске транзакции записи.
         /// </summary>
-        Try = Constant.MDBX_TXN_TRY,
+        Try = Constants.MDBX_TXN_TRY,
 
         /// <summary>
         /// Не снижать надежность транзакции, а использовать режим работы среды.
         /// </summary>
-        NoWeaking = Constant.MDBX_TXN_NOWEAKING,
+        NoWeaking = Constants.MDBX_TXN_NOWEAKING,
 
         /// <summary>
         /// Сбрасывать системные буферы на диск только один раз за транзакцию, пропуская сброс метаданных.
@@ -66,7 +66,7 @@ namespace MDBX.Options
         /// То есть сохраняются свойства ACI (атомарность, согласованность, изолированность), но не D (долговечность) базы данных.
         /// Этот флаг может быть изменен в любое время с помощью mdbx_env_set_flags().
         /// </summary>
-        NoMetaSync = Constant.MDBX_NOMETASYNC,
+        NoMetaSync = Constants.MDBX_NOMETASYNC,
 
         /// <summary>
         /// Не сбрасывать системные буферы на диск при фиксации транзакции.
@@ -86,6 +86,6 @@ namespace MDBX.Options
         /// Поэтому (MDBX_MAPASYNC | MDBX_WRITEMAP) может быть предпочтительнее.
         /// Этот флаг может быть изменен в любое время с помощью mdbx_env_set_flags().
         /// </summary>
-        NoSync = Constant.MDBX_NOSYNC,
+        NoSync = Constants.MDBX_NOSYNC,
     }
 }

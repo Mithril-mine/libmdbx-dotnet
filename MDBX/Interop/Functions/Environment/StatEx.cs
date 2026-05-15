@@ -1,3 +1,4 @@
+using MDBX.Interop.Models;
 using System.Runtime.InteropServices;
 using System.Security;
 

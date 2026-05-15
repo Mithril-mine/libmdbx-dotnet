@@ -1,6 +1,7 @@
 namespace MDBX;
 
 using Interop;
+using MDBX.Interop.Models;
 using MDBX.Options;
 using System.Numerics;
 
@@ -205,6 +206,30 @@ public class MdbxEnvironment : IDisposable
             if (!closed && _envPtr != IntPtr.Zero)
             {
                 Environment.Sync(_envPtr, force);
+            }
+            else
+            {
+                throw new InvalidOperationException("MDBX environment is not open.");
+            }
+        }
+    }
+
+    /// <summary>
+    /// Сброс буферов данных среды на диск.
+    /// Если среда не была открыта с флагами отсутствия синхронизации (MDBX_NOMETASYNC, MDBX_SAFE_NOSYNC и MDBX_UTTERLY_NOSYNC), 
+    /// то данные всегда записываются на диск и сбрасываются в него при вызове mdbx_txn_commit(). 
+    /// В противном случае можно вызвать mdbx_env_sync(), чтобы вручную записать на диск несинхронизированные данные и сбросить их.
+    /// 
+    /// Кроме того, функция mdbx_env_sync_ex() с аргументом force=false может использоваться для обеспечения 
+    /// режима опроса при отложенной/асинхронной синхронизации в сочетании с функциями mdbx_env_set_syncbytes() и/или mdbx_env_set_syncperiod().
+    /// </summary>
+    public void SyncEx(bool force, bool nonblock)
+    {
+        lock (_syncRoot)
+        {
+            if (!closed && _envPtr != IntPtr.Zero)
+            {
+                Environment.SyncEx(_envPtr, force, nonblock);
             }
             else
             {

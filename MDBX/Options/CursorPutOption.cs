@@ -23,7 +23,7 @@ public enum CursorPutOption : int
     /// ПРИМЕЧАНИЕ: MDBX в отличие от LMDB позволяет изменять размер данных и
     /// автоматически обрабатывает переordering для отсортированных дубликатов (MDBX_DUPSORT).
     /// </summary>
-    Current = Constant.MDBX_CURRENT,
+    Current = Constants.MDBX_CURRENT,
 
     /// <summary>
     /// Ввести новую пару ключ/данные только если она еще не появилась в
@@ -31,7 +31,7 @@ public enum CursorPutOption : int
     /// с MDBX_DUPSORT. Функция вернет MDBX_KEYEXIST, если пара
     /// ключ/данные уже присутствует в базе данных.
     /// </summary>
-    NoDupData = Constant.MDBX_NODUPDATA,
+    NoDupData = Constants.MDBX_NODUPDATA,
 
     /// <summary>
     /// Ввести новую пару ключ/данные только если ключ еще не появился
@@ -39,7 +39,7 @@ public enum CursorPutOption : int
     /// уже присутствует в базе данных, даже если база данных поддерживает
     /// дубликаты (MDBX_DUPSORT).
     /// </summary>
-    NoOverwrite = Constant.MDBX_NOOVERWRITE,
+    NoOverwrite = Constants.MDBX_NOOVERWRITE,
 
     /// <summary>
     /// Зарезервировать пространство для данных заданного размера, но не копировать данные.
@@ -49,7 +49,7 @@ public enum CursorPutOption : int
     /// сгенерированы позже. Этот флаг не должен указываться, если база данных
     /// была открыта с MDBX_DUPSORT.
     /// </summary>
-    Reserve = Constant.MDBX_RESERVE,
+    Reserve = Constants.MDBX_RESERVE,
 
     /// <summary>
     /// Добавить данную пару ключ/данные в конец базы данных. Никаких сравнений
@@ -57,12 +57,12 @@ public enum CursorPutOption : int
     /// ключи уже находятся в правильном порядке. Загрузка несортированных
     /// ключей с этим флагом вызовет ошибку MDBX_KEYEXIST.
     /// </summary>
-    Append = Constant.MDBX_APPEND,
+    Append = Constants.MDBX_APPEND,
 
     /// <summary>
     /// Аналогично Append, но для отсортированных данных-дубликатов.
     /// </summary>
-    AppendDup = Constant.MDBX_APPENDDUP,
+    AppendDup = Constants.MDBX_APPENDDUP,
 
     /// <summary>
     /// Хранить несколько смежных элементов данных в одном запросе. Этот флаг
@@ -75,5 +75,5 @@ public enum CursorPutOption : int
     /// будет установлено в фактическое количество записанных элементов.
     /// Поле iov_base второго MDBX_val не используется.
     /// </summary>
-    Multiple = Constant.MDBX_MULTIPLE,
+    Multiple = Constants.MDBX_MULTIPLE,
 }

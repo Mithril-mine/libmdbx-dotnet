@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace MDBX.Interop
+namespace MDBX.Interop.Models
 {
     /// <summary>
     /// Представляет значение базы данных (пару ключ/значение) для передачи между managed и unmanaged кодом.

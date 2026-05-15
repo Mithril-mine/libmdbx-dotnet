@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 namespace MDBX;
 
 using Interop;
+using MDBX.Interop.Models;
 using MDBX.Options;
 using MDBX.Serializers;
 
@@ -104,7 +105,7 @@ public class MdbxCursor : IDisposable
         }
         catch (MdbxException ex)
         {
-            if (ex.ErrorNumber == Constant.MDBX_NOTFOUND)
+            if (ex.ErrorNumber == Constants.MDBX_NOTFOUND)
                 return false;
             throw;
         }

@@ -78,8 +78,8 @@ docfx docfx.json --serve
 - ⏳ mdbx_canary_get
 - ⏳ mdbx_canary_put
 - ⏳ mdbx_cursor_bind
-- ⏳ mdbx_cursor_close
-- ✅ mdbx_cursor_close2
+- ✅ mdbx_cursor_close
+- ⏳ mdbx_cursor_close2
 - ⏳ mdbx_cursor_compare
 - ⏳ mdbx_cursor_copy
 - ✅ mdbx_cursor_count
@@ -117,6 +117,7 @@ docfx docfx.json --serve
 - ⏳ mdbx_dump_val
 - ⏳ mdbx_enumerate_tables
 - ⏳ mdbx_env_chk_encount_problem
+- ✅ mdbx_env_close
 - ✅ mdbx_env_close_ex
 - ⏳ mdbx_env_copy
 - ⏳ mdbx_env_copy2fd
@@ -136,7 +137,7 @@ docfx docfx.json --serve
 - ⏳ mdbx_env_get_pathW
 - ⏳ mdbx_env_get_userctx
 - ⏳ mdbx_env_get_valsize4page_max
-- ❌ mdbx_env_info_ex
+- ✅ mdbx_env_info_ex
 - ✅ mdbx_env_info
 - ✅ mdbx_env_open
 - ⏳ mdbx_env_open_for_recovery
@@ -145,11 +146,16 @@ docfx docfx.json --serve
 - ⏳ mdbx_env_set_assert
 - ✅ mdbx_env_set_flags
 - ⏳ mdbx_env_set_hsr
+- ✅ mdbx_env_set_mapsize
+- ✅ mdbx_env_set_maxreaders
+- ✅ mdbx_env_get_maxreaders
+- ✅ mdbx_env_get_maxkeysize
 - ⏳ mdbx_env_set_option
 - ⏳ mdbx_env_set_userctx
 - ✅ mdbx_env_stat
-- ⏳ mdbx_env_stat_ex
-- ⏳ mdbx_env_sync_ex
+- ✅ mdbx_env_stat_ex
+- ✅ mdbx_env_sync
+- ✅ mdbx_env_sync_ex
 - ⏳ mdbx_env_turn_for_recovery
 - ⏳ mdbx_estimate_distance
 - ⏳ mdbx_float_from_key
@@ -186,6 +192,7 @@ docfx docfx.json --serve
 - ⏳ mdbx_reader_check
 - ⏳ mdbx_reader_list
 - ⏳ mdbx_setup_debug
+- ✅ mdbx_env_set_maxdbs
 - ✅ mdbx_strerror
 - ⏳ mdbx_strerror_ANSI2OEM
 - ⏳ mdbx_strerror_r
@@ -193,7 +200,9 @@ docfx docfx.json --serve
 - ⏳ mdbx_thread_register
 - ⏳ mdbx_thread_unregister
 - ✅ mdbx_txn_abort
+- ✅ mdbx_txn_begin
 - ⏳ mdbx_txn_break
+- ✅ mdbx_txn_commit
 - ⏳ mdbx_txn_commit_ex
 - ⏳ mdbx_txn_copy2fd
 - ⏳ mdbx_txn_copy2pathname

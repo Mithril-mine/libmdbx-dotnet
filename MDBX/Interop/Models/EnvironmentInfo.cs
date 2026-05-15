@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 
 
-namespace MDBX.Interop;
+namespace MDBX.Interop.Models;
 
 /// <summary>
 /// Геометрия и ограничения размера файла базы данных.

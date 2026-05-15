@@ -22,5 +22,5 @@ public enum CursorDelOption : int
     /// с MDBX_DUPSORT. Функция вернет MDBX_KEYEXIST, если пара
     /// ключ/данные уже присутствует в базе данных.
     /// </summary>
-    NoDupData = Constant.MDBX_NODUPDATA,
+    NoDupData = Constants.MDBX_NODUPDATA,
 }

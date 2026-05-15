@@ -6,3 +6,4 @@ MDBX/bin
 *.log
 docs/_site
 docs/api/*.yml
+*/*.lscache

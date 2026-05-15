@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 namespace MDBX;
 
 using Interop;
+using MDBX.Interop.Models;
 using MDBX.Options;
 using MDBX.Serializers;
 
@@ -133,7 +134,7 @@ public class MdbxDatabase
         }
         catch (MdbxException ex)
         {
-            if (ex.ErrorNumber == Constant.MDBX_NOTFOUND)
+            if (ex.ErrorNumber == Constants.MDBX_NOTFOUND)
                 return [];
             throw;
         }
@@ -191,7 +192,7 @@ public class MdbxDatabase
         }
         catch (MdbxException ex)
         {
-            if (ex.ErrorNumber == Constant.MDBX_NOTFOUND)
+            if (ex.ErrorNumber == Constants.MDBX_NOTFOUND)
                 return false; // key not found
             throw;
         }

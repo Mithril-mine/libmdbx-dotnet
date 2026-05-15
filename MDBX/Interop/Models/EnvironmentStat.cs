@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 
 
-namespace MDBX.Interop;
+namespace MDBX.Interop.Models;
 
 /// <summary>
 /// Statistics for a database in the environment
