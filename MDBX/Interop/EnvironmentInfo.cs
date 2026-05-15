@@ -2,140 +2,164 @@ using System.Runtime.InteropServices;
 
 
 
-namespace MDBX.Interop
+namespace MDBX.Interop;
+
+/// <summary>
+/// Геометрия и ограничения размера файла базы данных.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct MdbxGeo
 {
-    /// <summary>
-    /// Информация о среде MDBX.
-    /// </summary>
-    [StructLayout(LayoutKind.Sequential)]
-    public struct EnvironmentInfo
-    {
-        private EnvironmentInfoGeo _geo;
+    /// <summary>Нижний предел размера файла данных.</summary>
+    public ulong Lower;
+    /// <summary>Верхний предел размера файла данных.</summary>
+    public ulong Upper;
+    /// <summary>Текущий размер файла данных.</summary>
+    public ulong Current;
+    /// <summary>Порог уменьшения (shrink) файла данных.</summary>
+    public ulong Shrink;
+    /// <summary>Шаг увеличения (growth) файла данных.</summary>
+    public ulong Grow;
+}
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _mapSize;
+/// <summary>
+/// Пара 64-битных идентификаторов.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct MdbxIdPair
+{
+    /// <summary>Компонент X идентификатора.</summary>
+    public ulong X;
+    /// <summary>Компонент Y идентификатора.</summary>
+    public ulong Y;
+}
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _lastPageNo;
+/// <summary>
+/// Идентификаторы загрузки системы, используемые для контроля целостности данных при перезагрузках.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct MdbxBootId
+{
+    /// <summary>Идентификатор текущей загрузки системы.</summary>
+    public MdbxIdPair Current;
+    /// <summary>Первый мета-идентификатор загрузки.</summary>
+    public MdbxIdPair Meta0;
+    /// <summary>Второй мета-идентификатор загрузки.</summary>
+    public MdbxIdPair Meta1;
+    /// <summary>Третий мета-идентификатор загрузки.</summary>
+    public MdbxIdPair Meta2;
+}
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _recentTxnID;
+/// <summary>
+/// Статистика операций со страницами памяти.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct MdbxPgOpStat
+{
+    /// <summary>Количество добавленных новых страниц.</summary>
+    public ulong Newly;
+    /// <summary>Количество страниц, скопированных при обновлении (Copy-On-Write).</summary>
+    public ulong Cow;
+    /// <summary>Количество клонов грязных страниц родительской транзакции для вложенных транзакций.</summary>
+    public ulong Clone;
+    /// <summary>Количество разделений (splits) страниц.</summary>
+    public ulong Split;
+    /// <summary>Количество слияний (merges) страниц.</summary>
+    public ulong Merge;
+    /// <summary>Количество вытесненных (spilled) грязных страниц на диск.</summary>
+    public ulong Spill;
+    /// <summary>Количество возвращенных/перечитанных (unspilled/reloaded) страниц.</summary>
+    public ulong Unspill;
+    /// <summary>Количество явных операций записи на диск (кол-во вызовов, а не страниц).</summary>
+    public ulong Wops;
+    /// <summary>Количество упреждающих (prefault) операций записи.</summary>
+    public ulong Prefault;
+    /// <summary>Количество вызовов функции mincore().</summary>
+    public ulong Mincore;
+    /// <summary>Количество явных операций синхронизации msync на диск.</summary>
+    public ulong Msync;
+    /// <summary>Количество явных операций синхронизации fsync на диск.</summary>
+    public ulong Fsync;
+}
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _lastReaderTxnID;
+/// <summary>
+/// Полная информация о состоянии окружения (Environment) libmdbx.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct EnvironmentInfo
+{
+    /// <summary>Информация о геометрии и границах размера файла данных.</summary>
+    public MdbxGeo MiGeo;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _selfLastReaderTxnID;
+    /// <summary>Размер отображения базы данных в памяти (размер memory map).</summary>
+    public ulong MiMapsize;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _meta0TxnID;
+    /// <summary>Текущий фактический размер файла базы данных.</summary>
+    public ulong MiDxbFsize;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _meta0TxnSign;
+    /// <summary>Пространство, выделенное под файл базы данных в файловой системе.</summary>
+    public ulong MiDxbFallocated;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _meta1TxnID;
+    /// <summary>Номер последней используемой страницы.</summary>
+    public ulong MiLastPgno;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _meta1TxnSign;
+    /// <summary>ID последней зафиксированной (committed) транзакции.</summary>
+    public ulong MiRecentTxnid;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _meta2TxnID;
+    /// <summary>ID последней транзакции чтения (reader transaction).</summary>
+    public ulong MiLatterReaderTxnid;
 
-        [MarshalAs(UnmanagedType.U8)]
-        private ulong _meta2TxnSign;
+    /// <summary>ID последней транзакции чтения текущего (этого) процесса.</summary>
+    public ulong MiSelfLatterReaderTxnid;
 
-        [MarshalAs(UnmanagedType.U4)]
-        private uint _maxReaders;
+    /// <summary>Фиксированный массив из 3 элементов для ID мета-транзакций (размер равен 3).</summary>
+    public unsafe fixed ulong MiMetaTxnid[3];
 
-        [MarshalAs(UnmanagedType.U4)]
-        private uint _numOfReaders;
+    /// <summary>Фиксированный массив из 3 элементов для сигнатур мета-транзакций (размер равен 3).</summary>
+    public unsafe fixed ulong MiMetaSign[3];
 
-        [MarshalAs(UnmanagedType.U4)]
-        private uint _dxbPageSize;
+    /// <summary>Общее количество слотов для читателей, доступных в окружении.</summary>
+    public uint MiMaxreaders;
 
-        [MarshalAs(UnmanagedType.U4)]
-        private uint _sysPageSize;
+    /// <summary>Максимальное количество одновременно использованных слотов читателей в окружении.</summary>
+    public uint MiNumreaders;
 
-        /// <summary>
-        /// Информация о геометрии окружения.
-        /// </summary>
-        public EnvironmentInfoGeo Geo { get { return _geo; } }
+    /// <summary>Размер страницы базы данных.</summary>
+    public uint MiDxbPagesize;
 
-        /// <summary>
-        /// Размер memory map в байтах.
-        /// </summary>
-        public ulong MapSize { get { return _mapSize; } }
+    /// <summary>Размер страницы операционной системы.</summary>
+    public uint MiSysPagesize;
 
-        /// <summary>
-        /// Номер последней страницы.
-        /// </summary>
-        public ulong LastPageNumber { get { return _lastPageNo; } }
+    /// <summary>Размер блока единого кэша страниц операционной системы (Unified Page Cache).</summary>
+    public uint MiSysUpcblk;
 
-        /// <summary>
-        /// Идентификатор последней зафиксированной транзакции.
-        /// </summary>
-        public ulong RecentTransactionID { get { return _recentTxnID; } }
+    /// <summary>Размер блока ввода-вывода (I/O) файловой системы.</summary>
+    public uint MiSysIoblk;
 
-        /// <summary>
-        /// Идентификатор транзакции последнего читателя.
-        /// </summary>
-        public ulong LastReaderTransactionID { get { return _lastReaderTxnID; } }
+    /// <summary>Уникальный ID загрузки операционной системы для контроля согласованности данных.</summary>
+    public MdbxBootId MiBootid;
 
-        /// <summary>
-        /// Идентификатор транзакции собственного последнего читателя.
-        /// </summary>
-        public ulong SelfLastReaderTransactionID { get { return _selfLastReaderTxnID; } }
+    /// <summary>Объем данных в байтах, который еще не был явно синхронизирован на диск.</summary>
+    public ulong MiUnsyncVolume;
 
-        /// <summary>
-        /// Идентификатор транзакции мета-страницы 0.
-        /// </summary>
-        public ulong Meta0TransactionID { get { return _meta0TxnID; } }
+    /// <summary>Текущий порог автоматической синхронизации в байтах.</summary>
+    public ulong MiAutosyncThreshold;
 
-        /// <summary>
-        /// Признак транзакции мета-страницы 0.
-        /// </summary>
-        public ulong Meta0TransactionSign { get { return _meta0TxnSign; } }
+    /// <summary>Время, прошедшее с момента перехода в "грязное" (несинхронизированное) состояние, в единицах 1/65536 секунды.</summary>
+    public uint MiSinceSyncSeconds16dot16;
 
-        /// <summary>
-        /// Идентификатор транзакции мета-страницы 1.
-        /// </summary>
-        public ulong Meta1TransactionID { get { return _meta1TxnID; } }
+    /// <summary>Текущий период автоматической синхронизации в единицах 1/65536 секунды.</summary>
+    public uint MiAutosyncPeriodSeconds16dot16;
 
-        /// <summary>
-        /// Признак транзакции мета-страницы 1.
-        /// </summary>
-        public ulong Meta1TransactionSign { get { return _meta1TxnSign; } }
+    /// <summary>Время, прошедшее с момента последней проверки читателей, в единицах 1/65536 секунды.</summary>
+    public uint MiSinceReaderCheckSeconds16dot16;
 
-        /// <summary>
-        /// Идентификатор транзакции мета-страницы 2.
-        /// </summary>
-        public ulong Meta2TransactionID { get { return _meta2TxnID; } }
+    /// <summary>Текущий режим работы окружения (возвращаемые флаги среды).</summary>
+    public uint MiMode;
 
-        /// <summary>
-        /// Признак транзакции мета-страницы 2.
-        /// </summary>
-        public ulong Meta2TransactionSign { get { return _meta2TxnSign; } }
+    /// <summary>Общая статистика операций со страницами памяти в текущей многопроцессной сессии.</summary>
+    public MdbxPgOpStat MiPgopStat;
 
-        /// <summary>
-        /// Максимальное количество читателей.
-        /// </summary>
-        public uint MaxReaders { get { return _maxReaders; } }
-
-        /// <summary>
-        /// Текущее количество читателей.
-        /// </summary>
-        public uint NumberOfReaders { get { return _numOfReaders; } }
-
-        /// <summary>
-        /// Размер страницы базы данных (dxb page size).
-        /// </summary>
-        public uint DatabasePageSize { get { return _dxbPageSize; } }
-
-        /// <summary>
-        /// Системный размер страницы.
-        /// </summary>
-        public uint SystemPageSize { get { return _sysPageSize; } }
-    }
-
+    /// <summary>GUID файла базы данных (DXB).</summary>
+    public MdbxIdPair MiDxbid;
 }

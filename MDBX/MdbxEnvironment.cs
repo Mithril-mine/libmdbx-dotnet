@@ -2,6 +2,7 @@ namespace MDBX;
 
 using Interop;
 using MDBX.Options;
+using System.Numerics;
 
 /// <summary>
 /// Представляет среду базы данных MDBX.
@@ -63,7 +64,9 @@ public class MdbxEnvironment : IDisposable
     #endregion
 
     internal readonly IntPtr _envPtr = IntPtr.Zero;
-    
+
+    internal IntPtr _transactionPtr = IntPtr.Zero;
+
     private readonly object _syncRoot = new object();
 
     static MdbxEnvironment() => NativeLibraryLoader.Load();
@@ -133,6 +136,9 @@ public class MdbxEnvironment : IDisposable
             if (!closed && _envPtr != IntPtr.Zero)
             {
                 IntPtr ptr = Transaction.Begin(_envPtr, IntPtr.Zero, flags);
+
+                _transactionPtr = ptr;
+
                 return new MdbxTransaction(this, ptr);
             }
             throw new InvalidOperationException("MDBX environment is not open.");
@@ -141,16 +147,22 @@ public class MdbxEnvironment : IDisposable
 
     /// <summary>
     /// Возвращает информацию о среде MDBX.
+    /// По крайней мере один из аргументов env или txn не должен быть нулевым.
+    /// Если аргумент txn не равен нулю, то stat будет заполнен в соответствии с указанной транзакцией. 
+    /// В противном случае, если аргумент txn равен нулю, stat будет заполнен на основе снимка 
+    /// последней зафиксированной транзакции записи,
+    /// а в следующий раз может быть возвращена другая информация.
     /// </summary>
     /// <returns>Информация о среде.</returns>
-    public EnvironmentInfo Info()
+    public EnvironmentInfo InfoEx()
     {
         lock (_syncRoot)
         {
-            if (!closed && _envPtr != IntPtr.Zero)
+            if (!closed)
             {
-                return Environment.Info(_envPtr);
+                return Environment.InfoEx(_envPtr, _transactionPtr);
             }
+
             throw new InvalidOperationException("MDBX environment is not open.");
         }
     }
@@ -165,7 +177,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                return Environment.Stat(_envPtr);
+                return Environment.Stat(_envPtr, _transactionPtr);
             }
             throw new InvalidOperationException("MDBX environment is not open.");
         }
