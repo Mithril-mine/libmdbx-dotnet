@@ -49,7 +49,7 @@ public class MdbxCursor : IDisposable
         if (!closed)
         {
             closed = true;
-            Cursor.Close(_cursorPtr);
+            MdbxInteropCursor.Close(_cursorPtr);
         }
     }
 
@@ -80,7 +80,7 @@ public class MdbxCursor : IDisposable
             DataBaseValue dbKey = new DataBaseValue(keyPtr, key == null ? 0 : key.Length);
             DataBaseValue dbValue = new DataBaseValue(valuePtr, value == null ? 0 : value.Length);
 
-            Cursor.Get(_cursorPtr, ref dbKey, ref dbValue, op);
+            MdbxInteropCursor.Get(_cursorPtr, ref dbKey, ref dbValue, op);
 
             if (dbKey.Address != IntPtr.Zero)
             {
@@ -179,7 +179,7 @@ public class MdbxCursor : IDisposable
             DataBaseValue dbKey = new DataBaseValue(keyPtr, key == null ? 0 : key.Length);
             DataBaseValue dbValue = new DataBaseValue(valuePtr, value == null ? 0 : value.Length);
 
-            Cursor.Put(_cursorPtr, ref dbKey, ref dbValue, option);
+            MdbxInteropCursor.Put(_cursorPtr, ref dbKey, ref dbValue, option);
         }
         finally
         {
@@ -222,7 +222,7 @@ public class MdbxCursor : IDisposable
     /// <param name="option">Опции удаления.</param>
     public void Del(CursorDelOption option = CursorDelOption.Unspecific)
     {
-        Cursor.Del(_cursorPtr, option);
+        MdbxInteropCursor.Del(_cursorPtr, option);
     }
 
 
@@ -235,7 +235,7 @@ public class MdbxCursor : IDisposable
     /// <returns>Количество дубликатов.</returns>
     public int Count()
     {
-        return Cursor.Count(_cursorPtr);
+        return MdbxInteropCursor.Count(_cursorPtr);
     }
 
     /// <summary>

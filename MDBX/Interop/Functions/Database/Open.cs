@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class DataBase
+partial class MdbxInteropDataBase
 {
     /// <summary>
     /// int mdbx_dbi_open(MDBX_txn *txn, const char *name, mdbx_dbi_flags_t flags, MDBX_dbi *dbi)

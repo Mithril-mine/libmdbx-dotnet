@@ -2,7 +2,7 @@ using MDBX.Interop.Functions;
 
 namespace MDBX.Interop;
 
-internal static partial class Transaction
+internal static partial class MdbxInteropTransaction
 {
     /// <summary>
     /// Привязывает все делегаты транзакций к нативным функциям библиотеки MDBX.

@@ -4,7 +4,7 @@ using System.Threading.Tasks.Dataflow;
 
 namespace MDBX.Interop;
 
-partial class Environment
+partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// Сброс буферов данных среды на диск.

@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class Environment
+partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// int mdbx_env_set_flags(MDBX_env *env, mdbx_env_flags_t flags, int onoff)

@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class Transaction
+partial class MdbxInteropTransaction
 {
     /// <summary>
     /// int mdbx_txn_begin(MDBX_env *env, MDBX_txn *parent, mdbx_txn_flags_t flags, MDBX_txn **txn)

@@ -2,7 +2,7 @@ using MDBX.Interop.Functions;
 
 namespace MDBX.Interop;
 
-internal static partial class DataBase
+internal static partial class MdbxInteropDataBase
 {
     internal static void Bind()
     {

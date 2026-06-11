@@ -2,7 +2,7 @@ using MDBX.Interop.Functions;
 
 namespace MDBX.Interop;
 
-internal static partial class Environment
+internal static partial class MdbxInteropEnvironment
 {
     internal static void Bind()
     {

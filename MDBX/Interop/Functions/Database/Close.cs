@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class DataBase
+partial class MdbxInteropDataBase
 {
     /// <summary>
     /// int mdbx_dbi_close(MDBX_env *env, MDBX_dbi dbi)

@@ -5,7 +5,7 @@ namespace MDBX.Interop;
 /// <summary>
 /// Взаимодействие с нативными функциями MDBX для операций с курсором.
 /// </summary>
-internal static partial class Cursor
+internal static partial class MdbxInteropCursor
 {
     /// <summary>
     /// Привязывает все делегаты курсора к нативным функциям библиотеки MDBX.

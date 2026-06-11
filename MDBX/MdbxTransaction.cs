@@ -46,7 +46,7 @@ public class MdbxTransaction : IDisposable
             {
                 _released = true;
 
-                Transaction.Commit(_txnPtr);
+                MdbxInteropTransaction.Commit(_txnPtr);
             }
             else
             {
@@ -63,7 +63,7 @@ public class MdbxTransaction : IDisposable
         if (!_released)
         {
             _released = true;
-            Transaction.Abort(_txnPtr);
+            MdbxInteropTransaction.Abort(_txnPtr);
         }
     }
 
@@ -81,7 +81,7 @@ public class MdbxTransaction : IDisposable
     /// </summary>
     public void Reset()
     {
-        Transaction.Reset(_txnPtr);
+        MdbxInteropTransaction.Reset(_txnPtr);
     }
 
     /// <summary>
@@ -93,7 +93,7 @@ public class MdbxTransaction : IDisposable
     /// </summary>
     public void Renew()
     {
-        Transaction.Renew(_txnPtr);
+        MdbxInteropTransaction.Renew(_txnPtr);
     }
 
     /// <summary>
@@ -120,7 +120,7 @@ public class MdbxTransaction : IDisposable
     /// <returns>Дескриптор базы данных.</returns>
     public MdbxDatabase OpenDatabase(string? name = null, DatabaseOption option = DatabaseOption.Unspecific)
     {
-        return new MdbxDatabase(_env, this, DataBase.Open(_txnPtr, name ?? string.Empty, option));
+        return new MdbxDatabase(_env, this, MdbxInteropDataBase.Open(_txnPtr, name ?? string.Empty, option));
     }
 
     /// <summary>
@@ -131,6 +131,6 @@ public class MdbxTransaction : IDisposable
     /// <returns>Идентификатор транзакции.</returns>
     public ulong GetID()
     {
-        return Transaction.GetID(_txnPtr);
+        return MdbxInteropTransaction.GetID(_txnPtr);
     }
 }

@@ -41,7 +41,7 @@ public class MdbxDatabase
     /// </summary>
     public void Close()
     {
-        DataBase.Close(_env._envPtr, _dbi);
+        MdbxInteropDataBase.Close(_env._envPtr, _dbi);
     }
 
 
@@ -50,7 +50,7 @@ public class MdbxDatabase
     /// </summary>
     public void Drop()
     {
-        DataBase.Drop(_tran._txnPtr, _dbi, true);
+        MdbxInteropDataBase.Drop(_tran._txnPtr, _dbi, true);
     }
 
     /// <summary>
@@ -58,7 +58,7 @@ public class MdbxDatabase
     /// </summary>
     public void Empty()
     {
-        DataBase.Drop(_tran._txnPtr, _dbi, false);
+        MdbxInteropDataBase.Drop(_tran._txnPtr, _dbi, false);
     }
 
     /// <summary>
@@ -80,7 +80,7 @@ public class MdbxDatabase
 
             DataBaseValue dbKey = new DataBaseValue(keyPtr, key.Length);
             DataBaseValue dbValue = new DataBaseValue(valuePtr, value.Length);
-            DataBase.Put(_tran._txnPtr, _dbi, dbKey, dbValue, option);
+            MdbxInteropDataBase.Put(_tran._txnPtr, _dbi, dbKey, dbValue, option);
         }
         finally
         {
@@ -118,7 +118,7 @@ public class MdbxDatabase
         {
             Marshal.Copy(key, 0, keyPtr, key.Length);
             DataBaseValue dbKey = new DataBaseValue(keyPtr, key.Length);
-            DataBaseValue dbValue = DataBase.Get(_tran._txnPtr, _dbi, dbKey);
+            DataBaseValue dbValue = MdbxInteropDataBase.Get(_tran._txnPtr, _dbi, dbKey);
 
             byte[]? buffer = null;
             if (dbValue.Address != IntPtr.Zero && dbValue.Length >= 0)
@@ -186,7 +186,7 @@ public class MdbxDatabase
             Marshal.Copy(key, 0, keyPtr, key.Length);
 
             DataBaseValue dbKey = new DataBaseValue(keyPtr, key.Length);
-            DataBase.Del(_tran._txnPtr, _dbi, dbKey, IntPtr.Zero);
+            MdbxInteropDataBase.Del(_tran._txnPtr, _dbi, dbKey, IntPtr.Zero);
 
             return true;
         }
@@ -229,7 +229,7 @@ public class MdbxDatabase
     /// <returns>Новый курсор для этой базы данных.</returns>
     public MdbxCursor OpenCursor()
     {
-        IntPtr ptr = Cursor.Open(_tran._txnPtr, _dbi);
+        IntPtr ptr = MdbxInteropCursor.Open(_tran._txnPtr, _dbi);
         return new MdbxCursor(_env, _tran, this, ptr);
     }
 

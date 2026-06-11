@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class Cursor
+partial class MdbxInteropCursor
 {
     /// <summary>
     /// int mdbx_cursor_count(MDBX_cursor *cursor, size_t *count)

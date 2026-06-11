@@ -164,10 +164,10 @@ internal static partial class NativeLibraryLoader
             default: throw new FileNotFoundException($"MDBX failed to load library at {filepath}", filepath);
         }
 
-        Misc.Bind();
-        Environment.Bind();
-        Transaction.Bind();
-        DataBase.Bind();
-        Cursor.Bind();
+        MdbxInteropMisc.Bind();
+        MdbxInteropEnvironment.Bind();
+        MdbxInteropTransaction.Bind();
+        MdbxInteropDataBase.Bind();
+        MdbxInteropCursor.Bind();
     }
 }

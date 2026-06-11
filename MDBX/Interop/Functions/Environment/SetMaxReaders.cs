@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class Environment
+partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// int mdbx_env_set_maxreaders(MDBX_env *env, mdbx_reader_t readers)

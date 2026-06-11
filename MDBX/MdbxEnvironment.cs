@@ -75,7 +75,7 @@ public class MdbxEnvironment : IDisposable
     /// <summary>
     /// Обыкновенный конструктор для создания новых экземпляров MdbxEnvironment.
     /// </summary>
-    public MdbxEnvironment() => _envPtr = Environment.Create();
+    public MdbxEnvironment() => _envPtr = MdbxInteropEnvironment.Create();
 
     /// <summary>
     /// Закрывает среду базы данных.
@@ -86,7 +86,7 @@ public class MdbxEnvironment : IDisposable
         lock (_syncRoot)
         {
             if (closed) return;
-            Environment.Close(_envPtr, dontSync);
+            MdbxInteropEnvironment.Close(_envPtr, dontSync);
             closed = true;
         }
     }
@@ -114,7 +114,7 @@ public class MdbxEnvironment : IDisposable
         lock (_syncRoot)
         {
             if (closed) throw new InvalidOperationException("MDBX environment is closed.");
-            Environment.Open(_envPtr, path, flags, (int)mode);
+            MdbxInteropEnvironment.Open(_envPtr, path, flags, (int)mode);
         }
     }
 
@@ -136,7 +136,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                IntPtr ptr = Transaction.Begin(_envPtr, IntPtr.Zero, flags);
+                IntPtr ptr = MdbxInteropTransaction.Begin(_envPtr, IntPtr.Zero, flags);
 
                 _transactionPtr = ptr;
 
@@ -161,7 +161,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed)
             {
-                return Environment.InfoEx(_envPtr, _transactionPtr);
+                return MdbxInteropEnvironment.InfoEx(_envPtr, _transactionPtr);
             }
 
             throw new InvalidOperationException("MDBX environment is not open.");
@@ -178,7 +178,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                return Environment.Stat(_envPtr, _transactionPtr);
+                return MdbxInteropEnvironment.Stat(_envPtr, _transactionPtr);
             }
             throw new InvalidOperationException("MDBX environment is not open.");
         }
@@ -205,7 +205,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                Environment.Sync(_envPtr, force);
+                MdbxInteropEnvironment.Sync(_envPtr, force);
             }
             else
             {
@@ -229,7 +229,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                Environment.SyncEx(_envPtr, force, nonblock);
+                MdbxInteropEnvironment.SyncEx(_envPtr, force, nonblock);
             }
             else
             {
@@ -257,7 +257,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                Environment.SetMaxDBs(_envPtr, num);
+                MdbxInteropEnvironment.SetMaxDBs(_envPtr, num);
             }
             else
             {
@@ -288,7 +288,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                Environment.SetMaxReaders(_envPtr, num);
+                MdbxInteropEnvironment.SetMaxReaders(_envPtr, num);
             }
             else
             {
@@ -334,7 +334,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                Environment.SetMapSize(_envPtr, num);
+                MdbxInteropEnvironment.SetMapSize(_envPtr, num);
             }
             else
             {
@@ -356,7 +356,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                Environment.SetFlags(_envPtr, flags, option == EnvironmentFlagOption.Add);
+                MdbxInteropEnvironment.SetFlags(_envPtr, flags, option == EnvironmentFlagOption.Add);
             }
             else
             {
@@ -375,7 +375,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                return Environment.GetFlags(_envPtr);
+                return MdbxInteropEnvironment.GetFlags(_envPtr);
             }
             throw new InvalidOperationException("MDBX environment is not open.");
         }
@@ -391,7 +391,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                return Environment.GetMaxReaders(_envPtr);
+                return MdbxInteropEnvironment.GetMaxReaders(_envPtr);
             }
             throw new InvalidOperationException("MDBX environment is not open.");
         }
@@ -407,7 +407,7 @@ public class MdbxEnvironment : IDisposable
         {
             if (!closed && _envPtr != IntPtr.Zero)
             {
-                return Environment.GetMaxKeySize(_envPtr);
+                return MdbxInteropEnvironment.GetMaxKeySize(_envPtr);
             }
             throw new InvalidOperationException("MDBX environment is not open.");
         }

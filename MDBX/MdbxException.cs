@@ -29,7 +29,7 @@ public class MdbxException : Exception
         return string.Format("MDBX {0} returned ({1}) - {2}"
             , method
             , errNum
-            , Misc.StringError(errNum)
+            , MdbxInteropMisc.StringError(errNum)
             );
     }
 }

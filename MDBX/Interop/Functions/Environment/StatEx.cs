@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class Environment
+partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// int mdbx_env_stat_ex(MDBX_env *env, mdbx_stat_t *stat, size_t stat_size)

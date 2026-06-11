@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class Environment
+partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// int mdbx_env_open(MDBX_env *env, const char *path, mdbx_env_flags_t flags, mdbx_mode_t mode)
