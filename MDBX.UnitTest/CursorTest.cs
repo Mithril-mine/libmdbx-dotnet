@@ -1,6 +1,7 @@
 using MDBX.Options;
 using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 using Xunit;
@@ -184,6 +185,154 @@ namespace MDBX.UnitTest
                             index++;
                             Assert.Equal(index, key);
                         }
+                    }
+                }
+
+                env.Close();
+            }
+        }
+
+
+        [Fact(DisplayName = "find by substring")]
+        public void TestFindBySubstring()
+        {
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "mdbx");
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
+            using (MdbxEnvironment env = new MdbxEnvironment())
+            {
+                env.SetMaxDatabases(20)
+                    .SetMaxReaders(128)
+                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+
+                var dbName = $"cursor_search_{Guid.NewGuid()}";
+
+                using (MdbxTransaction tran = env.BeginTransaction())
+                {
+                    MdbxDatabase db = tran.OpenDatabase(dbName, DatabaseOption.Create);
+                    db.Empty();
+
+                    db.Put("key-anton", "Anton");
+                    db.Put("key-andrey", "Andrey");
+                    db.Put("key-ira", "Ira");
+
+                    tran.Commit();
+                }
+
+                using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
+                {
+                    MdbxDatabase db = tran.OpenDatabase(dbName);
+                    using (MdbxCursor cursor = db.OpenCursor())
+                    {
+                        var search = new MdbxCursorSearch<string, string>(cursor);
+
+                        var byValue = search.FindByValue("an");
+                        Assert.Equal(new[] { "Andrey", "Anton" }, byValue.Select(item => item.Value).ToArray());
+
+                        var byValueCaseInsensitive = search.FindByValue("TON");
+                        Assert.Equal(new[] { "Anton" }, byValueCaseInsensitive.Select(item => item.Value).ToArray());
+
+                        var byKey = search.FindByKey("an");
+                        Assert.Equal(new[] { "key-andrey", "key-anton" }, byKey.Select(item => item.Key).ToArray());
+
+                        Assert.Empty(search.FindByValue("no-match"));
+                    }
+                }
+
+                env.Close();
+            }
+        }
+
+        [Fact(DisplayName = "find by substring with int key")]
+        public void TestFindBySubstringWithIntKey()
+        {
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "mdbx");
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
+            using (MdbxEnvironment env = new MdbxEnvironment())
+            {
+                env.SetMaxDatabases(20)
+                    .SetMaxReaders(128)
+                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+
+                var dbName = $"cursor_search_int_{Guid.NewGuid()}";
+
+                using (MdbxTransaction tran = env.BeginTransaction())
+                {
+                    MdbxDatabase db = tran.OpenDatabase(dbName, DatabaseOption.Create);
+                    db.Empty();
+
+                    db.Put(1001, "Anton");
+                    db.Put(2002, "Andrey");
+                    db.Put(3003, "Ira");
+
+                    tran.Commit();
+                }
+
+                using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
+                {
+                    MdbxDatabase db = tran.OpenDatabase(dbName);
+                    using (MdbxCursor cursor = db.OpenCursor())
+                    {
+                        var search = new MdbxCursorSearch<int, string>(cursor);
+
+                        var byKey = search.FindByKey(0);
+                        Assert.Equal(new[] { 3003, 2002, 1001 }, byKey.Select(item => item.Key).ToArray());
+
+                        var byValue = search.FindByValue("an");
+                        Assert.Equal(new[] { "Andrey", "Anton" }, byValue.Select(item => item.Value).ToArray());
+
+                        Assert.Empty(search.FindByKey(99));
+                    }
+                }
+
+                env.Close();
+            }
+        }
+
+        [Fact(DisplayName = "find by substring with long key")]
+        public void TestFindBySubstringWithLongKey()
+        {
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "mdbx");
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
+            using (MdbxEnvironment env = new MdbxEnvironment())
+            {
+                env.SetMaxDatabases(20)
+                    .SetMaxReaders(128)
+                    .Open(path, EnvironmentFlag.NoStickyThreads, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
+
+                var dbName = $"cursor_search_long_{Guid.NewGuid()}";
+
+                using (MdbxTransaction tran = env.BeginTransaction())
+                {
+                    MdbxDatabase db = tran.OpenDatabase(dbName, DatabaseOption.Create);
+                    db.Empty();
+
+                    db.Put(1001L, "Anton");
+                    db.Put(2002L, "Andrey");
+                    db.Put(3003L, "Ira");
+
+                    tran.Commit();
+                }
+
+                using (MdbxTransaction tran = env.BeginTransaction(TransactionOption.ReadOnly))
+                {
+                    MdbxDatabase db = tran.OpenDatabase(dbName);
+                    using (MdbxCursor cursor = db.OpenCursor())
+                    {
+                        var search = new MdbxCursorSearch<long, string>(cursor);
+
+                        var byKey = search.FindByKey(0L);
+                        Assert.Equal(new[] { 3003L, 2002L, 1001L }, byKey.Select(item => item.Key).ToArray());
+
+                        var byValue = search.FindByValue("an");
+                        Assert.Equal(new[] { "Andrey", "Anton" }, byValue.Select(item => item.Value).ToArray());
+
+                        Assert.Empty(search.FindByKey(99L));
                     }
                 }
 
