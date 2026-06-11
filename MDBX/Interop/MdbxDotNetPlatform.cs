@@ -18,7 +18,7 @@ internal static class MdbxDotNetPlatform
     internal static MdbxDotNetSupportedPlatform GetPlatform()
     {
         if (IsLinux) return MdbxDotNetSupportedPlatform.Linux;
-        
+
         if (IsWindows) return MdbxDotNetSupportedPlatform.Windows;
 
         return MdbxDotNetSupportedPlatform.Unknown;

@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropEnvironment
+internal partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// int mdbx_env_sync(MDBX_env *env, int force)

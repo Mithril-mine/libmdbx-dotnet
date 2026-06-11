@@ -1,12 +1,10 @@
-using System.Runtime.InteropServices;
-
-namespace MDBX;
-
-using Interop;
+using MDBX.Interop;
 using MDBX.Interop.Models;
 using MDBX.Options;
 using MDBX.Serializers;
+using System.Runtime.InteropServices;
 
+namespace MDBX;
 /// <summary>
 /// Представляет курсор для навигации по данным в базе данных MDBX.
 /// </summary>
@@ -23,11 +21,11 @@ public class MdbxCursor : IDisposable
     }
 
     private readonly MdbxEnvironment _env;
-    
+
     private readonly MdbxTransaction _tran;
-    
+
     private readonly MdbxDatabase _db;
-    
+
     private readonly IntPtr _cursorPtr;
 
     internal MdbxCursor(MdbxEnvironment env, MdbxTransaction tran, MdbxDatabase db, IntPtr cursorPtr)
@@ -44,7 +42,7 @@ public class MdbxCursor : IDisposable
     /// Дескриптор курсора будет освобождён и не должен использоваться после этого вызова.
     /// Его транзакция всё ещё должна быть жива, если это пишущая транзакция.
     /// </summary>
-    void Close()
+    private void Close()
     {
         if (!closed)
         {

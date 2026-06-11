@@ -1,7 +1,7 @@
+
+using MDBX.Interop;
+
 namespace MDBX;
-
-using Interop;
-
 /// <summary>
 /// Исключение MDBX.
 /// </summary>

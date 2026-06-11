@@ -17,7 +17,7 @@ namespace MDBX.UnitTest
     }
 
 
-    class BasicTest3PayloadSerializer : ISerializer<BasicTest3Payload>
+    internal class BasicTest3PayloadSerializer : ISerializer<BasicTest3Payload>
     {
         public BasicTest3Payload Deserialize(byte[] buffer)
         {

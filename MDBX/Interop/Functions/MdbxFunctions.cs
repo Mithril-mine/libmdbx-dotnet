@@ -17,7 +17,7 @@ internal static class MdbxFunctions
         /// Open an environment instance.
         /// On Windows the mdbx_env_openW() is recommended to use.
         /// </summary>
-        internal static readonly string Open = MdbxDotNetPlatform.IsWindows ? "mdbx_env_openW": "mdbx_env_open";
+        internal static readonly string Open = MdbxDotNetPlatform.IsWindows ? "mdbx_env_openW" : "mdbx_env_open";
 
 #pragma warning disable S1133
         [Obsolete("Please use mdbx_env_stat_ex instead of mdbx_env_stat.")]
@@ -27,9 +27,9 @@ internal static class MdbxFunctions
         /// <summary>
         /// Возвращает информацию о среде MDBX.
         /// </summary>
-        #pragma warning disable S1133
+#pragma warning disable S1133
         [Obsolete("Please use mdbx_env_info_ex instead of mdbx_env_info.")]
-        #pragma warning restore S1133
+#pragma warning restore S1133
         internal static readonly string Info = "mdbx_env_info";
         /// <summary>
         /// Возвращает информацию о среде MDBX.

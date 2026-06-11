@@ -4,7 +4,7 @@ namespace MDBX.Interop;
 
 internal class LibraryLoadInfo
 {
-    internal required string FileName {get;set;}
+    internal required string FileName { get; set; }
     internal required string Platform { get; set; }
 }
 
@@ -126,7 +126,7 @@ internal static partial class NativeLibraryLoader
 
     private static string GetLibraryFullPath(LibraryLoadInfo info)
     {
-        var filePath =  Path.Combine(
+        var filePath = Path.Combine(
           AppContext.BaseDirectory
           , "native"
           , info.Platform.ToLowerInvariant()

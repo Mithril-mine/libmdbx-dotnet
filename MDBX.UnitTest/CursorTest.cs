@@ -2,8 +2,6 @@ using MDBX.Options;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xunit;
 
@@ -83,8 +81,8 @@ namespace MDBX.UnitTest
                 env.SetMaxDatabases(20)
                     .SetMaxReaders(128)
                     .Open(path, EnvironmentFlag.NoMetaSync, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite);
-                
-                var dbName = $"cursor_test2_{Guid.NewGuid().ToString()}";
+
+                var dbName = $"cursor_test2_{Guid.NewGuid()}";
 
                 using (MdbxTransaction tran = env.BeginTransaction())
                 {

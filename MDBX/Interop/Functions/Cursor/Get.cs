@@ -5,7 +5,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropCursor
+internal partial class MdbxInteropCursor
 {
     /// <summary>
     /// int mdbx_cursor_get(MDBX_cursor *cursor, MDBX_val *key, MDBX_val *data, mdbx_cursor_op_t op)

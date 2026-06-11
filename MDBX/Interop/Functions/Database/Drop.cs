@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropDataBase
+internal partial class MdbxInteropDataBase
 {
     /// <summary>
     /// int mdbx_drop(MDBX_txn *txn, MDBX_dbi dbi, int del)

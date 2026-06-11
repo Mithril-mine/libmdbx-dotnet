@@ -1,12 +1,10 @@
-using System.Runtime.InteropServices;
-
-namespace MDBX;
-
-using Interop;
+using MDBX.Interop;
 using MDBX.Interop.Models;
 using MDBX.Options;
 using MDBX.Serializers;
+using System.Runtime.InteropServices;
 
+namespace MDBX;
 /// <summary>
 /// Дескриптор таблицы обозначает имя и параметры таблицы, независимо от
 /// того, существует ли такая таблица. Дескриптор таблицы может быть отменён

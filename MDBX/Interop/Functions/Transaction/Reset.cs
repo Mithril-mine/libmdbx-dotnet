@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropTransaction
+internal partial class MdbxInteropTransaction
 {
     /// <summary>
     /// int mdbx_txn_reset(MDBX_txn *txn)

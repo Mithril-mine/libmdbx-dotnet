@@ -6,7 +6,7 @@ namespace MDBX.Interop.Models
     /// Представляет значение базы данных (пару ключ/значение) для передачи между managed и unmanaged кодом.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    internal struct DataBaseValue
+    internal readonly struct DataBaseValue
     {
         /// <summary>
         /// Адрес данных в памяти.

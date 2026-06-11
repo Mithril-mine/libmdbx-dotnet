@@ -1,8 +1,8 @@
-namespace MDBX;
 
-using Interop;
+using MDBX.Interop;
 using MDBX.Options;
 
+namespace MDBX;
 /// <summary>
 /// Представляет транзакцию в базе данных MDBX.
 /// </summary>

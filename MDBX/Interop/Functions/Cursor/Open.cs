@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropCursor
+internal partial class MdbxInteropCursor
 {
     /// <summary>
     /// int mdbx_cursor_open(MDBX_txn *txn, MDBX_dbi dbi, MDBX_cursor **cursor)

@@ -1,5 +1,4 @@
 using MDBX.Options;
-using System;
 using System.IO;
 using System.Reflection;
 
@@ -34,7 +33,7 @@ namespace MDBX.UnitTest
             const string dataBaseName = "mdbx_env_info_ex";
 
             string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), dataBaseName);
-           
+
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
@@ -44,7 +43,7 @@ namespace MDBX.UnitTest
             env
                 .SetMaxDatabases(10)
                 .Open(path, EnvironmentFlag.EnvDefaults, UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite)
-                
+
                 ;
 
 

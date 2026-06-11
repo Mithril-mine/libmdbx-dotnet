@@ -1,10 +1,9 @@
 using System.Runtime.InteropServices;
 using System.Security;
-using System.Threading.Tasks.Dataflow;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropEnvironment
+internal partial class MdbxInteropEnvironment
 {
     /// <summary>
     /// Сброс буферов данных среды на диск.
@@ -24,9 +23,9 @@ partial class MdbxInteropEnvironment
     public static void SyncEx(IntPtr env, bool force, bool nonblock)
     {
         if (_syncExDelegate is null) throw new InvalidOperationException("Env.Sync called before Library.Load()");
-        
+
         int err = _syncExDelegate(env, force ? 1 : 0, nonblock ? 1 : 0);
-       
+
         if (err != 0) throw new MdbxException("mdbx_env_sync_ex", err);
     }
 }

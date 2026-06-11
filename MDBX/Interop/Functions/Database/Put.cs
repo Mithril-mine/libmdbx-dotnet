@@ -5,7 +5,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropDataBase
+internal partial class MdbxInteropDataBase
 {
     /// <summary>
     /// int mdbx_put(MDBX_txn *txn, MDBX_dbi dbi, const MDBX_val *key, const MDBX_val *val, mdbx_put_flags_t flags)

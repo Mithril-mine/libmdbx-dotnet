@@ -1,7 +1,5 @@
 namespace MDBX.Options
 {
-    using Interop;
-
     /// <summary>
     /// Опции транзакции.
     /// </summary>

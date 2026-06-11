@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropCursor
+internal partial class MdbxInteropCursor
 {
     /// <summary>
     /// int mdbx_cursor_del(MDBX_cursor *cursor, mdbx_del_flags_t flags)

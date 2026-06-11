@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropMisc
+internal partial class MdbxInteropMisc
 {
     /// <summary>
     /// const char *mdbx_strerror(int errnum)

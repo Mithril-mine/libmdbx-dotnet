@@ -1,10 +1,9 @@
-namespace MDBX;
 
-using Interop;
+using MDBX.Interop;
 using MDBX.Interop.Models;
 using MDBX.Options;
-using System.Numerics;
 
+namespace MDBX;
 /// <summary>
 /// Представляет среду базы данных MDBX.
 /// </summary>

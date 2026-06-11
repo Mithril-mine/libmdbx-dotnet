@@ -3,7 +3,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropTransaction
+internal partial class MdbxInteropTransaction
 {
     /// <summary>
     /// mdbx_txnid_t mdbx_txn_id(const MDBX_txn *txn)

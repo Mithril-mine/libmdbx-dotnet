@@ -4,7 +4,7 @@ using System.Security;
 
 namespace MDBX.Interop;
 
-partial class MdbxInteropDataBase
+internal partial class MdbxInteropDataBase
 {
     /// <summary>
     /// int mdbx_del(MDBX_txn *txn, MDBX_dbi dbi, const MDBX_val *key, MDBX_val *value)
