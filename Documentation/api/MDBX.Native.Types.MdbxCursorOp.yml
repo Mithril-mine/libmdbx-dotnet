@@ -1,0 +1,561 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxCursorOp
+  commentId: T:MDBX.Native.Types.MdbxCursorOp
+  id: MdbxCursorOp
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST_DUP
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH_RANGE
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_GET_CURRENT
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_GET_MULTIPLE
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_LAST
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_LAST_DUP
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_DUP
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_MULTIPLE
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_NODUP
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_PREV
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_DUP
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_NODUP
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_SET
+  - MDBX.Native.Types.MdbxCursorOp.MDBX_SET_KEY
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorOp
+  nameWithType: MdbxCursorOp
+  fullName: MDBX.Native.Types.MdbxCursorOp
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxCursorOp
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Операции курсора.
+  example: []
+  syntax:
+    content: public enum MdbxCursorOp
+    content.vb: Public Enum MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST
+  id: MDBX_FIRST
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_FIRST
+  nameWithType: MdbxCursorOp.MDBX_FIRST
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_FIRST
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 10
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить первый элемент.
+  example: []
+  syntax:
+    content: MDBX_FIRST = 0
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST_DUP
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST_DUP
+  id: MDBX_FIRST_DUP
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_FIRST_DUP
+  nameWithType: MdbxCursorOp.MDBX_FIRST_DUP
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_FIRST_DUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_FIRST_DUP
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 15
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить первый дубликат.
+  example: []
+  syntax:
+    content: MDBX_FIRST_DUP = 1
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH
+  id: MDBX_GET_BOTH
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_GET_BOTH
+  nameWithType: MdbxCursorOp.MDBX_GET_BOTH
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_GET_BOTH
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 20
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить пару ключ/данные.
+  example: []
+  syntax:
+    content: MDBX_GET_BOTH = 2
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH_RANGE
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH_RANGE
+  id: MDBX_GET_BOTH_RANGE
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_GET_BOTH_RANGE
+  nameWithType: MdbxCursorOp.MDBX_GET_BOTH_RANGE
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_BOTH_RANGE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_GET_BOTH_RANGE
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 25
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить ключ и первые данные, большие или равные указанным.
+  example: []
+  syntax:
+    content: MDBX_GET_BOTH_RANGE = 3
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_CURRENT
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_GET_CURRENT
+  id: MDBX_GET_CURRENT
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_GET_CURRENT
+  nameWithType: MdbxCursorOp.MDBX_GET_CURRENT
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_CURRENT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_GET_CURRENT
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 30
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить текущий элемент.
+  example: []
+  syntax:
+    content: MDBX_GET_CURRENT = 4
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_MULTIPLE
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_GET_MULTIPLE
+  id: MDBX_GET_MULTIPLE
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_GET_MULTIPLE
+  nameWithType: MdbxCursorOp.MDBX_GET_MULTIPLE
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_GET_MULTIPLE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_GET_MULTIPLE
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 35
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить несколько дубликатов.
+  example: []
+  syntax:
+    content: MDBX_GET_MULTIPLE = 5
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_LAST
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_LAST
+  id: MDBX_LAST
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LAST
+  nameWithType: MdbxCursorOp.MDBX_LAST
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_LAST
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LAST
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 40
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить последний элемент.
+  example: []
+  syntax:
+    content: MDBX_LAST = 6
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_LAST_DUP
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_LAST_DUP
+  id: MDBX_LAST_DUP
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LAST_DUP
+  nameWithType: MdbxCursorOp.MDBX_LAST_DUP
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_LAST_DUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LAST_DUP
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 45
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить последний дубликат.
+  example: []
+  syntax:
+    content: MDBX_LAST_DUP = 7
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT
+  id: MDBX_NEXT
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NEXT
+  nameWithType: MdbxCursorOp.MDBX_NEXT
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NEXT
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 50
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить следующий элемент.
+  example: []
+  syntax:
+    content: MDBX_NEXT = 8
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_DUP
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_DUP
+  id: MDBX_NEXT_DUP
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NEXT_DUP
+  nameWithType: MdbxCursorOp.MDBX_NEXT_DUP
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_DUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NEXT_DUP
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 55
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить следующий дубликат.
+  example: []
+  syntax:
+    content: MDBX_NEXT_DUP = 9
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_MULTIPLE
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_MULTIPLE
+  id: MDBX_NEXT_MULTIPLE
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NEXT_MULTIPLE
+  nameWithType: MdbxCursorOp.MDBX_NEXT_MULTIPLE
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_MULTIPLE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NEXT_MULTIPLE
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 60
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить несколько следующих дубликатов.
+  example: []
+  syntax:
+    content: MDBX_NEXT_MULTIPLE = 10
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_NODUP
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_NODUP
+  id: MDBX_NEXT_NODUP
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NEXT_NODUP
+  nameWithType: MdbxCursorOp.MDBX_NEXT_NODUP
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_NEXT_NODUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NEXT_NODUP
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 65
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить первый элемент следующего ключа.
+  example: []
+  syntax:
+    content: MDBX_NEXT_NODUP = 11
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_PREV
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_PREV
+  id: MDBX_PREV
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_PREV
+  nameWithType: MdbxCursorOp.MDBX_PREV
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_PREV
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_PREV
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 70
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить предыдущий элемент.
+  example: []
+  syntax:
+    content: MDBX_PREV = 12
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_DUP
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_DUP
+  id: MDBX_PREV_DUP
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_PREV_DUP
+  nameWithType: MdbxCursorOp.MDBX_PREV_DUP
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_DUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_PREV_DUP
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 75
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить предыдущий дубликат.
+  example: []
+  syntax:
+    content: MDBX_PREV_DUP = 13
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_NODUP
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_NODUP
+  id: MDBX_PREV_NODUP
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_PREV_NODUP
+  nameWithType: MdbxCursorOp.MDBX_PREV_NODUP
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_PREV_NODUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_PREV_NODUP
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 80
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получить последний элемент предыдущего ключа.
+  example: []
+  syntax:
+    content: MDBX_PREV_NODUP = 14
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_SET
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_SET
+  id: MDBX_SET
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_SET
+  nameWithType: MdbxCursorOp.MDBX_SET
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_SET
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_SET
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 85
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Установить ключ.
+  example: []
+  syntax:
+    content: MDBX_SET = 15
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxCursorOp.MDBX_SET_KEY
+  commentId: F:MDBX.Native.Types.MdbxCursorOp.MDBX_SET_KEY
+  id: MDBX_SET_KEY
+  parent: MDBX.Native.Types.MdbxCursorOp
+  langs:
+  - csharp
+  - vb
+  name: MDBX_SET_KEY
+  nameWithType: MdbxCursorOp.MDBX_SET_KEY
+  fullName: MDBX.Native.Types.MdbxCursorOp.MDBX_SET_KEY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCursorOp.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_SET_KEY
+    path: ../MDBX/Types/MdbxCursorOp.cs
+    startLine: 90
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Установить ключ и получить данные.
+  example: []
+  syntax:
+    content: MDBX_SET_KEY = 16
+    return:
+      type: MDBX.Native.Types.MdbxCursorOp
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxCursorOp
+  commentId: T:MDBX.Native.Types.MdbxCursorOp
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCursorOp.html
+  name: MdbxCursorOp
+  nameWithType: MdbxCursorOp
+  fullName: MDBX.Native.Types.MdbxCursorOp

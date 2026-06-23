@@ -1,0 +1,387 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxBunchAction
+  commentId: T:MDBX.Native.Types.MdbxBunchAction
+  id: MdbxBunchAction
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_EXCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_INCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_EXCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_INCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_VALUE
+  - MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_WHOLE
+  langs:
+  - csharp
+  - vb
+  name: MdbxBunchAction
+  nameWithType: MdbxBunchAction
+  fullName: MDBX.Native.Types.MdbxBunchAction
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxBunchAction
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Действие для пакетного удаления курсором.
+  example: []
+  syntax:
+    content: public enum MdbxBunchAction
+    content.vb: Public Enum MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_VALUE
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_VALUE
+  id: MDBX_DELETE_CURRENT_VALUE
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_CURRENT_VALUE
+  nameWithType: MdbxBunchAction.MDBX_DELETE_CURRENT_VALUE
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_VALUE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_CURRENT_VALUE
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 10
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить текущее значение.
+  example: []
+  syntax:
+    content: MDBX_DELETE_CURRENT_VALUE = 0
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  id: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 15
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все мультизначения до текущего (исключая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_EXCLUDING = 1
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  id: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 20
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все мультизначения до текущего (включая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_CURRENT_MULTIVAL_BEFORE_INCLUDING = 2
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  id: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 25
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все мультизначения после текущего (включая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_INCLUDING = 3
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  id: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 30
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все мультизначения после текущего (исключая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_CURRENT_MULTIVAL_AFTER_EXCLUDING = 4
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  id: MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  nameWithType: MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_CURRENT_MULTIVAL_ALL
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_CURRENT_MULTIVAL_ALL
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 35
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все мультизначения для текущего ключа.
+  example: []
+  syntax:
+    content: MDBX_DELETE_CURRENT_MULTIVAL_ALL = 5
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_EXCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_EXCLUDING
+  id: MDBX_DELETE_BEFORE_EXCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_BEFORE_EXCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_BEFORE_EXCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_EXCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_BEFORE_EXCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 40
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все до текущего (исключая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_BEFORE_EXCLUDING = 6
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_INCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_INCLUDING
+  id: MDBX_DELETE_BEFORE_INCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_BEFORE_INCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_BEFORE_INCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_BEFORE_INCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_BEFORE_INCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 45
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все до текущего (включая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_BEFORE_INCLUDING = 7
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_INCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_INCLUDING
+  id: MDBX_DELETE_AFTER_INCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_AFTER_INCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_AFTER_INCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_INCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_AFTER_INCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 50
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все после текущего (включая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_AFTER_INCLUDING = 8
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_EXCLUDING
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_EXCLUDING
+  id: MDBX_DELETE_AFTER_EXCLUDING
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_AFTER_EXCLUDING
+  nameWithType: MdbxBunchAction.MDBX_DELETE_AFTER_EXCLUDING
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_AFTER_EXCLUDING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_AFTER_EXCLUDING
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 55
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все после текущего (исключая текущее).
+  example: []
+  syntax:
+    content: MDBX_DELETE_AFTER_EXCLUDING = 9
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_WHOLE
+  commentId: F:MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_WHOLE
+  id: MDBX_DELETE_WHOLE
+  parent: MDBX.Native.Types.MdbxBunchAction
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DELETE_WHOLE
+  nameWithType: MdbxBunchAction.MDBX_DELETE_WHOLE
+  fullName: MDBX.Native.Types.MdbxBunchAction.MDBX_DELETE_WHOLE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxBunchAction.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DELETE_WHOLE
+    path: ../MDBX/Types/MdbxBunchAction.cs
+    startLine: 60
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все.
+  example: []
+  syntax:
+    content: MDBX_DELETE_WHOLE = 10
+    return:
+      type: MDBX.Native.Types.MdbxBunchAction
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxBunchAction
+  commentId: T:MDBX.Native.Types.MdbxBunchAction
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxBunchAction.html
+  name: MdbxBunchAction
+  nameWithType: MdbxBunchAction
+  fullName: MDBX.Native.Types.MdbxBunchAction

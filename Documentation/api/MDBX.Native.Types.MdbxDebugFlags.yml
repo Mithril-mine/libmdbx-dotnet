@@ -1,0 +1,310 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxDebugFlags
+  commentId: T:MDBX.Native.Types.MdbxDebugFlags
+  id: MdbxDebugFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_ASSERT
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_AUDIT
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DONT_UPGRADE
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DUMP
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_JITTER
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_MULTIOPEN
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_OVERLAP
+  - MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_NONE
+  langs:
+  - csharp
+  - vb
+  name: MdbxDebugFlags
+  nameWithType: MdbxDebugFlags
+  fullName: MDBX.Native.Types.MdbxDebugFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxDebugFlags
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги отладки.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxDebugFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxDebugFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_NONE
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_NONE
+  id: MDBX_DBG_NONE
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_NONE
+  nameWithType: MdbxDebugFlags.MDBX_DBG_NONE
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_NONE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_NONE
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Без флагов отладки.
+  example: []
+  syntax:
+    content: MDBX_DBG_NONE = 0
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_ASSERT
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_ASSERT
+  id: MDBX_DBG_ASSERT
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_ASSERT
+  nameWithType: MdbxDebugFlags.MDBX_DBG_ASSERT
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_ASSERT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_ASSERT
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить дорогостоящую проверку отладочных утверждений.
+  example: []
+  syntax:
+    content: MDBX_DBG_ASSERT = 1
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_AUDIT
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_AUDIT
+  id: MDBX_DBG_AUDIT
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_AUDIT
+  nameWithType: MdbxDebugFlags.MDBX_DBG_AUDIT
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_AUDIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_AUDIT
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить дополнительные дорогостоящие проверки и глубокую верификацию списков страниц.
+  example: []
+  syntax:
+    content: MDBX_DBG_AUDIT = 2
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_JITTER
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_JITTER
+  id: MDBX_DBG_JITTER
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_JITTER
+  nameWithType: MdbxDebugFlags.MDBX_DBG_JITTER
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_JITTER
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_JITTER
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 26
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить небольшие случайные задержки в критических точках.
+  example: []
+  syntax:
+    content: MDBX_DBG_JITTER = 4
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DUMP
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DUMP
+  id: MDBX_DBG_DUMP
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_DUMP
+  nameWithType: MdbxDebugFlags.MDBX_DBG_DUMP
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DUMP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_DUMP
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить включение мета-страниц БД в файлы core dump.
+  example: []
+  syntax:
+    content: MDBX_DBG_DUMP = 8
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_MULTIOPEN
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_MULTIOPEN
+  id: MDBX_DBG_LEGACY_MULTIOPEN
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_LEGACY_MULTIOPEN
+  nameWithType: MdbxDebugFlags.MDBX_DBG_LEGACY_MULTIOPEN
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_MULTIOPEN
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_LEGACY_MULTIOPEN
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 36
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Разрешить многократное открытие окружения.
+  example: []
+  syntax:
+    content: MDBX_DBG_LEGACY_MULTIOPEN = 16
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_OVERLAP
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_OVERLAP
+  id: MDBX_DBG_LEGACY_OVERLAP
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_LEGACY_OVERLAP
+  nameWithType: MdbxDebugFlags.MDBX_DBG_LEGACY_OVERLAP
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_LEGACY_OVERLAP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_LEGACY_OVERLAP
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 41
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Разрешить перекрытие read и write транзакций для одного потока.
+  example: []
+  syntax:
+    content: MDBX_DBG_LEGACY_OVERLAP = 32
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DONT_UPGRADE
+  commentId: F:MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DONT_UPGRADE
+  id: MDBX_DBG_DONT_UPGRADE
+  parent: MDBX.Native.Types.MdbxDebugFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DBG_DONT_UPGRADE
+  nameWithType: MdbxDebugFlags.MDBX_DBG_DONT_UPGRADE
+  fullName: MDBX.Native.Types.MdbxDebugFlags.MDBX_DBG_DONT_UPGRADE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDebugFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DBG_DONT_UPGRADE
+    path: ../MDBX/Types/MdbxDebugFlags.cs
+    startLine: 46
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отключить автоматическое обновление формата БД.
+  example: []
+  syntax:
+    content: MDBX_DBG_DONT_UPGRADE = 64
+    return:
+      type: MDBX.Native.Types.MdbxDebugFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxDebugFlags
+  commentId: T:MDBX.Native.Types.MdbxDebugFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFlags.html
+  name: MdbxDebugFlags
+  nameWithType: MdbxDebugFlags
+  fullName: MDBX.Native.Types.MdbxDebugFlags

@@ -1,0 +1,339 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons
+  commentId: T:MDBX.Native.Types.MdbxDefragStoppingReasons
+  id: MdbxDefragStoppingReasons
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ABORTED
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_DISCONTINUED
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ENOUGH_THRESHOLD
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ERROR
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LAGGARD_READER
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LARGE_CHUNK
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_NOOBSTACLES
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_STEP_SIZE
+  - MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_TIME_LIMIT
+  langs:
+  - csharp
+  - vb
+  name: MdbxDefragStoppingReasons
+  nameWithType: MdbxDefragStoppingReasons
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxDefragStoppingReasons
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Причины остановки дефрагментации базы данных.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxDefragStoppingReasons : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxDefragStoppingReasons As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_NOOBSTACLES
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_NOOBSTACLES
+  id: MDBX_DEFRAG_NOOBSTACLES
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_NOOBSTACLES
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_NOOBSTACLES
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_NOOBSTACLES
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_NOOBSTACLES
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 9
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Нет препятствий для дефрагментации.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_NOOBSTACLES = 0
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_STEP_SIZE
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_STEP_SIZE
+  id: MDBX_DEFRAG_STEP_SIZE
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_STEP_SIZE
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_STEP_SIZE
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_STEP_SIZE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_STEP_SIZE
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Достигнут лимит размера транзакции шага.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_STEP_SIZE = 1
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LARGE_CHUNK
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LARGE_CHUNK
+  id: MDBX_DEFRAG_LARGE_CHUNK
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_LARGE_CHUNK
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_LARGE_CHUNK
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LARGE_CHUNK
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_LARGE_CHUNK
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 13
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Необходимо предварительное перемещение для формирования последовательности свободных страниц.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_LARGE_CHUNK = 2
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_DISCONTINUED
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_DISCONTINUED
+  id: MDBX_DEFRAG_DISCONTINUED
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_DISCONTINUED
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_DISCONTINUED
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_DISCONTINUED
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_DISCONTINUED
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 15
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Дефрагментация была прервана пользователем.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_DISCONTINUED = 4
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LAGGARD_READER
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LAGGARD_READER
+  id: MDBX_DEFRAG_LAGGARD_READER
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_LAGGARD_READER
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_LAGGARD_READER
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_LAGGARD_READER
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_LAGGARD_READER
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 17
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Читатели используют старые MVCC-снимки, блокирующие дефрагментацию.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_LAGGARD_READER = 8
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ENOUGH_THRESHOLD
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ENOUGH_THRESHOLD
+  id: MDBX_DEFRAG_ENOUGH_THRESHOLD
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_ENOUGH_THRESHOLD
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_ENOUGH_THRESHOLD
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ENOUGH_THRESHOLD
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_ENOUGH_THRESHOLD
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 19
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Достигнута цель дефрагментации, заданная пользователем.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_ENOUGH_THRESHOLD = 16
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_TIME_LIMIT
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_TIME_LIMIT
+  id: MDBX_DEFRAG_TIME_LIMIT
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_TIME_LIMIT
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_TIME_LIMIT
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_TIME_LIMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_TIME_LIMIT
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Истек лимит времени дефрагментации.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_TIME_LIMIT = 32
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ABORTED
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ABORTED
+  id: MDBX_DEFRAG_ABORTED
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_ABORTED
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_ABORTED
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ABORTED
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_ABORTED
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 23
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Дефрагментация была прервана пользователем с немедленным завершением.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_ABORTED = 64
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ERROR
+  commentId: F:MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ERROR
+  id: MDBX_DEFRAG_ERROR
+  parent: MDBX.Native.Types.MdbxDefragStoppingReasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DEFRAG_ERROR
+  nameWithType: MdbxDefragStoppingReasons.MDBX_DEFRAG_ERROR
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons.MDBX_DEFRAG_ERROR
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragStoppingReasons.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DEFRAG_ERROR
+    path: ../MDBX/Types/MdbxDefragStoppingReasons.cs
+    startLine: 25
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Произошла ошибка во время дефрагментации.
+  example: []
+  syntax:
+    content: MDBX_DEFRAG_ERROR = 128
+    return:
+      type: MDBX.Native.Types.MdbxDefragStoppingReasons
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons
+  commentId: T:MDBX.Native.Types.MdbxDefragStoppingReasons
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDefragStoppingReasons.html
+  name: MdbxDefragStoppingReasons
+  nameWithType: MdbxDefragStoppingReasons
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons

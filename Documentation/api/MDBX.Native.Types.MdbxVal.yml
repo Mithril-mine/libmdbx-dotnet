@@ -1,0 +1,590 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxVal
+  commentId: T:MDBX.Native.Types.MdbxVal
+  id: MdbxVal
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxVal.#ctor(System.Byte[])
+  - MDBX.Native.Types.MdbxVal.#ctor(System.Void*,System.UIntPtr)
+  - MDBX.Native.Types.MdbxVal.AsSpan
+  - MDBX.Native.Types.MdbxVal.IovBase
+  - MDBX.Native.Types.MdbxVal.IovLen
+  langs:
+  - csharp
+  - vb
+  name: MdbxVal
+  nameWithType: MdbxVal
+  fullName: MDBX.Native.Types.MdbxVal
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxVal.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxVal
+    path: ../MDBX/Types/MdbxVal.cs
+    startLine: 12
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Структура для передачи ключей и данных в таблицах MDBX.
+  remarks: >-
+    Значения, возвращаемые из таблицы, действительны только до следующей
+
+    операции обновления или конца транзакции. Не изменяйте и не освобождайте их,
+
+    так как они обычно указывают прямо в базу данных.
+  example: []
+  syntax:
+    content: public struct MdbxVal
+    content.vb: Public Structure MdbxVal
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxVal.IovBase
+  commentId: F:MDBX.Native.Types.MdbxVal.IovBase
+  id: IovBase
+  parent: MDBX.Native.Types.MdbxVal
+  langs:
+  - csharp
+  - vb
+  name: IovBase
+  nameWithType: MdbxVal.IovBase
+  fullName: MDBX.Native.Types.MdbxVal.IovBase
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxVal.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IovBase
+    path: ../MDBX/Types/MdbxVal.cs
+    startLine: 18
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Указатель на данные.
+  example: []
+  syntax:
+    content: public void* IovBase
+    return:
+      type: System.Void*
+    content.vb: Public IovBase As Void*
+- uid: MDBX.Native.Types.MdbxVal.IovLen
+  commentId: F:MDBX.Native.Types.MdbxVal.IovLen
+  id: IovLen
+  parent: MDBX.Native.Types.MdbxVal
+  langs:
+  - csharp
+  - vb
+  name: IovLen
+  nameWithType: MdbxVal.IovLen
+  fullName: MDBX.Native.Types.MdbxVal.IovLen
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxVal.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IovLen
+    path: ../MDBX/Types/MdbxVal.cs
+    startLine: 23
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Длина данных в байтах.
+  example: []
+  syntax:
+    content: public nuint IovLen
+    return:
+      type: System.UIntPtr
+    content.vb: Public IovLen As UIntPtr
+- uid: MDBX.Native.Types.MdbxVal.#ctor(System.Void*,System.UIntPtr)
+  commentId: M:MDBX.Native.Types.MdbxVal.#ctor(System.Void*,System.UIntPtr)
+  id: '#ctor(System.Void*,System.UIntPtr)'
+  parent: MDBX.Native.Types.MdbxVal
+  langs:
+  - csharp
+  - vb
+  name: MdbxVal(void*, nuint)
+  nameWithType: MdbxVal.MdbxVal(void*, nuint)
+  fullName: MDBX.Native.Types.MdbxVal.MdbxVal(void*, nuint)
+  type: Constructor
+  source:
+    remote:
+      path: MDBX/Types/MdbxVal.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: .ctor
+    path: ../MDBX/Types/MdbxVal.cs
+    startLine: 30
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Инициализирует новую структуру MdbxVal.
+  example: []
+  syntax:
+    content: public MdbxVal(void* pointer, nuint length)
+    parameters:
+    - id: pointer
+      type: System.Void*
+      description: Указатель на данные.
+    - id: length
+      type: System.UIntPtr
+      description: Длина данных в байтах.
+    content.vb: Public Sub New(pointer As Void*, length As UIntPtr)
+  overload: MDBX.Native.Types.MdbxVal.#ctor*
+  nameWithType.vb: MdbxVal.New(Void*, UIntPtr)
+  fullName.vb: MDBX.Native.Types.MdbxVal.New(Void*, System.UIntPtr)
+  name.vb: New(Void*, UIntPtr)
+- uid: MDBX.Native.Types.MdbxVal.#ctor(System.Byte[])
+  commentId: M:MDBX.Native.Types.MdbxVal.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: MDBX.Native.Types.MdbxVal
+  langs:
+  - csharp
+  - vb
+  name: MdbxVal(byte[])
+  nameWithType: MdbxVal.MdbxVal(byte[])
+  fullName: MDBX.Native.Types.MdbxVal.MdbxVal(byte[])
+  type: Constructor
+  source:
+    remote:
+      path: MDBX/Types/MdbxVal.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: .ctor
+    path: ../MDBX/Types/MdbxVal.cs
+    startLine: 40
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Инициализирует новую структуру MdbxVal из управляемого массива байт.
+  example: []
+  syntax:
+    content: public MdbxVal(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+      description: Массив байт.
+    content.vb: Public Sub New(data As Byte())
+  overload: MDBX.Native.Types.MdbxVal.#ctor*
+  nameWithType.vb: MdbxVal.New(Byte())
+  fullName.vb: MDBX.Native.Types.MdbxVal.New(Byte())
+  name.vb: New(Byte())
+- uid: MDBX.Native.Types.MdbxVal.AsSpan
+  commentId: M:MDBX.Native.Types.MdbxVal.AsSpan
+  id: AsSpan
+  parent: MDBX.Native.Types.MdbxVal
+  langs:
+  - csharp
+  - vb
+  name: AsSpan()
+  nameWithType: MdbxVal.AsSpan()
+  fullName: MDBX.Native.Types.MdbxVal.AsSpan()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Types/MdbxVal.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: AsSpan
+    path: ../MDBX/Types/MdbxVal.cs
+    startLine: 59
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Получает данные в видеSpan byte.
+  example: []
+  syntax:
+    content: public Span<byte> AsSpan()
+    return:
+      type: System.Span{System.Byte}
+    content.vb: Public Function AsSpan() As Span(Of Byte)
+  overload: MDBX.Native.Types.MdbxVal.AsSpan*
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.Native.Types.MdbxVal.#ctor*
+  commentId: Overload:MDBX.Native.Types.MdbxVal.#ctor
+  href: MDBX.Native.Types.MdbxVal.html#MDBX_Native_Types_MdbxVal__ctor_System_Void__System_UIntPtr_
+  name: MdbxVal
+  nameWithType: MdbxVal.MdbxVal
+  fullName: MDBX.Native.Types.MdbxVal.MdbxVal
+  nameWithType.vb: MdbxVal.New
+  fullName.vb: MDBX.Native.Types.MdbxVal.New
+  name.vb: New
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: MDBX.Native.Types.MdbxVal.AsSpan*
+  commentId: Overload:MDBX.Native.Types.MdbxVal.AsSpan
+  href: MDBX.Native.Types.MdbxVal.html#MDBX_Native_Types_MdbxVal_AsSpan
+  name: AsSpan
+  nameWithType: MdbxVal.AsSpan
+  fullName: MDBX.Native.Types.MdbxVal.AsSpan
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

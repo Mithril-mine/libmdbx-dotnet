@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxCmpFunc
+  commentId: T:MDBX.Native.Types.MdbxCmpFunc
+  id: MdbxCmpFunc
+  parent: MDBX.Native.Types
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MdbxCmpFunc
+  nameWithType: MdbxCmpFunc
+  fullName: MDBX.Native.Types.MdbxCmpFunc
+  type: Delegate
+  source:
+    remote:
+      path: MDBX/Types/MdbxDelegates.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxCmpFunc
+    path: ../MDBX/Types/MdbxDelegates.cs
+    startLine: 39
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция сравнения ключей.
+  example: []
+  syntax:
+    content: public delegate int MdbxCmpFunc(MdbxVal* a, MdbxVal* b)
+    parameters:
+    - id: a
+      type: MDBX.Native.Types.MdbxVal*
+      description: Первый ключ.
+    - id: b
+      type: MDBX.Native.Types.MdbxVal*
+      description: Второй ключ.
+    return:
+      type: System.Int32
+      description: Отрицательное значение если a &lt; b, 0 если a == b, положительное если a &gt; b.
+    content.vb: Public Delegate Function MdbxCmpFunc(a As MdbxVal*, b As MdbxVal*) As Integer
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

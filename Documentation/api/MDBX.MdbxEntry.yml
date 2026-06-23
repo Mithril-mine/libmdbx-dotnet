@@ -1,0 +1,409 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.MdbxEntry
+  commentId: T:MDBX.MdbxEntry
+  id: MdbxEntry
+  parent: MDBX
+  children:
+  - MDBX.MdbxEntry.#ctor(System.Byte[],System.Byte[])
+  - MDBX.MdbxEntry.Key
+  - MDBX.MdbxEntry.Value
+  langs:
+  - csharp
+  - vb
+  name: MdbxEntry
+  nameWithType: MdbxEntry
+  fullName: MDBX.MdbxEntry
+  type: Class
+  source:
+    remote:
+      path: MDBX/Query/MdbxEntry.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxEntry
+    path: ../MDBX/Query/MdbxEntry.cs
+    startLine: 6
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: >-
+    Пара ключ-значение, прочитанная из таблицы через курсор.
+
+    Ключ и значение представлены в виде "сырых" байтов и копируются из нативной памяти.
+  example: []
+  syntax:
+    content: public sealed class MdbxEntry
+    content.vb: Public NotInheritable Class MdbxEntry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.MdbxEntry.Key
+  commentId: P:MDBX.MdbxEntry.Key
+  id: Key
+  parent: MDBX.MdbxEntry
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: MdbxEntry.Key
+  fullName: MDBX.MdbxEntry.Key
+  type: Property
+  source:
+    remote:
+      path: MDBX/Query/MdbxEntry.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Key
+    path: ../MDBX/Query/MdbxEntry.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Ключ записи.
+  example: []
+  syntax:
+    content: public byte[] Key { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Key As Byte()
+  overload: MDBX.MdbxEntry.Key*
+- uid: MDBX.MdbxEntry.Value
+  commentId: P:MDBX.MdbxEntry.Value
+  id: Value
+  parent: MDBX.MdbxEntry
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MdbxEntry.Value
+  fullName: MDBX.MdbxEntry.Value
+  type: Property
+  source:
+    remote:
+      path: MDBX/Query/MdbxEntry.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Value
+    path: ../MDBX/Query/MdbxEntry.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Значение записи.
+  example: []
+  syntax:
+    content: public byte[] Value { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Value As Byte()
+  overload: MDBX.MdbxEntry.Value*
+- uid: MDBX.MdbxEntry.#ctor(System.Byte[],System.Byte[])
+  commentId: M:MDBX.MdbxEntry.#ctor(System.Byte[],System.Byte[])
+  id: '#ctor(System.Byte[],System.Byte[])'
+  parent: MDBX.MdbxEntry
+  langs:
+  - csharp
+  - vb
+  name: MdbxEntry(byte[], byte[])
+  nameWithType: MdbxEntry.MdbxEntry(byte[], byte[])
+  fullName: MDBX.MdbxEntry.MdbxEntry(byte[], byte[])
+  type: Constructor
+  source:
+    remote:
+      path: MDBX/Query/MdbxEntry.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: .ctor
+    path: ../MDBX/Query/MdbxEntry.cs
+    startLine: 23
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Создает запись из ключа и значения.
+  example: []
+  syntax:
+    content: public MdbxEntry(byte[] key, byte[] value)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ.
+    - id: value
+      type: System.Byte[]
+      description: Значение.
+    content.vb: Public Sub New(key As Byte(), value As Byte())
+  overload: MDBX.MdbxEntry.#ctor*
+  nameWithType.vb: MdbxEntry.New(Byte(), Byte())
+  fullName.vb: MDBX.MdbxEntry.New(Byte(), Byte())
+  name.vb: New(Byte(), Byte())
+references:
+- uid: MDBX
+  commentId: N:MDBX
+  href: MDBX.html
+  name: MDBX
+  nameWithType: MDBX
+  fullName: MDBX
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.MdbxEntry.Key*
+  commentId: Overload:MDBX.MdbxEntry.Key
+  href: MDBX.MdbxEntry.html#MDBX_MdbxEntry_Key
+  name: Key
+  nameWithType: MdbxEntry.Key
+  fullName: MDBX.MdbxEntry.Key
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: MDBX.MdbxEntry.Value*
+  commentId: Overload:MDBX.MdbxEntry.Value
+  href: MDBX.MdbxEntry.html#MDBX_MdbxEntry_Value
+  name: Value
+  nameWithType: MdbxEntry.Value
+  fullName: MDBX.MdbxEntry.Value
+- uid: MDBX.MdbxEntry.#ctor*
+  commentId: Overload:MDBX.MdbxEntry.#ctor
+  href: MDBX.MdbxEntry.html#MDBX_MdbxEntry__ctor_System_Byte___System_Byte___
+  name: MdbxEntry
+  nameWithType: MdbxEntry.MdbxEntry
+  fullName: MDBX.MdbxEntry.MdbxEntry
+  nameWithType.vb: MdbxEntry.New
+  fullName.vb: MDBX.MdbxEntry.New
+  name.vb: New

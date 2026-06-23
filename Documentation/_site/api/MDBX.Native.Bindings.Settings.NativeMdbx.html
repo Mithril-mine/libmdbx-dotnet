@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NativeMdbx | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NativeMdbx | Binding Documentation ">
+      
+      <meta name="description" content="Частичный класс для нативных методов настроек libmdbx.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MDBX.Native.Bindings.Settings.NativeMdbx">
+
+
+
+  <h1 id="MDBX_Native_Bindings_Settings_NativeMdbx" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx" class="text-break">
+Class NativeMdbx  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MDBX.html">MDBX</a>.<a class="xref" href="MDBX.Native.html">Native</a>.<a class="xref" href="MDBX.Native.Bindings.html">Bindings</a>.<a class="xref" href="MDBX.Native.Bindings.Settings.html">Settings</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>mdbx-dotnet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Частичный класс для нативных методов настроек libmdbx.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NativeMdbx</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NativeMdbx</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxDefaultPagesize_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxDefaultPagesize" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize">
+  MdbxDefaultPagesize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает размер страницы по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nuint MdbxDefaultPagesize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Размер страницы в байтах.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetFd_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetFd_MDBX_Native_Types_MDBX_env__System_IntPtr__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*,System.IntPtr*)">
+  MdbxEnvGetFd(MDBX_env*, nint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает дескриптор файла окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetFd(MDBX_env* env, nint* fd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>fd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>*</dt>
+    <dd><p>Указатель для дескриптора.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetFlags_MDBX_Native_Types_MDBX_env__System_UInt32__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*,System.UInt32*)">
+  MdbxEnvGetFlags(MDBX_env*, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает флаги окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetFlags(MDBX_env* env, uint* flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Указатель для флагов.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetHsr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetHsr_MDBX_Native_Types_MDBX_env__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr(MDBX.Native.Types.MDBX_env*)">
+  MdbxEnvGetHsr(MDBX_env*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает колбэк Handle-Slow-Readers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern delegate* unmanaged[Cdecl]&lt;MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int&gt; MdbxEnvGetHsr(MDBX_env* env)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*, <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Указатель на функцию колбэка.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxkeysize_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxkeysize_MDBX_Native_Types_MDBX_env__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize(MDBX.Native.Types.MDBX_env*)">
+  MdbxEnvGetMaxkeysize(MDBX_env*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер ключа (устаревшая версия без флагов).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetMaxkeysize(MDBX_env* env)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальный размер ключа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxkeysizeEx_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxkeysizeEx_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxEnvGetMaxkeysizeEx(MDBX_env*, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер ключа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetMaxkeysizeEx(MDBX_env* env, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальный размер ключа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxvalsizeEx_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxvalsizeEx_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxEnvGetMaxvalsizeEx(MDBX_env*, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер значения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetMaxvalsizeEx(MDBX_env* env, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальный размер значения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetOption_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetOption_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxOption_System_UInt64__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64*)">
+  MdbxEnvGetOption(MDBX_env*, MdbxOption, ulong*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает параметр окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetOption(MDBX_env* env, MdbxOption option, ulong* pValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>option</code> <a class="xref" href="MDBX.Native.Types.MdbxOption.html">MdbxOption</a></dt>
+    <dd><p>Параметр.</p>
+</dd>
+    <dt><code>pValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>*</dt>
+    <dd><p>Указатель для значения.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPairsize4pageMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPairsize4pageMax_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxEnvGetPairsize4pageMax(MDBX_env*, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер пары ключ-значение для страницы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetPairsize4pageMax(MDBX_env* env, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальный размер пары.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPath_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPath_MDBX_Native_Types_MDBX_env__System_Byte___" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*,System.Byte**)">
+  MdbxEnvGetPath(MDBX_env*, byte**)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает путь к окружению.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetPath(MDBX_env* env, byte** dest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>dest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>**</dt>
+    <dd><p>Буфер для пути.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPathW_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPathW_MDBX_Native_Types_MDBX_env__System_Char___" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*,System.Char**)">
+  MdbxEnvGetPathW(MDBX_env*, char**)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает путь к окружению (wide version).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetPathW(MDBX_env* env, char** dest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>dest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>**</dt>
+    <dd><p>Буфер для пути.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetUserctx_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetUserctx_MDBX_Native_Types_MDBX_env__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx(MDBX.Native.Types.MDBX_env*)">
+  MdbxEnvGetUserctx(MDBX_env*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает пользовательский контекст окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void* MdbxEnvGetUserctx(MDBX_env* env)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Указатель на пользовательский контекст.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetValsize4pageMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetValsize4pageMax_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxEnvGetValsize4pageMax(MDBX_env*, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер значения для страницы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvGetValsize4pageMax(MDBX_env* env, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальный размер значения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetFlags_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxEnvFlags_System_Boolean_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxEnvFlags,System.Boolean)">
+  MdbxEnvSetFlags(MDBX_env*, MdbxEnvFlags, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает флаги окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvSetFlags(MDBX_env* env, MdbxEnvFlags flags, bool onoff)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxEnvFlags.html">MdbxEnvFlags</a></dt>
+    <dd><p>Флаги.</p>
+</dd>
+    <dt><code>onoff</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Включить или выключить.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetGeometry_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetGeometry_MDBX_Native_Types_MDBX_env__System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+  MdbxEnvSetGeometry(MDBX_env*, nint, nint, nint, nint, nint, nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает геометрию окружения (размеры файлов).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvSetGeometry(MDBX_env* env, nint sizeLower, nint sizeNow, nint sizeUpper, nint growthStep, nint shrinkThreshold, nint pagesize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>sizeLower</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Нижний предел размера.</p>
+</dd>
+    <dt><code>sizeNow</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Текущий размер.</p>
+</dd>
+    <dt><code>sizeUpper</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Верхний предел размера.</p>
+</dd>
+    <dt><code>growthStep</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Шаг роста.</p>
+</dd>
+    <dt><code>shrinkThreshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Порог сжатия.</p>
+</dd>
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetHsr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetHsr_MDBX_Native_Types_MDBX_env___" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*,)">
+  MdbxEnvSetHsr(MDBX_env*, delegate* unmanaged[Cdecl]&lt;MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает колбэк Handle-Slow-Readers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvSetHsr(MDBX_env* env, delegate* unmanaged[Cdecl]&lt;MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int&gt; hsrCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>hsrCallback</code> delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*, <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Функция колбэка.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetOption_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetOption_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxOption_System_UInt64_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64)">
+  MdbxEnvSetOption(MDBX_env*, MdbxOption, ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает параметр окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvSetOption(MDBX_env* env, MdbxOption option, ulong value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>option</code> <a class="xref" href="MDBX.Native.Types.MdbxOption.html">MdbxOption</a></dt>
+    <dd><p>Параметр.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Значение.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetUserctx_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetUserctx_MDBX_Native_Types_MDBX_env__System_Void__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*,System.Void*)">
+  MdbxEnvSetUserctx(MDBX_env*, void*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает пользовательский контекст окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxEnvSetUserctx(MDBX_env* env, void* ctx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>env</code> <a class="xref" href="MDBX.Native.Types.MDBX_env.html">MDBX_env</a>*</dt>
+    <dd><p>Окружение.</p>
+</dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Пользовательский контекст.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxGetSysraminfo_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxGetSysraminfo_System_IntPtr__System_IntPtr__System_IntPtr__" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo(System.IntPtr*,System.IntPtr*,System.IntPtr*)">
+  MdbxGetSysraminfo(nint*, nint*, nint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает информацию о системной RAM.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxGetSysraminfo(nint* pageSize, nint* totalPages, nint* availPages)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>*</dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+    <dt><code>totalPages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>*</dt>
+    <dd><p>Общее количество страниц.</p>
+</dd>
+    <dt><code>availPages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>*</dt>
+    <dd><p>Доступное количество страниц.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxIsReadaheadReasonable_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxIsReadaheadReasonable_System_UIntPtr_System_IntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable(System.UIntPtr,System.IntPtr)">
+  MdbxIsReadaheadReasonable(nuint, nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, разумно ли использовать readahead для заданного объема.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxIsReadaheadReasonable(nuint volume, nint redundancy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Объем данных.</p>
+</dd>
+    <dt><code>redundancy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Избыточность.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsDbsizeMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsDbsizeMax_System_IntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax(System.IntPtr)">
+  MdbxLimitsDbsizeMax(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер базы данных.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsDbsizeMax(nint pagesize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Максимальный размер.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsDbsizeMin_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsDbsizeMin_System_IntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin(System.IntPtr)">
+  MdbxLimitsDbsizeMin(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает минимальный размер базы данных.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsDbsizeMin(nint pagesize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Минимальный размер.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsKeysizeMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsKeysizeMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxLimitsKeysizeMax(nint, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер ключа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsKeysizeMax(nint pagesize, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Максимальный размер ключа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsKeysizeMin_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsKeysizeMin_MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin(MDBX.Native.Types.MdbxDbFlags)">
+  MdbxLimitsKeysizeMin(MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает минимальный размер ключа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsKeysizeMin(MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Минимальный размер ключа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsPairsize4pageMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsPairsize4pageMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxLimitsPairsize4pageMax(nint, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер пары ключ-значение для страницы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsPairsize4pageMax(nint pagesize, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Максимальный размер пары.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsTxnsizeMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsTxnsizeMax_System_IntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax(System.IntPtr)">
+  MdbxLimitsTxnsizeMax(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер транзакции.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsTxnsizeMax(nint pagesize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Максимальный размер транзакции.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsize4pageMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsize4pageMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxLimitsValsize4pageMax(nint, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер значения для страницы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsValsize4pageMax(nint pagesize, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Максимальный размер значения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsizeMax_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsizeMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)">
+  MdbxLimitsValsizeMax(nint, MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает максимальный размер значения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsValsizeMax(nint pagesize, MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pagesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Размер страницы.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Максимальный размер значения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsizeMin_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsizeMin_MDBX_Native_Types_MdbxDbFlags_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin(MDBX.Native.Types.MdbxDbFlags)">
+  MdbxLimitsValsizeMin(MdbxDbFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает минимальный размер значения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint MdbxLimitsValsizeMin(MdbxDbFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxDbFlags.html">MdbxDbFlags</a></dt>
+    <dd><p>Флаги таблицы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Минимальный размер значения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxRatio2Digits_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxRatio2Digits_System_UInt64_System_UInt64_System_Int32_System_Byte__System_UIntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits(System.UInt64,System.UInt64,System.Int32,System.Byte*,System.UIntPtr)">
+  MdbxRatio2Digits(ulong, ulong, int, byte*, nuint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Преобразует соотношение в строку с заданной точностью.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern byte* MdbxRatio2Digits(ulong numerator, ulong denominator, int precision, byte* buffer, nuint bufferSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numerator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Числитель.</p>
+</dd>
+    <dt><code>denominator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Знаменатель.</p>
+</dd>
+    <dt><code>precision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Точность.</p>
+</dd>
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Буфер для результата.</p>
+</dd>
+    <dt><code>bufferSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Размер буфера.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Указатель на строку.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxRatio2Percents_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Settings_NativeMdbx_MdbxRatio2Percents_System_UInt64_System_UInt64_System_Byte__System_UIntPtr_" data-uid="MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents(System.UInt64,System.UInt64,System.Byte*,System.UIntPtr)">
+  MdbxRatio2Percents(ulong, ulong, byte*, nuint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Преобразует соотношение в проценты.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern byte* MdbxRatio2Percents(ulong value, ulong whole, byte* buffer, nuint bufferSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Значение.</p>
+</dd>
+    <dt><code>whole</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Целое.</p>
+</dd>
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Буфер для результата.</p>
+</dd>
+    <dt><code>bufferSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Размер буфера.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Указатель на строку.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MdbxCursor | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MdbxCursor | Binding Documentation ">
+      
+      <meta name="description" content="Высокоуровневая обертка курсора libmdbx.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MDBX.MdbxCursor">
+
+
+
+  <h1 id="MDBX_MdbxCursor" data-uid="MDBX.MdbxCursor" class="text-break">
+Class MdbxCursor  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MDBX.html">MDBX</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>mdbx-dotnet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Высокоуровневая обертка курсора libmdbx.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MdbxCursor : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MdbxCursor</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MDBX_MdbxCursor_NativeCursor_" data-uid="MDBX.MdbxCursor.NativeCursor*"></a>
+
+  <h3 id="MDBX_MdbxCursor_NativeCursor" data-uid="MDBX.MdbxCursor.NativeCursor">
+  NativeCursor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает нативный указатель на курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MDBX_cursor* NativeCursor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MDBX_MdbxCursor_Close_" data-uid="MDBX.MdbxCursor.Close*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Close" data-uid="MDBX.MdbxCursor.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Закрывает курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_CopyTo_" data-uid="MDBX.MdbxCursor.CopyTo*"></a>
+
+  <h3 id="MDBX_MdbxCursor_CopyTo_MDBX_MdbxCursor_" data-uid="MDBX.MdbxCursor.CopyTo(MDBX.MdbxCursor)">
+  CopyTo(MdbxCursor)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Копирует состояние курсора в другой курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(MdbxCursor dest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dest</code> <a class="xref" href="MDBX.MdbxCursor.html">MdbxCursor</a></dt>
+    <dd><p>Курсор назначения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Count_" data-uid="MDBX.MdbxCursor.Count*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Count" data-uid="MDBX.MdbxCursor.Count">
+  Count()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает количество элементов, доступных с текущей позиции курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public nuint Count()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Количество элементов.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Create_" data-uid="MDBX.MdbxCursor.Create*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Create_MDBX_MdbxTransaction_MDBX_MdbxDatabase_" data-uid="MDBX.MdbxCursor.Create(MDBX.MdbxTransaction,MDBX.MdbxDatabase)">
+  Create(MdbxTransaction, MdbxDatabase)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает новый курсор для указанной транзакции и таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MdbxCursor Create(MdbxTransaction txn, MdbxDatabase db)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.MdbxTransaction.html">MdbxTransaction</a></dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>db</code> <a class="xref" href="MDBX.MdbxDatabase.html">MdbxDatabase</a></dt>
+    <dd><p>Таблица (DBI).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.MdbxCursor.html">MdbxCursor</a></dt>
+    <dd><p>Новый курсор.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Delete_" data-uid="MDBX.MdbxCursor.Delete*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Delete_MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.MdbxCursor.Delete(MDBX.Native.Types.MdbxPutFlags)">
+  Delete(MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет текущий элемент через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Delete(MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги удаления.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если элемент был удален, false если элемент не найден.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Dispose_" data-uid="MDBX.MdbxCursor.Dispose*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Dispose" data-uid="MDBX.MdbxCursor.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Освобождает ресурсы курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Finalize_" data-uid="MDBX.MdbxCursor.Finalize*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Finalize" data-uid="MDBX.MdbxCursor.Finalize">
+  ~MdbxCursor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Финализатор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~MdbxCursor()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetCurrent_" data-uid="MDBX.MdbxCursor.GetCurrent*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetCurrent_System_Byte____" data-uid="MDBX.MdbxCursor.GetCurrent(System.Byte[]@)">
+  GetCurrent(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает текущий элемент (ключ и значение).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetCurrent(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ текущего элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение текущего элемента или null если курсор не позиционирован.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetFirst_" data-uid="MDBX.MdbxCursor.GetFirst*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetFirst_System_Byte____" data-uid="MDBX.MdbxCursor.GetFirst(System.Byte[]@)">
+  GetFirst(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на первый элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetFirst(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ первого элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение первого элемента или null если таблица пуста.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetFirstDup_" data-uid="MDBX.MdbxCursor.GetFirstDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetFirstDup_System_Byte____" data-uid="MDBX.MdbxCursor.GetFirstDup(System.Byte[]@)">
+  GetFirstDup(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на первый дубликат текущего ключа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetFirstDup(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение первого дубликата или null если дубликатов нет.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetLast_" data-uid="MDBX.MdbxCursor.GetLast*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetLast_System_Byte____" data-uid="MDBX.MdbxCursor.GetLast(System.Byte[]@)">
+  GetLast(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на последний элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetLast(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ последнего элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение последнего элемента или null если таблица пуста.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetLastDup_" data-uid="MDBX.MdbxCursor.GetLastDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetLastDup_System_Byte____" data-uid="MDBX.MdbxCursor.GetLastDup(System.Byte[]@)">
+  GetLastDup(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на последний дубликат текущего ключа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetLastDup(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение последнего дубликата или null если дубликатов нет.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetNext_" data-uid="MDBX.MdbxCursor.GetNext*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetNext_System_Byte____" data-uid="MDBX.MdbxCursor.GetNext(System.Byte[]@)">
+  GetNext(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на следующий элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetNext(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ следующего элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение следующего элемента или null если достигнут конец таблицы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetNextDup_" data-uid="MDBX.MdbxCursor.GetNextDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetNextDup_System_Byte____" data-uid="MDBX.MdbxCursor.GetNextDup(System.Byte[]@)">
+  GetNextDup(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на следующий дубликат.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetNextDup(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение следующего дубликата или null если достигнут конец дубликатов.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetNextNoDup_" data-uid="MDBX.MdbxCursor.GetNextNoDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetNextNoDup_System_Byte____" data-uid="MDBX.MdbxCursor.GetNextNoDup(System.Byte[]@)">
+  GetNextNoDup(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на следующий элемент с другим ключом.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetNextNoDup(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ следующего элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение следующего элемента с другим ключом или null если достигнут конец таблицы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetPrev_" data-uid="MDBX.MdbxCursor.GetPrev*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetPrev_System_Byte____" data-uid="MDBX.MdbxCursor.GetPrev(System.Byte[]@)">
+  GetPrev(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на предыдущий элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetPrev(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ предыдущего элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение предыдущего элемента или null если достигнуто начало таблицы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetPrevDup_" data-uid="MDBX.MdbxCursor.GetPrevDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetPrevDup_System_Byte____" data-uid="MDBX.MdbxCursor.GetPrevDup(System.Byte[]@)">
+  GetPrevDup(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на предыдущий дубликат.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetPrevDup(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение предыдущего дубликата или null если достигнуто начало дубликатов.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetPrevNoDup_" data-uid="MDBX.MdbxCursor.GetPrevNoDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetPrevNoDup_System_Byte____" data-uid="MDBX.MdbxCursor.GetPrevNoDup(System.Byte[]@)">
+  GetPrevNoDup(out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Перемещает курсор на предыдущий элемент с другим ключом.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetPrevNoDup(out byte[]? key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ предыдущего элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение предыдущего элемента с другим ключом или null если достигнуто начало таблицы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_GetSet_" data-uid="MDBX.MdbxCursor.GetSet*"></a>
+
+  <h3 id="MDBX_MdbxCursor_GetSet_System_Byte___System_Byte____" data-uid="MDBX.MdbxCursor.GetSet(System.Byte[],System.Byte[]@)">
+  GetSet(byte[], out byte[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Позиционирует курсор на указанный ключ.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? GetSet(byte[] key, out byte[]? foundKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ для позиционирования.</p>
+</dd>
+    <dt><code>foundKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Фактический найденный ключ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение найденного элемента или null если ключ не существует.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_IsEof_" data-uid="MDBX.MdbxCursor.IsEof*"></a>
+
+  <h3 id="MDBX_MdbxCursor_IsEof" data-uid="MDBX.MdbxCursor.IsEof">
+  IsEof()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, достигнут ли конец таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEof()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если курсор за пределами таблицы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_IsOnFirst_" data-uid="MDBX.MdbxCursor.IsOnFirst*"></a>
+
+  <h3 id="MDBX_MdbxCursor_IsOnFirst" data-uid="MDBX.MdbxCursor.IsOnFirst">
+  IsOnFirst()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на первом элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnFirst()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если курсор на первом элементе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_IsOnFirstDup_" data-uid="MDBX.MdbxCursor.IsOnFirstDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_IsOnFirstDup" data-uid="MDBX.MdbxCursor.IsOnFirstDup">
+  IsOnFirstDup()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на первом дубликате.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnFirstDup()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если курсор на первом дубликате.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_IsOnLast_" data-uid="MDBX.MdbxCursor.IsOnLast*"></a>
+
+  <h3 id="MDBX_MdbxCursor_IsOnLast" data-uid="MDBX.MdbxCursor.IsOnLast">
+  IsOnLast()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на последнем элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnLast()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если курсор на последнем элементе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_IsOnLastDup_" data-uid="MDBX.MdbxCursor.IsOnLastDup*"></a>
+
+  <h3 id="MDBX_MdbxCursor_IsOnLastDup" data-uid="MDBX.MdbxCursor.IsOnLastDup">
+  IsOnLastDup()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на последнем дубликате.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnLastDup()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если курсор на последнем дубликате.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Put_" data-uid="MDBX.MdbxCursor.Put*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Put_System_Byte___System_Byte___MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.MdbxCursor.Put(System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)">
+  Put(byte[], byte[], MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Записывает пару ключ-значение через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put(byte[] key, byte[] value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Значение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги операции записи.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Put_" data-uid="MDBX.MdbxCursor.Put*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Put_System_String_System_String_MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.MdbxCursor.Put(System.String,System.String,MDBX.Native.Types.MdbxPutFlags)">
+  Put(string, string, MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Записывает строковую пару ключ-значение через курсор (UTF-8).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put(string key, string value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Строковый ключ.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Строковое значение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги операции записи.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Renew_" data-uid="MDBX.MdbxCursor.Renew*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Renew_MDBX_MdbxTransaction_" data-uid="MDBX.MdbxCursor.Renew(MDBX.MdbxTransaction)">
+  Renew(MdbxTransaction)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Обновляет курсор для использования в новой транзакции.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Renew(MdbxTransaction txn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.MdbxTransaction.html">MdbxTransaction</a></dt>
+    <dd><p>Новая транзакция.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_MdbxCursor_Reset_" data-uid="MDBX.MdbxCursor.Reset*"></a>
+
+  <h3 id="MDBX_MdbxCursor_Reset" data-uid="MDBX.MdbxCursor.Reset">
+  Reset()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сбрасывает курсор (отвязывает от таблицы).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,553 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkContext
+  commentId: T:MDBX.Native.Types.MdbxChkContext
+  id: MdbxChkContext
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkContext.Env
+  - MDBX.Native.Types.MdbxChkContext.Internal
+  - MDBX.Native.Types.MdbxChkContext.Result
+  - MDBX.Native.Types.MdbxChkContext.Scope
+  - MDBX.Native.Types.MdbxChkContext.ScopeNesting
+  - MDBX.Native.Types.MdbxChkContext.Txn
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkContext
+  nameWithType: MdbxChkContext
+  fullName: MDBX.Native.Types.MdbxChkContext
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkContext
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 539
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Контекст проверки целостности базы данных.
+  remarks: Соответствует структуре MDBX_chk_context_t из заголовочного файла mdbx.h.
+  example: []
+  syntax:
+    content: public struct MdbxChkContext
+    content.vb: Public Structure MdbxChkContext
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxChkContext.Internal
+  commentId: F:MDBX.Native.Types.MdbxChkContext.Internal
+  id: Internal
+  parent: MDBX.Native.Types.MdbxChkContext
+  langs:
+  - csharp
+  - vb
+  name: Internal
+  nameWithType: MdbxChkContext.Internal
+  fullName: MDBX.Native.Types.MdbxChkContext.Internal
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Internal
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 545
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Внутренние данные (непрозрачный указатель).
+  example: []
+  syntax:
+    content: public void* Internal
+    return:
+      type: System.Void*
+    content.vb: Public Internal As Void*
+- uid: MDBX.Native.Types.MdbxChkContext.Env
+  commentId: F:MDBX.Native.Types.MdbxChkContext.Env
+  id: Env
+  parent: MDBX.Native.Types.MdbxChkContext
+  langs:
+  - csharp
+  - vb
+  name: Env
+  nameWithType: MdbxChkContext.Env
+  fullName: MDBX.Native.Types.MdbxChkContext.Env
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Env
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 550
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Окружение.
+  example: []
+  syntax:
+    content: public MDBX_env* Env
+    return:
+      type: MDBX.Native.Types.MDBX_env*
+    content.vb: Public Env As MDBX_env*
+- uid: MDBX.Native.Types.MdbxChkContext.Txn
+  commentId: F:MDBX.Native.Types.MdbxChkContext.Txn
+  id: Txn
+  parent: MDBX.Native.Types.MdbxChkContext
+  langs:
+  - csharp
+  - vb
+  name: Txn
+  nameWithType: MdbxChkContext.Txn
+  fullName: MDBX.Native.Types.MdbxChkContext.Txn
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Txn
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 555
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Транзакция.
+  example: []
+  syntax:
+    content: public MDBX_txn* Txn
+    return:
+      type: MDBX.Native.Types.MDBX_txn*
+    content.vb: Public Txn As MDBX_txn*
+- uid: MDBX.Native.Types.MdbxChkContext.Scope
+  commentId: F:MDBX.Native.Types.MdbxChkContext.Scope
+  id: Scope
+  parent: MDBX.Native.Types.MdbxChkContext
+  langs:
+  - csharp
+  - vb
+  name: Scope
+  nameWithType: MdbxChkContext.Scope
+  fullName: MDBX.Native.Types.MdbxChkContext.Scope
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Scope
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 560
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Текущая область.
+  example: []
+  syntax:
+    content: public MdbxChkScope* Scope
+    return:
+      type: MDBX.Native.Types.MdbxChkScope*
+    content.vb: Public Scope As MdbxChkScope*
+- uid: MDBX.Native.Types.MdbxChkContext.ScopeNesting
+  commentId: F:MDBX.Native.Types.MdbxChkContext.ScopeNesting
+  id: ScopeNesting
+  parent: MDBX.Native.Types.MdbxChkContext
+  langs:
+  - csharp
+  - vb
+  name: ScopeNesting
+  nameWithType: MdbxChkContext.ScopeNesting
+  fullName: MDBX.Native.Types.MdbxChkContext.ScopeNesting
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ScopeNesting
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 565
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Глубина вложенности областей.
+  example: []
+  syntax:
+    content: public byte ScopeNesting
+    return:
+      type: System.Byte
+    content.vb: Public ScopeNesting As Byte
+- uid: MDBX.Native.Types.MdbxChkContext.Result
+  commentId: F:MDBX.Native.Types.MdbxChkContext.Result
+  id: Result
+  parent: MDBX.Native.Types.MdbxChkContext
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: MdbxChkContext.Result
+  fullName: MDBX.Native.Types.MdbxChkContext.Result
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Result
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 570
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Результат проверки.
+  example: []
+  syntax:
+    content: public MdbxChkResultData Result
+    return:
+      type: MDBX.Native.Types.MdbxChkResultData
+    content.vb: Public Result As MdbxChkResultData
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Types.MDBX_env*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_env.html
+  name: MDBX_env*
+  nameWithType: MDBX_env*
+  fullName: MDBX.Native.Types.MDBX_env*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxChkScope*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkScope.html
+  name: MdbxChkScope*
+  nameWithType: MdbxChkScope*
+  fullName: MDBX.Native.Types.MdbxChkScope*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    href: MDBX.Native.Types.MdbxChkScope.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    href: MDBX.Native.Types.MdbxChkScope.html
+  - name: '*'
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: MDBX.Native.Types.MdbxChkResultData
+  commentId: T:MDBX.Native.Types.MdbxChkResultData
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkResultData.html
+  name: MdbxChkResultData
+  nameWithType: MdbxChkResultData
+  fullName: MDBX.Native.Types.MdbxChkResultData

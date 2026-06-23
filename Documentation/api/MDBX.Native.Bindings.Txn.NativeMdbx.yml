@@ -1,0 +1,1405 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Txn.NativeMdbx
+  id: NativeMdbx
+  parent: MDBX.Native.Bindings.Txn
+  children:
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxTxnFlags,System.Void*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MDBX_txn**,System.UIntPtr)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MdbxCommitLatency*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,System.Void*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead(MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxCommitLatency*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnInfo*,System.Boolean)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX.Native.Types.MDBX_txn*,System.Boolean,System.UIntPtr*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback(MDBX.Native.Types.MDBX_txn*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx(MDBX.Native.Types.MDBX_txn*,System.Void*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler(MDBX.Native.Types.MDBX_txn*,System.Int32*)
+  - MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx
+  type: Class
+  source:
+    remote:
+      path: MDBX/Bindings/Txn/NativeMdbx.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeMdbx
+    path: ../MDBX/Bindings/Txn/NativeMdbx.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Частичный класс для нативных методов транзакций libmdbx.
+  example: []
+  syntax:
+    content: public static class NativeMdbx
+    content.vb: Public Module NativeMdbx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MDBX_txn**,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MDBX_txn**,System.UIntPtr)
+  id: MdbxTxnBeginEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MDBX_txn**,System.UIntPtr)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnBeginEx(MDBX_env*, MDBX_txn*, MdbxTxnFlags, MDBX_txn**, nuint)
+  nameWithType: NativeMdbx.MdbxTxnBeginEx(MDBX_env*, MDBX_txn*, MdbxTxnFlags, MDBX_txn**, nuint)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxTxnFlags, MDBX.Native.Types.MDBX_txn**, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Начинает транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnBeginEx(MDBX_env* env, MDBX_txn* parent, MdbxTxnFlags flags, MDBX_txn** txn, nuint size)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: parent
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Родительская транзакция.
+    - id: flags
+      type: MDBX.Native.Types.MdbxTxnFlags
+      description: Флаги транзакции.
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn**
+      description: Указатель для транзакции.
+    - id: size
+      type: System.UIntPtr
+      description: Размер.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnBeginEx(env As MDBX_env*, parent As MDBX_txn*, flags As MdbxTxnFlags, txn As MDBX_txn**, size As UIntPtr) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx*
+  nameWithType.vb: NativeMdbx.MdbxTxnBeginEx(MDBX_env*, MDBX_txn*, MdbxTxnFlags, MDBX_txn**, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxTxnFlags, MDBX.Native.Types.MDBX_txn**, System.UIntPtr)
+  name.vb: MdbxTxnBeginEx(MDBX_env*, MDBX_txn*, MdbxTxnFlags, MDBX_txn**, UIntPtr)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,System.Void*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,System.Void*)
+  id: MdbxTxnClone(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,System.Void*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnClone(MDBX_txn*, MDBX_txn**, void*)
+  nameWithType: NativeMdbx.MdbxTxnClone(MDBX_txn*, MDBX_txn**, void*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_txn**, void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Клонирует транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnClone(MDBX_txn* origin, MDBX_txn** inOutClone, void* context)
+    parameters:
+    - id: origin
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Исходная транзакция.
+    - id: inOutClone
+      type: MDBX.Native.Types.MDBX_txn**
+      description: Указатель для клона.
+    - id: context
+      type: System.Void*
+      description: Пользовательский контекст.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnClone(origin As MDBX_txn*, inOutClone As MDBX_txn**, context As Void*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone*
+  nameWithType.vb: NativeMdbx.MdbxTxnClone(MDBX_txn*, MDBX_txn**, Void*)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_txn**, Void*)
+  name.vb: MdbxTxnClone(MDBX_txn*, MDBX_txn**, Void*)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx(MDBX.Native.Types.MDBX_txn*,System.Void*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx(MDBX.Native.Types.MDBX_txn*,System.Void*)
+  id: MdbxTxnSetUserctx(MDBX.Native.Types.MDBX_txn*,System.Void*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnSetUserctx(MDBX_txn*, void*)
+  nameWithType: NativeMdbx.MdbxTxnSetUserctx(MDBX_txn*, void*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx(MDBX.Native.Types.MDBX_txn*, void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Устанавливает пользовательский контекст транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnSetUserctx(MDBX_txn* txn, void* ctx)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: ctx
+      type: System.Void*
+      description: Пользовательский контекст.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnSetUserctx(txn As MDBX_txn*, ctx As Void*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx*
+  nameWithType.vb: NativeMdbx.MdbxTxnSetUserctx(MDBX_txn*, Void*)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx(MDBX.Native.Types.MDBX_txn*, Void*)
+  name.vb: MdbxTxnSetUserctx(MDBX_txn*, Void*)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnGetUserctx(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnGetUserctx(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnGetUserctx(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Получает пользовательский контекст транзакции.
+  example: []
+  syntax:
+    content: public static extern void* MdbxTxnGetUserctx(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.Void*
+      description: Указатель на пользовательский контекст.
+    content.vb: Public Shared Function MdbxTxnGetUserctx(txn As MDBX_txn*) As Void*
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnInfo*,System.Boolean)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnInfo*,System.Boolean)
+  id: MdbxTxnInfo(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnInfo*,System.Boolean)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnInfo(MDBX_txn*, MdbxTxnInfo*, bool)
+  nameWithType: NativeMdbx.MdbxTxnInfo(MDBX_txn*, MdbxTxnInfo*, bool)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxTxnInfo*, bool)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Получает информацию о транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnInfo(MDBX_txn* txn, MdbxTxnInfo* info, bool scanRlt)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: info
+      type: MDBX.Native.Types.MdbxTxnInfo*
+      description: Структура для информации.
+    - id: scanRlt
+      type: System.Boolean
+      description: Сканировать читателей.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnInfo(txn As MDBX_txn*, info As MdbxTxnInfo*, scanRlt As Boolean) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo*
+  nameWithType.vb: NativeMdbx.MdbxTxnInfo(MDBX_txn*, MdbxTxnInfo*, Boolean)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxTxnInfo*, Boolean)
+  name.vb: MdbxTxnInfo(MDBX_txn*, MdbxTxnInfo*, Boolean)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnEnv(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnEnv(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnEnv(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Получает окружение транзакции.
+  example: []
+  syntax:
+    content: public static extern MDBX_env* MdbxTxnEnv(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: MDBX.Native.Types.MDBX_env*
+      description: Указатель на окружение.
+    content.vb: Public Shared Function MdbxTxnEnv(txn As MDBX_txn*) As MDBX_env*
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnFlags(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnFlags(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnFlags(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Получает флаги транзакции.
+  example: []
+  syntax:
+    content: public static extern MdbxTxnFlags MdbxTxnFlags(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+      description: Флаги транзакции.
+    content.vb: Public Shared Function MdbxTxnFlags(txn As MDBX_txn*) As MdbxTxnFlags
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnId(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnId(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnId(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Получает ID транзакции.
+  example: []
+  syntax:
+    content: public static extern ulong MdbxTxnId(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.UInt64
+      description: ID транзакции.
+    content.vb: Public Shared Function MdbxTxnId(txn As MDBX_txn*) As ULong
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  id: MdbxTxnCommitEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnCommitEx(MDBX_txn*, MdbxCommitLatency*)
+  nameWithType: NativeMdbx.MdbxTxnCommitEx(MDBX_txn*, MdbxCommitLatency*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxCommitLatency*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Фиксирует транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnCommitEx(MDBX_txn* txn, MdbxCommitLatency* latency)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: latency
+      type: MDBX.Native.Types.MdbxCommitLatency*
+      description: Информация о задержках.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnCommitEx(txn As MDBX_txn*, latency As MdbxCommitLatency*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MdbxCommitLatency*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MdbxCommitLatency*)
+  id: MdbxTxnCheckpoint(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxTxnFlags,MDBX.Native.Types.MdbxCommitLatency*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnCheckpoint(MDBX_txn*, MdbxTxnFlags, MdbxCommitLatency*)
+  nameWithType: NativeMdbx.MdbxTxnCheckpoint(MDBX_txn*, MdbxTxnFlags, MdbxCommitLatency*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxTxnFlags, MDBX.Native.Types.MdbxCommitLatency*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Выполняет checkpoint транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnCheckpoint(MDBX_txn* txn, MdbxTxnFlags weakeningDurability, MdbxCommitLatency* latency)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: weakeningDurability
+      type: MDBX.Native.Types.MdbxTxnFlags
+      description: Флаги ослабления durability.
+    - id: latency
+      type: MDBX.Native.Types.MdbxCommitLatency*
+      description: Информация о задержках.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnCheckpoint(txn As MDBX_txn*, weakeningDurability As MdbxTxnFlags, latency As MdbxCommitLatency*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead(MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxCommitLatency*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead(MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxCommitLatency*)
+  id: MdbxTxnCommitEmbarkRead(MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxCommitLatency*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnCommitEmbarkRead(MDBX_txn**, MdbxCommitLatency*)
+  nameWithType: NativeMdbx.MdbxTxnCommitEmbarkRead(MDBX_txn**, MdbxCommitLatency*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead(MDBX.Native.Types.MDBX_txn**, MDBX.Native.Types.MdbxCommitLatency*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Фиксирует транзакцию для embark read.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnCommitEmbarkRead(MDBX_txn** ptxn, MdbxCommitLatency* latency)
+    parameters:
+    - id: ptxn
+      type: MDBX.Native.Types.MDBX_txn**
+      description: Указатель на транзакцию.
+    - id: latency
+      type: MDBX.Native.Types.MdbxCommitLatency*
+      description: Информация о задержках.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnCommitEmbarkRead(ptxn As MDBX_txn**, latency As MdbxCommitLatency*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxTxnFlags,System.Void*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxTxnFlags,System.Void*)
+  id: MdbxTxnAmend(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_txn**,MDBX.Native.Types.MdbxTxnFlags,System.Void*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnAmend(MDBX_txn*, MDBX_txn**, MdbxTxnFlags, void*)
+  nameWithType: NativeMdbx.MdbxTxnAmend(MDBX_txn*, MDBX_txn**, MdbxTxnFlags, void*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_txn**, MDBX.Native.Types.MdbxTxnFlags, void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Изменяет read-транзакцию в write-транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnAmend(MDBX_txn* readTxn, MDBX_txn** ptrWriteTxn, MdbxTxnFlags flags, void* context)
+    parameters:
+    - id: readTxn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Read-транзакция.
+    - id: ptrWriteTxn
+      type: MDBX.Native.Types.MDBX_txn**
+      description: Указатель для write-транзакции.
+    - id: flags
+      type: MDBX.Native.Types.MdbxTxnFlags
+      description: Флаги.
+    - id: context
+      type: System.Void*
+      description: Пользовательский контекст.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnAmend(readTxn As MDBX_txn*, ptrWriteTxn As MDBX_txn**, flags As MdbxTxnFlags, context As Void*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend*
+  nameWithType.vb: NativeMdbx.MdbxTxnAmend(MDBX_txn*, MDBX_txn**, MdbxTxnFlags, Void*)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_txn**, MDBX.Native.Types.MdbxTxnFlags, Void*)
+  name.vb: MdbxTxnAmend(MDBX_txn*, MDBX_txn**, MdbxTxnFlags, Void*)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnRollback(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnRollback(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnRollback(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Откатывает транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnRollback(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnRollback(txn As MDBX_txn*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  id: MdbxTxnAbortEx(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCommitLatency*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnAbortEx(MDBX_txn*, MdbxCommitLatency*)
+  nameWithType: NativeMdbx.MdbxTxnAbortEx(MDBX_txn*, MdbxCommitLatency*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxCommitLatency*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Отменяет транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnAbortEx(MDBX_txn* txn, MdbxCommitLatency* latency)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: latency
+      type: MDBX.Native.Types.MdbxCommitLatency*
+      description: Информация о задержках.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnAbortEx(txn As MDBX_txn*, latency As MdbxCommitLatency*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnBreak(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnBreak(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnBreak(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Ломает транзакцию (прерывает операцию).
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnBreak(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnBreak(txn As MDBX_txn*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnReset(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnReset(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnReset(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Сбрасывает транзакцию (освобождает ресурсы, но не откатывает).
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnReset(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnReset(txn As MDBX_txn*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  id: MdbxTxnPark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnPark(MDBX_txn*, bool)
+  nameWithType: NativeMdbx.MdbxTxnPark(MDBX_txn*, bool)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark(MDBX.Native.Types.MDBX_txn*, bool)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Паркует транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnPark(MDBX_txn* txn, bool autounpark)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: autounpark
+      type: System.Boolean
+      description: Автоматически unpark при доступе.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnPark(txn As MDBX_txn*, autounpark As Boolean) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark*
+  nameWithType.vb: NativeMdbx.MdbxTxnPark(MDBX_txn*, Boolean)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark(MDBX.Native.Types.MDBX_txn*, Boolean)
+  name.vb: MdbxTxnPark(MDBX_txn*, Boolean)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  id: MdbxTxnUnpark(MDBX.Native.Types.MDBX_txn*,System.Boolean)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnUnpark(MDBX_txn*, bool)
+  nameWithType: NativeMdbx.MdbxTxnUnpark(MDBX_txn*, bool)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark(MDBX.Native.Types.MDBX_txn*, bool)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Отменяет парковку транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnUnpark(MDBX_txn* txn, bool restartIfOusted)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: restartIfOusted
+      type: System.Boolean
+      description: Перезапустить если вытеснен.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnUnpark(txn As MDBX_txn*, restartIfOusted As Boolean) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark*
+  nameWithType.vb: NativeMdbx.MdbxTxnUnpark(MDBX_txn*, Boolean)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark(MDBX.Native.Types.MDBX_txn*, Boolean)
+  name.vb: MdbxTxnUnpark(MDBX_txn*, Boolean)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnRenew(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnRenew(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnRenew(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Обновляет (renew) транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnRenew(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnRenew(txn As MDBX_txn*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh(MDBX.Native.Types.MDBX_txn*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh(MDBX.Native.Types.MDBX_txn*)
+  id: MdbxTxnRefresh(MDBX.Native.Types.MDBX_txn*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnRefresh(MDBX_txn*)
+  nameWithType: NativeMdbx.MdbxTxnRefresh(MDBX_txn*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh(MDBX.Native.Types.MDBX_txn*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Обновляет (refresh) транзакцию.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnRefresh(MDBX_txn* txn)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnRefresh(txn As MDBX_txn*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh*
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX.Native.Types.MDBX_txn*,System.Boolean,System.UIntPtr*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX.Native.Types.MDBX_txn*,System.Boolean,System.UIntPtr*)
+  id: MdbxTxnReleaseAllCursorsEx(MDBX.Native.Types.MDBX_txn*,System.Boolean,System.UIntPtr*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnReleaseAllCursorsEx(MDBX_txn*, bool, nuint*)
+  nameWithType: NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX_txn*, bool, nuint*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX.Native.Types.MDBX_txn*, bool, nuint*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Освобождает все курсоры транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnReleaseAllCursorsEx(MDBX_txn* txn, bool unbind, nuint* count)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: unbind
+      type: System.Boolean
+      description: Отвязать курсоры.
+    - id: count
+      type: System.UIntPtr*
+      description: Количество освобожденных курсоров.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnReleaseAllCursorsEx(txn As MDBX_txn*, unbind As Boolean, count As UIntPtr*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx*
+  nameWithType.vb: NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX_txn*, Boolean, UIntPtr*)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx(MDBX.Native.Types.MDBX_txn*, Boolean, System.UIntPtr*)
+  name.vb: MdbxTxnReleaseAllCursorsEx(MDBX_txn*, Boolean, UIntPtr*)
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler(MDBX.Native.Types.MDBX_txn*,System.Int32*)
+  commentId: M:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler(MDBX.Native.Types.MDBX_txn*,System.Int32*)
+  id: MdbxTxnStraggler(MDBX.Native.Types.MDBX_txn*,System.Int32*)
+  parent: MDBX.Native.Bindings.Txn.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnStraggler(MDBX_txn*, int*)
+  nameWithType: NativeMdbx.MdbxTxnStraggler(MDBX_txn*, int*)
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler(MDBX.Native.Types.MDBX_txn*, int*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Txn
+  summary: Получает информацию о "straggler" транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxTxnStraggler(MDBX_txn* txn, int* percent)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: percent
+      type: System.Int32*
+      description: Процент.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxTxnStraggler(txn As MDBX_txn*, percent As Integer*) As Integer
+  overload: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler*
+  nameWithType.vb: NativeMdbx.MdbxTxnStraggler(MDBX_txn*, Integer*)
+  fullName.vb: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler(MDBX.Native.Types.MDBX_txn*, Integer*)
+  name.vb: MdbxTxnStraggler(MDBX_txn*, Integer*)
+references:
+- uid: MDBX.Native.Bindings.Txn
+  commentId: N:MDBX.Native.Bindings.Txn
+  href: MDBX.html
+  name: MDBX.Native.Bindings.Txn
+  nameWithType: MDBX.Native.Bindings.Txn
+  fullName: MDBX.Native.Bindings.Txn
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Txn
+    name: Txn
+    href: MDBX.Native.Bindings.Txn.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Txn
+    name: Txn
+    href: MDBX.Native.Bindings.Txn.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnBeginEx_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxTxnFlags_MDBX_Native_Types_MDBX_txn___System_UIntPtr_
+  name: MdbxTxnBeginEx
+  nameWithType: NativeMdbx.MdbxTxnBeginEx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBeginEx
+- uid: MDBX.Native.Types.MDBX_env*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_env.html
+  name: MDBX_env*
+  nameWithType: MDBX_env*
+  fullName: MDBX.Native.Types.MDBX_env*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxTxnFlags
+  commentId: T:MDBX.Native.Types.MdbxTxnFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxTxnFlags.html
+  name: MdbxTxnFlags
+  nameWithType: MdbxTxnFlags
+  fullName: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MDBX_txn**
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn**
+  nameWithType: MDBX_txn**
+  fullName: MDBX.Native.Types.MDBX_txn**
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  - name: '*'
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnClone_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MDBX_txn___System_Void__
+  name: MdbxTxnClone
+  nameWithType: NativeMdbx.MdbxTxnClone
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnClone
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnSetUserctx_MDBX_Native_Types_MDBX_txn__System_Void__
+  name: MdbxTxnSetUserctx
+  nameWithType: NativeMdbx.MdbxTxnSetUserctx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnSetUserctx
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnGetUserctx_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnGetUserctx
+  nameWithType: NativeMdbx.MdbxTxnGetUserctx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnGetUserctx
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnInfo_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxTxnInfo__System_Boolean_
+  name: MdbxTxnInfo
+  nameWithType: NativeMdbx.MdbxTxnInfo
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnInfo
+- uid: MDBX.Native.Types.MdbxTxnInfo*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxTxnInfo.html
+  name: MdbxTxnInfo*
+  nameWithType: MdbxTxnInfo*
+  fullName: MDBX.Native.Types.MdbxTxnInfo*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxTxnInfo
+    name: MdbxTxnInfo
+    href: MDBX.Native.Types.MdbxTxnInfo.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxTxnInfo
+    name: MdbxTxnInfo
+    href: MDBX.Native.Types.MdbxTxnInfo.html
+  - name: '*'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnEnv_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnEnv
+  nameWithType: NativeMdbx.MdbxTxnEnv
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnEnv
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnFlags_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnFlags
+  nameWithType: NativeMdbx.MdbxTxnFlags
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnFlags
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnId_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnId
+  nameWithType: NativeMdbx.MdbxTxnId
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnId
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnCommitEx_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxCommitLatency__
+  name: MdbxTxnCommitEx
+  nameWithType: NativeMdbx.MdbxTxnCommitEx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEx
+- uid: MDBX.Native.Types.MdbxCommitLatency*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxCommitLatency.html
+  name: MdbxCommitLatency*
+  nameWithType: MdbxCommitLatency*
+  fullName: MDBX.Native.Types.MdbxCommitLatency*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: '*'
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnCheckpoint_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxTxnFlags_MDBX_Native_Types_MdbxCommitLatency__
+  name: MdbxTxnCheckpoint
+  nameWithType: NativeMdbx.MdbxTxnCheckpoint
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCheckpoint
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnCommitEmbarkRead_MDBX_Native_Types_MDBX_txn___MDBX_Native_Types_MdbxCommitLatency__
+  name: MdbxTxnCommitEmbarkRead
+  nameWithType: NativeMdbx.MdbxTxnCommitEmbarkRead
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnCommitEmbarkRead
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnAmend_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MDBX_txn___MDBX_Native_Types_MdbxTxnFlags_System_Void__
+  name: MdbxTxnAmend
+  nameWithType: NativeMdbx.MdbxTxnAmend
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAmend
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnRollback_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnRollback
+  nameWithType: NativeMdbx.MdbxTxnRollback
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRollback
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnAbortEx_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxCommitLatency__
+  name: MdbxTxnAbortEx
+  nameWithType: NativeMdbx.MdbxTxnAbortEx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnAbortEx
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnBreak_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnBreak
+  nameWithType: NativeMdbx.MdbxTxnBreak
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnBreak
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnReset_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnReset
+  nameWithType: NativeMdbx.MdbxTxnReset
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReset
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnPark_MDBX_Native_Types_MDBX_txn__System_Boolean_
+  name: MdbxTxnPark
+  nameWithType: NativeMdbx.MdbxTxnPark
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnPark
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnUnpark_MDBX_Native_Types_MDBX_txn__System_Boolean_
+  name: MdbxTxnUnpark
+  nameWithType: NativeMdbx.MdbxTxnUnpark
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnUnpark
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnRenew_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnRenew
+  nameWithType: NativeMdbx.MdbxTxnRenew
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRenew
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnRefresh_MDBX_Native_Types_MDBX_txn__
+  name: MdbxTxnRefresh
+  nameWithType: NativeMdbx.MdbxTxnRefresh
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnRefresh
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnReleaseAllCursorsEx_MDBX_Native_Types_MDBX_txn__System_Boolean_System_UIntPtr__
+  name: MdbxTxnReleaseAllCursorsEx
+  nameWithType: NativeMdbx.MdbxTxnReleaseAllCursorsEx
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnReleaseAllCursorsEx
+- uid: System.UIntPtr*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint*
+  nameWithType: nuint*
+  fullName: nuint*
+  nameWithType.vb: UIntPtr*
+  fullName.vb: System.UIntPtr*
+  name.vb: UIntPtr*
+  spec.csharp:
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: '*'
+  spec.vb:
+  - uid: System.UIntPtr
+    name: UIntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: '*'
+- uid: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler*
+  commentId: Overload:MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler
+  isExternal: true
+  href: MDBX.Native.Bindings.Txn.NativeMdbx.html#MDBX_Native_Bindings_Txn_NativeMdbx_MdbxTxnStraggler_MDBX_Native_Types_MDBX_txn__System_Int32__
+  name: MdbxTxnStraggler
+  nameWithType: NativeMdbx.MdbxTxnStraggler
+  fullName: MDBX.Native.Bindings.Txn.NativeMdbx.MdbxTxnStraggler
+- uid: System.Int32*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int*
+  nameWithType: int*
+  fullName: int*
+  nameWithType.vb: Integer*
+  fullName.vb: Integer*
+  name.vb: Integer*
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '*'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '*'

@@ -1,0 +1,358 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxLogLevel
+  commentId: T:MDBX.Native.Types.MdbxLogLevel
+  id: MdbxLogLevel
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DEBUG
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DONTCHANGE
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_ERROR
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_EXTRA
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_FATAL
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_MAX
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_NOTICE
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_TRACE
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_VERBOSE
+  - MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_WARN
+  langs:
+  - csharp
+  - vb
+  name: MdbxLogLevel
+  nameWithType: MdbxLogLevel
+  fullName: MDBX.Native.Types.MdbxLogLevel
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxLogLevel
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Уровни логирования.
+  example: []
+  syntax:
+    content: public enum MdbxLogLevel
+    content.vb: Public Enum MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DONTCHANGE
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DONTCHANGE
+  id: MDBX_LOG_DONTCHANGE
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_DONTCHANGE
+  nameWithType: MdbxLogLevel.MDBX_LOG_DONTCHANGE
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DONTCHANGE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_DONTCHANGE
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 10
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Не изменять текущие настройки (только для mdbx_setup_debug).
+  example: []
+  syntax:
+    content: MDBX_LOG_DONTCHANGE = -1
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_FATAL
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_FATAL
+  id: MDBX_LOG_FATAL
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_FATAL
+  nameWithType: MdbxLogLevel.MDBX_LOG_FATAL
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_FATAL
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_FATAL
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 15
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Критические условия (аварийные отказы).
+  example: []
+  syntax:
+    content: MDBX_LOG_FATAL = 0
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_ERROR
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_ERROR
+  id: MDBX_LOG_ERROR
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_ERROR
+  nameWithType: MdbxLogLevel.MDBX_LOG_ERROR
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_ERROR
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_ERROR
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 20
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Ошибки.
+  example: []
+  syntax:
+    content: MDBX_LOG_ERROR = 1
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_WARN
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_WARN
+  id: MDBX_LOG_WARN
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_WARN
+  nameWithType: MdbxLogLevel.MDBX_LOG_WARN
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_WARN
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_WARN
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 25
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Предупреждения.
+  example: []
+  syntax:
+    content: MDBX_LOG_WARN = 2
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_NOTICE
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_NOTICE
+  id: MDBX_LOG_NOTICE
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_NOTICE
+  nameWithType: MdbxLogLevel.MDBX_LOG_NOTICE
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_NOTICE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_NOTICE
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 30
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Уведомления.
+  example: []
+  syntax:
+    content: MDBX_LOG_NOTICE = 3
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_VERBOSE
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_VERBOSE
+  id: MDBX_LOG_VERBOSE
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_VERBOSE
+  nameWithType: MdbxLogLevel.MDBX_LOG_VERBOSE
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_VERBOSE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_VERBOSE
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 35
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Подробные информационные сообщения.
+  example: []
+  syntax:
+    content: MDBX_LOG_VERBOSE = 4
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DEBUG
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DEBUG
+  id: MDBX_LOG_DEBUG
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_DEBUG
+  nameWithType: MdbxLogLevel.MDBX_LOG_DEBUG
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_DEBUG
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_DEBUG
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 40
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отладочные сообщения.
+  example: []
+  syntax:
+    content: MDBX_LOG_DEBUG = 5
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_TRACE
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_TRACE
+  id: MDBX_LOG_TRACE
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_TRACE
+  nameWithType: MdbxLogLevel.MDBX_LOG_TRACE
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_TRACE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_TRACE
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 45
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Трассировочные отладочные сообщения.
+  example: []
+  syntax:
+    content: MDBX_LOG_TRACE = 6
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_EXTRA
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_EXTRA
+  id: MDBX_LOG_EXTRA
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_EXTRA
+  nameWithType: MdbxLogLevel.MDBX_LOG_EXTRA
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_EXTRA
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_EXTRA
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 50
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Дополнительные отладочные сообщения (дамп списков pgno).
+  example: []
+  syntax:
+    content: MDBX_LOG_EXTRA = 7
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_MAX
+  commentId: F:MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_MAX
+  id: MDBX_LOG_MAX
+  parent: MDBX.Native.Types.MdbxLogLevel
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LOG_MAX
+  nameWithType: MdbxLogLevel.MDBX_LOG_MAX
+  fullName: MDBX.Native.Types.MdbxLogLevel.MDBX_LOG_MAX
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxLogLevel.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LOG_MAX
+    path: ../MDBX/Types/MdbxLogLevel.cs
+    startLine: 55
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Максимальный уровень логирования.
+  example: []
+  syntax:
+    content: MDBX_LOG_MAX = 7
+    return:
+      type: MDBX.Native.Types.MdbxLogLevel
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxLogLevel
+  commentId: T:MDBX.Native.Types.MdbxLogLevel
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: MdbxLogLevel
+  nameWithType: MdbxLogLevel
+  fullName: MDBX.Native.Types.MdbxLogLevel

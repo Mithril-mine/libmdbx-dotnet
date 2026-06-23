@@ -1,0 +1,1635 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.MdbxCursor
+  commentId: T:MDBX.MdbxCursor
+  id: MdbxCursor
+  parent: MDBX
+  children:
+  - MDBX.MdbxCursor.Close
+  - MDBX.MdbxCursor.CopyTo(MDBX.MdbxCursor)
+  - MDBX.MdbxCursor.Count
+  - MDBX.MdbxCursor.Create(MDBX.MdbxTransaction,MDBX.MdbxDatabase)
+  - MDBX.MdbxCursor.Delete(MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.MdbxCursor.Dispose
+  - MDBX.MdbxCursor.Finalize
+  - MDBX.MdbxCursor.GetCurrent(System.Byte[]@)
+  - MDBX.MdbxCursor.GetFirst(System.Byte[]@)
+  - MDBX.MdbxCursor.GetFirstDup(System.Byte[]@)
+  - MDBX.MdbxCursor.GetLast(System.Byte[]@)
+  - MDBX.MdbxCursor.GetLastDup(System.Byte[]@)
+  - MDBX.MdbxCursor.GetNext(System.Byte[]@)
+  - MDBX.MdbxCursor.GetNextDup(System.Byte[]@)
+  - MDBX.MdbxCursor.GetNextNoDup(System.Byte[]@)
+  - MDBX.MdbxCursor.GetPrev(System.Byte[]@)
+  - MDBX.MdbxCursor.GetPrevDup(System.Byte[]@)
+  - MDBX.MdbxCursor.GetPrevNoDup(System.Byte[]@)
+  - MDBX.MdbxCursor.GetSet(System.Byte[],System.Byte[]@)
+  - MDBX.MdbxCursor.IsEof
+  - MDBX.MdbxCursor.IsOnFirst
+  - MDBX.MdbxCursor.IsOnFirstDup
+  - MDBX.MdbxCursor.IsOnLast
+  - MDBX.MdbxCursor.IsOnLastDup
+  - MDBX.MdbxCursor.NativeCursor
+  - MDBX.MdbxCursor.Put(System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.MdbxCursor.Put(System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.MdbxCursor.Renew(MDBX.MdbxTransaction)
+  - MDBX.MdbxCursor.Reset
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursor
+  nameWithType: MdbxCursor
+  fullName: MDBX.MdbxCursor
+  type: Class
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxCursor
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 9
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Высокоуровневая обертка курсора libmdbx.
+  example: []
+  syntax:
+    content: 'public sealed class MdbxCursor : IDisposable'
+    content.vb: Public NotInheritable Class MdbxCursor Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.MdbxCursor.Create(MDBX.MdbxTransaction,MDBX.MdbxDatabase)
+  commentId: M:MDBX.MdbxCursor.Create(MDBX.MdbxTransaction,MDBX.MdbxDatabase)
+  id: Create(MDBX.MdbxTransaction,MDBX.MdbxDatabase)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Create(MdbxTransaction, MdbxDatabase)
+  nameWithType: MdbxCursor.Create(MdbxTransaction, MdbxDatabase)
+  fullName: MDBX.MdbxCursor.Create(MDBX.MdbxTransaction, MDBX.MdbxDatabase)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Create
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 29
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Создает новый курсор для указанной транзакции и таблицы.
+  example: []
+  syntax:
+    content: public static MdbxCursor Create(MdbxTransaction txn, MdbxDatabase db)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: db
+      type: MDBX.MdbxDatabase
+      description: Таблица (DBI).
+    return:
+      type: MDBX.MdbxCursor
+      description: Новый курсор.
+    content.vb: Public Shared Function Create(txn As MdbxTransaction, db As MdbxDatabase) As MdbxCursor
+  overload: MDBX.MdbxCursor.Create*
+- uid: MDBX.MdbxCursor.NativeCursor
+  commentId: P:MDBX.MdbxCursor.NativeCursor
+  id: NativeCursor
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: NativeCursor
+  nameWithType: MdbxCursor.NativeCursor
+  fullName: MDBX.MdbxCursor.NativeCursor
+  type: Property
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeCursor
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 45
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает нативный указатель на курсор.
+  example: []
+  syntax:
+    content: public MDBX_cursor* NativeCursor { get; }
+    parameters: []
+    return:
+      type: MDBX.Native.Types.MDBX_cursor*
+    content.vb: Public ReadOnly Property NativeCursor As MDBX_cursor*
+  overload: MDBX.MdbxCursor.NativeCursor*
+- uid: MDBX.MdbxCursor.GetCurrent(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetCurrent(System.Byte[]@)
+  id: GetCurrent(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetCurrent(out byte[]?)
+  nameWithType: MdbxCursor.GetCurrent(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetCurrent(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetCurrent
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 59
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает текущий элемент (ключ и значение).
+  example: []
+  syntax:
+    content: public byte[]? GetCurrent(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ текущего элемента.
+    return:
+      type: System.Byte[]
+      description: Значение текущего элемента или null если курсор не позиционирован.
+    content.vb: Public Function GetCurrent(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetCurrent*
+  nameWithType.vb: MdbxCursor.GetCurrent(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetCurrent(Byte())
+  name.vb: GetCurrent(Byte())
+- uid: MDBX.MdbxCursor.GetFirst(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetFirst(System.Byte[]@)
+  id: GetFirst(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetFirst(out byte[]?)
+  nameWithType: MdbxCursor.GetFirst(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetFirst(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetFirst
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 82
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на первый элемент.
+  example: []
+  syntax:
+    content: public byte[]? GetFirst(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ первого элемента.
+    return:
+      type: System.Byte[]
+      description: Значение первого элемента или null если таблица пуста.
+    content.vb: Public Function GetFirst(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetFirst*
+  nameWithType.vb: MdbxCursor.GetFirst(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetFirst(Byte())
+  name.vb: GetFirst(Byte())
+- uid: MDBX.MdbxCursor.GetLast(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetLast(System.Byte[]@)
+  id: GetLast(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetLast(out byte[]?)
+  nameWithType: MdbxCursor.GetLast(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetLast(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetLast
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 105
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на последний элемент.
+  example: []
+  syntax:
+    content: public byte[]? GetLast(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ последнего элемента.
+    return:
+      type: System.Byte[]
+      description: Значение последнего элемента или null если таблица пуста.
+    content.vb: Public Function GetLast(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetLast*
+  nameWithType.vb: MdbxCursor.GetLast(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetLast(Byte())
+  name.vb: GetLast(Byte())
+- uid: MDBX.MdbxCursor.GetNext(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetNext(System.Byte[]@)
+  id: GetNext(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetNext(out byte[]?)
+  nameWithType: MdbxCursor.GetNext(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetNext(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetNext
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 128
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на следующий элемент.
+  example: []
+  syntax:
+    content: public byte[]? GetNext(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ следующего элемента.
+    return:
+      type: System.Byte[]
+      description: Значение следующего элемента или null если достигнут конец таблицы.
+    content.vb: Public Function GetNext(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetNext*
+  nameWithType.vb: MdbxCursor.GetNext(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetNext(Byte())
+  name.vb: GetNext(Byte())
+- uid: MDBX.MdbxCursor.GetPrev(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetPrev(System.Byte[]@)
+  id: GetPrev(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetPrev(out byte[]?)
+  nameWithType: MdbxCursor.GetPrev(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetPrev(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetPrev
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 151
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на предыдущий элемент.
+  example: []
+  syntax:
+    content: public byte[]? GetPrev(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ предыдущего элемента.
+    return:
+      type: System.Byte[]
+      description: Значение предыдущего элемента или null если достигнуто начало таблицы.
+    content.vb: Public Function GetPrev(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetPrev*
+  nameWithType.vb: MdbxCursor.GetPrev(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetPrev(Byte())
+  name.vb: GetPrev(Byte())
+- uid: MDBX.MdbxCursor.GetSet(System.Byte[],System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetSet(System.Byte[],System.Byte[]@)
+  id: GetSet(System.Byte[],System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetSet(byte[], out byte[]?)
+  nameWithType: MdbxCursor.GetSet(byte[], out byte[]?)
+  fullName: MDBX.MdbxCursor.GetSet(byte[], out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetSet
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 175
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Позиционирует курсор на указанный ключ.
+  example: []
+  syntax:
+    content: public byte[]? GetSet(byte[] key, out byte[]? foundKey)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ для позиционирования.
+    - id: foundKey
+      type: System.Byte[]
+      description: Фактический найденный ключ.
+    return:
+      type: System.Byte[]
+      description: Значение найденного элемента или null если ключ не существует.
+    content.vb: Public Function GetSet(key As Byte(), foundKey As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetSet*
+  nameWithType.vb: MdbxCursor.GetSet(Byte(), Byte())
+  fullName.vb: MDBX.MdbxCursor.GetSet(Byte(), Byte())
+  name.vb: GetSet(Byte(), Byte())
+- uid: MDBX.MdbxCursor.GetFirstDup(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetFirstDup(System.Byte[]@)
+  id: GetFirstDup(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetFirstDup(out byte[]?)
+  nameWithType: MdbxCursor.GetFirstDup(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetFirstDup(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetFirstDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 202
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на первый дубликат текущего ключа.
+  example: []
+  syntax:
+    content: public byte[]? GetFirstDup(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ элемента.
+    return:
+      type: System.Byte[]
+      description: Значение первого дубликата или null если дубликатов нет.
+    content.vb: Public Function GetFirstDup(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetFirstDup*
+  nameWithType.vb: MdbxCursor.GetFirstDup(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetFirstDup(Byte())
+  name.vb: GetFirstDup(Byte())
+- uid: MDBX.MdbxCursor.GetLastDup(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetLastDup(System.Byte[]@)
+  id: GetLastDup(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetLastDup(out byte[]?)
+  nameWithType: MdbxCursor.GetLastDup(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetLastDup(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetLastDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 225
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на последний дубликат текущего ключа.
+  example: []
+  syntax:
+    content: public byte[]? GetLastDup(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ элемента.
+    return:
+      type: System.Byte[]
+      description: Значение последнего дубликата или null если дубликатов нет.
+    content.vb: Public Function GetLastDup(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetLastDup*
+  nameWithType.vb: MdbxCursor.GetLastDup(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetLastDup(Byte())
+  name.vb: GetLastDup(Byte())
+- uid: MDBX.MdbxCursor.GetNextDup(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetNextDup(System.Byte[]@)
+  id: GetNextDup(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetNextDup(out byte[]?)
+  nameWithType: MdbxCursor.GetNextDup(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetNextDup(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetNextDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 248
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на следующий дубликат.
+  example: []
+  syntax:
+    content: public byte[]? GetNextDup(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ элемента.
+    return:
+      type: System.Byte[]
+      description: Значение следующего дубликата или null если достигнут конец дубликатов.
+    content.vb: Public Function GetNextDup(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetNextDup*
+  nameWithType.vb: MdbxCursor.GetNextDup(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetNextDup(Byte())
+  name.vb: GetNextDup(Byte())
+- uid: MDBX.MdbxCursor.GetPrevDup(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetPrevDup(System.Byte[]@)
+  id: GetPrevDup(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetPrevDup(out byte[]?)
+  nameWithType: MdbxCursor.GetPrevDup(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetPrevDup(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetPrevDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 271
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на предыдущий дубликат.
+  example: []
+  syntax:
+    content: public byte[]? GetPrevDup(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ элемента.
+    return:
+      type: System.Byte[]
+      description: Значение предыдущего дубликата или null если достигнуто начало дубликатов.
+    content.vb: Public Function GetPrevDup(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetPrevDup*
+  nameWithType.vb: MdbxCursor.GetPrevDup(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetPrevDup(Byte())
+  name.vb: GetPrevDup(Byte())
+- uid: MDBX.MdbxCursor.GetNextNoDup(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetNextNoDup(System.Byte[]@)
+  id: GetNextNoDup(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetNextNoDup(out byte[]?)
+  nameWithType: MdbxCursor.GetNextNoDup(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetNextNoDup(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetNextNoDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 294
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на следующий элемент с другим ключом.
+  example: []
+  syntax:
+    content: public byte[]? GetNextNoDup(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ следующего элемента.
+    return:
+      type: System.Byte[]
+      description: Значение следующего элемента с другим ключом или null если достигнут конец таблицы.
+    content.vb: Public Function GetNextNoDup(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetNextNoDup*
+  nameWithType.vb: MdbxCursor.GetNextNoDup(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetNextNoDup(Byte())
+  name.vb: GetNextNoDup(Byte())
+- uid: MDBX.MdbxCursor.GetPrevNoDup(System.Byte[]@)
+  commentId: M:MDBX.MdbxCursor.GetPrevNoDup(System.Byte[]@)
+  id: GetPrevNoDup(System.Byte[]@)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: GetPrevNoDup(out byte[]?)
+  nameWithType: MdbxCursor.GetPrevNoDup(out byte[]?)
+  fullName: MDBX.MdbxCursor.GetPrevNoDup(out byte[]?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetPrevNoDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 317
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перемещает курсор на предыдущий элемент с другим ключом.
+  example: []
+  syntax:
+    content: public byte[]? GetPrevNoDup(out byte[]? key)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ предыдущего элемента.
+    return:
+      type: System.Byte[]
+      description: Значение предыдущего элемента с другим ключом или null если достигнуто начало таблицы.
+    content.vb: Public Function GetPrevNoDup(key As Byte()) As Byte()
+  overload: MDBX.MdbxCursor.GetPrevNoDup*
+  nameWithType.vb: MdbxCursor.GetPrevNoDup(Byte())
+  fullName.vb: MDBX.MdbxCursor.GetPrevNoDup(Byte())
+  name.vb: GetPrevNoDup(Byte())
+- uid: MDBX.MdbxCursor.Put(System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.MdbxCursor.Put(System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  id: Put(System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Put(byte[], byte[], MdbxPutFlags)
+  nameWithType: MdbxCursor.Put(byte[], byte[], MdbxPutFlags)
+  fullName: MDBX.MdbxCursor.Put(byte[], byte[], MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Put
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 341
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Записывает пару ключ-значение через курсор.
+  example: []
+  syntax:
+    content: public void Put(byte[] key, byte[] value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)
+    parameters:
+    - id: key
+      type: System.Byte[]
+      description: Ключ.
+    - id: value
+      type: System.Byte[]
+      description: Значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги операции записи.
+    content.vb: Public Sub Put(key As Byte(), value As Byte(), flags As MdbxPutFlags = MdbxPutFlags.MDBX_UPSERT)
+  overload: MDBX.MdbxCursor.Put*
+  nameWithType.vb: MdbxCursor.Put(Byte(), Byte(), MdbxPutFlags)
+  fullName.vb: MDBX.MdbxCursor.Put(Byte(), Byte(), MDBX.Native.Types.MdbxPutFlags)
+  name.vb: Put(Byte(), Byte(), MdbxPutFlags)
+- uid: MDBX.MdbxCursor.Put(System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.MdbxCursor.Put(System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  id: Put(System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Put(string, string, MdbxPutFlags)
+  nameWithType: MdbxCursor.Put(string, string, MdbxPutFlags)
+  fullName: MDBX.MdbxCursor.Put(string, string, MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Put
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 364
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Записывает строковую пару ключ-значение через курсор (UTF-8).
+  example: []
+  syntax:
+    content: public void Put(string key, string value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)
+    parameters:
+    - id: key
+      type: System.String
+      description: Строковый ключ.
+    - id: value
+      type: System.String
+      description: Строковое значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги операции записи.
+    content.vb: Public Sub Put(key As String, value As String, flags As MdbxPutFlags = MdbxPutFlags.MDBX_UPSERT)
+  overload: MDBX.MdbxCursor.Put*
+  nameWithType.vb: MdbxCursor.Put(String, String, MdbxPutFlags)
+  fullName.vb: MDBX.MdbxCursor.Put(String, String, MDBX.Native.Types.MdbxPutFlags)
+  name.vb: Put(String, String, MdbxPutFlags)
+- uid: MDBX.MdbxCursor.Delete(MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.MdbxCursor.Delete(MDBX.Native.Types.MdbxPutFlags)
+  id: Delete(MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Delete(MdbxPutFlags)
+  nameWithType: MdbxCursor.Delete(MdbxPutFlags)
+  fullName: MDBX.MdbxCursor.Delete(MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Delete
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 378
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Удаляет текущий элемент через курсор.
+  example: []
+  syntax:
+    content: public bool Delete(MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги удаления.
+    return:
+      type: System.Boolean
+      description: True если элемент был удален, false если элемент не найден.
+    content.vb: Public Function Delete(flags As MdbxPutFlags = MdbxPutFlags.MDBX_UPSERT) As Boolean
+  overload: MDBX.MdbxCursor.Delete*
+- uid: MDBX.MdbxCursor.Count
+  commentId: M:MDBX.MdbxCursor.Count
+  id: Count
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Count()
+  nameWithType: MdbxCursor.Count()
+  fullName: MDBX.MdbxCursor.Count()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Count
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 393
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает количество элементов, доступных с текущей позиции курсора.
+  example: []
+  syntax:
+    content: public nuint Count()
+    return:
+      type: System.UIntPtr
+      description: Количество элементов.
+    content.vb: Public Function Count() As UIntPtr
+  overload: MDBX.MdbxCursor.Count*
+- uid: MDBX.MdbxCursor.IsEof
+  commentId: M:MDBX.MdbxCursor.IsEof
+  id: IsEof
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: IsEof()
+  nameWithType: MdbxCursor.IsEof()
+  fullName: MDBX.MdbxCursor.IsEof()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IsEof
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 407
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет, достигнут ли конец таблицы.
+  example: []
+  syntax:
+    content: public bool IsEof()
+    return:
+      type: System.Boolean
+      description: True если курсор за пределами таблицы.
+    content.vb: Public Function IsEof() As Boolean
+  overload: MDBX.MdbxCursor.IsEof*
+- uid: MDBX.MdbxCursor.IsOnFirst
+  commentId: M:MDBX.MdbxCursor.IsOnFirst
+  id: IsOnFirst
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: IsOnFirst()
+  nameWithType: MdbxCursor.IsOnFirst()
+  fullName: MDBX.MdbxCursor.IsOnFirst()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IsOnFirst
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 417
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет, находится ли курсор на первом элементе.
+  example: []
+  syntax:
+    content: public bool IsOnFirst()
+    return:
+      type: System.Boolean
+      description: True если курсор на первом элементе.
+    content.vb: Public Function IsOnFirst() As Boolean
+  overload: MDBX.MdbxCursor.IsOnFirst*
+- uid: MDBX.MdbxCursor.IsOnLast
+  commentId: M:MDBX.MdbxCursor.IsOnLast
+  id: IsOnLast
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: IsOnLast()
+  nameWithType: MdbxCursor.IsOnLast()
+  fullName: MDBX.MdbxCursor.IsOnLast()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IsOnLast
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 427
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет, находится ли курсор на последнем элементе.
+  example: []
+  syntax:
+    content: public bool IsOnLast()
+    return:
+      type: System.Boolean
+      description: True если курсор на последнем элементе.
+    content.vb: Public Function IsOnLast() As Boolean
+  overload: MDBX.MdbxCursor.IsOnLast*
+- uid: MDBX.MdbxCursor.IsOnFirstDup
+  commentId: M:MDBX.MdbxCursor.IsOnFirstDup
+  id: IsOnFirstDup
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: IsOnFirstDup()
+  nameWithType: MdbxCursor.IsOnFirstDup()
+  fullName: MDBX.MdbxCursor.IsOnFirstDup()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IsOnFirstDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 437
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет, находится ли курсор на первом дубликате.
+  example: []
+  syntax:
+    content: public bool IsOnFirstDup()
+    return:
+      type: System.Boolean
+      description: True если курсор на первом дубликате.
+    content.vb: Public Function IsOnFirstDup() As Boolean
+  overload: MDBX.MdbxCursor.IsOnFirstDup*
+- uid: MDBX.MdbxCursor.IsOnLastDup
+  commentId: M:MDBX.MdbxCursor.IsOnLastDup
+  id: IsOnLastDup
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: IsOnLastDup()
+  nameWithType: MdbxCursor.IsOnLastDup()
+  fullName: MDBX.MdbxCursor.IsOnLastDup()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IsOnLastDup
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 447
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет, находится ли курсор на последнем дубликате.
+  example: []
+  syntax:
+    content: public bool IsOnLastDup()
+    return:
+      type: System.Boolean
+      description: True если курсор на последнем дубликате.
+    content.vb: Public Function IsOnLastDup() As Boolean
+  overload: MDBX.MdbxCursor.IsOnLastDup*
+- uid: MDBX.MdbxCursor.Renew(MDBX.MdbxTransaction)
+  commentId: M:MDBX.MdbxCursor.Renew(MDBX.MdbxTransaction)
+  id: Renew(MDBX.MdbxTransaction)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Renew(MdbxTransaction)
+  nameWithType: MdbxCursor.Renew(MdbxTransaction)
+  fullName: MDBX.MdbxCursor.Renew(MDBX.MdbxTransaction)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Renew
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 457
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Обновляет курсор для использования в новой транзакции.
+  example: []
+  syntax:
+    content: public void Renew(MdbxTransaction txn)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Новая транзакция.
+    content.vb: Public Sub Renew(txn As MdbxTransaction)
+  overload: MDBX.MdbxCursor.Renew*
+- uid: MDBX.MdbxCursor.Reset
+  commentId: M:MDBX.MdbxCursor.Reset
+  id: Reset
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: MdbxCursor.Reset()
+  fullName: MDBX.MdbxCursor.Reset()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Reset
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 470
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Сбрасывает курсор (отвязывает от таблицы).
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: MDBX.MdbxCursor.Reset*
+- uid: MDBX.MdbxCursor.CopyTo(MDBX.MdbxCursor)
+  commentId: M:MDBX.MdbxCursor.CopyTo(MDBX.MdbxCursor)
+  id: CopyTo(MDBX.MdbxCursor)
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(MdbxCursor)
+  nameWithType: MdbxCursor.CopyTo(MdbxCursor)
+  fullName: MDBX.MdbxCursor.CopyTo(MDBX.MdbxCursor)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: CopyTo
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 482
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Копирует состояние курсора в другой курсор.
+  example: []
+  syntax:
+    content: public void CopyTo(MdbxCursor dest)
+    parameters:
+    - id: dest
+      type: MDBX.MdbxCursor
+      description: Курсор назначения.
+    content.vb: Public Sub CopyTo(dest As MdbxCursor)
+  overload: MDBX.MdbxCursor.CopyTo*
+- uid: MDBX.MdbxCursor.Close
+  commentId: M:MDBX.MdbxCursor.Close
+  id: Close
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: MdbxCursor.Close()
+  fullName: MDBX.MdbxCursor.Close()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Close
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 494
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Закрывает курсор.
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close()
+  overload: MDBX.MdbxCursor.Close*
+- uid: MDBX.MdbxCursor.Dispose
+  commentId: M:MDBX.MdbxCursor.Dispose
+  id: Dispose
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: MdbxCursor.Dispose()
+  fullName: MDBX.MdbxCursor.Dispose()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Dispose
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 506
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Освобождает ресурсы курсора.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: MDBX.MdbxCursor.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: MDBX.MdbxCursor.Finalize
+  commentId: M:MDBX.MdbxCursor.Finalize
+  id: Finalize
+  parent: MDBX.MdbxCursor
+  langs:
+  - csharp
+  - vb
+  name: ~MdbxCursor()
+  nameWithType: MdbxCursor.~MdbxCursor()
+  fullName: MDBX.MdbxCursor.~MdbxCursor()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Cursor/MdbxCursor.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Finalize
+    path: ../MDBX/Cursor/MdbxCursor.cs
+    startLine: 515
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Финализатор.
+  example: []
+  syntax:
+    content: protected ~MdbxCursor()
+    content.vb: 'Protected '
+  overload: MDBX.MdbxCursor.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: MDBX
+  commentId: N:MDBX
+  href: MDBX.html
+  name: MDBX
+  nameWithType: MDBX
+  fullName: MDBX
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.MdbxCursor.Create*
+  commentId: Overload:MDBX.MdbxCursor.Create
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Create_MDBX_MdbxTransaction_MDBX_MdbxDatabase_
+  name: Create
+  nameWithType: MdbxCursor.Create
+  fullName: MDBX.MdbxCursor.Create
+- uid: MDBX.MdbxTransaction
+  commentId: T:MDBX.MdbxTransaction
+  parent: MDBX
+  href: MDBX.MdbxTransaction.html
+  name: MdbxTransaction
+  nameWithType: MdbxTransaction
+  fullName: MDBX.MdbxTransaction
+- uid: MDBX.MdbxDatabase
+  commentId: T:MDBX.MdbxDatabase
+  parent: MDBX
+  href: MDBX.MdbxDatabase.html
+  name: MdbxDatabase
+  nameWithType: MdbxDatabase
+  fullName: MDBX.MdbxDatabase
+- uid: MDBX.MdbxCursor
+  commentId: T:MDBX.MdbxCursor
+  parent: MDBX
+  href: MDBX.MdbxCursor.html
+  name: MdbxCursor
+  nameWithType: MdbxCursor
+  fullName: MDBX.MdbxCursor
+- uid: MDBX.MdbxCursor.NativeCursor*
+  commentId: Overload:MDBX.MdbxCursor.NativeCursor
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_NativeCursor
+  name: NativeCursor
+  nameWithType: MdbxCursor.NativeCursor
+  fullName: MDBX.MdbxCursor.NativeCursor
+- uid: MDBX.Native.Types.MDBX_cursor*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_cursor.html
+  name: MDBX_cursor*
+  nameWithType: MDBX_cursor*
+  fullName: MDBX.Native.Types.MDBX_cursor*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+- uid: MDBX.MdbxCursor.GetCurrent*
+  commentId: Overload:MDBX.MdbxCursor.GetCurrent
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetCurrent_System_Byte____
+  name: GetCurrent
+  nameWithType: MdbxCursor.GetCurrent
+  fullName: MDBX.MdbxCursor.GetCurrent
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: MDBX.MdbxCursor.GetFirst*
+  commentId: Overload:MDBX.MdbxCursor.GetFirst
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetFirst_System_Byte____
+  name: GetFirst
+  nameWithType: MdbxCursor.GetFirst
+  fullName: MDBX.MdbxCursor.GetFirst
+- uid: MDBX.MdbxCursor.GetLast*
+  commentId: Overload:MDBX.MdbxCursor.GetLast
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetLast_System_Byte____
+  name: GetLast
+  nameWithType: MdbxCursor.GetLast
+  fullName: MDBX.MdbxCursor.GetLast
+- uid: MDBX.MdbxCursor.GetNext*
+  commentId: Overload:MDBX.MdbxCursor.GetNext
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetNext_System_Byte____
+  name: GetNext
+  nameWithType: MdbxCursor.GetNext
+  fullName: MDBX.MdbxCursor.GetNext
+- uid: MDBX.MdbxCursor.GetPrev*
+  commentId: Overload:MDBX.MdbxCursor.GetPrev
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetPrev_System_Byte____
+  name: GetPrev
+  nameWithType: MdbxCursor.GetPrev
+  fullName: MDBX.MdbxCursor.GetPrev
+- uid: MDBX.MdbxCursor.GetSet*
+  commentId: Overload:MDBX.MdbxCursor.GetSet
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetSet_System_Byte___System_Byte____
+  name: GetSet
+  nameWithType: MdbxCursor.GetSet
+  fullName: MDBX.MdbxCursor.GetSet
+- uid: MDBX.MdbxCursor.GetFirstDup*
+  commentId: Overload:MDBX.MdbxCursor.GetFirstDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetFirstDup_System_Byte____
+  name: GetFirstDup
+  nameWithType: MdbxCursor.GetFirstDup
+  fullName: MDBX.MdbxCursor.GetFirstDup
+- uid: MDBX.MdbxCursor.GetLastDup*
+  commentId: Overload:MDBX.MdbxCursor.GetLastDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetLastDup_System_Byte____
+  name: GetLastDup
+  nameWithType: MdbxCursor.GetLastDup
+  fullName: MDBX.MdbxCursor.GetLastDup
+- uid: MDBX.MdbxCursor.GetNextDup*
+  commentId: Overload:MDBX.MdbxCursor.GetNextDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetNextDup_System_Byte____
+  name: GetNextDup
+  nameWithType: MdbxCursor.GetNextDup
+  fullName: MDBX.MdbxCursor.GetNextDup
+- uid: MDBX.MdbxCursor.GetPrevDup*
+  commentId: Overload:MDBX.MdbxCursor.GetPrevDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetPrevDup_System_Byte____
+  name: GetPrevDup
+  nameWithType: MdbxCursor.GetPrevDup
+  fullName: MDBX.MdbxCursor.GetPrevDup
+- uid: MDBX.MdbxCursor.GetNextNoDup*
+  commentId: Overload:MDBX.MdbxCursor.GetNextNoDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetNextNoDup_System_Byte____
+  name: GetNextNoDup
+  nameWithType: MdbxCursor.GetNextNoDup
+  fullName: MDBX.MdbxCursor.GetNextNoDup
+- uid: MDBX.MdbxCursor.GetPrevNoDup*
+  commentId: Overload:MDBX.MdbxCursor.GetPrevNoDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_GetPrevNoDup_System_Byte____
+  name: GetPrevNoDup
+  nameWithType: MdbxCursor.GetPrevNoDup
+  fullName: MDBX.MdbxCursor.GetPrevNoDup
+- uid: MDBX.MdbxCursor.Put*
+  commentId: Overload:MDBX.MdbxCursor.Put
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Put_System_Byte___System_Byte___MDBX_Native_Types_MdbxPutFlags_
+  name: Put
+  nameWithType: MdbxCursor.Put
+  fullName: MDBX.MdbxCursor.Put
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPutFlags.html
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MDBX.MdbxCursor.Delete*
+  commentId: Overload:MDBX.MdbxCursor.Delete
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Delete_MDBX_Native_Types_MdbxPutFlags_
+  name: Delete
+  nameWithType: MdbxCursor.Delete
+  fullName: MDBX.MdbxCursor.Delete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MDBX.MdbxCursor.Count*
+  commentId: Overload:MDBX.MdbxCursor.Count
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Count
+  name: Count
+  nameWithType: MdbxCursor.Count
+  fullName: MDBX.MdbxCursor.Count
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.MdbxCursor.IsEof*
+  commentId: Overload:MDBX.MdbxCursor.IsEof
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_IsEof
+  name: IsEof
+  nameWithType: MdbxCursor.IsEof
+  fullName: MDBX.MdbxCursor.IsEof
+- uid: MDBX.MdbxCursor.IsOnFirst*
+  commentId: Overload:MDBX.MdbxCursor.IsOnFirst
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_IsOnFirst
+  name: IsOnFirst
+  nameWithType: MdbxCursor.IsOnFirst
+  fullName: MDBX.MdbxCursor.IsOnFirst
+- uid: MDBX.MdbxCursor.IsOnLast*
+  commentId: Overload:MDBX.MdbxCursor.IsOnLast
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_IsOnLast
+  name: IsOnLast
+  nameWithType: MdbxCursor.IsOnLast
+  fullName: MDBX.MdbxCursor.IsOnLast
+- uid: MDBX.MdbxCursor.IsOnFirstDup*
+  commentId: Overload:MDBX.MdbxCursor.IsOnFirstDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_IsOnFirstDup
+  name: IsOnFirstDup
+  nameWithType: MdbxCursor.IsOnFirstDup
+  fullName: MDBX.MdbxCursor.IsOnFirstDup
+- uid: MDBX.MdbxCursor.IsOnLastDup*
+  commentId: Overload:MDBX.MdbxCursor.IsOnLastDup
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_IsOnLastDup
+  name: IsOnLastDup
+  nameWithType: MdbxCursor.IsOnLastDup
+  fullName: MDBX.MdbxCursor.IsOnLastDup
+- uid: MDBX.MdbxCursor.Renew*
+  commentId: Overload:MDBX.MdbxCursor.Renew
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Renew_MDBX_MdbxTransaction_
+  name: Renew
+  nameWithType: MdbxCursor.Renew
+  fullName: MDBX.MdbxCursor.Renew
+- uid: MDBX.MdbxCursor.Reset*
+  commentId: Overload:MDBX.MdbxCursor.Reset
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Reset
+  name: Reset
+  nameWithType: MdbxCursor.Reset
+  fullName: MDBX.MdbxCursor.Reset
+- uid: MDBX.MdbxCursor.CopyTo*
+  commentId: Overload:MDBX.MdbxCursor.CopyTo
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_CopyTo_MDBX_MdbxCursor_
+  name: CopyTo
+  nameWithType: MdbxCursor.CopyTo
+  fullName: MDBX.MdbxCursor.CopyTo
+- uid: MDBX.MdbxCursor.Close*
+  commentId: Overload:MDBX.MdbxCursor.Close
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Close
+  name: Close
+  nameWithType: MdbxCursor.Close
+  fullName: MDBX.MdbxCursor.Close
+- uid: MDBX.MdbxCursor.Dispose*
+  commentId: Overload:MDBX.MdbxCursor.Dispose
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Dispose
+  name: Dispose
+  nameWithType: MdbxCursor.Dispose
+  fullName: MDBX.MdbxCursor.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: MDBX.MdbxCursor.Finalize*
+  commentId: Overload:MDBX.MdbxCursor.Finalize
+  href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Finalize
+  name: ~MdbxCursor
+  nameWithType: MdbxCursor.~MdbxCursor
+  fullName: MDBX.MdbxCursor.~MdbxCursor
+  spec.csharp:
+  - name: "~"
+  - uid: MDBX.MdbxCursor.Finalize*
+    name: MdbxCursor
+    href: MDBX.MdbxCursor.html#MDBX_MdbxCursor_Finalize

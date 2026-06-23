@@ -1,0 +1,766 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Debug.NativeMdbx
+  id: NativeMdbx
+  parent: MDBX.Native.Bindings.Debug
+  children:
+  - MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  - MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  - MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal(MDBX.Native.Types.MdbxVal*,System.Byte*,System.UIntPtr)
+  - MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,)
+  - MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,,System.Byte*,System.UIntPtr)
+  langs:
+  - csharp
+  - vb
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx
+  type: Class
+  source:
+    remote:
+      path: MDBX/Bindings/Debug/NativeMdbx.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeMdbx
+    path: ../MDBX/Bindings/Debug/NativeMdbx.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Debug
+  summary: Частичный класс для нативных методов отладки libmdbx.
+  example: []
+  syntax:
+    content: public static class NativeMdbx
+    content.vb: Public Module NativeMdbx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,)
+  commentId: M:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,)
+  id: MdbxSetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,)
+  parent: MDBX.Native.Bindings.Debug.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxSetupDebug(MdbxLogLevel, MdbxDebugFlags, delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, byte*, void>)
+  nameWithType: NativeMdbx.MdbxSetupDebug(MdbxLogLevel, MdbxDebugFlags, delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, byte*, void>)
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, byte*, void>)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Debug
+  summary: Настраивает отладочное логирование libmdbx.
+  example: []
+  syntax:
+    content: public static extern int MdbxSetupDebug(MdbxLogLevel logLevel, MdbxDebugFlags debugFlags, delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, byte*, void> logger)
+    parameters:
+    - id: logLevel
+      type: MDBX.Native.Types.MdbxLogLevel
+      description: Уровень логирования.
+    - id: debugFlags
+      type: MDBX.Native.Types.MdbxDebugFlags
+      description: Флаги отладки.
+    - id: logger
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, byte*, void>
+      description: Функция логирования.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxSetupDebug(logLevel As MdbxLogLevel, debugFlags As MdbxDebugFlags, logger As ) As Integer
+  overload: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug*
+  nameWithType.vb: NativeMdbx.MdbxSetupDebug(MdbxLogLevel, MdbxDebugFlags, )
+  fullName.vb: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, )
+  name.vb: MdbxSetupDebug(MdbxLogLevel, MdbxDebugFlags, )
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,,System.Byte*,System.UIntPtr)
+  id: MdbxSetupDebugNofmt(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,,System.Byte*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.Debug.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxSetupDebugNofmt(MdbxLogLevel, MdbxDebugFlags, delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, void>, byte*, nuint)
+  nameWithType: NativeMdbx.MdbxSetupDebugNofmt(MdbxLogLevel, MdbxDebugFlags, delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, void>, byte*, nuint)
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, void>, byte*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Debug
+  summary: Настраивает отладочное логирование без форматирования.
+  example: []
+  syntax:
+    content: public static extern int MdbxSetupDebugNofmt(MdbxLogLevel logLevel, MdbxDebugFlags debugFlags, delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, void> logger, byte* loggerBuffer, nuint loggerBufferSize)
+    parameters:
+    - id: logLevel
+      type: MDBX.Native.Types.MdbxLogLevel
+      description: Уровень логирования.
+    - id: debugFlags
+      type: MDBX.Native.Types.MdbxDebugFlags
+      description: Флаги отладки.
+    - id: logger
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, void>
+      description: Функция логирования без форматирования.
+    - id: loggerBuffer
+      type: System.Byte*
+      description: Буфер для форматирования сообщений.
+    - id: loggerBufferSize
+      type: System.UIntPtr
+      description: Размер буфера.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxSetupDebugNofmt(logLevel As MdbxLogLevel, debugFlags As MdbxDebugFlags, logger As , loggerBuffer As Byte*, loggerBufferSize As UIntPtr) As Integer
+  overload: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt*
+  nameWithType.vb: NativeMdbx.MdbxSetupDebugNofmt(MdbxLogLevel, MdbxDebugFlags, , Byte*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, , Byte*, System.UIntPtr)
+  name.vb: MdbxSetupDebugNofmt(MdbxLogLevel, MdbxDebugFlags, , Byte*, UIntPtr)
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  commentId: M:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  id: MdbxCanaryPut(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  parent: MDBX.Native.Bindings.Debug.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCanaryPut(MDBX_txn*, MdbxCanary*)
+  nameWithType: NativeMdbx.MdbxCanaryPut(MDBX_txn*, MdbxCanary*)
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxCanary*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Debug
+  summary: Устанавливает структуру-маяк (canary) для окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxCanaryPut(MDBX_txn* txn, MdbxCanary* canary)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: canary
+      type: MDBX.Native.Types.MdbxCanary*
+      description: Структура-маяк.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCanaryPut(txn As MDBX_txn*, canary As MdbxCanary*) As Integer
+  overload: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut*
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  commentId: M:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  id: MdbxCanaryGet(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxCanary*)
+  parent: MDBX.Native.Bindings.Debug.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCanaryGet(MDBX_txn*, MdbxCanary*)
+  nameWithType: NativeMdbx.MdbxCanaryGet(MDBX_txn*, MdbxCanary*)
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxCanary*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Debug
+  summary: Получает структуру-маяк (canary) окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxCanaryGet(MDBX_txn* txn, MdbxCanary* canary)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: canary
+      type: MDBX.Native.Types.MdbxCanary*
+      description: Структура-маяк для заполнения.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCanaryGet(txn As MDBX_txn*, canary As MdbxCanary*) As Integer
+  overload: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet*
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal(MDBX.Native.Types.MdbxVal*,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal(MDBX.Native.Types.MdbxVal*,System.Byte*,System.UIntPtr)
+  id: MdbxDumpVal(MDBX.Native.Types.MdbxVal*,System.Byte*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.Debug.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxDumpVal(MdbxVal*, byte*, nuint)
+  nameWithType: NativeMdbx.MdbxDumpVal(MdbxVal*, byte*, nuint)
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal(MDBX.Native.Types.MdbxVal*, byte*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Debug
+  summary: Форматирует значение MDBX_val в строку.
+  example: []
+  syntax:
+    content: public static extern byte* MdbxDumpVal(MdbxVal* key, byte* buf, nuint bufsize)
+    parameters:
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ для форматирования.
+    - id: buf
+      type: System.Byte*
+      description: Буфер для результата.
+    - id: bufsize
+      type: System.UIntPtr
+      description: Размер буфера.
+    return:
+      type: System.Byte*
+      description: Указатель на строку.
+    content.vb: Public Shared Function MdbxDumpVal(key As MdbxVal*, buf As Byte*, bufsize As UIntPtr) As Byte*
+  overload: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal*
+  nameWithType.vb: NativeMdbx.MdbxDumpVal(MdbxVal*, Byte*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal(MDBX.Native.Types.MdbxVal*, Byte*, System.UIntPtr)
+  name.vb: MdbxDumpVal(MdbxVal*, Byte*, UIntPtr)
+references:
+- uid: MDBX.Native.Bindings.Debug
+  commentId: N:MDBX.Native.Bindings.Debug
+  href: MDBX.html
+  name: MDBX.Native.Bindings.Debug
+  nameWithType: MDBX.Native.Bindings.Debug
+  fullName: MDBX.Native.Bindings.Debug
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Debug
+    name: Debug
+    href: MDBX.Native.Bindings.Debug.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Debug
+    name: Debug
+    href: MDBX.Native.Bindings.Debug.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug*
+  commentId: Overload:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug
+  isExternal: true
+  href: MDBX.Native.Bindings.Debug.NativeMdbx.html#MDBX_Native_Bindings_Debug_NativeMdbx_MdbxSetupDebug_MDBX_Native_Types_MdbxLogLevel_MDBX_Native_Types_MdbxDebugFlags__
+  name: MdbxSetupDebug
+  nameWithType: NativeMdbx.MdbxSetupDebug
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebug
+- uid: MDBX.Native.Types.MdbxLogLevel
+  commentId: T:MDBX.Native.Types.MdbxLogLevel
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: MdbxLogLevel
+  nameWithType: MdbxLogLevel
+  fullName: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxDebugFlags
+  commentId: T:MDBX.Native.Types.MdbxDebugFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFlags.html
+  name: MdbxDebugFlags
+  nameWithType: MdbxDebugFlags
+  fullName: MDBX.Native.Types.MdbxDebugFlags
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, byte*, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, byte*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, byte*, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, byte*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxLogLevel,System.Byte*,System.Int32,System.Byte*,System.Byte*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxLogLevel
+    name: MdbxLogLevel
+    href: MDBX.Native.Types.MdbxLogLevel.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt*
+  commentId: Overload:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt
+  isExternal: true
+  href: MDBX.Native.Bindings.Debug.NativeMdbx.html#MDBX_Native_Bindings_Debug_NativeMdbx_MdbxSetupDebugNofmt_MDBX_Native_Types_MdbxLogLevel_MDBX_Native_Types_MdbxDebugFlags__System_Byte__System_UIntPtr_
+  name: MdbxSetupDebugNofmt
+  nameWithType: NativeMdbx.MdbxSetupDebugNofmt
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxSetupDebugNofmt
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxLogLevel, byte*, int, byte*, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxLogLevel, byte*, int, byte*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxLogLevel,System.Byte*,System.Int32,System.Byte*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxLogLevel
+    name: MdbxLogLevel
+    href: MDBX.Native.Types.MdbxLogLevel.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut*
+  commentId: Overload:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut
+  isExternal: true
+  href: MDBX.Native.Bindings.Debug.NativeMdbx.html#MDBX_Native_Bindings_Debug_NativeMdbx_MdbxCanaryPut_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxCanary__
+  name: MdbxCanaryPut
+  nameWithType: NativeMdbx.MdbxCanaryPut
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryPut
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxCanary*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxCanary.html
+  name: MdbxCanary*
+  nameWithType: MdbxCanary*
+  fullName: MDBX.Native.Types.MdbxCanary*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxCanary
+    name: MdbxCanary
+    href: MDBX.Native.Types.MdbxCanary.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxCanary
+    name: MdbxCanary
+    href: MDBX.Native.Types.MdbxCanary.html
+  - name: '*'
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet*
+  commentId: Overload:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet
+  isExternal: true
+  href: MDBX.Native.Bindings.Debug.NativeMdbx.html#MDBX_Native_Bindings_Debug_NativeMdbx_MdbxCanaryGet_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxCanary__
+  name: MdbxCanaryGet
+  nameWithType: NativeMdbx.MdbxCanaryGet
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxCanaryGet
+- uid: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal*
+  commentId: Overload:MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal
+  isExternal: true
+  href: MDBX.Native.Bindings.Debug.NativeMdbx.html#MDBX_Native_Bindings_Debug_NativeMdbx_MdbxDumpVal_MDBX_Native_Types_MdbxVal__System_Byte__System_UIntPtr_
+  name: MdbxDumpVal
+  nameWithType: NativeMdbx.MdbxDumpVal
+  fullName: MDBX.Native.Bindings.Debug.NativeMdbx.MdbxDumpVal
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'

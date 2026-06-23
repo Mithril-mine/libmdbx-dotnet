@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxWarmupFlags
+  commentId: T:MDBX.Native.Types.MdbxWarmupFlags
+  id: MdbxWarmupFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DATA
+  - MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DEFAULT
+  - MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_META
+  langs:
+  - csharp
+  - vb
+  name: MdbxWarmupFlags
+  nameWithType: MdbxWarmupFlags
+  fullName: MDBX.Native.Types.MdbxWarmupFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxWarmupFlags
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 38
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги прогрева окружения.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxWarmupFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxWarmupFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DEFAULT
+  commentId: F:MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DEFAULT
+  id: MDBX_WARMUP_DEFAULT
+  parent: MDBX.Native.Types.MdbxWarmupFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_WARMUP_DEFAULT
+  nameWithType: MdbxWarmupFlags.MDBX_WARMUP_DEFAULT
+  fullName: MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DEFAULT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_WARMUP_DEFAULT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 44
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги по умолчанию.
+  example: []
+  syntax:
+    content: MDBX_WARMUP_DEFAULT = 0
+    return:
+      type: MDBX.Native.Types.MdbxWarmupFlags
+- uid: MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DATA
+  commentId: F:MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DATA
+  id: MDBX_WARMUP_DATA
+  parent: MDBX.Native.Types.MdbxWarmupFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_WARMUP_DATA
+  nameWithType: MdbxWarmupFlags.MDBX_WARMUP_DATA
+  fullName: MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_DATA
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_WARMUP_DATA
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 49
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Прогреть страницы данных.
+  example: []
+  syntax:
+    content: MDBX_WARMUP_DATA = 1
+    return:
+      type: MDBX.Native.Types.MdbxWarmupFlags
+- uid: MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_META
+  commentId: F:MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_META
+  id: MDBX_WARMUP_META
+  parent: MDBX.Native.Types.MdbxWarmupFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_WARMUP_META
+  nameWithType: MdbxWarmupFlags.MDBX_WARMUP_META
+  fullName: MDBX.Native.Types.MdbxWarmupFlags.MDBX_WARMUP_META
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_WARMUP_META
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 54
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Прогреть страницы метаданных.
+  example: []
+  syntax:
+    content: MDBX_WARMUP_META = 2
+    return:
+      type: MDBX.Native.Types.MdbxWarmupFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxWarmupFlags
+  commentId: T:MDBX.Native.Types.MdbxWarmupFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxWarmupFlags.html
+  name: MdbxWarmupFlags
+  nameWithType: MdbxWarmupFlags
+  fullName: MDBX.Native.Types.MdbxWarmupFlags

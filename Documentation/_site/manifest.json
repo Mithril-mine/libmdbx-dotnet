@@ -1,0 +1,1507 @@
+{
+  "source_base_path": "D:/am/libmdbx/libmdbx-dotnet/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxCursor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxCursor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxCursor",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxCursor.yml\" sourcestartlinenumber=\"1\">Высокоуровневая обертка курсора libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxDatabase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxDatabase",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxDatabase.yml\" sourcestartlinenumber=\"1\">Высокоуровневая обертка таблицы (DBI) MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxEntry",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxEntry.yml\" sourcestartlinenumber=\"1\">Пара ключ-значение, прочитанная из таблицы через курсор.\nКлюч и значение представлены в виде &quot;сырых&quot; байтов и копируются из нативной памяти.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxEnvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxEnvironment",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxEnvironment.yml\" sourcestartlinenumber=\"1\">Высокоуровневая обертка окружения libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxErrorCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxErrorCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxErrorCodes",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxErrorCodes.yml\" sourcestartlinenumber=\"1\">Коды ошибок libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxException",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxException.yml\" sourcestartlinenumber=\"1\">Исключение, возникающее при ошибках libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxQuery.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxQuery",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxQuery.yml\" sourcestartlinenumber=\"1\">Высокоуровневая отложенная (lazy) абстракция над курсором MDBX.\nПредставляет собой <xref href=\"System.Collections.Generic.IEnumerable%601\" data-throw-if-not-resolved=\"false\"></xref>, перебирающий все записи таблицы\nповерх нативного курсора. Каждый вызов <xref href=\"MDBX.MdbxQuery.GetEnumerator\" data-throw-if-not-resolved=\"false\"></xref> открывает новый курсор,\nа перебор выполняется лениво, что делает тип полностью совместимым с LINQ\n(Where, Select, First, ToList и т.д.).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxQueryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxQueryExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxQueryExtensions",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxQueryExtensions.yml\" sourcestartlinenumber=\"1\">Методы расширения для <xref href=\"MDBX.MdbxQuery\" data-throw-if-not-resolved=\"false\"></xref>, упрощающие проекцию записей\nи построение LINQ-запросов, где параметр предиката — это значение или ключ.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.MdbxTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.MdbxTransaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.MdbxTransaction",
+      "Summary": "<p sourcefile=\"api/MDBX.MdbxTransaction.yml\" sourcestartlinenumber=\"1\">Высокоуровневая обертка транзакции MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Crud.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Crud.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Crud.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Crud.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов CRUD операций libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Crud.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Crud.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Crud",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Cursor.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Cursor.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Cursor.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Cursor.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов курсоров libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Cursor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Cursor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Cursor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Dbi.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Dbi.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Dbi.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Dbi.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов таблиц (DBI) libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Dbi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Dbi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Dbi",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Debug.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Debug.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Debug.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Debug.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов отладки libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Debug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Debug.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Debug",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Env.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Env.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Env.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Env.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов окружения libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Env.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Env",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.ErrorHandling.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.ErrorHandling.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.ErrorHandling.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов обработки ошибок libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.ErrorHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.ErrorHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.ErrorHandling",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Extra.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Extra.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Extra.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Extra.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов дополнительных операций libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Extra.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Extra.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Extra",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Settings.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Settings.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Settings.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Settings.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов настроек libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Settings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Settings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Stat.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Stat.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Stat.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Stat.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов статистики libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Stat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Stat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Stat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Txn.NativeMdbx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Txn.NativeMdbx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Txn.NativeMdbx",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Bindings.Txn.NativeMdbx.yml\" sourcestartlinenumber=\"1\">Частичный класс для нативных методов транзакций libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Bindings.Txn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Bindings.Txn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Bindings.Txn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.NativeLibraryLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.NativeLibraryLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.NativeLibraryLoader",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.NativeLibraryLoader.yml\" sourcestartlinenumber=\"1\">Загрузчик нативных библиотек libmdbx.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_cursor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_cursor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_cursor",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_cursor.yml\" sourcestartlinenumber=\"1\">Непрозрачная структура курсора MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_defrag_result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_defrag_result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_defrag_result",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_defrag_result.yml\" sourcestartlinenumber=\"1\">Структура с результатами и прогрессом дефрагментации.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_env.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_env",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_env.yml\" sourcestartlinenumber=\"1\">Непрозрачная структура окружения MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_envinfo.MDBX_bootid",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.yml\" sourcestartlinenumber=\"1\">Идентификатор загрузки.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair.yml\" sourcestartlinenumber=\"1\">Пара идентификаторов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.yml\" sourcestartlinenumber=\"1\">Идентификатор файла БД.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_geo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_geo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_envinfo.MDBX_geo",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_envinfo.MDBX_geo.yml\" sourcestartlinenumber=\"1\">Геометрия файлов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.yml\" sourcestartlinenumber=\"1\">Статистика операций со страницами.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_envinfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_envinfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_envinfo",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_envinfo.yml\" sourcestartlinenumber=\"1\">Информация об окружении MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MDBX_txn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MDBX_txn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MDBX_txn",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MDBX_txn.yml\" sourcestartlinenumber=\"1\">Непрозрачная структура транзакции MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxBunchAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxBunchAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxBunchAction",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxBunchAction.yml\" sourcestartlinenumber=\"1\">Действие для пакетного удаления курсором.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCacheEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCacheEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCacheEntry",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCacheEntry.yml\" sourcestartlinenumber=\"1\">Легкая структура кэш-записи, используемая функциями mdbx_cache_get() и mdbx_cache_get_SingleThreaded().</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCacheResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCacheResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCacheResult",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCacheResult.yml\" sourcestartlinenumber=\"1\">Пара кода ошибки и статуса кэша, возвращаемая функциями mdbx_cache_get() и mdbx_cache_get_SingleThreaded().</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCacheStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCacheStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCacheStatus",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCacheStatus.yml\" sourcestartlinenumber=\"1\">Статус кэша, возвращаемый функциями mdbx_cache_get() и mdbx_cache_get_SingleThreaded().</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCanary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCanary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCanary",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCanary.yml\" sourcestartlinenumber=\"1\">Структура-маяк (canary) для отслеживания изменений окружения.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkCallbacks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkCallbacks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkCallbacks",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkCallbacks.yml\" sourcestartlinenumber=\"1\">Набор функций обратного вызова, используемых для проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkContext",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkContext.yml\" sourcestartlinenumber=\"1\">Контекст проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkFlags.yml\" sourcestartlinenumber=\"1\">Флаги проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkGc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkGc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkGc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkGc.yml\" sourcestartlinenumber=\"1\">Псевдоним для GarbageCollectorDB: ((void*)((ptrdiff_t)-1)).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange.yml\" sourcestartlinenumber=\"1\">Диапазон гистограммы.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkHistogram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkHistogram.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkHistogram",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkHistogram.yml\" sourcestartlinenumber=\"1\">Гистограмма для проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkHistogramData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkHistogramData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkHistogramData",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkHistogramData.yml\" sourcestartlinenumber=\"1\">Гистограмма для проверки целостности базы данных (управляемая версия для использования вне unsafe контекста).\nОсуществляет сопоставление с нативной структурой MDBX_chk_histogram.\nИспользуует фиксированный буфер для массива диапазонов, что позволяет\nиспользовать указатели на структуры, содержащие эту гистограмму.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkIssue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkIssue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkIssue",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkIssue.yml\" sourcestartlinenumber=\"1\">Проблема, обнаруженная во время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkLine",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkLine.yml\" sourcestartlinenumber=\"1\">Виртуальная строка отчета, генерируемого во время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkMain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkMain.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkMain",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkMain.yml\" sourcestartlinenumber=\"1\">Псевдоним для MainDB: ((void*)((ptrdiff_t)0)).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkMeta.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkMeta",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkMeta.yml\" sourcestartlinenumber=\"1\">Псевдоним для MetaPages: ((void*)((ptrdiff_t)-2)).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkResultData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkResultData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkResultData",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkResultData.yml\" sourcestartlinenumber=\"1\">Данные результата проверки.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkScope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkScope",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkScope.yml\" sourcestartlinenumber=\"1\">Иерархический контекст во время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkSeverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkSeverity",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkSeverity.yml\" sourcestartlinenumber=\"1\">Уровни логирования и детализации информации, передаваемые через\nфункции обратного вызова во время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkStage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkStage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkStage",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkStage.yml\" sourcestartlinenumber=\"1\">Этапы проверки, сообщаемые через функции обратного вызова\nво время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkTable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkTable",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkTable.yml\" sourcestartlinenumber=\"1\">Информация о таблице ключ-значение во время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkTableHistograms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkTableHistograms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkTableHistograms",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkTableHistograms.yml\" sourcestartlinenumber=\"1\">Гистограммы таблицы.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkTablePages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkTablePages.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkTablePages",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkTablePages.yml\" sourcestartlinenumber=\"1\">Статистика страниц таблицы.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxChkUserTableCookie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxChkUserTableCookie.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxChkUserTableCookie",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxChkUserTableCookie.yml\" sourcestartlinenumber=\"1\">Неизменяемый тип для связывания дополнительных данных, связанных с определенной\nтаблицей ключ-значение во время проверки целостности базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCmpFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCmpFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCmpFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCmpFunc.yml\" sourcestartlinenumber=\"1\">Функция сравнения ключей.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.yml\" sourcestartlinenumber=\"1\">Статистика профилирования GC.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.yml\" sourcestartlinenumber=\"1\">Метрики слияния списков страниц.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCommitLatency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCommitLatency.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCommitLatency",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCommitLatency.yml\" sourcestartlinenumber=\"1\">Информация о задержках при фиксации транзакции.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCopyFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCopyFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCopyFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCopyFlags.yml\" sourcestartlinenumber=\"1\">Флаги копирования окружения.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxCursorOp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxCursorOp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxCursorOp",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxCursorOp.yml\" sourcestartlinenumber=\"1\">Операции курсора.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxDbFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxDbFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxDbFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxDbFlags.yml\" sourcestartlinenumber=\"1\">Флаги базы данных (таблицы).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxDebugFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxDebugFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxDebugFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxDebugFlags.yml\" sourcestartlinenumber=\"1\">Флаги отладки.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxDebugFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxDebugFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxDebugFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxDebugFunc.yml\" sourcestartlinenumber=\"1\">Функция отладки (логгирования).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxDebugFuncNofmt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxDebugFuncNofmt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxDebugFuncNofmt",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxDebugFuncNofmt.yml\" sourcestartlinenumber=\"1\">Функция отладки без формата.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxDefragProgressFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxDefragProgressFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxDefragProgressFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxDefragProgressFunc.yml\" sourcestartlinenumber=\"1\">Функция уведомления о прогрессе дефрагментации.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxDefragStoppingReasons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxDefragStoppingReasons.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxDefragStoppingReasons",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxDefragStoppingReasons.yml\" sourcestartlinenumber=\"1\">Причины остановки дефрагментации базы данных.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxEnvDeleteMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxEnvDeleteMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxEnvDeleteMode",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxEnvDeleteMode.yml\" sourcestartlinenumber=\"1\">Режим удаления окружения.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxEnvFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxEnvFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxEnvFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxEnvFlags.yml\" sourcestartlinenumber=\"1\">Флаги окружения.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable.yml\" sourcestartlinenumber=\"1\">Информация о возвращаемых страницах.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxGcInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxGcInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxGcInfo",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxGcInfo.yml\" sourcestartlinenumber=\"1\">Информация о сборке мусора (GC) и использовании страниц.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxGcIterFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxGcIterFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxGcIterFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxGcIterFunc.yml\" sourcestartlinenumber=\"1\">Функция итерации GC.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxHsrFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxHsrFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxHsrFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxHsrFunc.yml\" sourcestartlinenumber=\"1\">Функция обработки медленных читателей (HSR - Handle Slow Readers).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxLogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxLogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxLogLevel",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxLogLevel.yml\" sourcestartlinenumber=\"1\">Уровни логирования.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxOption",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxOption.yml\" sourcestartlinenumber=\"1\">Параметры окружения.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxPanicFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxPanicFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxPanicFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxPanicFunc.yml\" sourcestartlinenumber=\"1\">Функция паники (обработчик критических ошибок).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxPredicateFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxPredicateFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxPredicateFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxPredicateFunc.yml\" sourcestartlinenumber=\"1\">Функция предиката для сканирования курсора.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxPreserveFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxPreserveFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxPreserveFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxPreserveFunc.yml\" sourcestartlinenumber=\"1\">Функция сохранения данных для mdbx_replace_ex.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxPutFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxPutFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxPutFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxPutFlags.yml\" sourcestartlinenumber=\"1\">Флаги операции вставки/обновления.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxReaderListFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxReaderListFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxReaderListFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxReaderListFunc.yml\" sourcestartlinenumber=\"1\">Функция перечисления читателей.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxStat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxStat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxStat",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxStat.yml\" sourcestartlinenumber=\"1\">Статистика окружения MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxTableEnumFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxTableEnumFunc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxTableEnumFunc",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxTableEnumFunc.yml\" sourcestartlinenumber=\"1\">Функция перечисления таблиц.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxTxnFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxTxnFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxTxnFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxTxnFlags.yml\" sourcestartlinenumber=\"1\">Флаги транзакции.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxTxnInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxTxnInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxTxnInfo",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxTxnInfo.yml\" sourcestartlinenumber=\"1\">Информация о транзакции MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxVal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxVal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxVal",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxVal.yml\" sourcestartlinenumber=\"1\">Структура для передачи ключей и данных в таблицах MDBX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.MdbxWarmupFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.MdbxWarmupFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types.MdbxWarmupFlags",
+      "Summary": "<p sourcefile=\"api/MDBX.Native.Types.MdbxWarmupFlags.yml\" sourcestartlinenumber=\"1\">Флаги прогрева окружения.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.Types.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native.Types",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.Native.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.Native.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX.Native",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MDBX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MDBX.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MDBX",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/apple-touch-icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/apple-touch-icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon-96x96.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon-96x96.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/web-app-manifest-192x192.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/web-app-manifest-192x192.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/web-app-manifest-512x512.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/web-app-manifest-512x512.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

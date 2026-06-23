@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxTableEnumFunc
+  commentId: T:MDBX.Native.Types.MdbxTableEnumFunc
+  id: MdbxTableEnumFunc
+  parent: MDBX.Native.Types
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MdbxTableEnumFunc
+  nameWithType: MdbxTableEnumFunc
+  fullName: MDBX.Native.Types.MdbxTableEnumFunc
+  type: Delegate
+  source:
+    remote:
+      path: MDBX/Types/MdbxDelegates.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxTableEnumFunc
+    path: ../MDBX/Types/MdbxDelegates.cs
+    startLine: 50
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция перечисления таблиц.
+  example: []
+  syntax:
+    content: public delegate int MdbxTableEnumFunc(void* ctx, MDBX_txn* txn, MdbxVal* name, uint flags, uint id)
+    parameters:
+    - id: ctx
+      type: System.Void*
+      description: Пользовательский контекст.
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: name
+      type: MDBX.Native.Types.MdbxVal*
+      description: Имя таблицы.
+    - id: flags
+      type: System.UInt32
+      description: Флаги таблицы.
+    - id: id
+      type: System.UInt32
+      description: ID таблицы.
+    return:
+      type: System.Int32
+      description: 0 для продолжения, ненулевое значение для остановки.
+    content.vb: Public Delegate Function MdbxTableEnumFunc(ctx As Void*, txn As MDBX_txn*, name As MdbxVal*, flags As UInteger, id As UInteger) As Integer
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

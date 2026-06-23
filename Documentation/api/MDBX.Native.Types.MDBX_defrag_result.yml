@@ -1,0 +1,779 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MDBX_defrag_result
+  commentId: T:MDBX.Native.Types.MDBX_defrag_result
+  id: MDBX_defrag_result
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MDBX_defrag_result.cycles
+  - MDBX.Native.Types.MDBX_defrag_result.obstructed_pgno
+  - MDBX.Native.Types.MDBX_defrag_result.obstructed_span
+  - MDBX.Native.Types.MDBX_defrag_result.obstructed_txnid
+  - MDBX.Native.Types.MDBX_defrag_result.obstructor_pid
+  - MDBX.Native.Types.MDBX_defrag_result.obstructor_tid
+  - MDBX.Native.Types.MDBX_defrag_result.pages_left
+  - MDBX.Native.Types.MDBX_defrag_result.pages_moved
+  - MDBX.Native.Types.MDBX_defrag_result.pages_retained
+  - MDBX.Native.Types.MDBX_defrag_result.pages_scheduled
+  - MDBX.Native.Types.MDBX_defrag_result.pages_shrinked
+  - MDBX.Native.Types.MDBX_defrag_result.pages_whole
+  - MDBX.Native.Types.MDBX_defrag_result.rough_estimation_cycle_progress_permille
+  - MDBX.Native.Types.MDBX_defrag_result.spent_time_dot16
+  - MDBX.Native.Types.MDBX_defrag_result.stopping_reasons
+  langs:
+  - csharp
+  - vb
+  name: MDBX_defrag_result
+  nameWithType: MDBX_defrag_result
+  fullName: MDBX.Native.Types.MDBX_defrag_result
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_defrag_result
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Структура с результатами и прогрессом дефрагментации.
+  example: []
+  syntax:
+    content: public struct MDBX_defrag_result
+    content.vb: Public Structure MDBX_defrag_result
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MDBX_defrag_result.pages_shrinked
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.pages_shrinked
+  id: pages_shrinked
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: pages_shrinked
+  nameWithType: MDBX_defrag_result.pages_shrinked
+  fullName: MDBX.Native.Types.MDBX_defrag_result.pages_shrinked
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: pages_shrinked
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество страниц, на которое уменьшился размер базы данных.
+  example: []
+  syntax:
+    content: public nint pages_shrinked
+    return:
+      type: System.IntPtr
+    content.vb: Public pages_shrinked As IntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.pages_moved
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.pages_moved
+  id: pages_moved
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: pages_moved
+  nameWithType: MDBX_defrag_result.pages_moved
+  fullName: MDBX.Native.Types.MDBX_defrag_result.pages_moved
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: pages_moved
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 13
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее количество перемещенных страниц.
+  example: []
+  syntax:
+    content: public nuint pages_moved
+    return:
+      type: System.UIntPtr
+    content.vb: Public pages_moved As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.pages_scheduled
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.pages_scheduled
+  id: pages_scheduled
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: pages_scheduled
+  nameWithType: MDBX_defrag_result.pages_scheduled
+  fullName: MDBX.Native.Types.MDBX_defrag_result.pages_scheduled
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: pages_scheduled
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 15
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество страниц, запланированных к перемещению на следующем этапе.
+  example: []
+  syntax:
+    content: public nuint pages_scheduled
+    return:
+      type: System.UIntPtr
+    content.vb: Public pages_scheduled As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.pages_retained
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.pages_retained
+  id: pages_retained
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: pages_retained
+  nameWithType: MDBX_defrag_result.pages_retained
+  fullName: MDBX.Native.Types.MDBX_defrag_result.pages_retained
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: pages_retained
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 17
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество страниц, удерживаемых другими процессами через MVCC-снимки.
+  example: []
+  syntax:
+    content: public nuint pages_retained
+    return:
+      type: System.UIntPtr
+    content.vb: Public pages_retained As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.pages_left
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.pages_left
+  id: pages_left
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: pages_left
+  nameWithType: MDBX_defrag_result.pages_left
+  fullName: MDBX.Native.Types.MDBX_defrag_result.pages_left
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: pages_left
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 19
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Оценочное количество страниц, которые потенциально могут быть дефрагментированы.
+  example: []
+  syntax:
+    content: public nuint pages_left
+    return:
+      type: System.UIntPtr
+    content.vb: Public pages_left As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.pages_whole
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.pages_whole
+  id: pages_whole
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: pages_whole
+  nameWithType: MDBX_defrag_result.pages_whole
+  fullName: MDBX.Native.Types.MDBX_defrag_result.pages_whole
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: pages_whole
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее количество страниц в базе данных.
+  example: []
+  syntax:
+    content: public nuint pages_whole
+    return:
+      type: System.UIntPtr
+    content.vb: Public pages_whole As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.obstructed_pgno
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.obstructed_pgno
+  id: obstructed_pgno
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: obstructed_pgno
+  nameWithType: MDBX_defrag_result.obstructed_pgno
+  fullName: MDBX.Native.Types.MDBX_defrag_result.obstructed_pgno
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: obstructed_pgno
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 23
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Номер страницы, на которой остановилась дефрагментация.
+  example: []
+  syntax:
+    content: public nuint obstructed_pgno
+    return:
+      type: System.UIntPtr
+    content.vb: Public obstructed_pgno As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.obstructed_span
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.obstructed_span
+  id: obstructed_span
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: obstructed_span
+  nameWithType: MDBX_defrag_result.obstructed_span
+  fullName: MDBX.Native.Types.MDBX_defrag_result.obstructed_span
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: obstructed_span
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 25
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Длина спана large/overflow-страницы, на котором остановилась дефрагментация.
+  example: []
+  syntax:
+    content: public nuint obstructed_span
+    return:
+      type: System.UIntPtr
+    content.vb: Public obstructed_span As UIntPtr
+- uid: MDBX.Native.Types.MDBX_defrag_result.obstructed_txnid
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.obstructed_txnid
+  id: obstructed_txnid
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: obstructed_txnid
+  nameWithType: MDBX_defrag_result.obstructed_txnid
+  fullName: MDBX.Native.Types.MDBX_defrag_result.obstructed_txnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: obstructed_txnid
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 27
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID транзакции самого раннего MVCC-снимка, блокирующего дефрагментацию.
+  example: []
+  syntax:
+    content: public ulong obstructed_txnid
+    return:
+      type: System.UInt64
+    content.vb: Public obstructed_txnid As ULong
+- uid: MDBX.Native.Types.MDBX_defrag_result.obstructor_tid
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.obstructor_tid
+  id: obstructor_tid
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: obstructor_tid
+  nameWithType: MDBX_defrag_result.obstructor_tid
+  fullName: MDBX.Native.Types.MDBX_defrag_result.obstructor_tid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: obstructor_tid
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 29
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID потока читателя, блокирующего дефрагментацию.
+  example: []
+  syntax:
+    content: public uint obstructor_tid
+    return:
+      type: System.UInt32
+    content.vb: Public obstructor_tid As UInteger
+- uid: MDBX.Native.Types.MDBX_defrag_result.obstructor_pid
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.obstructor_pid
+  id: obstructor_pid
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: obstructor_pid
+  nameWithType: MDBX_defrag_result.obstructor_pid
+  fullName: MDBX.Native.Types.MDBX_defrag_result.obstructor_pid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: obstructor_pid
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID процесса читателя, блокирующего дефрагментацию.
+  example: []
+  syntax:
+    content: public uint obstructor_pid
+    return:
+      type: System.UInt32
+    content.vb: Public obstructor_pid As UInteger
+- uid: MDBX.Native.Types.MDBX_defrag_result.rough_estimation_cycle_progress_permille
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.rough_estimation_cycle_progress_permille
+  id: rough_estimation_cycle_progress_permille
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: rough_estimation_cycle_progress_permille
+  nameWithType: MDBX_defrag_result.rough_estimation_cycle_progress_permille
+  fullName: MDBX.Native.Types.MDBX_defrag_result.rough_estimation_cycle_progress_permille
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: rough_estimation_cycle_progress_permille
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 33
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Примерный прогресс текущего цикла дефрагментации в промилле (1000 = 100%).
+  example: []
+  syntax:
+    content: public uint rough_estimation_cycle_progress_permille
+    return:
+      type: System.UInt32
+    content.vb: Public rough_estimation_cycle_progress_permille As UInteger
+- uid: MDBX.Native.Types.MDBX_defrag_result.cycles
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.cycles
+  id: cycles
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: cycles
+  nameWithType: MDBX_defrag_result.cycles
+  fullName: MDBX.Native.Types.MDBX_defrag_result.cycles
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: cycles
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 35
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество выполненных циклов дефрагментации.
+  example: []
+  syntax:
+    content: public uint cycles
+    return:
+      type: System.UInt32
+    content.vb: Public cycles As UInteger
+- uid: MDBX.Native.Types.MDBX_defrag_result.stopping_reasons
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.stopping_reasons
+  id: stopping_reasons
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: stopping_reasons
+  nameWithType: MDBX_defrag_result.stopping_reasons
+  fullName: MDBX.Native.Types.MDBX_defrag_result.stopping_reasons
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: stopping_reasons
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 37
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Причины остановки дефрагментации (маска флагов).
+  example: []
+  syntax:
+    content: public uint stopping_reasons
+    return:
+      type: System.UInt32
+    content.vb: Public stopping_reasons As UInteger
+- uid: MDBX.Native.Types.MDBX_defrag_result.spent_time_dot16
+  commentId: F:MDBX.Native.Types.MDBX_defrag_result.spent_time_dot16
+  id: spent_time_dot16
+  parent: MDBX.Native.Types.MDBX_defrag_result
+  langs:
+  - csharp
+  - vb
+  name: spent_time_dot16
+  nameWithType: MDBX_defrag_result.spent_time_dot16
+  fullName: MDBX.Native.Types.MDBX_defrag_result.spent_time_dot16
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDefragResult.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: spent_time_dot16
+    path: ../MDBX/Types/MdbxDefragResult.cs
+    startLine: 39
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Затраченное время с начала дефрагментации в 1/65536 секунды.
+  example: []
+  syntax:
+    content: public nuint spent_time_dot16
+    return:
+      type: System.UIntPtr
+    content.vb: Public spent_time_dot16 As UIntPtr
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger

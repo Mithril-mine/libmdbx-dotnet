@@ -1,0 +1,339 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxDbFlags
+  commentId: T:MDBX.Native.Types.MdbxDbFlags
+  id: MdbxDbFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_CREATE
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_DB_ACCEDE
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_DB_DEFAULTS
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_DUPFIXED
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_DUPSORT
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERDUP
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERKEY
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEDUP
+  - MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEKEY
+  langs:
+  - csharp
+  - vb
+  name: MdbxDbFlags
+  nameWithType: MdbxDbFlags
+  fullName: MDBX.Native.Types.MdbxDbFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxDbFlags
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги базы данных (таблицы).
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxDbFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxDbFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_DB_DEFAULTS
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_DB_DEFAULTS
+  id: MDBX_DB_DEFAULTS
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DB_DEFAULTS
+  nameWithType: MdbxDbFlags.MDBX_DB_DEFAULTS
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_DB_DEFAULTS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DB_DEFAULTS
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги по умолчанию.
+  example: []
+  syntax:
+    content: MDBX_DB_DEFAULTS = 0
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEKEY
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEKEY
+  id: MDBX_REVERSEKEY
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_REVERSEKEY
+  nameWithType: MdbxDbFlags.MDBX_REVERSEKEY
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEKEY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_REVERSEKEY
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Использовать обратный ключ (ключи хранятся в обратном порядке).
+  example: []
+  syntax:
+    content: MDBX_REVERSEKEY = 2
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_DUPSORT
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_DUPSORT
+  id: MDBX_DUPSORT
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DUPSORT
+  nameWithType: MdbxDbFlags.MDBX_DUPSORT
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_DUPSORT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DUPSORT
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Разрешить дубликаты ключей.
+  example: []
+  syntax:
+    content: MDBX_DUPSORT = 4
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERKEY
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERKEY
+  id: MDBX_INTEGERKEY
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_INTEGERKEY
+  nameWithType: MdbxDbFlags.MDBX_INTEGERKEY
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERKEY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_INTEGERKEY
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 26
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Цифровые ключи (для оптимизации сравнения).
+  example: []
+  syntax:
+    content: MDBX_INTEGERKEY = 8
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERDUP
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERDUP
+  id: MDBX_INTEGERDUP
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_INTEGERDUP
+  nameWithType: MdbxDbFlags.MDBX_INTEGERDUP
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_INTEGERDUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_INTEGERDUP
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Цифровые значения (для оптимизации сравнения).
+  example: []
+  syntax:
+    content: MDBX_INTEGERDUP = 32
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_DUPFIXED
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_DUPFIXED
+  id: MDBX_DUPFIXED
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DUPFIXED
+  nameWithType: MdbxDbFlags.MDBX_DUPFIXED
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_DUPFIXED
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DUPFIXED
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 36
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: С фиксированным размером дубликаты (для оптимизации сравнения).
+  example: []
+  syntax:
+    content: MDBX_DUPFIXED = 16
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEDUP
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEDUP
+  id: MDBX_REVERSEDUP
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_REVERSEDUP
+  nameWithType: MdbxDbFlags.MDBX_REVERSEDUP
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_REVERSEDUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_REVERSEDUP
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 41
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Обратное сравнение строковых значений дубликатов.
+  example: []
+  syntax:
+    content: MDBX_REVERSEDUP = 64
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_CREATE
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_CREATE
+  id: MDBX_CREATE
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CREATE
+  nameWithType: MdbxDbFlags.MDBX_CREATE
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_CREATE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CREATE
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 46
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Создать базу данных, если она не существует.
+  example: []
+  syntax:
+    content: MDBX_CREATE = 262144
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDbFlags.MDBX_DB_ACCEDE
+  commentId: F:MDBX.Native.Types.MdbxDbFlags.MDBX_DB_ACCEDE
+  id: MDBX_DB_ACCEDE
+  parent: MDBX.Native.Types.MdbxDbFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_DB_ACCEDE
+  nameWithType: MdbxDbFlags.MDBX_DB_ACCEDE
+  fullName: MDBX.Native.Types.MdbxDbFlags.MDBX_DB_ACCEDE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxDbFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_DB_ACCEDE
+    path: ../MDBX/Types/MdbxDbFlags.cs
+    startLine: 51
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Открыть существующую таблицу, созданную с неизвестными флагами.
+  example: []
+  syntax:
+    content: MDBX_DB_ACCEDE = 1073741824
+    return:
+      type: MDBX.Native.Types.MdbxDbFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxDbFlags
+  commentId: T:MDBX.Native.Types.MdbxDbFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDbFlags.html
+  name: MdbxDbFlags
+  nameWithType: MdbxDbFlags
+  fullName: MDBX.Native.Types.MdbxDbFlags

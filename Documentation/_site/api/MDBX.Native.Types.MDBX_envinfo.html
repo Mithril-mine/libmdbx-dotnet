@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct MDBX_envinfo | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct MDBX_envinfo | Binding Documentation ">
+      
+      <meta name="description" content="Информация об окружении MDBX.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MDBX.Native.Types.MDBX_envinfo">
+
+
+
+  <h1 id="MDBX_Native_Types_MDBX_envinfo" data-uid="MDBX.Native.Types.MDBX_envinfo" class="text-break">
+Struct MDBX_envinfo  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MDBX.html">MDBX</a>.<a class="xref" href="MDBX.Native.html">Native</a>.<a class="xref" href="MDBX.Native.Types.html">Types</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>mdbx-dotnet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Информация об окружении MDBX.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct MDBX_envinfo</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiAutosyncPeriodSeconds16Dot16" data-uid="MDBX.Native.Types.MDBX_envinfo.MiAutosyncPeriodSeconds16Dot16">
+  MiAutosyncPeriodSeconds16Dot16
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Период автосинхронизации (1/65536 сек).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiAutosyncPeriodSeconds16Dot16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiAutosyncThreshold" data-uid="MDBX.Native.Types.MDBX_envinfo.MiAutosyncThreshold">
+  MiAutosyncThreshold
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Порог автосинхронизации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiAutosyncThreshold</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiBootid" data-uid="MDBX.Native.Types.MDBX_envinfo.MiBootid">
+  MiBootid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентификатор загрузки.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MDBX_envinfo.MDBX_bootid MiBootid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_envinfo.html">MDBX_envinfo</a>.<a class="xref" href="MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.html">MDBX_bootid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiDxbFallocated" data-uid="MDBX.Native.Types.MDBX_envinfo.MiDxbFallocated">
+  MiDxbFallocated
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выделенный размер файла БД.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiDxbFallocated</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiDxbFsize" data-uid="MDBX.Native.Types.MDBX_envinfo.MiDxbFsize">
+  MiDxbFsize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Текущий размер файла БД.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiDxbFsize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiDxbPagesize" data-uid="MDBX.Native.Types.MDBX_envinfo.MiDxbPagesize">
+  MiDxbPagesize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Размер страницы БД.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiDxbPagesize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiDxbid" data-uid="MDBX.Native.Types.MDBX_envinfo.MiDxbid">
+  MiDxbid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентификатор файла БД.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MDBX_envinfo.MDBX_dxbid MiDxbid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_envinfo.html">MDBX_envinfo</a>.<a class="xref" href="MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.html">MDBX_dxbid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiGeo" data-uid="MDBX.Native.Types.MDBX_envinfo.MiGeo">
+  MiGeo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Геометрия файлов.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MDBX_envinfo.MDBX_geo MiGeo</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_envinfo.html">MDBX_envinfo</a>.<a class="xref" href="MDBX.Native.Types.MDBX_envinfo.MDBX_geo.html">MDBX_geo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiLastPgno" data-uid="MDBX.Native.Types.MDBX_envinfo.MiLastPgno">
+  MiLastPgno
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Номер последней использованной страницы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiLastPgno</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiLatterReaderTxnid" data-uid="MDBX.Native.Types.MDBX_envinfo.MiLatterReaderTxnid">
+  MiLatterReaderTxnid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>ID последней reader транзакции.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiLatterReaderTxnid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiMapsize" data-uid="MDBX.Native.Types.MDBX_envinfo.MiMapsize">
+  MiMapsize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Размер memory map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiMapsize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiMaxreaders" data-uid="MDBX.Native.Types.MDBX_envinfo.MiMaxreaders">
+  MiMaxreaders
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Максимальное количество reader слотов.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiMaxreaders</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiMetaSign" data-uid="MDBX.Native.Types.MDBX_envinfo.MiMetaSign">
+  MiMetaSign
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сигнатуры мета-информации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong* MiMetaSign</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiMetaTxnid" data-uid="MDBX.Native.Types.MDBX_envinfo.MiMetaTxnid">
+  MiMetaTxnid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Мета-информация.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong* MiMetaTxnid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiMode" data-uid="MDBX.Native.Types.MDBX_envinfo.MiMode">
+  MiMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Текущий режим окружения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiMode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiNumreaders" data-uid="MDBX.Native.Types.MDBX_envinfo.MiNumreaders">
+  MiNumreaders
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Количество используемых reader слотов.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiNumreaders</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiPgopStat" data-uid="MDBX.Native.Types.MDBX_envinfo.MiPgopStat">
+  MiPgopStat
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Статистика операций со страницами.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MDBX_envinfo.MDBX_pgop_stat MiPgopStat</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_envinfo.html">MDBX_envinfo</a>.<a class="xref" href="MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.html">MDBX_pgop_stat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiRecentTxnid" data-uid="MDBX.Native.Types.MDBX_envinfo.MiRecentTxnid">
+  MiRecentTxnid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>ID последней зафиксированной транзакции.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiRecentTxnid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiSelfLatterReaderTxnid" data-uid="MDBX.Native.Types.MDBX_envinfo.MiSelfLatterReaderTxnid">
+  MiSelfLatterReaderTxnid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>ID последней reader транзакции текущего процесса.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiSelfLatterReaderTxnid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiSinceReaderCheckSeconds16Dot16" data-uid="MDBX.Native.Types.MDBX_envinfo.MiSinceReaderCheckSeconds16Dot16">
+  MiSinceReaderCheckSeconds16Dot16
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Время с последней проверки читателей (1/65536 сек).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiSinceReaderCheckSeconds16Dot16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiSinceSyncSeconds16Dot16" data-uid="MDBX.Native.Types.MDBX_envinfo.MiSinceSyncSeconds16Dot16">
+  MiSinceSyncSeconds16Dot16
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Время с последней нестабильной фиксации (1/65536 сек).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiSinceSyncSeconds16Dot16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiSysIoblk" data-uid="MDBX.Native.Types.MDBX_envinfo.MiSysIoblk">
+  MiSysIoblk
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Размер блока IO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiSysIoblk</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiSysPagesize" data-uid="MDBX.Native.Types.MDBX_envinfo.MiSysPagesize">
+  MiSysPagesize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Системный размер страницы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiSysPagesize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiSysUpcblk" data-uid="MDBX.Native.Types.MDBX_envinfo.MiSysUpcblk">
+  MiSysUpcblk
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Размер блока Unified Page Cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MiSysUpcblk</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MDBX_envinfo_MiUnsyncVolume" data-uid="MDBX.Native.Types.MDBX_envinfo.MiUnsyncVolume">
+  MiUnsyncVolume
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Несинхронизированный объем.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong MiUnsyncVolume</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,656 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  id: MDBX_envinfo.MDBX_pgop_stat
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Clone
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Cow
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Fsync
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Merge
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Mincore
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Msync
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Newly
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Prefault
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Spill
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Split
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Unspill
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Wops
+  langs:
+  - csharp
+  - vb
+  name: MDBX_envinfo.MDBX_pgop_stat
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_pgop_stat
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 201
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Статистика операций со страницами.
+  example: []
+  syntax:
+    content: public struct MDBX_envinfo.MDBX_pgop_stat
+    content.vb: Public Structure MDBX_envinfo.MDBX_pgop_stat
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Newly
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Newly
+  id: Newly
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Newly
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Newly
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Newly
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Newly
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 206
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество новых страниц.
+  example: []
+  syntax:
+    content: public ulong Newly
+    return:
+      type: System.UInt64
+    content.vb: Public Newly As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Cow
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Cow
+  id: Cow
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Cow
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Cow
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Cow
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Cow
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 211
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество скопированных страниц.
+  example: []
+  syntax:
+    content: public ulong Cow
+    return:
+      type: System.UInt64
+    content.vb: Public Cow As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Clone
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Clone
+  id: Clone
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Clone
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Clone
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Clone
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Clone
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 216
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество клонированных страниц.
+  example: []
+  syntax:
+    content: public ulong Clone
+    return:
+      type: System.UInt64
+    content.vb: Public Clone As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Split
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Split
+  id: Split
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Split
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Split
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Split
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Split
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 221
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество разделений страниц.
+  example: []
+  syntax:
+    content: public ulong Split
+    return:
+      type: System.UInt64
+    content.vb: Public Split As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Merge
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Merge
+  id: Merge
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Merge
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Merge
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Merge
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Merge
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 226
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество слияний страниц.
+  example: []
+  syntax:
+    content: public ulong Merge
+    return:
+      type: System.UInt64
+    content.vb: Public Merge As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Spill
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Spill
+  id: Spill
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Spill
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Spill
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Spill
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Spill
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 231
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество spill операций.
+  example: []
+  syntax:
+    content: public ulong Spill
+    return:
+      type: System.UInt64
+    content.vb: Public Spill As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Unspill
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Unspill
+  id: Unspill
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Unspill
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Unspill
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Unspill
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Unspill
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 236
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество unspill операций.
+  example: []
+  syntax:
+    content: public ulong Unspill
+    return:
+      type: System.UInt64
+    content.vb: Public Unspill As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Wops
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Wops
+  id: Wops
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Wops
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Wops
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Wops
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Wops
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 241
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество операций записи.
+  example: []
+  syntax:
+    content: public ulong Wops
+    return:
+      type: System.UInt64
+    content.vb: Public Wops As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Prefault
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Prefault
+  id: Prefault
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Prefault
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Prefault
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Prefault
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Prefault
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 246
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество prefault операций.
+  example: []
+  syntax:
+    content: public ulong Prefault
+    return:
+      type: System.UInt64
+    content.vb: Public Prefault As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Mincore
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Mincore
+  id: Mincore
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Mincore
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Mincore
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Mincore
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Mincore
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 251
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество вызовов mincore.
+  example: []
+  syntax:
+    content: public ulong Mincore
+    return:
+      type: System.UInt64
+    content.vb: Public Mincore As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Msync
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Msync
+  id: Msync
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Msync
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Msync
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Msync
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Msync
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 256
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество операций msync.
+  example: []
+  syntax:
+    content: public ulong Msync
+    return:
+      type: System.UInt64
+    content.vb: Public Msync As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Fsync
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Fsync
+  id: Fsync
+  parent: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  langs:
+  - csharp
+  - vb
+  name: Fsync
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat.Fsync
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.Fsync
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Fsync
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 261
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество операций fsync.
+  example: []
+  syntax:
+    content: public ulong Fsync
+    return:
+      type: System.UInt64
+    content.vb: Public Fsync As ULong
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

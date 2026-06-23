@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxEnvDeleteMode
+  commentId: T:MDBX.Native.Types.MdbxEnvDeleteMode
+  id: MdbxEnvDeleteMode
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL
+  - MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_DATA
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvDeleteMode
+  nameWithType: MdbxEnvDeleteMode
+  fullName: MDBX.Native.Types.MdbxEnvDeleteMode
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxEnvDeleteMode
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 22
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Режим удаления окружения.
+  example: []
+  syntax:
+    content: 'public enum MdbxEnvDeleteMode : uint'
+    content.vb: Public Enum MdbxEnvDeleteMode As UInteger
+- uid: MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_DATA
+  commentId: F:MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_DATA
+  id: MDBX_ENV_DELETE_DATA
+  parent: MDBX.Native.Types.MdbxEnvDeleteMode
+  langs:
+  - csharp
+  - vb
+  name: MDBX_ENV_DELETE_DATA
+  nameWithType: MdbxEnvDeleteMode.MDBX_ENV_DELETE_DATA
+  fullName: MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_DATA
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_ENV_DELETE_DATA
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 27
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Только удалить данные, но оставить файлы.
+  example: []
+  syntax:
+    content: MDBX_ENV_DELETE_DATA = 0
+    return:
+      type: MDBX.Native.Types.MdbxEnvDeleteMode
+- uid: MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL
+  commentId: F:MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL
+  id: MDBX_ENV_DELETE_ALL
+  parent: MDBX.Native.Types.MdbxEnvDeleteMode
+  langs:
+  - csharp
+  - vb
+  name: MDBX_ENV_DELETE_ALL
+  nameWithType: MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL
+  fullName: MDBX.Native.Types.MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_ENV_DELETE_ALL
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 32
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Удалить все файлы окружения.
+  example: []
+  syntax:
+    content: MDBX_ENV_DELETE_ALL = 1
+    return:
+      type: MDBX.Native.Types.MdbxEnvDeleteMode
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxEnvDeleteMode
+  commentId: T:MDBX.Native.Types.MdbxEnvDeleteMode
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvDeleteMode.html
+  name: MdbxEnvDeleteMode
+  nameWithType: MdbxEnvDeleteMode
+  fullName: MDBX.Native.Types.MdbxEnvDeleteMode

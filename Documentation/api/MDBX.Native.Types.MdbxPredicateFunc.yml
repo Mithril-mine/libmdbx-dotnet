@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxPredicateFunc
+  commentId: T:MDBX.Native.Types.MdbxPredicateFunc
+  id: MdbxPredicateFunc
+  parent: MDBX.Native.Types
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MdbxPredicateFunc
+  nameWithType: MdbxPredicateFunc
+  fullName: MDBX.Native.Types.MdbxPredicateFunc
+  type: Delegate
+  source:
+    remote:
+      path: MDBX/Types/MdbxDelegates.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxPredicateFunc
+    path: ../MDBX/Types/MdbxDelegates.cs
+    startLine: 60
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция предиката для сканирования курсора.
+  example: []
+  syntax:
+    content: public delegate int MdbxPredicateFunc(void* context, MdbxVal* key, MdbxVal* value, void* arg)
+    parameters:
+    - id: context
+      type: System.Void*
+      description: Пользовательский контекст.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: value
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    - id: arg
+      type: System.Void*
+      description: Дополнительный аргумент.
+    return:
+      type: System.Int32
+      description: 0 для продолжения, ненулевое значение для остановки.
+    content.vb: Public Delegate Function MdbxPredicateFunc(context As Void*, key As MdbxVal*, value As MdbxVal*, arg As Void*) As Integer
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

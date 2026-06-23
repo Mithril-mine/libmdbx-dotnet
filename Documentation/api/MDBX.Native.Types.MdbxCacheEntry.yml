@@ -1,0 +1,457 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxCacheEntry
+  commentId: T:MDBX.Native.Types.MdbxCacheEntry
+  id: MdbxCacheEntry
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxCacheEntry.LastConfirmedTxnid
+  - MDBX.Native.Types.MdbxCacheEntry.Length
+  - MDBX.Native.Types.MdbxCacheEntry.Offset
+  - MDBX.Native.Types.MdbxCacheEntry.TrunkTxnid
+  langs:
+  - csharp
+  - vb
+  name: MdbxCacheEntry
+  nameWithType: MdbxCacheEntry
+  fullName: MDBX.Native.Types.MdbxCacheEntry
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxCacheEntry
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 87
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Легкая структура кэш-записи, используемая функциями mdbx_cache_get() и mdbx_cache_get_SingleThreaded().
+  remarks: >-
+    Подход к кэшированию заключается в сохранении смещения значения данных,
+
+    полученного из базы данных, с экстремально быстрой проверкой его актуальности
+
+    на основе идентификатора транзакции внутри внутренних B-деревьевых структур.
+
+    Кэш-запись может быть размещена в разделяемой памяти и использоваться несколькими процессами.
+
+    Каждая кэш-запись должна быть инициализирована функцией mdbx_cache_init() перед первым использованием.
+  example: []
+  syntax:
+    content: public struct MdbxCacheEntry
+    content.vb: Public Structure MdbxCacheEntry
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxCacheEntry.TrunkTxnid
+  commentId: F:MDBX.Native.Types.MdbxCacheEntry.TrunkTxnid
+  id: TrunkTxnid
+  parent: MDBX.Native.Types.MdbxCacheEntry
+  langs:
+  - csharp
+  - vb
+  name: TrunkTxnid
+  nameWithType: MdbxCacheEntry.TrunkTxnid
+  fullName: MDBX.Native.Types.MdbxCacheEntry.TrunkTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TrunkTxnid
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 94
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Идентификатор транзакции/MVCC-снимка страницы или другой внутренней структуры БД,
+
+    содержащей кэшируемые данные или отражающей их состояние.
+  example: []
+  syntax:
+    content: public ulong TrunkTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public TrunkTxnid As ULong
+- uid: MDBX.Native.Types.MdbxCacheEntry.LastConfirmedTxnid
+  commentId: F:MDBX.Native.Types.MdbxCacheEntry.LastConfirmedTxnid
+  id: LastConfirmedTxnid
+  parent: MDBX.Native.Types.MdbxCacheEntry
+  langs:
+  - csharp
+  - vb
+  name: LastConfirmedTxnid
+  nameWithType: MdbxCacheEntry.LastConfirmedTxnid
+  fullName: MDBX.Native.Types.MdbxCacheEntry.LastConfirmedTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LastConfirmedTxnid
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 100
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Идентификатор недавней транзакции/MVCC-снимка, в котором кэш-запись
+
+    была проверена и подтверждена.
+  example: []
+  syntax:
+    content: public ulong LastConfirmedTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public LastConfirmedTxnid As ULong
+- uid: MDBX.Native.Types.MdbxCacheEntry.Offset
+  commentId: F:MDBX.Native.Types.MdbxCacheEntry.Offset
+  id: Offset
+  parent: MDBX.Native.Types.MdbxCacheEntry
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: MdbxCacheEntry.Offset
+  fullName: MDBX.Native.Types.MdbxCacheEntry.Offset
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Offset
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 106
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Смещение кэшируемого значения данных для соответствующего ключа.
+
+    Нулевое значение означает MDBX_NOTFOUND.
+  example: []
+  syntax:
+    content: public nuint Offset
+    return:
+      type: System.UIntPtr
+    content.vb: Public Offset As UIntPtr
+- uid: MDBX.Native.Types.MdbxCacheEntry.Length
+  commentId: F:MDBX.Native.Types.MdbxCacheEntry.Length
+  id: Length
+  parent: MDBX.Native.Types.MdbxCacheEntry
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: MdbxCacheEntry.Length
+  fullName: MDBX.Native.Types.MdbxCacheEntry.Length
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Length
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 111
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Длина кэшируемого значения данных для соответствующего ключа.
+  example: []
+  syntax:
+    content: public uint Length
+    return:
+      type: System.UInt32
+    content.vb: Public Length As UInteger
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger

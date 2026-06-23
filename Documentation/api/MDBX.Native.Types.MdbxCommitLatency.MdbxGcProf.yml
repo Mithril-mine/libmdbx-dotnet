@@ -1,0 +1,949 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  commentId: T:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  id: MdbxCommitLatency.MdbxGcProf
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Coalescences
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Flushes
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Kicks
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxReaderLag
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxRetainedPages
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeSelf
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeWork
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfCounter
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfMajflt
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRsteps
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRtimeMonotonic
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXpages
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXtimeCpu
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wipes
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wloops
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkCounter
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkMajflt
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRsteps
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRtimeMonotonic
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXpages
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXtimeCpu
+  langs:
+  - csharp
+  - vb
+  name: MdbxCommitLatency.MdbxGcProf
+  nameWithType: MdbxCommitLatency.MdbxGcProf
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxGcProf
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 58
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Статистика профилирования GC.
+  example: []
+  syntax:
+    content: public struct MdbxCommitLatency.MdbxGcProf
+    content.vb: Public Structure MdbxCommitLatency.MdbxGcProf
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wloops
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wloops
+  id: Wloops
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: Wloops
+  nameWithType: MdbxCommitLatency.MdbxGcProf.Wloops
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wloops
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Wloops
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 63
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество итераций обновления GC больше 1, если были повторы/перезапуски.
+  example: []
+  syntax:
+    content: public uint Wloops
+    return:
+      type: System.UInt32
+    content.vb: Public Wloops As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Coalescences
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Coalescences
+  id: Coalescences
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: Coalescences
+  nameWithType: MdbxCommitLatency.MdbxGcProf.Coalescences
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Coalescences
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Coalescences
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 68
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество итераций слияния элементов GC.
+  example: []
+  syntax:
+    content: public uint Coalescences
+    return:
+      type: System.UInt32
+    content.vb: Public Coalescences As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wipes
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wipes
+  id: Wipes
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: Wipes
+  nameWithType: MdbxCommitLatency.MdbxGcProf.Wipes
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Wipes
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Wipes
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 73
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество предыдущих надежных/стабильных зафиксированных точек, удаленных при работе в режиме MDBX_UTTERLY_NOSYNC.
+  example: []
+  syntax:
+    content: public uint Wipes
+    return:
+      type: System.UInt32
+    content.vb: Public Wipes As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Flushes
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Flushes
+  id: Flushes
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: Flushes
+  nameWithType: MdbxCommitLatency.MdbxGcProf.Flushes
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Flushes
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Flushes
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 78
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество принудительных фиксаций на диск для избежания роста базы данных при работе вне режима MDBX_UTTERLY_NOSYNC.
+  example: []
+  syntax:
+    content: public uint Flushes
+    return:
+      type: System.UInt32
+    content.vb: Public Flushes As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Kicks
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Kicks
+  id: Kicks
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: Kicks
+  nameWithType: MdbxCommitLatency.MdbxGcProf.Kicks
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.Kicks
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Kicks
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 83
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество обращений к механизму Handle-Slow-Readers.
+  example: []
+  syntax:
+    content: public uint Kicks
+    return:
+      type: System.UInt32
+    content.vb: Public Kicks As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkCounter
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkCounter
+  id: WorkCounter
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: WorkCounter
+  nameWithType: MdbxCommitLatency.MdbxGcProf.WorkCounter
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkCounter
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: WorkCounter
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 88
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество медленных/глубоких поисков GC для размещения пользовательских данных.
+  example: []
+  syntax:
+    content: public uint WorkCounter
+    return:
+      type: System.UInt32
+    content.vb: Public WorkCounter As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRtimeMonotonic
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRtimeMonotonic
+  id: WorkRtimeMonotonic
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: WorkRtimeMonotonic
+  nameWithType: MdbxCommitLatency.MdbxGcProf.WorkRtimeMonotonic
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRtimeMonotonic
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: WorkRtimeMonotonic
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 93
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Время "по стене часов", затраченное на чтение и поиск внутри GC для пользовательских данных.
+  example: []
+  syntax:
+    content: public uint WorkRtimeMonotonic
+    return:
+      type: System.UInt32
+    content.vb: Public WorkRtimeMonotonic As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXtimeCpu
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXtimeCpu
+  id: WorkXtimeCpu
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: WorkXtimeCpu
+  nameWithType: MdbxCommitLatency.MdbxGcProf.WorkXtimeCpu
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXtimeCpu
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: WorkXtimeCpu
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 98
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: CPU-время в пользовательском режиме, затраченное на подготовку страниц из GC для пользовательских данных.
+  example: []
+  syntax:
+    content: public uint WorkXtimeCpu
+    return:
+      type: System.UInt32
+    content.vb: Public WorkXtimeCpu As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRsteps
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRsteps
+  id: WorkRsteps
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: WorkRsteps
+  nameWithType: MdbxCommitLatency.MdbxGcProf.WorkRsteps
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkRsteps
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: WorkRsteps
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 103
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество итераций поиска внутри GC при выделении страниц для пользовательских данных.
+  example: []
+  syntax:
+    content: public uint WorkRsteps
+    return:
+      type: System.UInt32
+    content.vb: Public WorkRsteps As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXpages
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXpages
+  id: WorkXpages
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: WorkXpages
+  nameWithType: MdbxCommitLatency.MdbxGcProf.WorkXpages
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkXpages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: WorkXpages
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 108
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество запросов на выделение последовательностей страниц для пользовательских данных.
+  example: []
+  syntax:
+    content: public uint WorkXpages
+    return:
+      type: System.UInt32
+    content.vb: Public WorkXpages As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkMajflt
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkMajflt
+  id: WorkMajflt
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: WorkMajflt
+  nameWithType: MdbxCommitLatency.MdbxGcProf.WorkMajflt
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.WorkMajflt
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: WorkMajflt
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 113
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество страничных ошибок внутри GC при выделении и подготовке страниц для пользовательских данных.
+  example: []
+  syntax:
+    content: public uint WorkMajflt
+    return:
+      type: System.UInt32
+    content.vb: Public WorkMajflt As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfCounter
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfCounter
+  id: SelfCounter
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: SelfCounter
+  nameWithType: MdbxCommitLatency.MdbxGcProf.SelfCounter
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfCounter
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SelfCounter
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 118
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество выполнений медленного пути GC для обслуживания и обновления самого GC.
+  example: []
+  syntax:
+    content: public uint SelfCounter
+    return:
+      type: System.UInt32
+    content.vb: Public SelfCounter As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRtimeMonotonic
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRtimeMonotonic
+  id: SelfRtimeMonotonic
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: SelfRtimeMonotonic
+  nameWithType: MdbxCommitLatency.MdbxGcProf.SelfRtimeMonotonic
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRtimeMonotonic
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SelfRtimeMonotonic
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 123
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Время "по стене часов", затраченное на чтение и поиск внутри GC для обслуживания самого GC.
+  example: []
+  syntax:
+    content: public uint SelfRtimeMonotonic
+    return:
+      type: System.UInt32
+    content.vb: Public SelfRtimeMonotonic As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXtimeCpu
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXtimeCpu
+  id: SelfXtimeCpu
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: SelfXtimeCpu
+  nameWithType: MdbxCommitLatency.MdbxGcProf.SelfXtimeCpu
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXtimeCpu
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SelfXtimeCpu
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 128
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: CPU-время в пользовательском режиме, затраченное на подготовку страниц из GC для обслуживания самого GC.
+  example: []
+  syntax:
+    content: public uint SelfXtimeCpu
+    return:
+      type: System.UInt32
+    content.vb: Public SelfXtimeCpu As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRsteps
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRsteps
+  id: SelfRsteps
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: SelfRsteps
+  nameWithType: MdbxCommitLatency.MdbxGcProf.SelfRsteps
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfRsteps
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SelfRsteps
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 133
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество итераций поиска внутри GC при выделении страниц для обслуживания самого GC.
+  example: []
+  syntax:
+    content: public uint SelfRsteps
+    return:
+      type: System.UInt32
+    content.vb: Public SelfRsteps As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXpages
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXpages
+  id: SelfXpages
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: SelfXpages
+  nameWithType: MdbxCommitLatency.MdbxGcProf.SelfXpages
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfXpages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SelfXpages
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 138
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество запросов на выделение последовательностей страниц для самого GC.
+  example: []
+  syntax:
+    content: public uint SelfXpages
+    return:
+      type: System.UInt32
+    content.vb: Public SelfXpages As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfMajflt
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfMajflt
+  id: SelfMajflt
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: SelfMajflt
+  nameWithType: MdbxCommitLatency.MdbxGcProf.SelfMajflt
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.SelfMajflt
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SelfMajflt
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 143
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество страничных ошибок внутри GC при выделении и подготовке страниц для самого GC.
+  example: []
+  syntax:
+    content: public uint SelfMajflt
+    return:
+      type: System.UInt32
+    content.vb: Public SelfMajflt As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeWork
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeWork
+  id: PnlMergeWork
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: PnlMergeWork
+  nameWithType: MdbxCommitLatency.MdbxGcProf.PnlMergeWork
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeWork
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PnlMergeWork
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 148
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Метрики объема работы и стоимости слияния списков страниц (merge work).
+  example: []
+  syntax:
+    content: public MdbxCommitLatency.MdbxPnlMerge PnlMergeWork
+    return:
+      type: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    content.vb: Public PnlMergeWork As MdbxCommitLatency.MdbxPnlMerge
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeSelf
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeSelf
+  id: PnlMergeSelf
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: PnlMergeSelf
+  nameWithType: MdbxCommitLatency.MdbxGcProf.PnlMergeSelf
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.PnlMergeSelf
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PnlMergeSelf
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 153
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Метрики объема работы и стоимости слияния списков страниц (merge self).
+  example: []
+  syntax:
+    content: public MdbxCommitLatency.MdbxPnlMerge PnlMergeSelf
+    return:
+      type: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    content.vb: Public PnlMergeSelf As MdbxCommitLatency.MdbxPnlMerge
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxReaderLag
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxReaderLag
+  id: MaxReaderLag
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: MaxReaderLag
+  nameWithType: MdbxCommitLatency.MdbxGcProf.MaxReaderLag
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxReaderLag
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MaxReaderLag
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 158
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Максимальная наблюдаемая разница между последним и старейшим прочитанными MVCC-снимками.
+  example: []
+  syntax:
+    content: public uint MaxReaderLag
+    return:
+      type: System.UInt32
+    content.vb: Public MaxReaderLag As UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxRetainedPages
+  commentId: F:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxRetainedPages
+  id: MaxRetainedPages
+  parent: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  langs:
+  - csharp
+  - vb
+  name: MaxRetainedPages
+  nameWithType: MdbxCommitLatency.MdbxGcProf.MaxRetainedPages
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.MaxRetainedPages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCommitLatency.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MaxRetainedPages
+    path: ../MDBX/Types/MdbxCommitLatency.cs
+    startLine: 163
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Максимальное отмеченное количество страниц, удерживаемых от повторного использования.
+  example: []
+  syntax:
+    content: public uint MaxRetainedPages
+    return:
+      type: System.UInt32
+    content.vb: Public MaxRetainedPages As UInteger
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  commentId: T:MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCommitLatency.html
+  name: MdbxCommitLatency.MdbxPnlMerge
+  nameWithType: MdbxCommitLatency.MdbxPnlMerge
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    name: MdbxPnlMerge
+    href: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    name: MdbxPnlMerge
+    href: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.html

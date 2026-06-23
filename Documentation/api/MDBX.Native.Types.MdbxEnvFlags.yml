@@ -1,0 +1,513 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxEnvFlags
+  commentId: T:MDBX.Native.Types.MdbxEnvFlags
+  id: MdbxEnvFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_ACCEDE
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_ENV_DEFAULTS
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_EXCLUSIVE
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_LIFORECLAIM
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMEMINIT
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMETASYNC
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_NORDAHEAD
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSTICKYTHREADS
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSUBDIR
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_PAGEPERTURB
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_RDONLY
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_SAFE_NOSYNC
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_UTTERLY_NOSYNC
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_VALIDATION
+  - MDBX.Native.Types.MdbxEnvFlags.MDBX_WRITEMAP
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvFlags
+  nameWithType: MdbxEnvFlags
+  fullName: MDBX.Native.Types.MdbxEnvFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxEnvFlags
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги окружения.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxEnvFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxEnvFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_ENV_DEFAULTS
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_ENV_DEFAULTS
+  id: MDBX_ENV_DEFAULTS
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_ENV_DEFAULTS
+  nameWithType: MdbxEnvFlags.MDBX_ENV_DEFAULTS
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_ENV_DEFAULTS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_ENV_DEFAULTS
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги по умолчанию.
+  example: []
+  syntax:
+    content: MDBX_ENV_DEFAULTS = 0
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_VALIDATION
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_VALIDATION
+  id: MDBX_VALIDATION
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_VALIDATION
+  nameWithType: MdbxEnvFlags.MDBX_VALIDATION
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_VALIDATION
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_VALIDATION
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Дополнительная валидация структуры БД и содержимого страниц.
+  example: []
+  syntax:
+    content: MDBX_VALIDATION = 8192
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSUBDIR
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSUBDIR
+  id: MDBX_NOSUBDIR
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NOSUBDIR
+  nameWithType: MdbxEnvFlags.MDBX_NOSUBDIR
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSUBDIR
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NOSUBDIR
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отсутствие каталога окружения.
+  example: []
+  syntax:
+    content: MDBX_NOSUBDIR = 16384
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_RDONLY
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_RDONLY
+  id: MDBX_RDONLY
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_RDONLY
+  nameWithType: MdbxEnvFlags.MDBX_RDONLY
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_RDONLY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_RDONLY
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 26
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Режим только для чтения.
+  example: []
+  syntax:
+    content: MDBX_RDONLY = 131072
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_EXCLUSIVE
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_EXCLUSIVE
+  id: MDBX_EXCLUSIVE
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_EXCLUSIVE
+  nameWithType: MdbxEnvFlags.MDBX_EXCLUSIVE
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_EXCLUSIVE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_EXCLUSIVE
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Исключительный/монопольный режим открытия окружения.
+  example: []
+  syntax:
+    content: MDBX_EXCLUSIVE = 4194304
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_ACCEDE
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_ACCEDE
+  id: MDBX_ACCEDE
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_ACCEDE
+  nameWithType: MdbxEnvFlags.MDBX_ACCEDE
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_ACCEDE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_ACCEDE
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 36
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Использовать окружение/БД, уже открытые другим процессом(ами).
+  example: []
+  syntax:
+    content: MDBX_ACCEDE = 1073741824
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_WRITEMAP
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_WRITEMAP
+  id: MDBX_WRITEMAP
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_WRITEMAP
+  nameWithType: MdbxEnvFlags.MDBX_WRITEMAP
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_WRITEMAP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_WRITEMAP
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 41
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отображать данные в память с правами записи.
+  example: []
+  syntax:
+    content: MDBX_WRITEMAP = 524288
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSTICKYTHREADS
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSTICKYTHREADS
+  id: MDBX_NOSTICKYTHREADS
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NOSTICKYTHREADS
+  nameWithType: MdbxEnvFlags.MDBX_NOSTICKYTHREADS
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOSTICKYTHREADS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NOSTICKYTHREADS
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 46
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отвязать транзакции от потоков, насколько это возможно.
+  example: []
+  syntax:
+    content: MDBX_NOSTICKYTHREADS = 2097152
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_NORDAHEAD
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_NORDAHEAD
+  id: MDBX_NORDAHEAD
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NORDAHEAD
+  nameWithType: MdbxEnvFlags.MDBX_NORDAHEAD
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_NORDAHEAD
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NORDAHEAD
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 51
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отключить предварительное чтение.
+  example: []
+  syntax:
+    content: MDBX_NORDAHEAD = 8388608
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMEMINIT
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMEMINIT
+  id: MDBX_NOMEMINIT
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NOMEMINIT
+  nameWithType: MdbxEnvFlags.MDBX_NOMEMINIT
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMEMINIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NOMEMINIT
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 56
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Не инициализировать malloc'ed память перед записью в файл данных.
+  example: []
+  syntax:
+    content: MDBX_NOMEMINIT = 16777216
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_LIFORECLAIM
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_LIFORECLAIM
+  id: MDBX_LIFORECLAIM
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_LIFORECLAIM
+  nameWithType: MdbxEnvFlags.MDBX_LIFORECLAIM
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_LIFORECLAIM
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_LIFORECLAIM
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 61
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Использовать LRU-стратегию возврата страниц читателями.
+  example: []
+  syntax:
+    content: MDBX_LIFORECLAIM = 67108864
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_PAGEPERTURB
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_PAGEPERTURB
+  id: MDBX_PAGEPERTURB
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_PAGEPERTURB
+  nameWithType: MdbxEnvFlags.MDBX_PAGEPERTURB
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_PAGEPERTURB
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_PAGEPERTURB
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 66
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Отладка: заполнять/возмущать освобождаемые страницы.'
+  example: []
+  syntax:
+    content: MDBX_PAGEPERTURB = 134217728
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMETASYNC
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMETASYNC
+  id: MDBX_NOMETASYNC
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NOMETASYNC
+  nameWithType: MdbxEnvFlags.MDBX_NOMETASYNC
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_NOMETASYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NOMETASYNC
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 71
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Не сбрасывать метаданные на диск при коммите.
+  example: []
+  syntax:
+    content: MDBX_NOMETASYNC = 262144
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_SAFE_NOSYNC
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_SAFE_NOSYNC
+  id: MDBX_SAFE_NOSYNC
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_SAFE_NOSYNC
+  nameWithType: MdbxEnvFlags.MDBX_SAFE_NOSYNC
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_SAFE_NOSYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_SAFE_NOSYNC
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 76
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Безопасный режим без синхронизации (данные сбрасываются периодически).
+  example: []
+  syntax:
+    content: MDBX_SAFE_NOSYNC = 65536
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags.MDBX_UTTERLY_NOSYNC
+  commentId: F:MDBX.Native.Types.MdbxEnvFlags.MDBX_UTTERLY_NOSYNC
+  id: MDBX_UTTERLY_NOSYNC
+  parent: MDBX.Native.Types.MdbxEnvFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_UTTERLY_NOSYNC
+  nameWithType: MdbxEnvFlags.MDBX_UTTERLY_NOSYNC
+  fullName: MDBX.Native.Types.MdbxEnvFlags.MDBX_UTTERLY_NOSYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_UTTERLY_NOSYNC
+    path: ../MDBX/Types/MdbxEnvFlags.cs
+    startLine: 81
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Полностью отключить синхронизацию (опасно для данных).
+  example: []
+  syntax:
+    content: MDBX_UTTERLY_NOSYNC = 1114112
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxEnvFlags
+  commentId: T:MDBX.Native.Types.MdbxEnvFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvFlags.html
+  name: MdbxEnvFlags
+  nameWithType: MdbxEnvFlags
+  fullName: MDBX.Native.Types.MdbxEnvFlags

@@ -1,35 +1,46 @@
-
-using MDBX.Interop;
+using System.Runtime.InteropServices;
 
 namespace MDBX;
+
 /// <summary>
-/// Исключение MDBX.
+/// Исключение, возникающее при ошибках libmdbx.
 /// </summary>
-public class MdbxException : Exception
+public unsafe sealed class MdbxException : Exception
 {
     /// <summary>
-    /// Номер ошибки MDBX.
+    /// Код ошибки libmdbx.
     /// </summary>
-    public int ErrorNumber { get { return _errorNumber; } }
-    private readonly int _errorNumber;
+    public int ErrorCode { get; }
 
     /// <summary>
-    /// Инициализирует новый экземпляр класса MdbxException.
+    /// Инициализирует новое исключение с кодом ошибки.
     /// </summary>
-    /// <param name="method">Имя метода, который вызвал ошибку.</param>
-    /// <param name="errNum">Код ошибки MDBX.</param>
-    internal MdbxException(string method, int errNum) :
-        base(GetMessage(method, errNum))
+    /// <param name="errorCode">Код ошибки libmdbx.</param>
+    public MdbxException(int errorCode)
+        : base(GetErrorMessage(errorCode))
     {
-        _errorNumber = errNum;
+        ErrorCode = errorCode;
     }
 
-    private static string GetMessage(string method, int errNum)
+    /// <summary>
+    /// Инициализирует новое исключение с кодом ошибки и сообщением.
+    /// </summary>
+    /// <param name="errorCode">Код ошибки libmdbx.</param>
+    /// <param name="message">Сообщение об ошибке.</param>
+    public MdbxException(int errorCode, string message)
+        : base(message)
     {
-        return string.Format("MDBX {0} returned ({1}) - {2}"
-            , method
-            , errNum
-            , MdbxInteropMisc.StringError(errNum)
-            );
+        ErrorCode = errorCode;
+    }
+
+    /// <summary>
+    /// Возвращает строковое описание кода ошибки libmdbx.
+    /// </summary>
+    private static string GetErrorMessage(int errorCode)
+    {
+        byte* ptr = Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror(errorCode);
+        if (ptr == null)
+            return $"MDBX error {errorCode}";
+        return Marshal.PtrToStringUTF8((IntPtr)ptr)!;
     }
 }

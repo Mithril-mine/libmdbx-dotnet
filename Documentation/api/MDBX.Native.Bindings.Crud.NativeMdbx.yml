@@ -1,0 +1,809 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Crud.NativeMdbx
+  id: NativeMdbx
+  parent: MDBX.Native.Bindings.Crud
+  children:
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,System.UIntPtr*)
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags,MDBX.Native.Types.MdbxPreserveFunc,System.Void*)
+  langs:
+  - csharp
+  - vb
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx
+  type: Class
+  source:
+    remote:
+      path: MDBX/Bindings/Crud/NativeMdbx.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeMdbx
+    path: ../MDBX/Bindings/Crud/NativeMdbx.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Частичный класс для нативных методов CRUD операций libmdbx.
+  example: []
+  syntax:
+    content: public static class NativeMdbx
+    content.vb: Public Module NativeMdbx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  id: MdbxGet(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxGet(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  nameWithType: NativeMdbx.MdbxGet(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Получает значение по ключу.
+  example: []
+  syntax:
+    content: public static extern int MdbxGet(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxGet(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, data As MdbxVal*) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet*
+  nameWithType.vb: NativeMdbx.MdbxGet(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  name.vb: MdbxGet(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*)
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,System.UIntPtr*)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,System.UIntPtr*)
+  id: MdbxGetEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,System.UIntPtr*)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxGetEx(MDBX_txn*, uint, MdbxVal*, MdbxVal*, nuint*)
+  nameWithType: NativeMdbx.MdbxGetEx(MDBX_txn*, uint, MdbxVal*, MdbxVal*, nuint*)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, nuint*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Получает значение по ключу с расширенными опциями.
+  example: []
+  syntax:
+    content: public static extern int MdbxGetEx(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data, nuint* valuesCount)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    - id: valuesCount
+      type: System.UIntPtr*
+      description: Количество значений.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxGetEx(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, data As MdbxVal*, valuesCount As UIntPtr*) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx*
+  nameWithType.vb: NativeMdbx.MdbxGetEx(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, UIntPtr*)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, System.UIntPtr*)
+  name.vb: MdbxGetEx(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, UIntPtr*)
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  id: MdbxPut(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxPut(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  nameWithType: NativeMdbx.MdbxPut(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Записывает значение.
+  example: []
+  syntax:
+    content: public static extern int MdbxPut(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data, MdbxPutFlags flags)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxPut(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, data As MdbxVal*, flags As MdbxPutFlags) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut*
+  nameWithType.vb: NativeMdbx.MdbxPut(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags)
+  name.vb: MdbxPut(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, MdbxPutFlags)
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  id: MdbxReplace(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxReplace(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  nameWithType: NativeMdbx.MdbxReplace(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Заменяет значение.
+  example: []
+  syntax:
+    content: public static extern int MdbxReplace(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* newData, MdbxVal* oldData, MdbxPutFlags flags)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: newData
+      type: MDBX.Native.Types.MdbxVal*
+      description: Новое значение.
+    - id: oldData
+      type: MDBX.Native.Types.MdbxVal*
+      description: Старое значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxReplace(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, newData As MdbxVal*, oldData As MdbxVal*, flags As MdbxPutFlags) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace*
+  nameWithType.vb: NativeMdbx.MdbxReplace(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags)
+  name.vb: MdbxReplace(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags,MDBX.Native.Types.MdbxPreserveFunc,System.Void*)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags,MDBX.Native.Types.MdbxPreserveFunc,System.Void*)
+  id: MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags,MDBX.Native.Types.MdbxPreserveFunc,System.Void*)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxReplaceEx(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags, MdbxPreserveFunc?, void*)
+  nameWithType: NativeMdbx.MdbxReplaceEx(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags, MdbxPreserveFunc?, void*)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags, MDBX.Native.Types.MdbxPreserveFunc?, void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Заменяет значение с расширенными опциями.
+  example: []
+  syntax:
+    content: public static extern int MdbxReplaceEx(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* newData, MdbxVal* oldData, MdbxPutFlags flags, MdbxPreserveFunc? preserver, void* preserver_context)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: newData
+      type: MDBX.Native.Types.MdbxVal*
+      description: Новое значение.
+    - id: oldData
+      type: MDBX.Native.Types.MdbxVal*
+      description: Старое значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги.
+    - id: preserver
+      type: MDBX.Native.Types.MdbxPreserveFunc
+      description: Функция сохранения данных.
+    - id: preserver_context
+      type: System.Void*
+      description: Контекст для функции сохранения.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxReplaceEx(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, newData As MdbxVal*, oldData As MdbxVal*, flags As MdbxPutFlags, preserver As MdbxPreserveFunc, preserver_context As Void*) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx*
+  nameWithType.vb: NativeMdbx.MdbxReplaceEx(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags, MdbxPreserveFunc, Void*)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags, MDBX.Native.Types.MdbxPreserveFunc, Void*)
+  name.vb: MdbxReplaceEx(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags, MdbxPreserveFunc, Void*)
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  id: MdbxDel(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxDel(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  nameWithType: NativeMdbx.MdbxDel(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Удаляет элемент.
+  example: []
+  syntax:
+    content: public static extern int MdbxDel(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение (опционально).
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxDel(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, data As MdbxVal*) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel*
+  nameWithType.vb: NativeMdbx.MdbxDel(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  name.vb: MdbxDel(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*)
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  commentId: M:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  id: MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  parent: MDBX.Native.Bindings.Crud.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxGetEqualOrGreat(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  nameWithType: NativeMdbx.MdbxGetEqualOrGreat(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Crud
+  summary: Получает значение по ключу или ближайному большему ключу.
+  example: []
+  syntax:
+    content: public static extern int MdbxGetEqualOrGreat(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: 'Ключ (на вход: искомый ключ, на выходе: найденный ключ).'
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе, MDBX_NOTFOUND если не найдено).
+    content.vb: Public Shared Function MdbxGetEqualOrGreat(txn As MDBX_txn*, dbi As UInteger, key As MdbxVal*, data As MdbxVal*) As Integer
+  overload: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat*
+  nameWithType.vb: NativeMdbx.MdbxGetEqualOrGreat(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*)
+  fullName.vb: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  name.vb: MdbxGetEqualOrGreat(MDBX_txn*, UInteger, MdbxVal*, MdbxVal*)
+references:
+- uid: MDBX.Native.Bindings.Crud
+  commentId: N:MDBX.Native.Bindings.Crud
+  href: MDBX.html
+  name: MDBX.Native.Bindings.Crud
+  nameWithType: MDBX.Native.Bindings.Crud
+  fullName: MDBX.Native.Bindings.Crud
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Crud
+    name: Crud
+    href: MDBX.Native.Bindings.Crud.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Crud
+    name: Crud
+    href: MDBX.Native.Bindings.Crud.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGet_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__
+  name: MdbxGet
+  nameWithType: NativeMdbx.MdbxGet
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGetEx_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__System_UIntPtr__
+  name: MdbxGetEx
+  nameWithType: NativeMdbx.MdbxGetEx
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx
+- uid: System.UIntPtr*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint*
+  nameWithType: nuint*
+  fullName: nuint*
+  nameWithType.vb: UIntPtr*
+  fullName.vb: System.UIntPtr*
+  name.vb: UIntPtr*
+  spec.csharp:
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: '*'
+  spec.vb:
+  - uid: System.UIntPtr
+    name: UIntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: '*'
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxPut_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_
+  name: MdbxPut
+  nameWithType: NativeMdbx.MdbxPut
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPutFlags.html
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxReplace_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_
+  name: MdbxReplace
+  nameWithType: NativeMdbx.MdbxReplace
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxReplaceEx_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_MDBX_Native_Types_MdbxPreserveFunc_System_Void__
+  name: MdbxReplaceEx
+  nameWithType: NativeMdbx.MdbxReplaceEx
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx
+- uid: MDBX.Native.Types.MdbxPreserveFunc
+  commentId: T:MDBX.Native.Types.MdbxPreserveFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPreserveFunc.html
+  name: MdbxPreserveFunc
+  nameWithType: MdbxPreserveFunc
+  fullName: MDBX.Native.Types.MdbxPreserveFunc
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxDel_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__
+  name: MdbxDel
+  nameWithType: NativeMdbx.MdbxDel
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel
+- uid: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat*
+  commentId: Overload:MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat
+  isExternal: true
+  href: MDBX.Native.Bindings.Crud.NativeMdbx.html#MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGetEqualOrGreat_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__
+  name: MdbxGetEqualOrGreat
+  nameWithType: NativeMdbx.MdbxGetEqualOrGreat
+  fullName: MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat

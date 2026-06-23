@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxPreserveFunc
+  commentId: T:MDBX.Native.Types.MdbxPreserveFunc
+  id: MdbxPreserveFunc
+  parent: MDBX.Native.Types
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MdbxPreserveFunc
+  nameWithType: MdbxPreserveFunc
+  fullName: MDBX.Native.Types.MdbxPreserveFunc
+  type: Delegate
+  source:
+    remote:
+      path: MDBX/Types/MdbxDelegates.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxPreserveFunc
+    path: ../MDBX/Types/MdbxDelegates.cs
+    startLine: 115
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция сохранения данных для mdbx_replace_ex.
+  example: []
+  syntax:
+    content: public delegate int MdbxPreserveFunc(void* context, MdbxVal* target, void* src, nuint bytes)
+    parameters:
+    - id: context
+      type: System.Void*
+      description: Пользовательский контекст.
+    - id: target
+      type: MDBX.Native.Types.MdbxVal*
+      description: Целевой буфер.
+    - id: src
+      type: System.Void*
+      description: Исходные данные.
+    - id: bytes
+      type: System.UIntPtr
+      description: Количество байт.
+    return:
+      type: System.Int32
+      description: 0 при успехе, иначе код ошибки.
+    content.vb: Public Delegate Function MdbxPreserveFunc(context As Void*, target As MdbxVal*, src As Void*, bytes As UIntPtr) As Integer
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

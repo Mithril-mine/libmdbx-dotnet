@@ -1,0 +1,356 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxCacheStatus
+  commentId: T:MDBX.Native.Types.MdbxCacheStatus
+  id: MdbxCacheStatus
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_BEHIND
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_CONFIRMED
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_DIRTY
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_ERROR
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_HIT
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_RACE
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_REFRESHED
+  - MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_UNABLE
+  langs:
+  - csharp
+  - vb
+  name: MdbxCacheStatus
+  nameWithType: MdbxCacheStatus
+  fullName: MDBX.Native.Types.MdbxCacheStatus
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxCacheStatus
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 12
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Статус кэша, возвращаемый функциями mdbx_cache_get() и mdbx_cache_get_SingleThreaded().
+  remarks: >-
+    Значения соответствуют перечислению MDBX_cache_status_t из заголовочного файла mdbx.h.
+
+    Отрицательные значения означают ошибки или специальные случаи, положительные — успех.
+  example: []
+  syntax:
+    content: public enum MdbxCacheStatus
+    content.vb: Public Enum MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_ERROR
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_ERROR
+  id: MDBX_CACHE_ERROR
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_ERROR
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_ERROR
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_ERROR
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_ERROR
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 18
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Произошла ошибка, не связанная с отсутствием ключа в кэше.
+
+    Кэш-запись не изменена.
+  example: []
+  syntax:
+    content: MDBX_CACHE_ERROR = -3
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_BEHIND
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_BEHIND
+  id: MDBX_CACHE_BEHIND
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_BEHIND
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_BEHIND
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_BEHIND
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_BEHIND
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 26
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат получен в обход кэша, так как транзакция слишком старая.
+
+    Кэш-запись отражает более новую версию данных, недоступную в текущем MVCC-снимке.
+
+    Кэш-запись не изменена.
+
+    Результат корректен до конца транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_BEHIND = -2
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_UNABLE
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_UNABLE
+  id: MDBX_CACHE_UNABLE
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_UNABLE
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_UNABLE
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_UNABLE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_UNABLE
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 33
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат корректен, но не может быть закэширован из-за ABA-подобной проблемы в истории данных.
+
+    Кэш-запись не изменена.
+
+    Результат корректен до конца транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_UNABLE = -1
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_RACE
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_RACE
+  id: MDBX_CACHE_RACE
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_RACE
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_RACE
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_RACE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_RACE
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 41
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат получен в обход кэша из-за обнаружения гонки при обновлении кэш-записи другим потоком.
+
+    Кэш-запись не изменена.
+
+    Для read-транзакции результат корректен до конца транзакции.
+
+    Для write-транзакций результат корректен до явного изменения значения или завершения транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_RACE = 0
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_DIRTY
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_DIRTY
+  id: MDBX_CACHE_DIRTY
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_DIRTY
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_DIRTY
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_DIRTY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_DIRTY
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 48
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат корректен, но не может быть закэширован, так как изменения ещё не зафиксированы.
+
+    Кэш-запись не изменена, так как изменения данных ещё не зафиксированы и могут быть отменены.
+
+    Результат корректен до следующего изменения внутри текущей write-транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_DIRTY = 1
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_HIT
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_HIT
+  id: MDBX_CACHE_HIT
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_HIT
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_HIT
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_HIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_HIT
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 56
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат корректен и получен из кэш-записи, которая не была изменена.
+
+    Кэш-запись не изменена, так как данные не изменились с момента последней проверки.
+
+    Для read-транзакции результат корректен до конца транзакции.
+
+    Для write-транзакций результат корректен до явного изменения значения или завершения транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_HIT = 2
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_CONFIRMED
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_CONFIRMED
+  id: MDBX_CACHE_CONFIRMED
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_CONFIRMED
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_CONFIRMED
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_CONFIRMED
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_CONFIRMED
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 65
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат корректен и получен из кэш-записи, которая была немного обновлена
+
+    для отражения актуальности данных для недавних зафиксированных транзакций.
+
+    Кэш-запись слегка обновлена.
+
+    Для read-транзакции результат корректен до конца транзакции.
+
+    Для write-транзакций результат корректен до явного изменения значения или завершения транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_CONFIRMED = 3
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_REFRESHED
+  commentId: F:MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_REFRESHED
+  id: MDBX_CACHE_REFRESHED
+  parent: MDBX.Native.Types.MdbxCacheStatus
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CACHE_REFRESHED
+  nameWithType: MdbxCacheStatus.MDBX_CACHE_REFRESHED
+  fullName: MDBX.Native.Types.MdbxCacheStatus.MDBX_CACHE_REFRESHED
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxCacheTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CACHE_REFRESHED
+    path: ../MDBX/Types/MdbxCacheTypes.cs
+    startLine: 74
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Результат корректен и соответствует свежим данным, прочитанным из базы данных,
+
+    которые также были помещены в кэш-запись.
+
+    Кэш-запись полностью обновлена для отражения актуальных данных.
+
+    Для read-транзакции результат корректен до конца транзакции.
+
+    Для write-транзакций результат корректен до явного изменения значения или завершения транзакции.
+  example: []
+  syntax:
+    content: MDBX_CACHE_REFRESHED = 4
+    return:
+      type: MDBX.Native.Types.MdbxCacheStatus
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxCacheStatus
+  commentId: T:MDBX.Native.Types.MdbxCacheStatus
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCacheStatus.html
+  name: MdbxCacheStatus
+  nameWithType: MdbxCacheStatus
+  fullName: MDBX.Native.Types.MdbxCacheStatus

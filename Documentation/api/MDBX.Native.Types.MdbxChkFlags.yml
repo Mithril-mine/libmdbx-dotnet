@@ -1,0 +1,230 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkFlags
+  commentId: T:MDBX.Native.Types.MdbxChkFlags
+  id: MdbxChkFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_DEFAULTS
+  - MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_IGNORE_ORDER
+  - MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_READWRITE
+  - MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  - MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_KV_TRAVERSAL
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkFlags
+  nameWithType: MdbxChkFlags
+  fullName: MDBX.Native.Types.MdbxChkFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkFlags
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 12
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги проверки целостности базы данных.
+  remarks: >-
+    Значения соответствуют перечислению MDBX_chk_flags_t из заголовочного файла mdbx.h.
+
+    Могут быть объединены с помощью битовых операций.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxChkFlags
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxChkFlags
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_DEFAULTS
+  commentId: F:MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_DEFAULTS
+  id: MDBX_CHK_DEFAULTS
+  parent: MDBX.Native.Types.MdbxChkFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CHK_DEFAULTS
+  nameWithType: MdbxChkFlags.MDBX_CHK_DEFAULTS
+  fullName: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_DEFAULTS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CHK_DEFAULTS
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 18
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Режим проверки по умолчанию, включая read-only режим.
+  example: []
+  syntax:
+    content: MDBX_CHK_DEFAULTS = 0
+    return:
+      type: MDBX.Native.Types.MdbxChkFlags
+- uid: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_READWRITE
+  commentId: F:MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_READWRITE
+  id: MDBX_CHK_READWRITE
+  parent: MDBX.Native.Types.MdbxChkFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CHK_READWRITE
+  nameWithType: MdbxChkFlags.MDBX_CHK_READWRITE
+  fullName: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_READWRITE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CHK_READWRITE
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 23
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Проверка в read-write режиме с блокировкой и приостановкой записных транзакций.
+  example: []
+  syntax:
+    content: MDBX_CHK_READWRITE = 1
+    return:
+      type: MDBX.Native.Types.MdbxChkFlags
+- uid: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  commentId: F:MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  id: MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  parent: MDBX.Native.Types.MdbxChkFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  nameWithType: MdbxChkFlags.MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  fullName: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_BTREE_TRAVERSAL
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CHK_SKIP_BTREE_TRAVERSAL
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 28
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Пропустить обход дерева страниц.
+  example: []
+  syntax:
+    content: MDBX_CHK_SKIP_BTREE_TRAVERSAL = 2
+    return:
+      type: MDBX.Native.Types.MdbxChkFlags
+- uid: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_KV_TRAVERSAL
+  commentId: F:MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_KV_TRAVERSAL
+  id: MDBX_CHK_SKIP_KV_TRAVERSAL
+  parent: MDBX.Native.Types.MdbxChkFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CHK_SKIP_KV_TRAVERSAL
+  nameWithType: MdbxChkFlags.MDBX_CHK_SKIP_KV_TRAVERSAL
+  fullName: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_SKIP_KV_TRAVERSAL
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CHK_SKIP_KV_TRAVERSAL
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 33
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Пропустить итерацию и просмотр записей ключ-значение.
+  example: []
+  syntax:
+    content: MDBX_CHK_SKIP_KV_TRAVERSAL = 4
+    return:
+      type: MDBX.Native.Types.MdbxChkFlags
+- uid: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_IGNORE_ORDER
+  commentId: F:MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_IGNORE_ORDER
+  id: MDBX_CHK_IGNORE_ORDER
+  parent: MDBX.Native.Types.MdbxChkFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CHK_IGNORE_ORDER
+  nameWithType: MdbxChkFlags.MDBX_CHK_IGNORE_ORDER
+  fullName: MDBX.Native.Types.MdbxChkFlags.MDBX_CHK_IGNORE_ORDER
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CHK_IGNORE_ORDER
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 39
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Игнорировать порядок ключей и значений.
+
+    Необходимо при проверке баз данных с нестандартными функциями сравнения.
+  example: []
+  syntax:
+    content: MDBX_CHK_IGNORE_ORDER = 8
+    return:
+      type: MDBX.Native.Types.MdbxChkFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxChkFlags
+  commentId: T:MDBX.Native.Types.MdbxChkFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkFlags.html
+  name: MdbxChkFlags
+  nameWithType: MdbxChkFlags
+  fullName: MDBX.Native.Types.MdbxChkFlags

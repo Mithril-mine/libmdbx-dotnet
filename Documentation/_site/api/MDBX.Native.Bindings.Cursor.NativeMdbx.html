@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NativeMdbx | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NativeMdbx | Binding Documentation ">
+      
+      <meta name="description" content="Частичный класс для нативных методов курсоров libmdbx.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx">
+
+
+
+  <h1 id="MDBX_Native_Bindings_Cursor_NativeMdbx" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx" class="text-break">
+Class NativeMdbx  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MDBX.html">MDBX</a>.<a class="xref" href="MDBX.Native.html">Native</a>.<a class="xref" href="MDBX.Native.Bindings.html">Bindings</a>.<a class="xref" href="MDBX.Native.Bindings.Cursor.html">Cursor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>mdbx-dotnet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Частичный класс для нативных методов курсоров libmdbx.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NativeMdbx</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NativeMdbx</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorBind_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorBind_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MDBX_cursor__System_UInt32_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*,System.UInt32)">
+  MdbxCursorBind(MDBX_txn*, MDBX_cursor*, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Привязывает курсор к транзакции и таблице.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorBind(MDBX_txn* txn, MDBX_cursor* cursor, uint dbi)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorBunchDelete_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorBunchDelete_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxBunchAction_System_UInt64__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxBunchAction,System.UInt64*)">
+  MdbxCursorBunchDelete(MDBX_cursor*, MdbxBunchAction, ulong*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Пакетное удаление через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorBunchDelete(MDBX_cursor* cursor, MdbxBunchAction action, ulong* numberOfAffected)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="MDBX.Native.Types.MdbxBunchAction.html">MdbxBunchAction</a></dt>
+    <dd><p>Действие.</p>
+</dd>
+    <dt><code>numberOfAffected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>*</dt>
+    <dd><p>Количество затронутых элементов.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorClose_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorClose_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorClose(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Закрывает курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void MdbxCursorClose(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorClose2_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorClose2_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorClose2(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Закрывает курсор с возвратом кода ошибки.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorClose2(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCompare_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCompare_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__System_Boolean_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean)">
+  MdbxCursorCompare(MDBX_cursor*, MDBX_cursor*, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сравнивает два курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorCompare(MDBX_cursor* left, MDBX_cursor* right, bool ignoreMultival)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Левый курсор.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Правый курсор.</p>
+</dd>
+    <dt><code>ignoreMultival</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Игнорировать множественные значения.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Результат сравнения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCopy_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCopy_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorCopy(MDBX_cursor*, MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Копирует курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorCopy(MDBX_cursor* src, MDBX_cursor* dest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Исходный курсор.</p>
+</dd>
+    <dt><code>dest</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор назначения.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCount_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCount_MDBX_Native_Types_MDBX_cursor__System_UIntPtr__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*)">
+  MdbxCursorCount(MDBX_cursor*, nuint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает количество элементов.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorCount(MDBX_cursor* cursor, nuint* count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>*</dt>
+    <dd><p>Количество.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCountEx_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCountEx_MDBX_Native_Types_MDBX_cursor__System_UIntPtr__MDBX_Native_Types_MdbxStat__System_UIntPtr_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxStat*,System.UIntPtr)">
+  MdbxCursorCountEx(MDBX_cursor*, nuint*, MdbxStat*, nuint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает количество элементов с статистикой.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorCountEx(MDBX_cursor* cursor, nuint* count, MdbxStat* stat, nuint bytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>*</dt>
+    <dd><p>Количество.</p>
+</dd>
+    <dt><code>stat</code> <a class="xref" href="MDBX.Native.Types.MdbxStat.html">MdbxStat</a>*</dt>
+    <dd><p>Статистика.</p>
+</dd>
+    <dt><code>bytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Размер структуры.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCreate_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCreate_System_Void__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate(System.Void*)">
+  MdbxCursorCreate(void*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern MDBX_cursor* MdbxCursorCreate(void* context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Пользовательский контекст.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Указатель на курсор.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDbi_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDbi_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorDbi(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает DBI курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern uint MdbxCursorDbi(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDel_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDel_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxPutFlags)">
+  MdbxCursorDel(MDBX_cursor*, MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет элемент через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorDel(MDBX_cursor* cursor, MdbxPutFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDeleteRange_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDeleteRange_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__System_Boolean_System_Boolean_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean,System.Boolean)">
+  MdbxCursorDeleteRange(MDBX_cursor*, MDBX_cursor*, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет диапазон через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorDeleteRange(MDBX_cursor* begin, MDBX_cursor* end, bool endIncluding, bool force)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>begin</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Начальный курсор.</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Конечный курсор.</p>
+</dd>
+    <dt><code>endIncluding</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Включая конечный.</p>
+</dd>
+    <dt><code>force</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Принудительно.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDistance_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDistance_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__System_IntPtr__MDBX_Native_Types_MdbxCursorOp_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.IntPtr*,MDBX.Native.Types.MdbxCursorOp)">
+  MdbxCursorDistance(MDBX_cursor*, MDBX_cursor*, nint*, MdbxCursorOp)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает расстояние между курсорами.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorDistance(MDBX_cursor* first, MDBX_cursor* last, nint* distance, MdbxCursorOp op)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Первый курсор.</p>
+</dd>
+    <dt><code>last</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Последний курсор.</p>
+</dd>
+    <dt><code>distance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>*</dt>
+    <dd><p>Расстояние.</p>
+</dd>
+    <dt><code>op</code> <a class="xref" href="MDBX.Native.Types.MdbxCursorOp.html">MdbxCursorOp</a></dt>
+    <dd><p>Операция.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDistribute_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDistribute_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor___System_UInt32_System_UInt32_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor**,System.UInt32,System.UInt32)">
+  MdbxCursorDistribute(MDBX_cursor*, MDBX_cursor*, MDBX_cursor**, uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Распределяет элементы между курсорами.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorDistribute(MDBX_cursor* first, MDBX_cursor* last, MDBX_cursor** array, uint count, uint deepness)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Первый курсор.</p>
+</dd>
+    <dt><code>last</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Последний курсор.</p>
+</dd>
+    <dt><code>array</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>**</dt>
+    <dd><p>Массив курсоров.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Количество.</p>
+</dd>
+    <dt><code>deepness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Глубина.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorEof_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorEof_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorEof(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, достигнут ли конец таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorEof(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>1 если конец, 0 иначе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGet_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGet_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxCursorOp_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxCursorOp)">
+  MdbxCursorGet(MDBX_cursor*, MdbxVal*, MdbxVal*, MdbxCursorOp)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает элемент через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorGet(MDBX_cursor* cursor, MdbxVal* key, MdbxVal* data, MdbxCursorOp op)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение.</p>
+</dd>
+    <dt><code>op</code> <a class="xref" href="MDBX.Native.Types.MdbxCursorOp.html">MdbxCursorOp</a></dt>
+    <dd><p>Операция.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGetBatch_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGetBatch_MDBX_Native_Types_MDBX_cursor__System_UIntPtr__MDBX_Native_Types_MdbxVal__System_UIntPtr_MDBX_Native_Types_MdbxCursorOp_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxVal*,System.UIntPtr,MDBX.Native.Types.MdbxCursorOp)">
+  MdbxCursorGetBatch(MDBX_cursor*, nuint*, MdbxVal*, nuint, MdbxCursorOp)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает пакет элементов через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorGetBatch(MDBX_cursor* cursor, nuint* count, MdbxVal* pairs, nuint limit, MdbxCursorOp op)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>*</dt>
+    <dd><p>Количество элементов.</p>
+</dd>
+    <dt><code>pairs</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Массив пар ключ-значение.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>Лимит.</p>
+</dd>
+    <dt><code>op</code> <a class="xref" href="MDBX.Native.Types.MdbxCursorOp.html">MdbxCursorOp</a></dt>
+    <dd><p>Операция.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGetUserctx_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGetUserctx_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorGetUserctx(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает пользовательский контекст курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void* MdbxCursorGetUserctx(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Указатель на контекст.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorIgnord_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorIgnord_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorIgnord(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Игнорирует дубликаты.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorIgnord(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnFirst_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnFirst_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorOnFirst(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на первом элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorOnFirst(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>1 если на первом, 0 иначе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnFirstDup_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnFirstDup_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorOnFirstDup(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на первом дубликате.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorOnFirstDup(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>1 если на первом дубликате, 0 иначе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnLast_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnLast_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorOnLast(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на последнем элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorOnLast(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>1 если на последнем, 0 иначе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnLastDup_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnLastDup_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorOnLastDup(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, находится ли курсор на последнем дубликате.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorOnLastDup(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>1 если на последнем дубликате, 0 иначе.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOpen_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOpen_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MDBX_cursor___" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MDBX_cursor**)">
+  MdbxCursorOpen(MDBX_txn*, uint, MDBX_cursor**)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Открывает курсор для таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorOpen(MDBX_txn* txn, uint dbi, MDBX_cursor** cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>**</dt>
+    <dd><p>Указатель для курсора.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorPut_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorPut_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)">
+  MdbxCursorPut(MDBX_cursor*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Записывает элемент через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorPut(MDBX_cursor* cursor, MdbxVal* key, MdbxVal* data, MdbxPutFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorRenew_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorRenew_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorRenew(MDBX_txn*, MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Обновляет курсор для новой транзакции.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorRenew(MDBX_txn* txn, MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorReset_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorReset_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorReset(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сбрасывает курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorReset(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScan_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScan_MDBX_Native_Types_MDBX_cursor___System_Void__MDBX_Native_Types_MdbxCursorOp_MDBX_Native_Types_MdbxVal__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*)">
+  MdbxCursorScan(MDBX_cursor*, delegate* unmanaged[Cdecl]&lt;void*, MdbxVal*, MdbxVal*, void*, int&gt;, void*, MdbxCursorOp, MdbxVal*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сканирует элементы через курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorScan(MDBX_cursor* cursor, delegate* unmanaged[Cdecl]&lt;void*, MdbxVal*, MdbxVal*, void*, int&gt; predicate, void* context, MdbxCursorOp op, MdbxVal* arg)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>predicate</code> delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Функция предиката.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Контекст.</p>
+</dd>
+    <dt><code>op</code> <a class="xref" href="MDBX.Native.Types.MdbxCursorOp.html">MdbxCursorOp</a></dt>
+    <dd><p>Операция.</p>
+</dd>
+    <dt><code>arg</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Аргумент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScanFrom_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScanFrom_MDBX_Native_Types_MDBX_cursor___System_Void__MDBX_Native_Types_MdbxCursorOp_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)">
+  MdbxCursorScanFrom(MDBX_cursor*, delegate* unmanaged[Cdecl]&lt;void*, MdbxVal*, MdbxVal*, void*, int&gt;, void*, MdbxCursorOp, MdbxVal*, MdbxVal*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сканирует элементы через курсор начиная с позиции.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorScanFrom(MDBX_cursor* cursor, delegate* unmanaged[Cdecl]&lt;void*, MdbxVal*, MdbxVal*, void*, int&gt; predicate, void* context, MdbxCursorOp op, MdbxVal* arg, MdbxVal* startKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>predicate</code> delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Функция предиката.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Контекст.</p>
+</dd>
+    <dt><code>op</code> <a class="xref" href="MDBX.Native.Types.MdbxCursorOp.html">MdbxCursorOp</a></dt>
+    <dd><p>Операция.</p>
+</dd>
+    <dt><code>arg</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Аргумент.</p>
+</dd>
+    <dt><code>startKey</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Начальный ключ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScroll_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScroll_MDBX_Native_Types_MDBX_cursor__System_IntPtr_System_UInt32_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*,System.IntPtr,System.UInt32)">
+  MdbxCursorScroll(MDBX_cursor*, nint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Прокручивает курсор.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorScroll(MDBX_cursor* cursor, nint amount, uint deepness)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Количество шагов.</p>
+</dd>
+    <dt><code>deepness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Глубина.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorSetUserctx_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorSetUserctx_MDBX_Native_Types_MDBX_cursor__System_Void__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*,System.Void*)">
+  MdbxCursorSetUserctx(MDBX_cursor*, void*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает пользовательский контекст курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorSetUserctx(MDBX_cursor* cursor, void* ctx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Контекст.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorTxn_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorTxn_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorTxn(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает транзакцию курсора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern MDBX_txn* MdbxCursorTxn(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Указатель на транзакцию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorUnbind_" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorUnbind_MDBX_Native_Types_MDBX_cursor__" data-uid="MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind(MDBX.Native.Types.MDBX_cursor*)">
+  MdbxCursorUnbind(MDBX_cursor*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Отвязывает курсор от таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxCursorUnbind(MDBX_cursor* cursor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursor</code> <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*</dt>
+    <dd><p>Курсор.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
-		<AssemblyName>mdbx-dotnet</AssemblyName>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
+    <AssemblyName>mdbx-dotnet</AssemblyName>
 		<Authors>Jerry.Wang, Anton May</Authors>
 		<PackageProjectUrl>https://public.amsoft.spb.ru/libmdbx</PackageProjectUrl>
 		<PackageId>mdbx</PackageId>
 		<Description>.NET bindings of libmdbx - Fastfull embedded transactional key-value storage engine. Surpasses the legendary LMDB in reliability, capabilities and performance.  Used in hundreds of open source projects, including Ethereum.</Description>
 		<PackageTags>lmdb mdbx libmdbx key-value performance storage-engine no-sql</PackageTags>
-		<Version>0.14.2.8-5-develop</Version>
+		<Version>0.14.3-39-8-develop</Version>
 		<PublishAot>true</PublishAot>
 		<AssemblyTitle>mdbx-dotnet</AssemblyTitle>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -44,29 +45,14 @@
 		<Optimize>False</Optimize>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<None Include="..\README.md" Pack="true" PackagePath="\" />
-		<None Update="native\windows\x64\*.dll" Pack="true" PackagePath="lib\net10.0">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Update="native\linux\x64\*.so" Pack="true" PackagePath="lib\net10.0">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="native\windows\x64\mdbx.dll" Pack="true" PackagePath="runtimes\win-x64\native" />
+    <None Include="native\linux\x64\libmdbx.so" Pack="true" PackagePath="runtimes\linux-x64\native" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <Compile Update="Resources\LocalResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>LocalResources.resx</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Update="Resources\LocalResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>LocalResources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	</ItemGroup>
+  <ItemGroup>
+    <NativeLibrary Include="native\windows\x64\mdbx.dll" Condition="'$(RuntimeIdentifier)' == 'win-x64'" />
+    <NativeLibrary Include="native\linux\x64\libmdbx.so" Condition="'$(RuntimeIdentifier)' == 'linux-x64'" />
+  </ItemGroup>
 
 </Project>

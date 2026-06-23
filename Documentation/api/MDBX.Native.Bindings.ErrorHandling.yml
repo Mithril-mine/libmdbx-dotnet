@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.ErrorHandling
+  commentId: N:MDBX.Native.Bindings.ErrorHandling
+  id: MDBX.Native.Bindings.ErrorHandling
+  children:
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MDBX.Native.Bindings.ErrorHandling
+  nameWithType: MDBX.Native.Bindings.ErrorHandling
+  fullName: MDBX.Native.Bindings.ErrorHandling
+  type: Namespace
+  assemblies:
+  - mdbx-dotnet
+references:
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx

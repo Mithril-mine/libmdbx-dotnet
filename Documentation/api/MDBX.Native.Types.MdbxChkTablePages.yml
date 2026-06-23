@@ -1,0 +1,536 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkTablePages
+  commentId: T:MDBX.Native.Types.MdbxChkTablePages
+  id: MdbxChkTablePages
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkTablePages.All
+  - MDBX.Native.Types.MdbxChkTablePages.Branch
+  - MDBX.Native.Types.MdbxChkTablePages.Broken
+  - MDBX.Native.Types.MdbxChkTablePages.Empty
+  - MDBX.Native.Types.MdbxChkTablePages.Leaf
+  - MDBX.Native.Types.MdbxChkTablePages.NestedBranch
+  - MDBX.Native.Types.MdbxChkTablePages.NestedLeaf
+  - MDBX.Native.Types.MdbxChkTablePages.NestedSubleaf
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkTablePages
+  nameWithType: MdbxChkTablePages
+  fullName: MDBX.Native.Types.MdbxChkTablePages
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkTablePages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 432
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Статистика страниц таблицы.
+  example: []
+  syntax:
+    content: public struct MdbxChkTablePages
+    content.vb: Public Structure MdbxChkTablePages
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxChkTablePages.All
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.All
+  id: All
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: All
+  nameWithType: MdbxChkTablePages.All
+  fullName: MDBX.Native.Types.MdbxChkTablePages.All
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: All
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 438
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее количество страниц.
+  example: []
+  syntax:
+    content: public nuint All
+    return:
+      type: System.UIntPtr
+    content.vb: Public All As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.Empty
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.Empty
+  id: Empty
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: MdbxChkTablePages.Empty
+  fullName: MDBX.Native.Types.MdbxChkTablePages.Empty
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Empty
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 443
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество пустых страниц.
+  example: []
+  syntax:
+    content: public nuint Empty
+    return:
+      type: System.UIntPtr
+    content.vb: Public Empty As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.Broken
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.Broken
+  id: Broken
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: Broken
+  nameWithType: MdbxChkTablePages.Broken
+  fullName: MDBX.Native.Types.MdbxChkTablePages.Broken
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Broken
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 448
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество сломанных страниц.
+  example: []
+  syntax:
+    content: public nuint Broken
+    return:
+      type: System.UIntPtr
+    content.vb: Public Broken As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.Branch
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.Branch
+  id: Branch
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: Branch
+  nameWithType: MdbxChkTablePages.Branch
+  fullName: MDBX.Native.Types.MdbxChkTablePages.Branch
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Branch
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 453
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество ветвящих страниц.
+  example: []
+  syntax:
+    content: public nuint Branch
+    return:
+      type: System.UIntPtr
+    content.vb: Public Branch As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.Leaf
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.Leaf
+  id: Leaf
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: Leaf
+  nameWithType: MdbxChkTablePages.Leaf
+  fullName: MDBX.Native.Types.MdbxChkTablePages.Leaf
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Leaf
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 458
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество листовых страниц.
+  example: []
+  syntax:
+    content: public nuint Leaf
+    return:
+      type: System.UIntPtr
+    content.vb: Public Leaf As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.NestedBranch
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.NestedBranch
+  id: NestedBranch
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: NestedBranch
+  nameWithType: MdbxChkTablePages.NestedBranch
+  fullName: MDBX.Native.Types.MdbxChkTablePages.NestedBranch
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NestedBranch
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 463
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество вложенных ветвящих страниц.
+  example: []
+  syntax:
+    content: public nuint NestedBranch
+    return:
+      type: System.UIntPtr
+    content.vb: Public NestedBranch As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.NestedLeaf
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.NestedLeaf
+  id: NestedLeaf
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: NestedLeaf
+  nameWithType: MdbxChkTablePages.NestedLeaf
+  fullName: MDBX.Native.Types.MdbxChkTablePages.NestedLeaf
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NestedLeaf
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 468
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество вложенных листовых страниц.
+  example: []
+  syntax:
+    content: public nuint NestedLeaf
+    return:
+      type: System.UIntPtr
+    content.vb: Public NestedLeaf As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkTablePages.NestedSubleaf
+  commentId: F:MDBX.Native.Types.MdbxChkTablePages.NestedSubleaf
+  id: NestedSubleaf
+  parent: MDBX.Native.Types.MdbxChkTablePages
+  langs:
+  - csharp
+  - vb
+  name: NestedSubleaf
+  nameWithType: MdbxChkTablePages.NestedSubleaf
+  fullName: MDBX.Native.Types.MdbxChkTablePages.NestedSubleaf
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NestedSubleaf
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 473
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество вложенных сублистовых страниц.
+  example: []
+  syntax:
+    content: public nuint NestedSubleaf
+    return:
+      type: System.UIntPtr
+    content.vb: Public NestedSubleaf As UIntPtr
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr

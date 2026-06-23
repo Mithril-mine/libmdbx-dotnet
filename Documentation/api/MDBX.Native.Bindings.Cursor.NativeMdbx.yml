@@ -1,0 +1,1974 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Cursor.NativeMdbx
+  id: NativeMdbx
+  parent: MDBX.Native.Bindings.Cursor
+  children:
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*,System.UInt32)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxBunchAction,System.UInt64*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxStat*,System.UIntPtr)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate(System.Void*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean,System.Boolean)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.IntPtr*,MDBX.Native.Types.MdbxCursorOp)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor**,System.UInt32,System.UInt32)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxCursorOp)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxVal*,System.UIntPtr,MDBX.Native.Types.MdbxCursorOp)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MDBX_cursor**)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*,System.IntPtr,System.UInt32)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*,System.Void*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn(MDBX.Native.Types.MDBX_cursor*)
+  - MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind(MDBX.Native.Types.MDBX_cursor*)
+  langs:
+  - csharp
+  - vb
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx
+  type: Class
+  source:
+    remote:
+      path: MDBX/Bindings/Cursor/NativeMdbx.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeMdbx
+    path: ../MDBX/Bindings/Cursor/NativeMdbx.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Частичный класс для нативных методов курсоров libmdbx.
+  example: []
+  syntax:
+    content: public static class NativeMdbx
+    content.vb: Public Module NativeMdbx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate(System.Void*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate(System.Void*)
+  id: MdbxCursorCreate(System.Void*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorCreate(void*)
+  nameWithType: NativeMdbx.MdbxCursorCreate(void*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate(void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Создает курсор.
+  example: []
+  syntax:
+    content: public static extern MDBX_cursor* MdbxCursorCreate(void* context)
+    parameters:
+    - id: context
+      type: System.Void*
+      description: Пользовательский контекст.
+    return:
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Указатель на курсор.
+    content.vb: Public Shared Function MdbxCursorCreate(context As Void*) As MDBX_cursor*
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate*
+  nameWithType.vb: NativeMdbx.MdbxCursorCreate(Void*)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate(Void*)
+  name.vb: MdbxCursorCreate(Void*)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MDBX_cursor**)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MDBX_cursor**)
+  id: MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MDBX_cursor**)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorOpen(MDBX_txn*, uint, MDBX_cursor**)
+  nameWithType: NativeMdbx.MdbxCursorOpen(MDBX_txn*, uint, MDBX_cursor**)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*, uint, MDBX.Native.Types.MDBX_cursor**)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Открывает курсор для таблицы.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorOpen(MDBX_txn* txn, uint dbi, MDBX_cursor** cursor)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor**
+      description: Указатель для курсора.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorOpen(txn As MDBX_txn*, dbi As UInteger, cursor As MDBX_cursor**) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen*
+  nameWithType.vb: NativeMdbx.MdbxCursorOpen(MDBX_txn*, UInteger, MDBX_cursor**)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen(MDBX.Native.Types.MDBX_txn*, UInteger, MDBX.Native.Types.MDBX_cursor**)
+  name.vb: MdbxCursorOpen(MDBX_txn*, UInteger, MDBX_cursor**)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorClose(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorClose(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorClose(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Закрывает курсор.
+  example: []
+  syntax:
+    content: public static extern void MdbxCursorClose(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    content.vb: Public Shared Sub MdbxCursorClose(cursor As MDBX_cursor*)
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorClose2(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorClose2(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorClose2(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Закрывает курсор с возвратом кода ошибки.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorClose2(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorClose2(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*,System.UInt32)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*,System.UInt32)
+  id: MdbxCursorBind(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*,System.UInt32)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorBind(MDBX_txn*, MDBX_cursor*, uint)
+  nameWithType: NativeMdbx.MdbxCursorBind(MDBX_txn*, MDBX_cursor*, uint)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_cursor*, uint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Привязывает курсор к транзакции и таблице.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorBind(MDBX_txn* txn, MDBX_cursor* cursor, uint dbi)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: dbi
+      type: System.UInt32
+      description: DBI.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorBind(txn As MDBX_txn*, cursor As MDBX_cursor*, dbi As UInteger) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind*
+  nameWithType.vb: NativeMdbx.MdbxCursorBind(MDBX_txn*, MDBX_cursor*, UInteger)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_cursor*, UInteger)
+  name.vb: MdbxCursorBind(MDBX_txn*, MDBX_cursor*, UInteger)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorUnbind(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorUnbind(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorUnbind(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Отвязывает курсор от таблицы.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorUnbind(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorUnbind(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorRenew(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorRenew(MDBX_txn*, MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorRenew(MDBX_txn*, MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Обновляет курсор для новой транзакции.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorRenew(MDBX_txn* txn, MDBX_cursor* cursor)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция.
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorRenew(txn As MDBX_txn*, cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorReset(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorReset(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorReset(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Сбрасывает курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorReset(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorReset(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorCopy(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorCopy(MDBX_cursor*, MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorCopy(MDBX_cursor*, MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Копирует курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorCopy(MDBX_cursor* src, MDBX_cursor* dest)
+    parameters:
+    - id: src
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Исходный курсор.
+    - id: dest
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор назначения.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorCopy(src As MDBX_cursor*, dest As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean)
+  id: MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorCompare(MDBX_cursor*, MDBX_cursor*, bool)
+  nameWithType: NativeMdbx.MdbxCursorCompare(MDBX_cursor*, MDBX_cursor*, bool)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, bool)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Сравнивает два курсора.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorCompare(MDBX_cursor* left, MDBX_cursor* right, bool ignoreMultival)
+    parameters:
+    - id: left
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Левый курсор.
+    - id: right
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Правый курсор.
+    - id: ignoreMultival
+      type: System.Boolean
+      description: Игнорировать множественные значения.
+    return:
+      type: System.Int32
+      description: Результат сравнения.
+    content.vb: Public Shared Function MdbxCursorCompare(left As MDBX_cursor*, right As MDBX_cursor*, ignoreMultival As Boolean) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare*
+  nameWithType.vb: NativeMdbx.MdbxCursorCompare(MDBX_cursor*, MDBX_cursor*, Boolean)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, Boolean)
+  name.vb: MdbxCursorCompare(MDBX_cursor*, MDBX_cursor*, Boolean)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxCursorOp)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxCursorOp)
+  id: MdbxCursorGet(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxCursorOp)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorGet(MDBX_cursor*, MdbxVal*, MdbxVal*, MdbxCursorOp)
+  nameWithType: NativeMdbx.MdbxCursorGet(MDBX_cursor*, MdbxVal*, MdbxVal*, MdbxCursorOp)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxCursorOp)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает элемент через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorGet(MDBX_cursor* cursor, MdbxVal* key, MdbxVal* data, MdbxCursorOp op)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    - id: op
+      type: MDBX.Native.Types.MdbxCursorOp
+      description: Операция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorGet(cursor As MDBX_cursor*, key As MdbxVal*, data As MdbxVal*, op As MdbxCursorOp) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxVal*,System.UIntPtr,MDBX.Native.Types.MdbxCursorOp)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxVal*,System.UIntPtr,MDBX.Native.Types.MdbxCursorOp)
+  id: MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxVal*,System.UIntPtr,MDBX.Native.Types.MdbxCursorOp)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorGetBatch(MDBX_cursor*, nuint*, MdbxVal*, nuint, MdbxCursorOp)
+  nameWithType: NativeMdbx.MdbxCursorGetBatch(MDBX_cursor*, nuint*, MdbxVal*, nuint, MdbxCursorOp)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*, nuint*, MDBX.Native.Types.MdbxVal*, nuint, MDBX.Native.Types.MdbxCursorOp)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает пакет элементов через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorGetBatch(MDBX_cursor* cursor, nuint* count, MdbxVal* pairs, nuint limit, MdbxCursorOp op)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: count
+      type: System.UIntPtr*
+      description: Количество элементов.
+    - id: pairs
+      type: MDBX.Native.Types.MdbxVal*
+      description: Массив пар ключ-значение.
+    - id: limit
+      type: System.UIntPtr
+      description: Лимит.
+    - id: op
+      type: MDBX.Native.Types.MdbxCursorOp
+      description: Операция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorGetBatch(cursor As MDBX_cursor*, count As UIntPtr*, pairs As MdbxVal*, limit As UIntPtr, op As MdbxCursorOp) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch*
+  nameWithType.vb: NativeMdbx.MdbxCursorGetBatch(MDBX_cursor*, UIntPtr*, MdbxVal*, UIntPtr, MdbxCursorOp)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch(MDBX.Native.Types.MDBX_cursor*, System.UIntPtr*, MDBX.Native.Types.MdbxVal*, System.UIntPtr, MDBX.Native.Types.MdbxCursorOp)
+  name.vb: MdbxCursorGetBatch(MDBX_cursor*, UIntPtr*, MdbxVal*, UIntPtr, MdbxCursorOp)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorGetUserctx(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorGetUserctx(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorGetUserctx(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает пользовательский контекст курсора.
+  example: []
+  syntax:
+    content: public static extern void* MdbxCursorGetUserctx(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Void*
+      description: Указатель на контекст.
+    content.vb: Public Shared Function MdbxCursorGetUserctx(cursor As MDBX_cursor*) As Void*
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*,System.Void*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*,System.Void*)
+  id: MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*,System.Void*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorSetUserctx(MDBX_cursor*, void*)
+  nameWithType: NativeMdbx.MdbxCursorSetUserctx(MDBX_cursor*, void*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*, void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Устанавливает пользовательский контекст курсора.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorSetUserctx(MDBX_cursor* cursor, void* ctx)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: ctx
+      type: System.Void*
+      description: Контекст.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorSetUserctx(cursor As MDBX_cursor*, ctx As Void*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx*
+  nameWithType.vb: NativeMdbx.MdbxCursorSetUserctx(MDBX_cursor*, Void*)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx(MDBX.Native.Types.MDBX_cursor*, Void*)
+  name.vb: MdbxCursorSetUserctx(MDBX_cursor*, Void*)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  id: MdbxCursorPut(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorPut(MDBX_cursor*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  nameWithType: NativeMdbx.MdbxCursorPut(MDBX_cursor*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Записывает элемент через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorPut(MDBX_cursor* cursor, MdbxVal* key, MdbxVal* data, MdbxPutFlags flags)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: key
+      type: MDBX.Native.Types.MdbxVal*
+      description: Ключ.
+    - id: data
+      type: MDBX.Native.Types.MdbxVal*
+      description: Значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorPut(cursor As MDBX_cursor*, key As MdbxVal*, data As MdbxVal*, flags As MdbxPutFlags) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxPutFlags)
+  id: MdbxCursorDel(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorDel(MDBX_cursor*, MdbxPutFlags)
+  nameWithType: NativeMdbx.MdbxCursorDel(MDBX_cursor*, MdbxPutFlags)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Удаляет элемент через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorDel(MDBX_cursor* cursor, MdbxPutFlags flags)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorDel(cursor As MDBX_cursor*, flags As MdbxPutFlags) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean,System.Boolean)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean,System.Boolean)
+  id: MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.Boolean,System.Boolean)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorDeleteRange(MDBX_cursor*, MDBX_cursor*, bool, bool)
+  nameWithType: NativeMdbx.MdbxCursorDeleteRange(MDBX_cursor*, MDBX_cursor*, bool, bool)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, bool, bool)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Удаляет диапазон через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorDeleteRange(MDBX_cursor* begin, MDBX_cursor* end, bool endIncluding, bool force)
+    parameters:
+    - id: begin
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Начальный курсор.
+    - id: end
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Конечный курсор.
+    - id: endIncluding
+      type: System.Boolean
+      description: Включая конечный.
+    - id: force
+      type: System.Boolean
+      description: Принудительно.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorDeleteRange(begin As MDBX_cursor*, [end] As MDBX_cursor*, endIncluding As Boolean, force As Boolean) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange*
+  nameWithType.vb: NativeMdbx.MdbxCursorDeleteRange(MDBX_cursor*, MDBX_cursor*, Boolean, Boolean)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, Boolean, Boolean)
+  name.vb: MdbxCursorDeleteRange(MDBX_cursor*, MDBX_cursor*, Boolean, Boolean)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.IntPtr*,MDBX.Native.Types.MdbxCursorOp)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.IntPtr*,MDBX.Native.Types.MdbxCursorOp)
+  id: MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,System.IntPtr*,MDBX.Native.Types.MdbxCursorOp)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorDistance(MDBX_cursor*, MDBX_cursor*, nint*, MdbxCursorOp)
+  nameWithType: NativeMdbx.MdbxCursorDistance(MDBX_cursor*, MDBX_cursor*, nint*, MdbxCursorOp)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, nint*, MDBX.Native.Types.MdbxCursorOp)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает расстояние между курсорами.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorDistance(MDBX_cursor* first, MDBX_cursor* last, nint* distance, MdbxCursorOp op)
+    parameters:
+    - id: first
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Первый курсор.
+    - id: last
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Последний курсор.
+    - id: distance
+      type: System.IntPtr*
+      description: Расстояние.
+    - id: op
+      type: MDBX.Native.Types.MdbxCursorOp
+      description: Операция.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorDistance(first As MDBX_cursor*, last As MDBX_cursor*, distance As IntPtr*, op As MdbxCursorOp) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance*
+  nameWithType.vb: NativeMdbx.MdbxCursorDistance(MDBX_cursor*, MDBX_cursor*, IntPtr*, MdbxCursorOp)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, System.IntPtr*, MDBX.Native.Types.MdbxCursorOp)
+  name.vb: MdbxCursorDistance(MDBX_cursor*, MDBX_cursor*, IntPtr*, MdbxCursorOp)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*,System.IntPtr,System.UInt32)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*,System.IntPtr,System.UInt32)
+  id: MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*,System.IntPtr,System.UInt32)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorScroll(MDBX_cursor*, nint, uint)
+  nameWithType: NativeMdbx.MdbxCursorScroll(MDBX_cursor*, nint, uint)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*, nint, uint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Прокручивает курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorScroll(MDBX_cursor* cursor, nint amount, uint deepness)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: amount
+      type: System.IntPtr
+      description: Количество шагов.
+    - id: deepness
+      type: System.UInt32
+      description: Глубина.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorScroll(cursor As MDBX_cursor*, amount As IntPtr, deepness As UInteger) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll*
+  nameWithType.vb: NativeMdbx.MdbxCursorScroll(MDBX_cursor*, IntPtr, UInteger)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll(MDBX.Native.Types.MDBX_cursor*, System.IntPtr, UInteger)
+  name.vb: MdbxCursorScroll(MDBX_cursor*, IntPtr, UInteger)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor**,System.UInt32,System.UInt32)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor**,System.UInt32,System.UInt32)
+  id: MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MDBX_cursor**,System.UInt32,System.UInt32)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorDistribute(MDBX_cursor*, MDBX_cursor*, MDBX_cursor**, uint, uint)
+  nameWithType: NativeMdbx.MdbxCursorDistribute(MDBX_cursor*, MDBX_cursor*, MDBX_cursor**, uint, uint)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor**, uint, uint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Распределяет элементы между курсорами.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorDistribute(MDBX_cursor* first, MDBX_cursor* last, MDBX_cursor** array, uint count, uint deepness)
+    parameters:
+    - id: first
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Первый курсор.
+    - id: last
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Последний курсор.
+    - id: array
+      type: MDBX.Native.Types.MDBX_cursor**
+      description: Массив курсоров.
+    - id: count
+      type: System.UInt32
+      description: Количество.
+    - id: deepness
+      type: System.UInt32
+      description: Глубина.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorDistribute(first As MDBX_cursor*, last As MDBX_cursor*, array As MDBX_cursor**, count As UInteger, deepness As UInteger) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute*
+  nameWithType.vb: NativeMdbx.MdbxCursorDistribute(MDBX_cursor*, MDBX_cursor*, MDBX_cursor**, UInteger, UInteger)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MDBX_cursor**, UInteger, UInteger)
+  name.vb: MdbxCursorDistribute(MDBX_cursor*, MDBX_cursor*, MDBX_cursor**, UInteger, UInteger)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxBunchAction,System.UInt64*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxBunchAction,System.UInt64*)
+  id: MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*,MDBX.Native.Types.MdbxBunchAction,System.UInt64*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorBunchDelete(MDBX_cursor*, MdbxBunchAction, ulong*)
+  nameWithType: NativeMdbx.MdbxCursorBunchDelete(MDBX_cursor*, MdbxBunchAction, ulong*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MdbxBunchAction, ulong*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Пакетное удаление через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorBunchDelete(MDBX_cursor* cursor, MdbxBunchAction action, ulong* numberOfAffected)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: action
+      type: MDBX.Native.Types.MdbxBunchAction
+      description: Действие.
+    - id: numberOfAffected
+      type: System.UInt64*
+      description: Количество затронутых элементов.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorBunchDelete(cursor As MDBX_cursor*, action As MdbxBunchAction, numberOfAffected As ULong*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete*
+  nameWithType.vb: NativeMdbx.MdbxCursorBunchDelete(MDBX_cursor*, MdbxBunchAction, ULong*)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete(MDBX.Native.Types.MDBX_cursor*, MDBX.Native.Types.MdbxBunchAction, ULong*)
+  name.vb: MdbxCursorBunchDelete(MDBX_cursor*, MdbxBunchAction, ULong*)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*)
+  id: MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorCount(MDBX_cursor*, nuint*)
+  nameWithType: NativeMdbx.MdbxCursorCount(MDBX_cursor*, nuint*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*, nuint*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает количество элементов.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorCount(MDBX_cursor* cursor, nuint* count)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: count
+      type: System.UIntPtr*
+      description: Количество.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorCount(cursor As MDBX_cursor*, count As UIntPtr*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount*
+  nameWithType.vb: NativeMdbx.MdbxCursorCount(MDBX_cursor*, UIntPtr*)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount(MDBX.Native.Types.MDBX_cursor*, System.UIntPtr*)
+  name.vb: MdbxCursorCount(MDBX_cursor*, UIntPtr*)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxStat*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxStat*,System.UIntPtr)
+  id: MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*,System.UIntPtr*,MDBX.Native.Types.MdbxStat*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorCountEx(MDBX_cursor*, nuint*, MdbxStat*, nuint)
+  nameWithType: NativeMdbx.MdbxCursorCountEx(MDBX_cursor*, nuint*, MdbxStat*, nuint)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*, nuint*, MDBX.Native.Types.MdbxStat*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает количество элементов с статистикой.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorCountEx(MDBX_cursor* cursor, nuint* count, MdbxStat* stat, nuint bytes)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: count
+      type: System.UIntPtr*
+      description: Количество.
+    - id: stat
+      type: MDBX.Native.Types.MdbxStat*
+      description: Статистика.
+    - id: bytes
+      type: System.UIntPtr
+      description: Размер структуры.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorCountEx(cursor As MDBX_cursor*, count As UIntPtr*, stat As MdbxStat*, bytes As UIntPtr) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx*
+  nameWithType.vb: NativeMdbx.MdbxCursorCountEx(MDBX_cursor*, UIntPtr*, MdbxStat*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx(MDBX.Native.Types.MDBX_cursor*, System.UIntPtr*, MDBX.Native.Types.MdbxStat*, System.UIntPtr)
+  name.vb: MdbxCursorCountEx(MDBX_cursor*, UIntPtr*, MdbxStat*, UIntPtr)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorEof(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorEof(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorEof(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Проверяет, достигнут ли конец таблицы.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorEof(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: 1 если конец, 0 иначе.
+    content.vb: Public Shared Function MdbxCursorEof(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorOnFirst(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorOnFirst(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorOnFirst(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Проверяет, находится ли курсор на первом элементе.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorOnFirst(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: 1 если на первом, 0 иначе.
+    content.vb: Public Shared Function MdbxCursorOnFirst(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorOnFirstDup(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorOnFirstDup(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorOnFirstDup(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Проверяет, находится ли курсор на первом дубликате.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorOnFirstDup(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: 1 если на первом дубликате, 0 иначе.
+    content.vb: Public Shared Function MdbxCursorOnFirstDup(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorOnLast(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorOnLast(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorOnLast(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Проверяет, находится ли курсор на последнем элементе.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorOnLast(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: 1 если на последнем, 0 иначе.
+    content.vb: Public Shared Function MdbxCursorOnLast(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorOnLastDup(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorOnLastDup(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorOnLastDup(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Проверяет, находится ли курсор на последнем дубликате.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorOnLastDup(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: 1 если на последнем дубликате, 0 иначе.
+    content.vb: Public Shared Function MdbxCursorOnLastDup(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorTxn(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorTxn(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorTxn(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает транзакцию курсора.
+  example: []
+  syntax:
+    content: public static extern MDBX_txn* MdbxCursorTxn(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Указатель на транзакцию.
+    content.vb: Public Shared Function MdbxCursorTxn(cursor As MDBX_cursor*) As MDBX_txn*
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorDbi(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorDbi(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorDbi(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Получает DBI курсора.
+  example: []
+  syntax:
+    content: public static extern uint MdbxCursorDbi(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.UInt32
+      description: DBI.
+    content.vb: Public Shared Function MdbxCursorDbi(cursor As MDBX_cursor*) As UInteger
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord(MDBX.Native.Types.MDBX_cursor*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord(MDBX.Native.Types.MDBX_cursor*)
+  id: MdbxCursorIgnord(MDBX.Native.Types.MDBX_cursor*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorIgnord(MDBX_cursor*)
+  nameWithType: NativeMdbx.MdbxCursorIgnord(MDBX_cursor*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord(MDBX.Native.Types.MDBX_cursor*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Игнорирует дубликаты.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorIgnord(MDBX_cursor* cursor)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorIgnord(cursor As MDBX_cursor*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord*
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*)
+  id: MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorScan(MDBX_cursor*, delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int>, void*, MdbxCursorOp, MdbxVal*)
+  nameWithType: NativeMdbx.MdbxCursorScan(MDBX_cursor*, delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int>, void*, MdbxCursorOp, MdbxVal*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*, delegate* unmanaged[Cdecl]<void*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, void*, int>, void*, MDBX.Native.Types.MdbxCursorOp, MDBX.Native.Types.MdbxVal*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Сканирует элементы через курсор.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorScan(MDBX_cursor* cursor, delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int> predicate, void* context, MdbxCursorOp op, MdbxVal* arg)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: predicate
+      type: delegate* unmanaged[Cdecl]<void*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, void*, int>
+      description: Функция предиката.
+    - id: context
+      type: System.Void*
+      description: Контекст.
+    - id: op
+      type: MDBX.Native.Types.MdbxCursorOp
+      description: Операция.
+    - id: arg
+      type: MDBX.Native.Types.MdbxVal*
+      description: Аргумент.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorScan(cursor As MDBX_cursor*, predicate As , context As Void*, op As MdbxCursorOp, arg As MdbxVal*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan*
+  nameWithType.vb: NativeMdbx.MdbxCursorScan(MDBX_cursor*, , Void*, MdbxCursorOp, MdbxVal*)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan(MDBX.Native.Types.MDBX_cursor*, , Void*, MDBX.Native.Types.MdbxCursorOp, MDBX.Native.Types.MdbxVal*)
+  name.vb: MdbxCursorScan(MDBX_cursor*, , Void*, MdbxCursorOp, MdbxVal*)
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  commentId: M:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  id: MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*,,System.Void*,MDBX.Native.Types.MdbxCursorOp,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+  parent: MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxCursorScanFrom(MDBX_cursor*, delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int>, void*, MdbxCursorOp, MdbxVal*, MdbxVal*)
+  nameWithType: NativeMdbx.MdbxCursorScanFrom(MDBX_cursor*, delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int>, void*, MdbxCursorOp, MdbxVal*, MdbxVal*)
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*, delegate* unmanaged[Cdecl]<void*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, void*, int>, void*, MDBX.Native.Types.MdbxCursorOp, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Cursor
+  summary: Сканирует элементы через курсор начиная с позиции.
+  example: []
+  syntax:
+    content: public static extern int MdbxCursorScanFrom(MDBX_cursor* cursor, delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int> predicate, void* context, MdbxCursorOp op, MdbxVal* arg, MdbxVal* startKey)
+    parameters:
+    - id: cursor
+      type: MDBX.Native.Types.MDBX_cursor*
+      description: Курсор.
+    - id: predicate
+      type: delegate* unmanaged[Cdecl]<void*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, void*, int>
+      description: Функция предиката.
+    - id: context
+      type: System.Void*
+      description: Контекст.
+    - id: op
+      type: MDBX.Native.Types.MdbxCursorOp
+      description: Операция.
+    - id: arg
+      type: MDBX.Native.Types.MdbxVal*
+      description: Аргумент.
+    - id: startKey
+      type: MDBX.Native.Types.MdbxVal*
+      description: Начальный ключ.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxCursorScanFrom(cursor As MDBX_cursor*, predicate As , context As Void*, op As MdbxCursorOp, arg As MdbxVal*, startKey As MdbxVal*) As Integer
+  overload: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom*
+  nameWithType.vb: NativeMdbx.MdbxCursorScanFrom(MDBX_cursor*, , Void*, MdbxCursorOp, MdbxVal*, MdbxVal*)
+  fullName.vb: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom(MDBX.Native.Types.MDBX_cursor*, , Void*, MDBX.Native.Types.MdbxCursorOp, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*)
+  name.vb: MdbxCursorScanFrom(MDBX_cursor*, , Void*, MdbxCursorOp, MdbxVal*, MdbxVal*)
+references:
+- uid: MDBX.Native.Bindings.Cursor
+  commentId: N:MDBX.Native.Bindings.Cursor
+  href: MDBX.html
+  name: MDBX.Native.Bindings.Cursor
+  nameWithType: MDBX.Native.Bindings.Cursor
+  fullName: MDBX.Native.Bindings.Cursor
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Cursor
+    name: Cursor
+    href: MDBX.Native.Bindings.Cursor.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Cursor
+    name: Cursor
+    href: MDBX.Native.Bindings.Cursor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCreate_System_Void__
+  name: MdbxCursorCreate
+  nameWithType: NativeMdbx.MdbxCursorCreate
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCreate
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Types.MDBX_cursor*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_cursor.html
+  name: MDBX_cursor*
+  nameWithType: MDBX_cursor*
+  fullName: MDBX.Native.Types.MDBX_cursor*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOpen_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MDBX_cursor___
+  name: MdbxCursorOpen
+  nameWithType: NativeMdbx.MdbxCursorOpen
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOpen
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.Native.Types.MDBX_cursor**
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_cursor.html
+  name: MDBX_cursor**
+  nameWithType: MDBX_cursor**
+  fullName: MDBX.Native.Types.MDBX_cursor**
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorClose_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorClose
+  nameWithType: NativeMdbx.MdbxCursorClose
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorClose2_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorClose2
+  nameWithType: NativeMdbx.MdbxCursorClose2
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorClose2
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorBind_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MDBX_cursor__System_UInt32_
+  name: MdbxCursorBind
+  nameWithType: NativeMdbx.MdbxCursorBind
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBind
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorUnbind_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorUnbind
+  nameWithType: NativeMdbx.MdbxCursorUnbind
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorUnbind
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorRenew_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorRenew
+  nameWithType: NativeMdbx.MdbxCursorRenew
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorRenew
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorReset_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorReset
+  nameWithType: NativeMdbx.MdbxCursorReset
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorReset
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCopy_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorCopy
+  nameWithType: NativeMdbx.MdbxCursorCopy
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCopy
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCompare_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__System_Boolean_
+  name: MdbxCursorCompare
+  nameWithType: NativeMdbx.MdbxCursorCompare
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCompare
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGet_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxCursorOp_
+  name: MdbxCursorGet
+  nameWithType: NativeMdbx.MdbxCursorGet
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGet
+- uid: MDBX.Native.Types.MdbxVal*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal*
+  nameWithType: MdbxVal*
+  fullName: MDBX.Native.Types.MdbxVal*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxCursorOp
+  commentId: T:MDBX.Native.Types.MdbxCursorOp
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCursorOp.html
+  name: MdbxCursorOp
+  nameWithType: MdbxCursorOp
+  fullName: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGetBatch_MDBX_Native_Types_MDBX_cursor__System_UIntPtr__MDBX_Native_Types_MdbxVal__System_UIntPtr_MDBX_Native_Types_MdbxCursorOp_
+  name: MdbxCursorGetBatch
+  nameWithType: NativeMdbx.MdbxCursorGetBatch
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetBatch
+- uid: System.UIntPtr*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint*
+  nameWithType: nuint*
+  fullName: nuint*
+  nameWithType.vb: UIntPtr*
+  fullName.vb: System.UIntPtr*
+  name.vb: UIntPtr*
+  spec.csharp:
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: '*'
+  spec.vb:
+  - uid: System.UIntPtr
+    name: UIntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: '*'
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorGetUserctx_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorGetUserctx
+  nameWithType: NativeMdbx.MdbxCursorGetUserctx
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorGetUserctx
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorSetUserctx_MDBX_Native_Types_MDBX_cursor__System_Void__
+  name: MdbxCursorSetUserctx
+  nameWithType: NativeMdbx.MdbxCursorSetUserctx
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorSetUserctx
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorPut_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_
+  name: MdbxCursorPut
+  nameWithType: NativeMdbx.MdbxCursorPut
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorPut
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPutFlags.html
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDel_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxPutFlags_
+  name: MdbxCursorDel
+  nameWithType: NativeMdbx.MdbxCursorDel
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDel
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDeleteRange_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__System_Boolean_System_Boolean_
+  name: MdbxCursorDeleteRange
+  nameWithType: NativeMdbx.MdbxCursorDeleteRange
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDeleteRange
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDistance_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__System_IntPtr__MDBX_Native_Types_MdbxCursorOp_
+  name: MdbxCursorDistance
+  nameWithType: NativeMdbx.MdbxCursorDistance
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistance
+- uid: System.IntPtr*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint*
+  nameWithType: nint*
+  fullName: nint*
+  nameWithType.vb: IntPtr*
+  fullName.vb: System.IntPtr*
+  name.vb: IntPtr*
+  spec.csharp:
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: '*'
+  spec.vb:
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: '*'
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScroll_MDBX_Native_Types_MDBX_cursor__System_IntPtr_System_UInt32_
+  name: MdbxCursorScroll
+  nameWithType: NativeMdbx.MdbxCursorScroll
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScroll
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDistribute_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MDBX_cursor___System_UInt32_System_UInt32_
+  name: MdbxCursorDistribute
+  nameWithType: NativeMdbx.MdbxCursorDistribute
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDistribute
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorBunchDelete_MDBX_Native_Types_MDBX_cursor__MDBX_Native_Types_MdbxBunchAction_System_UInt64__
+  name: MdbxCursorBunchDelete
+  nameWithType: NativeMdbx.MdbxCursorBunchDelete
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorBunchDelete
+- uid: MDBX.Native.Types.MdbxBunchAction
+  commentId: T:MDBX.Native.Types.MdbxBunchAction
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxBunchAction.html
+  name: MdbxBunchAction
+  nameWithType: MdbxBunchAction
+  fullName: MDBX.Native.Types.MdbxBunchAction
+- uid: System.UInt64*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong*
+  nameWithType: ulong*
+  fullName: ulong*
+  nameWithType.vb: ULong*
+  fullName.vb: ULong*
+  name.vb: ULong*
+  spec.csharp:
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '*'
+  spec.vb:
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '*'
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCount_MDBX_Native_Types_MDBX_cursor__System_UIntPtr__
+  name: MdbxCursorCount
+  nameWithType: NativeMdbx.MdbxCursorCount
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCount
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorCountEx_MDBX_Native_Types_MDBX_cursor__System_UIntPtr__MDBX_Native_Types_MdbxStat__System_UIntPtr_
+  name: MdbxCursorCountEx
+  nameWithType: NativeMdbx.MdbxCursorCountEx
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorCountEx
+- uid: MDBX.Native.Types.MdbxStat*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxStat.html
+  name: MdbxStat*
+  nameWithType: MdbxStat*
+  fullName: MDBX.Native.Types.MdbxStat*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxStat
+    name: MdbxStat
+    href: MDBX.Native.Types.MdbxStat.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxStat
+    name: MdbxStat
+    href: MDBX.Native.Types.MdbxStat.html
+  - name: '*'
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorEof_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorEof
+  nameWithType: NativeMdbx.MdbxCursorEof
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorEof
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnFirst_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorOnFirst
+  nameWithType: NativeMdbx.MdbxCursorOnFirst
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirst
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnFirstDup_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorOnFirstDup
+  nameWithType: NativeMdbx.MdbxCursorOnFirstDup
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnFirstDup
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnLast_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorOnLast
+  nameWithType: NativeMdbx.MdbxCursorOnLast
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLast
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorOnLastDup_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorOnLastDup
+  nameWithType: NativeMdbx.MdbxCursorOnLastDup
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorOnLastDup
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorTxn_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorTxn
+  nameWithType: NativeMdbx.MdbxCursorTxn
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorTxn
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorDbi_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorDbi
+  nameWithType: NativeMdbx.MdbxCursorDbi
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorDbi
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorIgnord_MDBX_Native_Types_MDBX_cursor__
+  name: MdbxCursorIgnord
+  nameWithType: NativeMdbx.MdbxCursorIgnord
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorIgnord
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScan_MDBX_Native_Types_MDBX_cursor___System_Void__MDBX_Native_Types_MdbxCursorOp_MDBX_Native_Types_MdbxVal__
+  name: MdbxCursorScan
+  nameWithType: NativeMdbx.MdbxCursorScan
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScan
+- uid: delegate* unmanaged[Cdecl]<void*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, void*, int>
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int>
+  nameWithType: delegate* unmanaged[Cdecl]<void*, MdbxVal*, MdbxVal*, void*, int>
+  fullName: delegate* unmanaged[Cdecl]<void*, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, void*, int>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(System.Void*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,System.Void*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom*
+  commentId: Overload:MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom
+  isExternal: true
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html#MDBX_Native_Bindings_Cursor_NativeMdbx_MdbxCursorScanFrom_MDBX_Native_Types_MDBX_cursor___System_Void__MDBX_Native_Types_MdbxCursorOp_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__
+  name: MdbxCursorScanFrom
+  nameWithType: NativeMdbx.MdbxCursorScanFrom
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx.MdbxCursorScanFrom

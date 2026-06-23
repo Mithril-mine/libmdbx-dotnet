@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxDefragProgressFunc
+  commentId: T:MDBX.Native.Types.MdbxDefragProgressFunc
+  id: MdbxDefragProgressFunc
+  parent: MDBX.Native.Types
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MdbxDefragProgressFunc
+  nameWithType: MdbxDefragProgressFunc
+  fullName: MDBX.Native.Types.MdbxDefragProgressFunc
+  type: Delegate
+  source:
+    remote:
+      path: MDBX/Types/MdbxDelegates.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxDefragProgressFunc
+    path: ../MDBX/Types/MdbxDelegates.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция уведомления о прогрессе дефрагментации.
+  example: []
+  syntax:
+    content: public delegate int MdbxDefragProgressFunc(void* ctx, MDBX_defrag_result* progress)
+    parameters:
+    - id: ctx
+      type: System.Void*
+      description: Пользовательский контекст.
+    - id: progress
+      type: MDBX.Native.Types.MDBX_defrag_result*
+      description: Указатель на структуру с результатами дефрагментации.
+    return:
+      type: System.Int32
+      description: 0 для продолжения, ненулевое значение для остановки.
+    content.vb: Public Delegate Function MdbxDefragProgressFunc(ctx As Void*, progress As MDBX_defrag_result*) As Integer
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Types.MDBX_defrag_result*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_defrag_result.html
+  name: MDBX_defrag_result*
+  nameWithType: MDBX_defrag_result*
+  fullName: MDBX.Native.Types.MDBX_defrag_result*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_defrag_result
+    name: MDBX_defrag_result
+    href: MDBX.Native.Types.MDBX_defrag_result.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_defrag_result
+    name: MDBX_defrag_result
+    href: MDBX.Native.Types.MDBX_defrag_result.html
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
