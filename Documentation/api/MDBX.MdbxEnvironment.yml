@@ -1,0 +1,3555 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.MdbxEnvironment
+  commentId: T:MDBX.MdbxEnvironment
+  id: MdbxEnvironment
+  parent: MDBX
+  children:
+  - MDBX.MdbxEnvironment.BeginTransaction(MDBX.Native.Types.MdbxTxnFlags)
+  - MDBX.MdbxEnvironment.CheckReaders(System.Int32@)
+  - MDBX.MdbxEnvironment.Close
+  - MDBX.MdbxEnvironment.Close(System.Boolean)
+  - MDBX.MdbxEnvironment.CloseDatabase(System.UInt32)
+  - MDBX.MdbxEnvironment.Copy(System.String,MDBX.Native.Types.MdbxCopyFlags)
+  - MDBX.MdbxEnvironment.CopyToFd(System.IntPtr,MDBX.Native.Types.MdbxCopyFlags)
+  - MDBX.MdbxEnvironment.Create
+  - MDBX.MdbxEnvironment.DefaultPageSize
+  - MDBX.MdbxEnvironment.Defrag(System.UIntPtr,System.UIntPtr,System.UIntPtr,System.UIntPtr,System.IntPtr,System.IntPtr,MDBX.Native.Types.MdbxDefragProgressFunc)
+  - MDBX.MdbxEnvironment.Delete(System.String,MDBX.Native.Types.MdbxEnvDeleteMode)
+  - MDBX.MdbxEnvironment.Dispose
+  - MDBX.MdbxEnvironment.DropDatabase(System.UInt32,System.Boolean)
+  - MDBX.MdbxEnvironment.EnumerateReaders(System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String})
+  - MDBX.MdbxEnvironment.EnumerateTables(System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32})
+  - MDBX.MdbxEnvironment.FileDescriptor
+  - MDBX.MdbxEnvironment.Finalize
+  - MDBX.MdbxEnvironment.GetErrorMessage(System.Int32)
+  - MDBX.MdbxEnvironment.GetFlags
+  - MDBX.MdbxEnvironment.GetHsr
+  - MDBX.MdbxEnvironment.GetInfo
+  - MDBX.MdbxEnvironment.GetMaxKeySize(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.GetMaxPairSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.GetMaxValueSize(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.GetMaxValueSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.GetOption(MDBX.Native.Types.MdbxOption)
+  - MDBX.MdbxEnvironment.GetStat
+  - MDBX.MdbxEnvironment.GetSystemRamInfo(System.IntPtr@,System.IntPtr@,System.IntPtr@)
+  - MDBX.MdbxEnvironment.GetUserContext
+  - MDBX.MdbxEnvironment.IsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  - MDBX.MdbxEnvironment.LimitsDatabaseSizeMax(System.IntPtr)
+  - MDBX.MdbxEnvironment.LimitsDatabaseSizeMin(System.IntPtr)
+  - MDBX.MdbxEnvironment.LimitsKeySizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.LimitsKeySizeMin(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.LimitsPairSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.LimitsTransactionSizeMax(System.IntPtr)
+  - MDBX.MdbxEnvironment.LimitsValueSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.LimitsValueSizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.LimitsValueSizeMin(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.LockTransaction(System.Boolean)
+  - MDBX.MdbxEnvironment.NativeEnv
+  - MDBX.MdbxEnvironment.Open(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16,System.Int32)
+  - MDBX.MdbxEnvironment.OpenDatabase(System.String,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.OpenDatabaseEx(System.String,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.MdbxEnvironment.OpenForRecovery(System.String,System.UInt32,System.Boolean)
+  - MDBX.MdbxEnvironment.OpenInternal(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16)
+  - MDBX.MdbxEnvironment.Path
+  - MDBX.MdbxEnvironment.RegisterThread
+  - MDBX.MdbxEnvironment.RenameDatabase(System.UInt32,System.String)
+  - MDBX.MdbxEnvironment.ResurrectAfterFork
+  - MDBX.MdbxEnvironment.SetFlags(MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  - MDBX.MdbxEnvironment.SetGeometry(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)
+  - MDBX.MdbxEnvironment.SetHsr(MDBX.Native.Types.MdbxHsrFunc)
+  - MDBX.MdbxEnvironment.SetOption(MDBX.Native.Types.MdbxOption,System.UInt64)
+  - MDBX.MdbxEnvironment.SetUserContext(System.Void*)
+  - MDBX.MdbxEnvironment.SetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFunc)
+  - MDBX.MdbxEnvironment.SetupDebugNoFormat(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFuncNofmt,System.Byte*,System.UIntPtr)
+  - MDBX.MdbxEnvironment.Sync(System.Boolean,System.Boolean)
+  - MDBX.MdbxEnvironment.TurnForRecovery(System.UInt32)
+  - MDBX.MdbxEnvironment.UnlockTransaction
+  - MDBX.MdbxEnvironment.UnregisterThread
+  - MDBX.MdbxEnvironment.Warmup(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxWarmupFlags,System.UInt32)
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvironment
+  nameWithType: MdbxEnvironment
+  fullName: MDBX.MdbxEnvironment
+  type: Class
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxEnvironment
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 8
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Высокоуровневая обертка окружения libmdbx.
+  example: []
+  syntax:
+    content: 'public sealed class MdbxEnvironment : IDisposable'
+    content.vb: Public NotInheritable Class MdbxEnvironment Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.MdbxEnvironment.Create
+  commentId: M:MDBX.MdbxEnvironment.Create
+  id: Create
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: MdbxEnvironment.Create()
+  fullName: MDBX.MdbxEnvironment.Create()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Create
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 27
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Создает новое окружение MDBX.
+  example: []
+  syntax:
+    content: public static MdbxEnvironment Create()
+    return:
+      type: MDBX.MdbxEnvironment
+      description: Новое окружение.
+    content.vb: Public Shared Function Create() As MdbxEnvironment
+  overload: MDBX.MdbxEnvironment.Create*
+- uid: MDBX.MdbxEnvironment.Open(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16,System.Int32)
+  commentId: M:MDBX.MdbxEnvironment.Open(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16,System.Int32)
+  id: Open(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16,System.Int32)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Open(string, MdbxEnvFlags, ushort, int)
+  nameWithType: MdbxEnvironment.Open(string, MdbxEnvFlags, ushort, int)
+  fullName: MDBX.MdbxEnvironment.Open(string, MDBX.Native.Types.MdbxEnvFlags, ushort, int)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Open
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 44
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Создает и открывает окружение MDBX.
+  example: []
+  syntax:
+    content: public static MdbxEnvironment Open(string path, MdbxEnvFlags flags = MdbxEnvFlags.MDBX_ENV_DEFAULTS, ushort mode = 1792, int maxDatabases = 0)
+    parameters:
+    - id: path
+      type: System.String
+      description: Путь к базе данных.
+    - id: flags
+      type: MDBX.Native.Types.MdbxEnvFlags
+      description: Флаги окружения.
+    - id: mode
+      type: System.UInt16
+      description: Режим доступа (права доступа для создания файлов).
+    - id: maxDatabases
+      type: System.Int32
+      description: Максимальное количество таблиц (0 = по умолчанию).
+    return:
+      type: MDBX.MdbxEnvironment
+      description: Открытое окружение.
+    content.vb: Public Shared Function Open(path As String, flags As MdbxEnvFlags = MdbxEnvFlags.MDBX_ENV_DEFAULTS, mode As UShort = 1792, maxDatabases As Integer = 0) As MdbxEnvironment
+  overload: MDBX.MdbxEnvironment.Open*
+  nameWithType.vb: MdbxEnvironment.Open(String, MdbxEnvFlags, UShort, Integer)
+  fullName.vb: MDBX.MdbxEnvironment.Open(String, MDBX.Native.Types.MdbxEnvFlags, UShort, Integer)
+  name.vb: Open(String, MdbxEnvFlags, UShort, Integer)
+- uid: MDBX.MdbxEnvironment.OpenInternal(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16)
+  commentId: M:MDBX.MdbxEnvironment.OpenInternal(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16)
+  id: OpenInternal(System.String,MDBX.Native.Types.MdbxEnvFlags,System.UInt16)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: OpenInternal(string, MdbxEnvFlags, ushort)
+  nameWithType: MdbxEnvironment.OpenInternal(string, MdbxEnvFlags, ushort)
+  fullName: MDBX.MdbxEnvironment.OpenInternal(string, MDBX.Native.Types.MdbxEnvFlags, ushort)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: OpenInternal
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 59
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Открывает окружение MDBX.
+  example: []
+  syntax:
+    content: public void OpenInternal(string path, MdbxEnvFlags flags = MdbxEnvFlags.MDBX_ENV_DEFAULTS, ushort mode = 1792)
+    parameters:
+    - id: path
+      type: System.String
+      description: Путь к базе данных.
+    - id: flags
+      type: MDBX.Native.Types.MdbxEnvFlags
+      description: Флаги окружения.
+    - id: mode
+      type: System.UInt16
+      description: Режим доступа (права доступа для создания файлов).
+    content.vb: Public Sub OpenInternal(path As String, flags As MdbxEnvFlags = MdbxEnvFlags.MDBX_ENV_DEFAULTS, mode As UShort = 1792)
+  overload: MDBX.MdbxEnvironment.OpenInternal*
+  nameWithType.vb: MdbxEnvironment.OpenInternal(String, MdbxEnvFlags, UShort)
+  fullName.vb: MDBX.MdbxEnvironment.OpenInternal(String, MDBX.Native.Types.MdbxEnvFlags, UShort)
+  name.vb: OpenInternal(String, MdbxEnvFlags, UShort)
+- uid: MDBX.MdbxEnvironment.Close
+  commentId: M:MDBX.MdbxEnvironment.Close
+  id: Close
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: MdbxEnvironment.Close()
+  fullName: MDBX.MdbxEnvironment.Close()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Close
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 74
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Закрывает окружение MDBX.
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close()
+  overload: MDBX.MdbxEnvironment.Close*
+- uid: MDBX.MdbxEnvironment.Close(System.Boolean)
+  commentId: M:MDBX.MdbxEnvironment.Close(System.Boolean)
+  id: Close(System.Boolean)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Close(bool)
+  nameWithType: MdbxEnvironment.Close(bool)
+  fullName: MDBX.MdbxEnvironment.Close(bool)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Close
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 83
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Закрывает окружение MDBX с опциональной отменой синхронизации.
+  example: []
+  syntax:
+    content: public void Close(bool dontSync)
+    parameters:
+    - id: dontSync
+      type: System.Boolean
+      description: Не синхронизировать при закрытии.
+    content.vb: Public Sub Close(dontSync As Boolean)
+  overload: MDBX.MdbxEnvironment.Close*
+  nameWithType.vb: MdbxEnvironment.Close(Boolean)
+  fullName.vb: MDBX.MdbxEnvironment.Close(Boolean)
+  name.vb: Close(Boolean)
+- uid: MDBX.MdbxEnvironment.Delete(System.String,MDBX.Native.Types.MdbxEnvDeleteMode)
+  commentId: M:MDBX.MdbxEnvironment.Delete(System.String,MDBX.Native.Types.MdbxEnvDeleteMode)
+  id: Delete(System.String,MDBX.Native.Types.MdbxEnvDeleteMode)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Delete(string, MdbxEnvDeleteMode)
+  nameWithType: MdbxEnvironment.Delete(string, MdbxEnvDeleteMode)
+  fullName: MDBX.MdbxEnvironment.Delete(string, MDBX.Native.Types.MdbxEnvDeleteMode)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Delete
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 98
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Удаляет окружение MDBX по пути.
+  example: []
+  syntax:
+    content: public static void Delete(string path, MdbxEnvDeleteMode mode = MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL)
+    parameters:
+    - id: path
+      type: System.String
+      description: Путь к окружению.
+    - id: mode
+      type: MDBX.Native.Types.MdbxEnvDeleteMode
+      description: Режим удаления.
+    content.vb: Public Shared Sub Delete(path As String, mode As MdbxEnvDeleteMode = MdbxEnvDeleteMode.MDBX_ENV_DELETE_ALL)
+  overload: MDBX.MdbxEnvironment.Delete*
+  nameWithType.vb: MdbxEnvironment.Delete(String, MdbxEnvDeleteMode)
+  fullName.vb: MDBX.MdbxEnvironment.Delete(String, MDBX.Native.Types.MdbxEnvDeleteMode)
+  name.vb: Delete(String, MdbxEnvDeleteMode)
+- uid: MDBX.MdbxEnvironment.Copy(System.String,MDBX.Native.Types.MdbxCopyFlags)
+  commentId: M:MDBX.MdbxEnvironment.Copy(System.String,MDBX.Native.Types.MdbxCopyFlags)
+  id: Copy(System.String,MDBX.Native.Types.MdbxCopyFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Copy(string, MdbxCopyFlags)
+  nameWithType: MdbxEnvironment.Copy(string, MdbxCopyFlags)
+  fullName: MDBX.MdbxEnvironment.Copy(string, MDBX.Native.Types.MdbxCopyFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Copy
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 114
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Копирует окружение MDBX в указанный путь.
+  example: []
+  syntax:
+    content: public void Copy(string destinationPath, MdbxCopyFlags flags = MdbxCopyFlags.MDBX_CP_DEFAULT)
+    parameters:
+    - id: destinationPath
+      type: System.String
+      description: Путь назначения.
+    - id: flags
+      type: MDBX.Native.Types.MdbxCopyFlags
+      description: Флаги копирования.
+    content.vb: Public Sub Copy(destinationPath As String, flags As MdbxCopyFlags = MdbxCopyFlags.MDBX_CP_DEFAULT)
+  overload: MDBX.MdbxEnvironment.Copy*
+  nameWithType.vb: MdbxEnvironment.Copy(String, MdbxCopyFlags)
+  fullName.vb: MDBX.MdbxEnvironment.Copy(String, MDBX.Native.Types.MdbxCopyFlags)
+  name.vb: Copy(String, MdbxCopyFlags)
+- uid: MDBX.MdbxEnvironment.CopyToFd(System.IntPtr,MDBX.Native.Types.MdbxCopyFlags)
+  commentId: M:MDBX.MdbxEnvironment.CopyToFd(System.IntPtr,MDBX.Native.Types.MdbxCopyFlags)
+  id: CopyToFd(System.IntPtr,MDBX.Native.Types.MdbxCopyFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: CopyToFd(nint, MdbxCopyFlags)
+  nameWithType: MdbxEnvironment.CopyToFd(nint, MdbxCopyFlags)
+  fullName: MDBX.MdbxEnvironment.CopyToFd(nint, MDBX.Native.Types.MdbxCopyFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: CopyToFd
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 131
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Копирует окружение MDBX в файловый дескриптор.
+  example: []
+  syntax:
+    content: public void CopyToFd(nint fd, MdbxCopyFlags flags = MdbxCopyFlags.MDBX_CP_DEFAULT)
+    parameters:
+    - id: fd
+      type: System.IntPtr
+      description: Файловый дескриптор.
+    - id: flags
+      type: MDBX.Native.Types.MdbxCopyFlags
+      description: Флаги копирования.
+    content.vb: Public Sub CopyToFd(fd As IntPtr, flags As MdbxCopyFlags = MdbxCopyFlags.MDBX_CP_DEFAULT)
+  overload: MDBX.MdbxEnvironment.CopyToFd*
+  nameWithType.vb: MdbxEnvironment.CopyToFd(IntPtr, MdbxCopyFlags)
+  fullName.vb: MDBX.MdbxEnvironment.CopyToFd(System.IntPtr, MDBX.Native.Types.MdbxCopyFlags)
+  name.vb: CopyToFd(IntPtr, MdbxCopyFlags)
+- uid: MDBX.MdbxEnvironment.OpenForRecovery(System.String,System.UInt32,System.Boolean)
+  commentId: M:MDBX.MdbxEnvironment.OpenForRecovery(System.String,System.UInt32,System.Boolean)
+  id: OpenForRecovery(System.String,System.UInt32,System.Boolean)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: OpenForRecovery(string, uint, bool)
+  nameWithType: MdbxEnvironment.OpenForRecovery(string, uint, bool)
+  fullName: MDBX.MdbxEnvironment.OpenForRecovery(string, uint, bool)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: OpenForRecovery
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 145
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Открывает окружение для восстановления.
+  example: []
+  syntax:
+    content: public void OpenForRecovery(string path, uint targetMeta, bool writable)
+    parameters:
+    - id: path
+      type: System.String
+      description: Путь к базе данных.
+    - id: targetMeta
+      type: System.UInt32
+      description: Целевая мета-страница.
+    - id: writable
+      type: System.Boolean
+      description: Доступно для записи.
+    content.vb: Public Sub OpenForRecovery(path As String, targetMeta As UInteger, writable As Boolean)
+  overload: MDBX.MdbxEnvironment.OpenForRecovery*
+  nameWithType.vb: MdbxEnvironment.OpenForRecovery(String, UInteger, Boolean)
+  fullName.vb: MDBX.MdbxEnvironment.OpenForRecovery(String, UInteger, Boolean)
+  name.vb: OpenForRecovery(String, UInteger, Boolean)
+- uid: MDBX.MdbxEnvironment.TurnForRecovery(System.UInt32)
+  commentId: M:MDBX.MdbxEnvironment.TurnForRecovery(System.UInt32)
+  id: TurnForRecovery(System.UInt32)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: TurnForRecovery(uint)
+  nameWithType: MdbxEnvironment.TurnForRecovery(uint)
+  fullName: MDBX.MdbxEnvironment.TurnForRecovery(uint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TurnForRecovery
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 161
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Переключает окружение для восстановления на указанную мета-страницу.
+  example: []
+  syntax:
+    content: public void TurnForRecovery(uint targetMeta)
+    parameters:
+    - id: targetMeta
+      type: System.UInt32
+      description: Целевая мета-страница.
+    content.vb: Public Sub TurnForRecovery(targetMeta As UInteger)
+  overload: MDBX.MdbxEnvironment.TurnForRecovery*
+  nameWithType.vb: MdbxEnvironment.TurnForRecovery(UInteger)
+  fullName.vb: MDBX.MdbxEnvironment.TurnForRecovery(UInteger)
+  name.vb: TurnForRecovery(UInteger)
+- uid: MDBX.MdbxEnvironment.ResurrectAfterFork
+  commentId: M:MDBX.MdbxEnvironment.ResurrectAfterFork
+  id: ResurrectAfterFork
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: ResurrectAfterFork()
+  nameWithType: MdbxEnvironment.ResurrectAfterFork()
+  fullName: MDBX.MdbxEnvironment.ResurrectAfterFork()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ResurrectAfterFork
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 172
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Восстанавливает окружение после fork.
+  example: []
+  syntax:
+    content: public void ResurrectAfterFork()
+    content.vb: Public Sub ResurrectAfterFork()
+  overload: MDBX.MdbxEnvironment.ResurrectAfterFork*
+- uid: MDBX.MdbxEnvironment.Warmup(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxWarmupFlags,System.UInt32)
+  commentId: M:MDBX.MdbxEnvironment.Warmup(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxWarmupFlags,System.UInt32)
+  id: Warmup(MDBX.Native.Types.MDBX_txn*,MDBX.Native.Types.MdbxWarmupFlags,System.UInt32)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Warmup(MDBX_txn*, MdbxWarmupFlags, uint)
+  nameWithType: MdbxEnvironment.Warmup(MDBX_txn*, MdbxWarmupFlags, uint)
+  fullName: MDBX.MdbxEnvironment.Warmup(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxWarmupFlags, uint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Warmup
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 186
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Прогревает окружение (предзагружает страницы в память).
+  example: []
+  syntax:
+    content: public void Warmup(MDBX_txn* txn = null, MdbxWarmupFlags flags = MdbxWarmupFlags.MDBX_WARMUP_DEFAULT, uint timeoutSeconds16Dot16 = 0)
+    parameters:
+    - id: txn
+      type: MDBX.Native.Types.MDBX_txn*
+      description: Транзакция (может быть null).
+    - id: flags
+      type: MDBX.Native.Types.MdbxWarmupFlags
+      description: Флаги прогрева.
+    - id: timeoutSeconds16Dot16
+      type: System.UInt32
+      description: Таймаут в 1/65536 сек (0 = без ограничения).
+    content.vb: Public Sub Warmup(txn As MDBX_txn* = Nothing, flags As MdbxWarmupFlags = MdbxWarmupFlags.MDBX_WARMUP_DEFAULT, timeoutSeconds16Dot16 As UInteger = 0)
+  overload: MDBX.MdbxEnvironment.Warmup*
+  nameWithType.vb: MdbxEnvironment.Warmup(MDBX_txn*, MdbxWarmupFlags, UInteger)
+  fullName.vb: MDBX.MdbxEnvironment.Warmup(MDBX.Native.Types.MDBX_txn*, MDBX.Native.Types.MdbxWarmupFlags, UInteger)
+  name.vb: Warmup(MDBX_txn*, MdbxWarmupFlags, UInteger)
+- uid: MDBX.MdbxEnvironment.Defrag(System.UIntPtr,System.UIntPtr,System.UIntPtr,System.UIntPtr,System.IntPtr,System.IntPtr,MDBX.Native.Types.MdbxDefragProgressFunc)
+  commentId: M:MDBX.MdbxEnvironment.Defrag(System.UIntPtr,System.UIntPtr,System.UIntPtr,System.UIntPtr,System.IntPtr,System.IntPtr,MDBX.Native.Types.MdbxDefragProgressFunc)
+  id: Defrag(System.UIntPtr,System.UIntPtr,System.UIntPtr,System.UIntPtr,System.IntPtr,System.IntPtr,MDBX.Native.Types.MdbxDefragProgressFunc)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Defrag(nuint, nuint, nuint, nuint, nint, nint, MdbxDefragProgressFunc?)
+  nameWithType: MdbxEnvironment.Defrag(nuint, nuint, nuint, nuint, nint, nint, MdbxDefragProgressFunc?)
+  fullName: MDBX.MdbxEnvironment.Defrag(nuint, nuint, nuint, nuint, nint, nint, MDBX.Native.Types.MdbxDefragProgressFunc?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Defrag
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 204
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Фрагментирует окружение (defrag).
+  example: []
+  syntax:
+    content: public void Defrag(nuint defragAtleast = 0, nuint timeAtleastDot16 = 0, nuint defragEnough = 0, nuint timeLimitDot16 = 0, nint acceptableBacklash = 0, nint preferredBatch = 0, MdbxDefragProgressFunc? progressCallback = null)
+    parameters:
+    - id: defragAtleast
+      type: System.UIntPtr
+      description: Минимальное количество страниц для дефрагментации (0 = по умолчанию).
+    - id: timeAtleastDot16
+      type: System.UIntPtr
+      description: Минимальное время в 1/65536 сек (0 = по умолчанию).
+    - id: defragEnough
+      type: System.UIntPtr
+      description: Достаточное количество страниц (0 = по умолчанию).
+    - id: timeLimitDot16
+      type: System.UIntPtr
+      description: Лимит времени в 1/65536 сек (0 = без лимита).
+    - id: acceptableBacklash
+      type: System.IntPtr
+      description: Допустимый откат.
+    - id: preferredBatch
+      type: System.IntPtr
+      description: Предпочтительный размер пакета.
+    - id: progressCallback
+      type: MDBX.Native.Types.MdbxDefragProgressFunc
+      description: Функция обратного вызова для уведомления о прогрессе.
+    content.vb: Public Sub Defrag(defragAtleast As UIntPtr = 0, timeAtleastDot16 As UIntPtr = 0, defragEnough As UIntPtr = 0, timeLimitDot16 As UIntPtr = 0, acceptableBacklash As IntPtr = 0, preferredBatch As IntPtr = 0, progressCallback As MdbxDefragProgressFunc = Nothing)
+  overload: MDBX.MdbxEnvironment.Defrag*
+  nameWithType.vb: MdbxEnvironment.Defrag(UIntPtr, UIntPtr, UIntPtr, UIntPtr, IntPtr, IntPtr, MdbxDefragProgressFunc)
+  fullName.vb: MDBX.MdbxEnvironment.Defrag(System.UIntPtr, System.UIntPtr, System.UIntPtr, System.UIntPtr, System.IntPtr, System.IntPtr, MDBX.Native.Types.MdbxDefragProgressFunc)
+  name.vb: Defrag(UIntPtr, UIntPtr, UIntPtr, UIntPtr, IntPtr, IntPtr, MdbxDefragProgressFunc)
+- uid: MDBX.MdbxEnvironment.Sync(System.Boolean,System.Boolean)
+  commentId: M:MDBX.MdbxEnvironment.Sync(System.Boolean,System.Boolean)
+  id: Sync(System.Boolean,System.Boolean)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Sync(bool, bool)
+  nameWithType: MdbxEnvironment.Sync(bool, bool)
+  fullName: MDBX.MdbxEnvironment.Sync(bool, bool)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Sync
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 242
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Синхронизирует окружение на диск.
+  example: []
+  syntax:
+    content: public void Sync(bool force = false, bool nonblock = false)
+    parameters:
+    - id: force
+      type: System.Boolean
+      description: Принудительная синхронизация.
+    - id: nonblock
+      type: System.Boolean
+      description: Неблокирующая синхронизация.
+    content.vb: Public Sub Sync(force As Boolean = False, nonblock As Boolean = False)
+  overload: MDBX.MdbxEnvironment.Sync*
+  nameWithType.vb: MdbxEnvironment.Sync(Boolean, Boolean)
+  fullName.vb: MDBX.MdbxEnvironment.Sync(Boolean, Boolean)
+  name.vb: Sync(Boolean, Boolean)
+- uid: MDBX.MdbxEnvironment.GetStat
+  commentId: M:MDBX.MdbxEnvironment.GetStat
+  id: GetStat
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetStat()
+  nameWithType: MdbxEnvironment.GetStat()
+  fullName: MDBX.MdbxEnvironment.GetStat()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetStat
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 253
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает статистику окружения.
+  example: []
+  syntax:
+    content: public MdbxStat GetStat()
+    return:
+      type: MDBX.Native.Types.MdbxStat
+    content.vb: Public Function GetStat() As MdbxStat
+  overload: MDBX.MdbxEnvironment.GetStat*
+- uid: MDBX.MdbxEnvironment.GetInfo
+  commentId: M:MDBX.MdbxEnvironment.GetInfo
+  id: GetInfo
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetInfo()
+  nameWithType: MdbxEnvironment.GetInfo()
+  fullName: MDBX.MdbxEnvironment.GetInfo()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetInfo
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 266
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает информацию об окружении.
+  example: []
+  syntax:
+    content: public MDBX_envinfo GetInfo()
+    return:
+      type: MDBX.Native.Types.MDBX_envinfo
+    content.vb: Public Function GetInfo() As MDBX_envinfo
+  overload: MDBX.MdbxEnvironment.GetInfo*
+- uid: MDBX.MdbxEnvironment.SetOption(MDBX.Native.Types.MdbxOption,System.UInt64)
+  commentId: M:MDBX.MdbxEnvironment.SetOption(MDBX.Native.Types.MdbxOption,System.UInt64)
+  id: SetOption(MDBX.Native.Types.MdbxOption,System.UInt64)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetOption(MdbxOption, ulong)
+  nameWithType: MdbxEnvironment.SetOption(MdbxOption, ulong)
+  fullName: MDBX.MdbxEnvironment.SetOption(MDBX.Native.Types.MdbxOption, ulong)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetOption
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 281
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Устанавливает параметр окружения.
+  example: []
+  syntax:
+    content: public void SetOption(MdbxOption option, ulong value)
+    parameters:
+    - id: option
+      type: MDBX.Native.Types.MdbxOption
+      description: Параметр.
+    - id: value
+      type: System.UInt64
+      description: Значение.
+    content.vb: Public Sub SetOption([option] As MdbxOption, value As ULong)
+  overload: MDBX.MdbxEnvironment.SetOption*
+  nameWithType.vb: MdbxEnvironment.SetOption(MdbxOption, ULong)
+  fullName.vb: MDBX.MdbxEnvironment.SetOption(MDBX.Native.Types.MdbxOption, ULong)
+  name.vb: SetOption(MdbxOption, ULong)
+- uid: MDBX.MdbxEnvironment.GetOption(MDBX.Native.Types.MdbxOption)
+  commentId: M:MDBX.MdbxEnvironment.GetOption(MDBX.Native.Types.MdbxOption)
+  id: GetOption(MDBX.Native.Types.MdbxOption)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetOption(MdbxOption)
+  nameWithType: MdbxEnvironment.GetOption(MdbxOption)
+  fullName: MDBX.MdbxEnvironment.GetOption(MDBX.Native.Types.MdbxOption)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetOption
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 294
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает параметр окружения.
+  example: []
+  syntax:
+    content: public ulong GetOption(MdbxOption option)
+    parameters:
+    - id: option
+      type: MDBX.Native.Types.MdbxOption
+      description: Параметр.
+    return:
+      type: System.UInt64
+      description: Значение параметра.
+    content.vb: Public Function GetOption([option] As MdbxOption) As ULong
+  overload: MDBX.MdbxEnvironment.GetOption*
+- uid: MDBX.MdbxEnvironment.SetFlags(MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  commentId: M:MDBX.MdbxEnvironment.SetFlags(MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  id: SetFlags(MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetFlags(MdbxEnvFlags, bool)
+  nameWithType: MdbxEnvironment.SetFlags(MdbxEnvFlags, bool)
+  fullName: MDBX.MdbxEnvironment.SetFlags(MDBX.Native.Types.MdbxEnvFlags, bool)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetFlags
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 309
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Устанавливает флаги окружения.
+  example: []
+  syntax:
+    content: public void SetFlags(MdbxEnvFlags flags, bool on)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxEnvFlags
+      description: Флаги.
+    - id: on
+      type: System.Boolean
+      description: Включить или выключить.
+    content.vb: Public Sub SetFlags(flags As MdbxEnvFlags, [on] As Boolean)
+  overload: MDBX.MdbxEnvironment.SetFlags*
+  nameWithType.vb: MdbxEnvironment.SetFlags(MdbxEnvFlags, Boolean)
+  fullName.vb: MDBX.MdbxEnvironment.SetFlags(MDBX.Native.Types.MdbxEnvFlags, Boolean)
+  name.vb: SetFlags(MdbxEnvFlags, Boolean)
+- uid: MDBX.MdbxEnvironment.GetFlags
+  commentId: M:MDBX.MdbxEnvironment.GetFlags
+  id: GetFlags
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetFlags()
+  nameWithType: MdbxEnvironment.GetFlags()
+  fullName: MDBX.MdbxEnvironment.GetFlags()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetFlags
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 321
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает флаги окружения.
+  example: []
+  syntax:
+    content: public MdbxEnvFlags GetFlags()
+    return:
+      type: MDBX.Native.Types.MdbxEnvFlags
+      description: Флаги окружения.
+    content.vb: Public Function GetFlags() As MdbxEnvFlags
+  overload: MDBX.MdbxEnvironment.GetFlags*
+- uid: MDBX.MdbxEnvironment.SetGeometry(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)
+  commentId: M:MDBX.MdbxEnvironment.SetGeometry(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)
+  id: SetGeometry(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetGeometry(long, long, long, long, long, long)
+  nameWithType: MdbxEnvironment.SetGeometry(long, long, long, long, long, long)
+  fullName: MDBX.MdbxEnvironment.SetGeometry(long, long, long, long, long, long)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetGeometry
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 340
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Устанавливает геометрию окружения (размеры файлов).
+  example: []
+  syntax:
+    content: public void SetGeometry(long sizeLower = -1, long sizeNow = -1, long sizeUpper = -1, long growthStep = -1, long shrinkThreshold = -1, long pageSize = 0)
+    parameters:
+    - id: sizeLower
+      type: System.Int64
+      description: Нижний предел размера (-1 = оставить без изменений).
+    - id: sizeNow
+      type: System.Int64
+      description: Текущий размер (-1 = оставить без изменений).
+    - id: sizeUpper
+      type: System.Int64
+      description: Верхний предел размера (-1 = оставить без изменений).
+    - id: growthStep
+      type: System.Int64
+      description: Шаг роста (-1 = по умолчанию).
+    - id: shrinkThreshold
+      type: System.Int64
+      description: Порог сжатия (-1 = по умолчанию).
+    - id: pageSize
+      type: System.Int64
+      description: Размер страницы (0 = по умолчанию).
+    content.vb: Public Sub SetGeometry(sizeLower As Long = -1, sizeNow As Long = -1, sizeUpper As Long = -1, growthStep As Long = -1, shrinkThreshold As Long = -1, pageSize As Long = 0)
+  overload: MDBX.MdbxEnvironment.SetGeometry*
+  nameWithType.vb: MdbxEnvironment.SetGeometry(Long, Long, Long, Long, Long, Long)
+  fullName.vb: MDBX.MdbxEnvironment.SetGeometry(Long, Long, Long, Long, Long, Long)
+  name.vb: SetGeometry(Long, Long, Long, Long, Long, Long)
+- uid: MDBX.MdbxEnvironment.SetHsr(MDBX.Native.Types.MdbxHsrFunc)
+  commentId: M:MDBX.MdbxEnvironment.SetHsr(MDBX.Native.Types.MdbxHsrFunc)
+  id: SetHsr(MDBX.Native.Types.MdbxHsrFunc)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetHsr(MdbxHsrFunc?)
+  nameWithType: MdbxEnvironment.SetHsr(MdbxHsrFunc?)
+  fullName: MDBX.MdbxEnvironment.SetHsr(MDBX.Native.Types.MdbxHsrFunc?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetHsr
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 354
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Устанавливает функцию обработки медленных читателей (HSR).
+  example: []
+  syntax:
+    content: public void SetHsr(MdbxHsrFunc? callback)
+    parameters:
+    - id: callback
+      type: MDBX.Native.Types.MdbxHsrFunc
+      description: Функция обратного вызова (null для сброса).
+    content.vb: Public Sub SetHsr(callback As MdbxHsrFunc)
+  overload: MDBX.MdbxEnvironment.SetHsr*
+  nameWithType.vb: MdbxEnvironment.SetHsr(MdbxHsrFunc)
+  fullName.vb: MDBX.MdbxEnvironment.SetHsr(MDBX.Native.Types.MdbxHsrFunc)
+  name.vb: SetHsr(MdbxHsrFunc)
+- uid: MDBX.MdbxEnvironment.GetHsr
+  commentId: M:MDBX.MdbxEnvironment.GetHsr
+  id: GetHsr
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetHsr()
+  nameWithType: MdbxEnvironment.GetHsr()
+  fullName: MDBX.MdbxEnvironment.GetHsr()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetHsr
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 376
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает функцию обработки медленных читателей (HSR).
+  example: []
+  syntax:
+    content: public MdbxHsrFunc? GetHsr()
+    return:
+      type: MDBX.Native.Types.MdbxHsrFunc
+      description: Функция обратного вызова или null.
+    content.vb: Public Function GetHsr() As MdbxHsrFunc
+  overload: MDBX.MdbxEnvironment.GetHsr*
+- uid: MDBX.MdbxEnvironment.SetUserContext(System.Void*)
+  commentId: M:MDBX.MdbxEnvironment.SetUserContext(System.Void*)
+  id: SetUserContext(System.Void*)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetUserContext(void*)
+  nameWithType: MdbxEnvironment.SetUserContext(void*)
+  fullName: MDBX.MdbxEnvironment.SetUserContext(void*)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetUserContext
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 389
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Устанавливает пользовательский контекст окружения.
+  example: []
+  syntax:
+    content: public void SetUserContext(void* context)
+    parameters:
+    - id: context
+      type: System.Void*
+      description: Пользовательский контекст.
+    content.vb: Public Sub SetUserContext(context As Void*)
+  overload: MDBX.MdbxEnvironment.SetUserContext*
+  nameWithType.vb: MdbxEnvironment.SetUserContext(Void*)
+  fullName.vb: MDBX.MdbxEnvironment.SetUserContext(Void*)
+  name.vb: SetUserContext(Void*)
+- uid: MDBX.MdbxEnvironment.GetUserContext
+  commentId: M:MDBX.MdbxEnvironment.GetUserContext
+  id: GetUserContext
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetUserContext()
+  nameWithType: MdbxEnvironment.GetUserContext()
+  fullName: MDBX.MdbxEnvironment.GetUserContext()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetUserContext
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 401
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает пользовательский контекст окружения.
+  example: []
+  syntax:
+    content: public void* GetUserContext()
+    return:
+      type: System.Void*
+      description: Указатель на пользовательский контекст.
+    content.vb: Public Function GetUserContext() As Void*
+  overload: MDBX.MdbxEnvironment.GetUserContext*
+- uid: MDBX.MdbxEnvironment.Path
+  commentId: P:MDBX.MdbxEnvironment.Path
+  id: Path
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: MdbxEnvironment.Path
+  fullName: MDBX.MdbxEnvironment.Path
+  type: Property
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Path
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 410
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает путь к окружению.
+  example: []
+  syntax:
+    content: public string Path { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Path As String
+  overload: MDBX.MdbxEnvironment.Path*
+- uid: MDBX.MdbxEnvironment.FileDescriptor
+  commentId: P:MDBX.MdbxEnvironment.FileDescriptor
+  id: FileDescriptor
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: FileDescriptor
+  nameWithType: MdbxEnvironment.FileDescriptor
+  fullName: MDBX.MdbxEnvironment.FileDescriptor
+  type: Property
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: FileDescriptor
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 428
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает дескриптор файла окружения.
+  example: []
+  syntax:
+    content: public nint FileDescriptor { get; }
+    parameters: []
+    return:
+      type: System.IntPtr
+    content.vb: Public ReadOnly Property FileDescriptor As IntPtr
+  overload: MDBX.MdbxEnvironment.FileDescriptor*
+- uid: MDBX.MdbxEnvironment.GetMaxKeySize(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.GetMaxKeySize(MDBX.Native.Types.MdbxDbFlags)
+  id: GetMaxKeySize(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetMaxKeySize(MdbxDbFlags)
+  nameWithType: MdbxEnvironment.GetMaxKeySize(MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.GetMaxKeySize(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetMaxKeySize
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 445
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер ключа.
+  example: []
+  syntax:
+    content: public int GetMaxKeySize(MdbxDbFlags flags = MdbxDbFlags.MDBX_DB_DEFAULTS)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+    content.vb: Public Function GetMaxKeySize(flags As MdbxDbFlags = MdbxDbFlags.MDBX_DB_DEFAULTS) As Integer
+  overload: MDBX.MdbxEnvironment.GetMaxKeySize*
+- uid: MDBX.MdbxEnvironment.GetMaxValueSize(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.GetMaxValueSize(MDBX.Native.Types.MdbxDbFlags)
+  id: GetMaxValueSize(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetMaxValueSize(MdbxDbFlags)
+  nameWithType: MdbxEnvironment.GetMaxValueSize(MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.GetMaxValueSize(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetMaxValueSize
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 455
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер значения.
+  example: []
+  syntax:
+    content: public int GetMaxValueSize(MdbxDbFlags flags = MdbxDbFlags.MDBX_DB_DEFAULTS)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+    content.vb: Public Function GetMaxValueSize(flags As MdbxDbFlags = MdbxDbFlags.MDBX_DB_DEFAULTS) As Integer
+  overload: MDBX.MdbxEnvironment.GetMaxValueSize*
+- uid: MDBX.MdbxEnvironment.GetMaxPairSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.GetMaxPairSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  id: GetMaxPairSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetMaxPairSizeForPage(MdbxDbFlags)
+  nameWithType: MdbxEnvironment.GetMaxPairSizeForPage(MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.GetMaxPairSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetMaxPairSizeForPage
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 465
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер пары ключ-значение для страницы.
+  example: []
+  syntax:
+    content: public int GetMaxPairSizeForPage(MdbxDbFlags flags = MdbxDbFlags.MDBX_DB_DEFAULTS)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+    content.vb: Public Function GetMaxPairSizeForPage(flags As MdbxDbFlags = MdbxDbFlags.MDBX_DB_DEFAULTS) As Integer
+  overload: MDBX.MdbxEnvironment.GetMaxPairSizeForPage*
+- uid: MDBX.MdbxEnvironment.GetMaxValueSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.GetMaxValueSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  id: GetMaxValueSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetMaxValueSizeForPage(MdbxDbFlags)
+  nameWithType: MdbxEnvironment.GetMaxValueSizeForPage(MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.GetMaxValueSizeForPage(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetMaxValueSizeForPage
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 475
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер значения для страницы.
+  example: []
+  syntax:
+    content: public int GetMaxValueSizeForPage(MdbxDbFlags flags = MdbxDbFlags.MDBX_DB_DEFAULTS)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+    content.vb: Public Function GetMaxValueSizeForPage(flags As MdbxDbFlags = MdbxDbFlags.MDBX_DB_DEFAULTS) As Integer
+  overload: MDBX.MdbxEnvironment.GetMaxValueSizeForPage*
+- uid: MDBX.MdbxEnvironment.DefaultPageSize
+  commentId: P:MDBX.MdbxEnvironment.DefaultPageSize
+  id: DefaultPageSize
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: DefaultPageSize
+  nameWithType: MdbxEnvironment.DefaultPageSize
+  fullName: MDBX.MdbxEnvironment.DefaultPageSize
+  type: Property
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: DefaultPageSize
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 484
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает размер страницы по умолчанию.
+  example: []
+  syntax:
+    content: public static nuint DefaultPageSize { get; }
+    parameters: []
+    return:
+      type: System.UIntPtr
+    content.vb: Public Shared ReadOnly Property DefaultPageSize As UIntPtr
+  overload: MDBX.MdbxEnvironment.DefaultPageSize*
+- uid: MDBX.MdbxEnvironment.GetSystemRamInfo(System.IntPtr@,System.IntPtr@,System.IntPtr@)
+  commentId: M:MDBX.MdbxEnvironment.GetSystemRamInfo(System.IntPtr@,System.IntPtr@,System.IntPtr@)
+  id: GetSystemRamInfo(System.IntPtr@,System.IntPtr@,System.IntPtr@)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetSystemRamInfo(out nint, out nint, out nint)
+  nameWithType: MdbxEnvironment.GetSystemRamInfo(out nint, out nint, out nint)
+  fullName: MDBX.MdbxEnvironment.GetSystemRamInfo(out nint, out nint, out nint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetSystemRamInfo
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 492
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает информацию о системной RAM.
+  example: []
+  syntax:
+    content: public static void GetSystemRamInfo(out nint pageSize, out nint totalPages, out nint availPages)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: totalPages
+      type: System.IntPtr
+      description: Общее количество страниц.
+    - id: availPages
+      type: System.IntPtr
+      description: Доступное количество страниц.
+    content.vb: Public Shared Sub GetSystemRamInfo(pageSize As IntPtr, totalPages As IntPtr, availPages As IntPtr)
+  overload: MDBX.MdbxEnvironment.GetSystemRamInfo*
+  nameWithType.vb: MdbxEnvironment.GetSystemRamInfo(IntPtr, IntPtr, IntPtr)
+  fullName.vb: MDBX.MdbxEnvironment.GetSystemRamInfo(System.IntPtr, System.IntPtr, System.IntPtr)
+  name.vb: GetSystemRamInfo(IntPtr, IntPtr, IntPtr)
+- uid: MDBX.MdbxEnvironment.IsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  commentId: M:MDBX.MdbxEnvironment.IsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  id: IsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: IsReadaheadReasonable(nuint, nint)
+  nameWithType: MdbxEnvironment.IsReadaheadReasonable(nuint, nint)
+  fullName: MDBX.MdbxEnvironment.IsReadaheadReasonable(nuint, nint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: IsReadaheadReasonable
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 510
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет, разумно ли использовать readahead для заданного объема.
+  example: []
+  syntax:
+    content: public static bool IsReadaheadReasonable(nuint volume, nint redundancy)
+    parameters:
+    - id: volume
+      type: System.UIntPtr
+      description: Объем данных.
+    - id: redundancy
+      type: System.IntPtr
+      description: Избыточность.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsReadaheadReasonable(volume As UIntPtr, redundancy As IntPtr) As Boolean
+  overload: MDBX.MdbxEnvironment.IsReadaheadReasonable*
+  nameWithType.vb: MdbxEnvironment.IsReadaheadReasonable(UIntPtr, IntPtr)
+  fullName.vb: MDBX.MdbxEnvironment.IsReadaheadReasonable(System.UIntPtr, System.IntPtr)
+  name.vb: IsReadaheadReasonable(UIntPtr, IntPtr)
+- uid: MDBX.MdbxEnvironment.LimitsDatabaseSizeMin(System.IntPtr)
+  commentId: M:MDBX.MdbxEnvironment.LimitsDatabaseSizeMin(System.IntPtr)
+  id: LimitsDatabaseSizeMin(System.IntPtr)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsDatabaseSizeMin(nint)
+  nameWithType: MdbxEnvironment.LimitsDatabaseSizeMin(nint)
+  fullName: MDBX.MdbxEnvironment.LimitsDatabaseSizeMin(nint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsDatabaseSizeMin
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 520
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает минимальный размер базы данных.
+  example: []
+  syntax:
+    content: public static nint LimitsDatabaseSizeMin(nint pageSize)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsDatabaseSizeMin(pageSize As IntPtr) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsDatabaseSizeMin*
+  nameWithType.vb: MdbxEnvironment.LimitsDatabaseSizeMin(IntPtr)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsDatabaseSizeMin(System.IntPtr)
+  name.vb: LimitsDatabaseSizeMin(IntPtr)
+- uid: MDBX.MdbxEnvironment.LimitsDatabaseSizeMax(System.IntPtr)
+  commentId: M:MDBX.MdbxEnvironment.LimitsDatabaseSizeMax(System.IntPtr)
+  id: LimitsDatabaseSizeMax(System.IntPtr)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsDatabaseSizeMax(nint)
+  nameWithType: MdbxEnvironment.LimitsDatabaseSizeMax(nint)
+  fullName: MDBX.MdbxEnvironment.LimitsDatabaseSizeMax(nint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsDatabaseSizeMax
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 526
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер базы данных.
+  example: []
+  syntax:
+    content: public static nint LimitsDatabaseSizeMax(nint pageSize)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsDatabaseSizeMax(pageSize As IntPtr) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsDatabaseSizeMax*
+  nameWithType.vb: MdbxEnvironment.LimitsDatabaseSizeMax(IntPtr)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsDatabaseSizeMax(System.IntPtr)
+  name.vb: LimitsDatabaseSizeMax(IntPtr)
+- uid: MDBX.MdbxEnvironment.LimitsKeySizeMin(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.LimitsKeySizeMin(MDBX.Native.Types.MdbxDbFlags)
+  id: LimitsKeySizeMin(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsKeySizeMin(MdbxDbFlags)
+  nameWithType: MdbxEnvironment.LimitsKeySizeMin(MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.LimitsKeySizeMin(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsKeySizeMin
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 532
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает минимальный размер ключа.
+  example: []
+  syntax:
+    content: public static nint LimitsKeySizeMin(MdbxDbFlags flags)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsKeySizeMin(flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsKeySizeMin*
+- uid: MDBX.MdbxEnvironment.LimitsKeySizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.LimitsKeySizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: LimitsKeySizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsKeySizeMax(nint, MdbxDbFlags)
+  nameWithType: MdbxEnvironment.LimitsKeySizeMax(nint, MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.LimitsKeySizeMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsKeySizeMax
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 539
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер ключа.
+  example: []
+  syntax:
+    content: public static nint LimitsKeySizeMax(nint pageSize, MdbxDbFlags flags)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsKeySizeMax(pageSize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsKeySizeMax*
+  nameWithType.vb: MdbxEnvironment.LimitsKeySizeMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsKeySizeMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: LimitsKeySizeMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.MdbxEnvironment.LimitsValueSizeMin(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.LimitsValueSizeMin(MDBX.Native.Types.MdbxDbFlags)
+  id: LimitsValueSizeMin(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsValueSizeMin(MdbxDbFlags)
+  nameWithType: MdbxEnvironment.LimitsValueSizeMin(MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.LimitsValueSizeMin(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsValueSizeMin
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 545
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает минимальный размер значения.
+  example: []
+  syntax:
+    content: public static nint LimitsValueSizeMin(MdbxDbFlags flags)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsValueSizeMin(flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsValueSizeMin*
+- uid: MDBX.MdbxEnvironment.LimitsValueSizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.LimitsValueSizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: LimitsValueSizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsValueSizeMax(nint, MdbxDbFlags)
+  nameWithType: MdbxEnvironment.LimitsValueSizeMax(nint, MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.LimitsValueSizeMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsValueSizeMax
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 552
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер значения.
+  example: []
+  syntax:
+    content: public static nint LimitsValueSizeMax(nint pageSize, MdbxDbFlags flags)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsValueSizeMax(pageSize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsValueSizeMax*
+  nameWithType.vb: MdbxEnvironment.LimitsValueSizeMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsValueSizeMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: LimitsValueSizeMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.MdbxEnvironment.LimitsPairSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.LimitsPairSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: LimitsPairSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsPairSizeForPageMax(nint, MdbxDbFlags)
+  nameWithType: MdbxEnvironment.LimitsPairSizeForPageMax(nint, MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.LimitsPairSizeForPageMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsPairSizeForPageMax
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 559
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер пары ключ-значение для страницы.
+  example: []
+  syntax:
+    content: public static nint LimitsPairSizeForPageMax(nint pageSize, MdbxDbFlags flags)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsPairSizeForPageMax(pageSize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsPairSizeForPageMax*
+  nameWithType.vb: MdbxEnvironment.LimitsPairSizeForPageMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsPairSizeForPageMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: LimitsPairSizeForPageMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.MdbxEnvironment.LimitsValueSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.LimitsValueSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: LimitsValueSizeForPageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsValueSizeForPageMax(nint, MdbxDbFlags)
+  nameWithType: MdbxEnvironment.LimitsValueSizeForPageMax(nint, MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.LimitsValueSizeForPageMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsValueSizeForPageMax
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 566
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер значения для страницы.
+  example: []
+  syntax:
+    content: public static nint LimitsValueSizeForPageMax(nint pageSize, MdbxDbFlags flags)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsValueSizeForPageMax(pageSize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsValueSizeForPageMax*
+  nameWithType.vb: MdbxEnvironment.LimitsValueSizeForPageMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsValueSizeForPageMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: LimitsValueSizeForPageMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.MdbxEnvironment.LimitsTransactionSizeMax(System.IntPtr)
+  commentId: M:MDBX.MdbxEnvironment.LimitsTransactionSizeMax(System.IntPtr)
+  id: LimitsTransactionSizeMax(System.IntPtr)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LimitsTransactionSizeMax(nint)
+  nameWithType: MdbxEnvironment.LimitsTransactionSizeMax(nint)
+  fullName: MDBX.MdbxEnvironment.LimitsTransactionSizeMax(nint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LimitsTransactionSizeMax
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 572
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает максимальный размер транзакции.
+  example: []
+  syntax:
+    content: public static nint LimitsTransactionSizeMax(nint pageSize)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function LimitsTransactionSizeMax(pageSize As IntPtr) As IntPtr
+  overload: MDBX.MdbxEnvironment.LimitsTransactionSizeMax*
+  nameWithType.vb: MdbxEnvironment.LimitsTransactionSizeMax(IntPtr)
+  fullName.vb: MDBX.MdbxEnvironment.LimitsTransactionSizeMax(System.IntPtr)
+  name.vb: LimitsTransactionSizeMax(IntPtr)
+- uid: MDBX.MdbxEnvironment.OpenDatabase(System.String,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.OpenDatabase(System.String,MDBX.Native.Types.MdbxDbFlags)
+  id: OpenDatabase(System.String,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: OpenDatabase(string?, MdbxDbFlags)
+  nameWithType: MdbxEnvironment.OpenDatabase(string?, MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.OpenDatabase(string?, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: OpenDatabase
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 580
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Открывает именованную таблицу (DBI).
+  example: []
+  syntax:
+    content: public uint OpenDatabase(string? name = null, MdbxDbFlags flags = MdbxDbFlags.MDBX_CREATE)
+    parameters:
+    - id: name
+      type: System.String
+      description: Имя таблицы (null для дефолтной таблицы).
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.UInt32
+      description: Идентификатор таблицы (DBI).
+    content.vb: Public Function OpenDatabase(name As String = Nothing, flags As MdbxDbFlags = MdbxDbFlags.MDBX_CREATE) As UInteger
+  overload: MDBX.MdbxEnvironment.OpenDatabase*
+  nameWithType.vb: MdbxEnvironment.OpenDatabase(String, MdbxDbFlags)
+  fullName.vb: MDBX.MdbxEnvironment.OpenDatabase(String, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: OpenDatabase(String, MdbxDbFlags)
+- uid: MDBX.MdbxEnvironment.BeginTransaction(MDBX.Native.Types.MdbxTxnFlags)
+  commentId: M:MDBX.MdbxEnvironment.BeginTransaction(MDBX.Native.Types.MdbxTxnFlags)
+  id: BeginTransaction(MDBX.Native.Types.MdbxTxnFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: BeginTransaction(MdbxTxnFlags)
+  nameWithType: MdbxEnvironment.BeginTransaction(MdbxTxnFlags)
+  fullName: MDBX.MdbxEnvironment.BeginTransaction(MDBX.Native.Types.MdbxTxnFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: BeginTransaction
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 621
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Начинает новую транзакцию.
+  example: []
+  syntax:
+    content: public MdbxTransaction BeginTransaction(MdbxTxnFlags flags = MdbxTxnFlags.MDBX_TXN_DEFAULTS)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxTxnFlags
+      description: Флаги транзакции.
+    return:
+      type: MDBX.MdbxTransaction
+      description: Новая транзакция.
+    content.vb: Public Function BeginTransaction(flags As MdbxTxnFlags = MdbxTxnFlags.MDBX_TXN_DEFAULTS) As MdbxTransaction
+  overload: MDBX.MdbxEnvironment.BeginTransaction*
+- uid: MDBX.MdbxEnvironment.OpenDatabaseEx(System.String,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.MdbxEnvironment.OpenDatabaseEx(System.String,MDBX.Native.Types.MdbxDbFlags)
+  id: OpenDatabaseEx(System.String,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: OpenDatabaseEx(string?, MdbxDbFlags)
+  nameWithType: MdbxEnvironment.OpenDatabaseEx(string?, MdbxDbFlags)
+  fullName: MDBX.MdbxEnvironment.OpenDatabaseEx(string?, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: OpenDatabaseEx
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 637
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Открывает именованную таблицу (DBI) и возвращает высокоуровневую обертку.
+  example: []
+  syntax:
+    content: public MdbxDatabase OpenDatabaseEx(string? name = null, MdbxDbFlags flags = MdbxDbFlags.MDBX_CREATE)
+    parameters:
+    - id: name
+      type: System.String
+      description: Имя таблицы (null для дефолтной таблицы).
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: MDBX.MdbxDatabase
+      description: Обертка таблицы (DBI).
+    content.vb: Public Function OpenDatabaseEx(name As String = Nothing, flags As MdbxDbFlags = MdbxDbFlags.MDBX_CREATE) As MdbxDatabase
+  overload: MDBX.MdbxEnvironment.OpenDatabaseEx*
+  nameWithType.vb: MdbxEnvironment.OpenDatabaseEx(String, MdbxDbFlags)
+  fullName.vb: MDBX.MdbxEnvironment.OpenDatabaseEx(String, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: OpenDatabaseEx(String, MdbxDbFlags)
+- uid: MDBX.MdbxEnvironment.CloseDatabase(System.UInt32)
+  commentId: M:MDBX.MdbxEnvironment.CloseDatabase(System.UInt32)
+  id: CloseDatabase(System.UInt32)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: CloseDatabase(uint)
+  nameWithType: MdbxEnvironment.CloseDatabase(uint)
+  fullName: MDBX.MdbxEnvironment.CloseDatabase(uint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: CloseDatabase
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 647
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Закрывает таблицу (DBI).
+  example: []
+  syntax:
+    content: public void CloseDatabase(uint dbi)
+    parameters:
+    - id: dbi
+      type: System.UInt32
+      description: Идентификатор таблицы.
+    content.vb: Public Sub CloseDatabase(dbi As UInteger)
+  overload: MDBX.MdbxEnvironment.CloseDatabase*
+  nameWithType.vb: MdbxEnvironment.CloseDatabase(UInteger)
+  fullName.vb: MDBX.MdbxEnvironment.CloseDatabase(UInteger)
+  name.vb: CloseDatabase(UInteger)
+- uid: MDBX.MdbxEnvironment.DropDatabase(System.UInt32,System.Boolean)
+  commentId: M:MDBX.MdbxEnvironment.DropDatabase(System.UInt32,System.Boolean)
+  id: DropDatabase(System.UInt32,System.Boolean)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: DropDatabase(uint, bool)
+  nameWithType: MdbxEnvironment.DropDatabase(uint, bool)
+  fullName: MDBX.MdbxEnvironment.DropDatabase(uint, bool)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: DropDatabase
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 660
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Удаляет таблицу (содержимое и/или саму таблицу).
+  example: []
+  syntax:
+    content: public void DropDatabase(uint dbi, bool deleteData = true)
+    parameters:
+    - id: dbi
+      type: System.UInt32
+      description: Идентификатор таблицы.
+    - id: deleteData
+      type: System.Boolean
+      description: Удалить данные.
+    content.vb: Public Sub DropDatabase(dbi As UInteger, deleteData As Boolean = True)
+  overload: MDBX.MdbxEnvironment.DropDatabase*
+  nameWithType.vb: MdbxEnvironment.DropDatabase(UInteger, Boolean)
+  fullName.vb: MDBX.MdbxEnvironment.DropDatabase(UInteger, Boolean)
+  name.vb: DropDatabase(UInteger, Boolean)
+- uid: MDBX.MdbxEnvironment.RenameDatabase(System.UInt32,System.String)
+  commentId: M:MDBX.MdbxEnvironment.RenameDatabase(System.UInt32,System.String)
+  id: RenameDatabase(System.UInt32,System.String)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: RenameDatabase(uint, string)
+  nameWithType: MdbxEnvironment.RenameDatabase(uint, string)
+  fullName: MDBX.MdbxEnvironment.RenameDatabase(uint, string)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: RenameDatabase
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 691
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Переименовывает таблицу.
+  example: []
+  syntax:
+    content: public void RenameDatabase(uint dbi, string newName)
+    parameters:
+    - id: dbi
+      type: System.UInt32
+      description: Идентификатор таблицы.
+    - id: newName
+      type: System.String
+      description: Новое имя таблицы.
+    content.vb: Public Sub RenameDatabase(dbi As UInteger, newName As String)
+  overload: MDBX.MdbxEnvironment.RenameDatabase*
+  nameWithType.vb: MdbxEnvironment.RenameDatabase(UInteger, String)
+  fullName.vb: MDBX.MdbxEnvironment.RenameDatabase(UInteger, String)
+  name.vb: RenameDatabase(UInteger, String)
+- uid: MDBX.MdbxEnvironment.EnumerateTables(System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32})
+  commentId: M:MDBX.MdbxEnvironment.EnumerateTables(System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32})
+  id: EnumerateTables(System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32})
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: EnumerateTables(Action<string, MdbxDbFlags, uint>)
+  nameWithType: MdbxEnvironment.EnumerateTables(Action<string, MdbxDbFlags, uint>)
+  fullName: MDBX.MdbxEnvironment.EnumerateTables(System.Action<string, MDBX.Native.Types.MdbxDbFlags, uint>)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: EnumerateTables
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 725
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перечисляет все таблицы в окружении.
+  example: []
+  syntax:
+    content: public void EnumerateTables(Action<string, MdbxDbFlags, uint> action)
+    parameters:
+    - id: action
+      type: System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32}
+      description: Действие для каждой таблицы (имя, флаги, ID).
+    content.vb: Public Sub EnumerateTables(action As Action(Of String, MdbxDbFlags, UInteger))
+  overload: MDBX.MdbxEnvironment.EnumerateTables*
+  nameWithType.vb: MdbxEnvironment.EnumerateTables(Action(Of String, MdbxDbFlags, UInteger))
+  fullName.vb: MDBX.MdbxEnvironment.EnumerateTables(System.Action(Of String, MDBX.Native.Types.MdbxDbFlags, UInteger))
+  name.vb: EnumerateTables(Action(Of String, MdbxDbFlags, UInteger))
+- uid: MDBX.MdbxEnvironment.CheckReaders(System.Int32@)
+  commentId: M:MDBX.MdbxEnvironment.CheckReaders(System.Int32@)
+  id: CheckReaders(System.Int32@)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: CheckReaders(out int)
+  nameWithType: MdbxEnvironment.CheckReaders(out int)
+  fullName: MDBX.MdbxEnvironment.CheckReaders(out int)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: CheckReaders
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 763
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Проверяет читателей и возвращает количество мертвых читателей.
+  example: []
+  syntax:
+    content: public void CheckReaders(out int deadReaders)
+    parameters:
+    - id: deadReaders
+      type: System.Int32
+      description: Количество мертвых читателей.
+    content.vb: Public Sub CheckReaders(deadReaders As Integer)
+  overload: MDBX.MdbxEnvironment.CheckReaders*
+  nameWithType.vb: MdbxEnvironment.CheckReaders(Integer)
+  fullName.vb: MDBX.MdbxEnvironment.CheckReaders(Integer)
+  name.vb: CheckReaders(Integer)
+- uid: MDBX.MdbxEnvironment.EnumerateReaders(System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String})
+  commentId: M:MDBX.MdbxEnvironment.EnumerateReaders(System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String})
+  id: EnumerateReaders(System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String})
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: EnumerateReaders(Action<int, int, uint, uint, ulong, ulong, string?>)
+  nameWithType: MdbxEnvironment.EnumerateReaders(Action<int, int, uint, uint, ulong, ulong, string?>)
+  fullName: MDBX.MdbxEnvironment.EnumerateReaders(System.Action<int, int, uint, uint, ulong, ulong, string?>)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: EnumerateReaders
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 778
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Перечисляет читателей окружения.
+  example: []
+  syntax:
+    content: public void EnumerateReaders(Action<int, int, uint, uint, ulong, ulong, string?> action)
+    parameters:
+    - id: action
+      type: System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String}
+      description: Действие для каждого читателя.
+    content.vb: Public Sub EnumerateReaders(action As Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String))
+  overload: MDBX.MdbxEnvironment.EnumerateReaders*
+  nameWithType.vb: MdbxEnvironment.EnumerateReaders(Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String))
+  fullName.vb: MDBX.MdbxEnvironment.EnumerateReaders(System.Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String))
+  name.vb: EnumerateReaders(Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String))
+- uid: MDBX.MdbxEnvironment.RegisterThread
+  commentId: M:MDBX.MdbxEnvironment.RegisterThread
+  id: RegisterThread
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: RegisterThread()
+  nameWithType: MdbxEnvironment.RegisterThread()
+  fullName: MDBX.MdbxEnvironment.RegisterThread()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: RegisterThread
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 811
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Регистрирует текущий поток для работы с окружением.
+  example: []
+  syntax:
+    content: public void RegisterThread()
+    content.vb: Public Sub RegisterThread()
+  overload: MDBX.MdbxEnvironment.RegisterThread*
+- uid: MDBX.MdbxEnvironment.UnregisterThread
+  commentId: M:MDBX.MdbxEnvironment.UnregisterThread
+  id: UnregisterThread
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: UnregisterThread()
+  nameWithType: MdbxEnvironment.UnregisterThread()
+  fullName: MDBX.MdbxEnvironment.UnregisterThread()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: UnregisterThread
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 822
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Отменяет регистрацию текущего потока.
+  example: []
+  syntax:
+    content: public void UnregisterThread()
+    content.vb: Public Sub UnregisterThread()
+  overload: MDBX.MdbxEnvironment.UnregisterThread*
+- uid: MDBX.MdbxEnvironment.LockTransaction(System.Boolean)
+  commentId: M:MDBX.MdbxEnvironment.LockTransaction(System.Boolean)
+  id: LockTransaction(System.Boolean)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: LockTransaction(bool)
+  nameWithType: MdbxEnvironment.LockTransaction(bool)
+  fullName: MDBX.MdbxEnvironment.LockTransaction(bool)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: LockTransaction
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 834
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Блокирует окружение для создания транзакции.
+  example: []
+  syntax:
+    content: public void LockTransaction(bool dontWait = false)
+    parameters:
+    - id: dontWait
+      type: System.Boolean
+      description: Не ждать, если окружение заблокировано.
+    content.vb: Public Sub LockTransaction(dontWait As Boolean = False)
+  overload: MDBX.MdbxEnvironment.LockTransaction*
+  nameWithType.vb: MdbxEnvironment.LockTransaction(Boolean)
+  fullName.vb: MDBX.MdbxEnvironment.LockTransaction(Boolean)
+  name.vb: LockTransaction(Boolean)
+- uid: MDBX.MdbxEnvironment.UnlockTransaction
+  commentId: M:MDBX.MdbxEnvironment.UnlockTransaction
+  id: UnlockTransaction
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: UnlockTransaction()
+  nameWithType: MdbxEnvironment.UnlockTransaction()
+  fullName: MDBX.MdbxEnvironment.UnlockTransaction()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: UnlockTransaction
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 845
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Разблокирует окружение.
+  example: []
+  syntax:
+    content: public void UnlockTransaction()
+    content.vb: Public Sub UnlockTransaction()
+  overload: MDBX.MdbxEnvironment.UnlockTransaction*
+- uid: MDBX.MdbxEnvironment.SetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFunc)
+  commentId: M:MDBX.MdbxEnvironment.SetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFunc)
+  id: SetupDebug(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFunc)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetupDebug(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFunc?)
+  nameWithType: MdbxEnvironment.SetupDebug(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFunc?)
+  fullName: MDBX.MdbxEnvironment.SetupDebug(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, MDBX.Native.Types.MdbxDebugFunc?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetupDebug
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 859
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Настраивает отладочное логирование libmdbx.
+  example: []
+  syntax:
+    content: public static void SetupDebug(MdbxLogLevel logLevel, MdbxDebugFlags debugFlags, MdbxDebugFunc? logger)
+    parameters:
+    - id: logLevel
+      type: MDBX.Native.Types.MdbxLogLevel
+      description: Уровень логирования.
+    - id: debugFlags
+      type: MDBX.Native.Types.MdbxDebugFlags
+      description: Флаги отладки.
+    - id: logger
+      type: MDBX.Native.Types.MdbxDebugFunc
+      description: Функция логирования (null для отключения).
+    content.vb: Public Shared Sub SetupDebug(logLevel As MdbxLogLevel, debugFlags As MdbxDebugFlags, logger As MdbxDebugFunc)
+  overload: MDBX.MdbxEnvironment.SetupDebug*
+  nameWithType.vb: MdbxEnvironment.SetupDebug(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFunc)
+  fullName.vb: MDBX.MdbxEnvironment.SetupDebug(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, MDBX.Native.Types.MdbxDebugFunc)
+  name.vb: SetupDebug(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFunc)
+- uid: MDBX.MdbxEnvironment.SetupDebugNoFormat(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFuncNofmt,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.MdbxEnvironment.SetupDebugNoFormat(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFuncNofmt,System.Byte*,System.UIntPtr)
+  id: SetupDebugNoFormat(MDBX.Native.Types.MdbxLogLevel,MDBX.Native.Types.MdbxDebugFlags,MDBX.Native.Types.MdbxDebugFuncNofmt,System.Byte*,System.UIntPtr)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: SetupDebugNoFormat(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFuncNofmt?, byte*, nuint)
+  nameWithType: MdbxEnvironment.SetupDebugNoFormat(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFuncNofmt?, byte*, nuint)
+  fullName: MDBX.MdbxEnvironment.SetupDebugNoFormat(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, MDBX.Native.Types.MdbxDebugFuncNofmt?, byte*, nuint)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SetupDebugNoFormat
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 884
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Настраивает отладочное логирование без форматирования.
+  example: []
+  syntax:
+    content: public static void SetupDebugNoFormat(MdbxLogLevel logLevel, MdbxDebugFlags debugFlags, MdbxDebugFuncNofmt? logger, byte* loggerBuffer = null, nuint loggerBufferSize = 0)
+    parameters:
+    - id: logLevel
+      type: MDBX.Native.Types.MdbxLogLevel
+      description: Уровень логирования.
+    - id: debugFlags
+      type: MDBX.Native.Types.MdbxDebugFlags
+      description: Флаги отладки.
+    - id: logger
+      type: MDBX.Native.Types.MdbxDebugFuncNofmt
+      description: Функция логирования без форматирования (null для отключения).
+    - id: loggerBuffer
+      type: System.Byte*
+      description: Буфер для форматирования сообщений.
+    - id: loggerBufferSize
+      type: System.UIntPtr
+      description: Размер буфера.
+    content.vb: Public Shared Sub SetupDebugNoFormat(logLevel As MdbxLogLevel, debugFlags As MdbxDebugFlags, logger As MdbxDebugFuncNofmt, loggerBuffer As Byte* = Nothing, loggerBufferSize As UIntPtr = 0)
+  overload: MDBX.MdbxEnvironment.SetupDebugNoFormat*
+  nameWithType.vb: MdbxEnvironment.SetupDebugNoFormat(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFuncNofmt, Byte*, UIntPtr)
+  fullName.vb: MDBX.MdbxEnvironment.SetupDebugNoFormat(MDBX.Native.Types.MdbxLogLevel, MDBX.Native.Types.MdbxDebugFlags, MDBX.Native.Types.MdbxDebugFuncNofmt, Byte*, System.UIntPtr)
+  name.vb: SetupDebugNoFormat(MdbxLogLevel, MdbxDebugFlags, MdbxDebugFuncNofmt, Byte*, UIntPtr)
+- uid: MDBX.MdbxEnvironment.GetErrorMessage(System.Int32)
+  commentId: M:MDBX.MdbxEnvironment.GetErrorMessage(System.Int32)
+  id: GetErrorMessage(System.Int32)
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: GetErrorMessage(int)
+  nameWithType: MdbxEnvironment.GetErrorMessage(int)
+  fullName: MDBX.MdbxEnvironment.GetErrorMessage(int)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GetErrorMessage
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 905
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает строковое описание кода ошибки.
+  example: []
+  syntax:
+    content: public static string GetErrorMessage(int errorCode)
+    parameters:
+    - id: errorCode
+      type: System.Int32
+      description: Код ошибки.
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetErrorMessage(errorCode As Integer) As String
+  overload: MDBX.MdbxEnvironment.GetErrorMessage*
+  nameWithType.vb: MdbxEnvironment.GetErrorMessage(Integer)
+  fullName.vb: MDBX.MdbxEnvironment.GetErrorMessage(Integer)
+  name.vb: GetErrorMessage(Integer)
+- uid: MDBX.MdbxEnvironment.NativeEnv
+  commentId: P:MDBX.MdbxEnvironment.NativeEnv
+  id: NativeEnv
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: NativeEnv
+  nameWithType: MdbxEnvironment.NativeEnv
+  fullName: MDBX.MdbxEnvironment.NativeEnv
+  type: Property
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeEnv
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 916
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает нативный указатель на окружение.
+  example: []
+  syntax:
+    content: public MDBX_env* NativeEnv { get; }
+    parameters: []
+    return:
+      type: MDBX.Native.Types.MDBX_env*
+    content.vb: Public ReadOnly Property NativeEnv As MDBX_env*
+  overload: MDBX.MdbxEnvironment.NativeEnv*
+- uid: MDBX.MdbxEnvironment.Dispose
+  commentId: M:MDBX.MdbxEnvironment.Dispose
+  id: Dispose
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: MdbxEnvironment.Dispose()
+  fullName: MDBX.MdbxEnvironment.Dispose()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Dispose
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 966
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Освобождает ресурсы окружения.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: MDBX.MdbxEnvironment.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: MDBX.MdbxEnvironment.Finalize
+  commentId: M:MDBX.MdbxEnvironment.Finalize
+  id: Finalize
+  parent: MDBX.MdbxEnvironment
+  langs:
+  - csharp
+  - vb
+  name: ~MdbxEnvironment()
+  nameWithType: MdbxEnvironment.~MdbxEnvironment()
+  fullName: MDBX.MdbxEnvironment.~MdbxEnvironment()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Environment/MdbxEnvironment.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Finalize
+    path: ../MDBX/Environment/MdbxEnvironment.cs
+    startLine: 975
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Финализатор.
+  example: []
+  syntax:
+    content: protected ~MdbxEnvironment()
+    content.vb: 'Protected '
+  overload: MDBX.MdbxEnvironment.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: MDBX
+  commentId: N:MDBX
+  href: MDBX.html
+  name: MDBX
+  nameWithType: MDBX
+  fullName: MDBX
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.MdbxEnvironment.Create*
+  commentId: Overload:MDBX.MdbxEnvironment.Create
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Create
+  name: Create
+  nameWithType: MdbxEnvironment.Create
+  fullName: MDBX.MdbxEnvironment.Create
+- uid: MDBX.MdbxEnvironment
+  commentId: T:MDBX.MdbxEnvironment
+  parent: MDBX
+  href: MDBX.MdbxEnvironment.html
+  name: MdbxEnvironment
+  nameWithType: MdbxEnvironment
+  fullName: MDBX.MdbxEnvironment
+- uid: MDBX.MdbxEnvironment.Open*
+  commentId: Overload:MDBX.MdbxEnvironment.Open
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Open_System_String_MDBX_Native_Types_MdbxEnvFlags_System_UInt16_System_Int32_
+  name: Open
+  nameWithType: MdbxEnvironment.Open
+  fullName: MDBX.MdbxEnvironment.Open
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MDBX.Native.Types.MdbxEnvFlags
+  commentId: T:MDBX.Native.Types.MdbxEnvFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvFlags.html
+  name: MdbxEnvFlags
+  nameWithType: MdbxEnvFlags
+  fullName: MDBX.Native.Types.MdbxEnvFlags
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.MdbxEnvironment.OpenInternal*
+  commentId: Overload:MDBX.MdbxEnvironment.OpenInternal
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_OpenInternal_System_String_MDBX_Native_Types_MdbxEnvFlags_System_UInt16_
+  name: OpenInternal
+  nameWithType: MdbxEnvironment.OpenInternal
+  fullName: MDBX.MdbxEnvironment.OpenInternal
+- uid: MDBX.MdbxEnvironment.Close*
+  commentId: Overload:MDBX.MdbxEnvironment.Close
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Close
+  name: Close
+  nameWithType: MdbxEnvironment.Close
+  fullName: MDBX.MdbxEnvironment.Close
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MDBX.MdbxEnvironment.Delete*
+  commentId: Overload:MDBX.MdbxEnvironment.Delete
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Delete_System_String_MDBX_Native_Types_MdbxEnvDeleteMode_
+  name: Delete
+  nameWithType: MdbxEnvironment.Delete
+  fullName: MDBX.MdbxEnvironment.Delete
+- uid: MDBX.Native.Types.MdbxEnvDeleteMode
+  commentId: T:MDBX.Native.Types.MdbxEnvDeleteMode
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvDeleteMode.html
+  name: MdbxEnvDeleteMode
+  nameWithType: MdbxEnvDeleteMode
+  fullName: MDBX.Native.Types.MdbxEnvDeleteMode
+- uid: MDBX.MdbxEnvironment.Copy*
+  commentId: Overload:MDBX.MdbxEnvironment.Copy
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Copy_System_String_MDBX_Native_Types_MdbxCopyFlags_
+  name: Copy
+  nameWithType: MdbxEnvironment.Copy
+  fullName: MDBX.MdbxEnvironment.Copy
+- uid: MDBX.Native.Types.MdbxCopyFlags
+  commentId: T:MDBX.Native.Types.MdbxCopyFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCopyFlags.html
+  name: MdbxCopyFlags
+  nameWithType: MdbxCopyFlags
+  fullName: MDBX.Native.Types.MdbxCopyFlags
+- uid: MDBX.MdbxEnvironment.CopyToFd*
+  commentId: Overload:MDBX.MdbxEnvironment.CopyToFd
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_CopyToFd_System_IntPtr_MDBX_Native_Types_MdbxCopyFlags_
+  name: CopyToFd
+  nameWithType: MdbxEnvironment.CopyToFd
+  fullName: MDBX.MdbxEnvironment.CopyToFd
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: MDBX.MdbxEnvironment.OpenForRecovery*
+  commentId: Overload:MDBX.MdbxEnvironment.OpenForRecovery
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_OpenForRecovery_System_String_System_UInt32_System_Boolean_
+  name: OpenForRecovery
+  nameWithType: MdbxEnvironment.OpenForRecovery
+  fullName: MDBX.MdbxEnvironment.OpenForRecovery
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.MdbxEnvironment.TurnForRecovery*
+  commentId: Overload:MDBX.MdbxEnvironment.TurnForRecovery
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_TurnForRecovery_System_UInt32_
+  name: TurnForRecovery
+  nameWithType: MdbxEnvironment.TurnForRecovery
+  fullName: MDBX.MdbxEnvironment.TurnForRecovery
+- uid: MDBX.MdbxEnvironment.ResurrectAfterFork*
+  commentId: Overload:MDBX.MdbxEnvironment.ResurrectAfterFork
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_ResurrectAfterFork
+  name: ResurrectAfterFork
+  nameWithType: MdbxEnvironment.ResurrectAfterFork
+  fullName: MDBX.MdbxEnvironment.ResurrectAfterFork
+- uid: MDBX.MdbxEnvironment.Warmup*
+  commentId: Overload:MDBX.MdbxEnvironment.Warmup
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Warmup_MDBX_Native_Types_MDBX_txn__MDBX_Native_Types_MdbxWarmupFlags_System_UInt32_
+  name: Warmup
+  nameWithType: MdbxEnvironment.Warmup
+  fullName: MDBX.MdbxEnvironment.Warmup
+- uid: MDBX.Native.Types.MDBX_txn*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn*
+  nameWithType: MDBX_txn*
+  fullName: MDBX.Native.Types.MDBX_txn*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxWarmupFlags
+  commentId: T:MDBX.Native.Types.MdbxWarmupFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxWarmupFlags.html
+  name: MdbxWarmupFlags
+  nameWithType: MdbxWarmupFlags
+  fullName: MDBX.Native.Types.MdbxWarmupFlags
+- uid: MDBX.MdbxEnvironment.Defrag*
+  commentId: Overload:MDBX.MdbxEnvironment.Defrag
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Defrag_System_UIntPtr_System_UIntPtr_System_UIntPtr_System_UIntPtr_System_IntPtr_System_IntPtr_MDBX_Native_Types_MdbxDefragProgressFunc_
+  name: Defrag
+  nameWithType: MdbxEnvironment.Defrag
+  fullName: MDBX.MdbxEnvironment.Defrag
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.Native.Types.MdbxDefragProgressFunc
+  commentId: T:MDBX.Native.Types.MdbxDefragProgressFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDefragProgressFunc.html
+  name: MdbxDefragProgressFunc
+  nameWithType: MdbxDefragProgressFunc
+  fullName: MDBX.Native.Types.MdbxDefragProgressFunc
+- uid: MDBX.MdbxEnvironment.Sync*
+  commentId: Overload:MDBX.MdbxEnvironment.Sync
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Sync_System_Boolean_System_Boolean_
+  name: Sync
+  nameWithType: MdbxEnvironment.Sync
+  fullName: MDBX.MdbxEnvironment.Sync
+- uid: MDBX.MdbxEnvironment.GetStat*
+  commentId: Overload:MDBX.MdbxEnvironment.GetStat
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetStat
+  name: GetStat
+  nameWithType: MdbxEnvironment.GetStat
+  fullName: MDBX.MdbxEnvironment.GetStat
+- uid: MDBX.Native.Types.MdbxStat
+  commentId: T:MDBX.Native.Types.MdbxStat
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxStat.html
+  name: MdbxStat
+  nameWithType: MdbxStat
+  fullName: MDBX.Native.Types.MdbxStat
+- uid: MDBX.MdbxEnvironment.GetInfo*
+  commentId: Overload:MDBX.MdbxEnvironment.GetInfo
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetInfo
+  name: GetInfo
+  nameWithType: MdbxEnvironment.GetInfo
+  fullName: MDBX.MdbxEnvironment.GetInfo
+- uid: MDBX.Native.Types.MDBX_envinfo
+  commentId: T:MDBX.Native.Types.MDBX_envinfo
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo
+  nameWithType: MDBX_envinfo
+  fullName: MDBX.Native.Types.MDBX_envinfo
+- uid: MDBX.MdbxEnvironment.SetOption*
+  commentId: Overload:MDBX.MdbxEnvironment.SetOption
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetOption_MDBX_Native_Types_MdbxOption_System_UInt64_
+  name: SetOption
+  nameWithType: MdbxEnvironment.SetOption
+  fullName: MDBX.MdbxEnvironment.SetOption
+- uid: MDBX.Native.Types.MdbxOption
+  commentId: T:MDBX.Native.Types.MdbxOption
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxOption.html
+  name: MdbxOption
+  nameWithType: MdbxOption
+  fullName: MDBX.Native.Types.MdbxOption
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: MDBX.MdbxEnvironment.GetOption*
+  commentId: Overload:MDBX.MdbxEnvironment.GetOption
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetOption_MDBX_Native_Types_MdbxOption_
+  name: GetOption
+  nameWithType: MdbxEnvironment.GetOption
+  fullName: MDBX.MdbxEnvironment.GetOption
+- uid: MDBX.MdbxEnvironment.SetFlags*
+  commentId: Overload:MDBX.MdbxEnvironment.SetFlags
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetFlags_MDBX_Native_Types_MdbxEnvFlags_System_Boolean_
+  name: SetFlags
+  nameWithType: MdbxEnvironment.SetFlags
+  fullName: MDBX.MdbxEnvironment.SetFlags
+- uid: MDBX.MdbxEnvironment.GetFlags*
+  commentId: Overload:MDBX.MdbxEnvironment.GetFlags
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetFlags
+  name: GetFlags
+  nameWithType: MdbxEnvironment.GetFlags
+  fullName: MDBX.MdbxEnvironment.GetFlags
+- uid: MDBX.MdbxEnvironment.SetGeometry*
+  commentId: Overload:MDBX.MdbxEnvironment.SetGeometry
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetGeometry_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_
+  name: SetGeometry
+  nameWithType: MdbxEnvironment.SetGeometry
+  fullName: MDBX.MdbxEnvironment.SetGeometry
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: MDBX.MdbxEnvironment.SetHsr*
+  commentId: Overload:MDBX.MdbxEnvironment.SetHsr
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetHsr_MDBX_Native_Types_MdbxHsrFunc_
+  name: SetHsr
+  nameWithType: MdbxEnvironment.SetHsr
+  fullName: MDBX.MdbxEnvironment.SetHsr
+- uid: MDBX.Native.Types.MdbxHsrFunc
+  commentId: T:MDBX.Native.Types.MdbxHsrFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxHsrFunc.html
+  name: MdbxHsrFunc
+  nameWithType: MdbxHsrFunc
+  fullName: MDBX.Native.Types.MdbxHsrFunc
+- uid: MDBX.MdbxEnvironment.GetHsr*
+  commentId: Overload:MDBX.MdbxEnvironment.GetHsr
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetHsr
+  name: GetHsr
+  nameWithType: MdbxEnvironment.GetHsr
+  fullName: MDBX.MdbxEnvironment.GetHsr
+- uid: MDBX.MdbxEnvironment.SetUserContext*
+  commentId: Overload:MDBX.MdbxEnvironment.SetUserContext
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetUserContext_System_Void__
+  name: SetUserContext
+  nameWithType: MdbxEnvironment.SetUserContext
+  fullName: MDBX.MdbxEnvironment.SetUserContext
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.MdbxEnvironment.GetUserContext*
+  commentId: Overload:MDBX.MdbxEnvironment.GetUserContext
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetUserContext
+  name: GetUserContext
+  nameWithType: MdbxEnvironment.GetUserContext
+  fullName: MDBX.MdbxEnvironment.GetUserContext
+- uid: MDBX.MdbxEnvironment.Path*
+  commentId: Overload:MDBX.MdbxEnvironment.Path
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Path
+  name: Path
+  nameWithType: MdbxEnvironment.Path
+  fullName: MDBX.MdbxEnvironment.Path
+- uid: MDBX.MdbxEnvironment.FileDescriptor*
+  commentId: Overload:MDBX.MdbxEnvironment.FileDescriptor
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_FileDescriptor
+  name: FileDescriptor
+  nameWithType: MdbxEnvironment.FileDescriptor
+  fullName: MDBX.MdbxEnvironment.FileDescriptor
+- uid: MDBX.MdbxEnvironment.GetMaxKeySize*
+  commentId: Overload:MDBX.MdbxEnvironment.GetMaxKeySize
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetMaxKeySize_MDBX_Native_Types_MdbxDbFlags_
+  name: GetMaxKeySize
+  nameWithType: MdbxEnvironment.GetMaxKeySize
+  fullName: MDBX.MdbxEnvironment.GetMaxKeySize
+- uid: MDBX.Native.Types.MdbxDbFlags
+  commentId: T:MDBX.Native.Types.MdbxDbFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDbFlags.html
+  name: MdbxDbFlags
+  nameWithType: MdbxDbFlags
+  fullName: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.MdbxEnvironment.GetMaxValueSize*
+  commentId: Overload:MDBX.MdbxEnvironment.GetMaxValueSize
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetMaxValueSize_MDBX_Native_Types_MdbxDbFlags_
+  name: GetMaxValueSize
+  nameWithType: MdbxEnvironment.GetMaxValueSize
+  fullName: MDBX.MdbxEnvironment.GetMaxValueSize
+- uid: MDBX.MdbxEnvironment.GetMaxPairSizeForPage*
+  commentId: Overload:MDBX.MdbxEnvironment.GetMaxPairSizeForPage
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetMaxPairSizeForPage_MDBX_Native_Types_MdbxDbFlags_
+  name: GetMaxPairSizeForPage
+  nameWithType: MdbxEnvironment.GetMaxPairSizeForPage
+  fullName: MDBX.MdbxEnvironment.GetMaxPairSizeForPage
+- uid: MDBX.MdbxEnvironment.GetMaxValueSizeForPage*
+  commentId: Overload:MDBX.MdbxEnvironment.GetMaxValueSizeForPage
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetMaxValueSizeForPage_MDBX_Native_Types_MdbxDbFlags_
+  name: GetMaxValueSizeForPage
+  nameWithType: MdbxEnvironment.GetMaxValueSizeForPage
+  fullName: MDBX.MdbxEnvironment.GetMaxValueSizeForPage
+- uid: MDBX.MdbxEnvironment.DefaultPageSize*
+  commentId: Overload:MDBX.MdbxEnvironment.DefaultPageSize
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_DefaultPageSize
+  name: DefaultPageSize
+  nameWithType: MdbxEnvironment.DefaultPageSize
+  fullName: MDBX.MdbxEnvironment.DefaultPageSize
+- uid: MDBX.MdbxEnvironment.GetSystemRamInfo*
+  commentId: Overload:MDBX.MdbxEnvironment.GetSystemRamInfo
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetSystemRamInfo_System_IntPtr__System_IntPtr__System_IntPtr__
+  name: GetSystemRamInfo
+  nameWithType: MdbxEnvironment.GetSystemRamInfo
+  fullName: MDBX.MdbxEnvironment.GetSystemRamInfo
+- uid: MDBX.MdbxEnvironment.IsReadaheadReasonable*
+  commentId: Overload:MDBX.MdbxEnvironment.IsReadaheadReasonable
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_IsReadaheadReasonable_System_UIntPtr_System_IntPtr_
+  name: IsReadaheadReasonable
+  nameWithType: MdbxEnvironment.IsReadaheadReasonable
+  fullName: MDBX.MdbxEnvironment.IsReadaheadReasonable
+- uid: MDBX.MdbxEnvironment.LimitsDatabaseSizeMin*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsDatabaseSizeMin
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsDatabaseSizeMin_System_IntPtr_
+  name: LimitsDatabaseSizeMin
+  nameWithType: MdbxEnvironment.LimitsDatabaseSizeMin
+  fullName: MDBX.MdbxEnvironment.LimitsDatabaseSizeMin
+- uid: MDBX.MdbxEnvironment.LimitsDatabaseSizeMax*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsDatabaseSizeMax
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsDatabaseSizeMax_System_IntPtr_
+  name: LimitsDatabaseSizeMax
+  nameWithType: MdbxEnvironment.LimitsDatabaseSizeMax
+  fullName: MDBX.MdbxEnvironment.LimitsDatabaseSizeMax
+- uid: MDBX.MdbxEnvironment.LimitsKeySizeMin*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsKeySizeMin
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsKeySizeMin_MDBX_Native_Types_MdbxDbFlags_
+  name: LimitsKeySizeMin
+  nameWithType: MdbxEnvironment.LimitsKeySizeMin
+  fullName: MDBX.MdbxEnvironment.LimitsKeySizeMin
+- uid: MDBX.MdbxEnvironment.LimitsKeySizeMax*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsKeySizeMax
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsKeySizeMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: LimitsKeySizeMax
+  nameWithType: MdbxEnvironment.LimitsKeySizeMax
+  fullName: MDBX.MdbxEnvironment.LimitsKeySizeMax
+- uid: MDBX.MdbxEnvironment.LimitsValueSizeMin*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsValueSizeMin
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsValueSizeMin_MDBX_Native_Types_MdbxDbFlags_
+  name: LimitsValueSizeMin
+  nameWithType: MdbxEnvironment.LimitsValueSizeMin
+  fullName: MDBX.MdbxEnvironment.LimitsValueSizeMin
+- uid: MDBX.MdbxEnvironment.LimitsValueSizeMax*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsValueSizeMax
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsValueSizeMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: LimitsValueSizeMax
+  nameWithType: MdbxEnvironment.LimitsValueSizeMax
+  fullName: MDBX.MdbxEnvironment.LimitsValueSizeMax
+- uid: MDBX.MdbxEnvironment.LimitsPairSizeForPageMax*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsPairSizeForPageMax
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsPairSizeForPageMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: LimitsPairSizeForPageMax
+  nameWithType: MdbxEnvironment.LimitsPairSizeForPageMax
+  fullName: MDBX.MdbxEnvironment.LimitsPairSizeForPageMax
+- uid: MDBX.MdbxEnvironment.LimitsValueSizeForPageMax*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsValueSizeForPageMax
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsValueSizeForPageMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: LimitsValueSizeForPageMax
+  nameWithType: MdbxEnvironment.LimitsValueSizeForPageMax
+  fullName: MDBX.MdbxEnvironment.LimitsValueSizeForPageMax
+- uid: MDBX.MdbxEnvironment.LimitsTransactionSizeMax*
+  commentId: Overload:MDBX.MdbxEnvironment.LimitsTransactionSizeMax
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LimitsTransactionSizeMax_System_IntPtr_
+  name: LimitsTransactionSizeMax
+  nameWithType: MdbxEnvironment.LimitsTransactionSizeMax
+  fullName: MDBX.MdbxEnvironment.LimitsTransactionSizeMax
+- uid: MDBX.MdbxEnvironment.OpenDatabase*
+  commentId: Overload:MDBX.MdbxEnvironment.OpenDatabase
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_OpenDatabase_System_String_MDBX_Native_Types_MdbxDbFlags_
+  name: OpenDatabase
+  nameWithType: MdbxEnvironment.OpenDatabase
+  fullName: MDBX.MdbxEnvironment.OpenDatabase
+- uid: MDBX.MdbxEnvironment.BeginTransaction*
+  commentId: Overload:MDBX.MdbxEnvironment.BeginTransaction
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_BeginTransaction_MDBX_Native_Types_MdbxTxnFlags_
+  name: BeginTransaction
+  nameWithType: MdbxEnvironment.BeginTransaction
+  fullName: MDBX.MdbxEnvironment.BeginTransaction
+- uid: MDBX.Native.Types.MdbxTxnFlags
+  commentId: T:MDBX.Native.Types.MdbxTxnFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxTxnFlags.html
+  name: MdbxTxnFlags
+  nameWithType: MdbxTxnFlags
+  fullName: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.MdbxTransaction
+  commentId: T:MDBX.MdbxTransaction
+  parent: MDBX
+  href: MDBX.MdbxTransaction.html
+  name: MdbxTransaction
+  nameWithType: MdbxTransaction
+  fullName: MDBX.MdbxTransaction
+- uid: MDBX.MdbxEnvironment.OpenDatabaseEx*
+  commentId: Overload:MDBX.MdbxEnvironment.OpenDatabaseEx
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_OpenDatabaseEx_System_String_MDBX_Native_Types_MdbxDbFlags_
+  name: OpenDatabaseEx
+  nameWithType: MdbxEnvironment.OpenDatabaseEx
+  fullName: MDBX.MdbxEnvironment.OpenDatabaseEx
+- uid: MDBX.MdbxDatabase
+  commentId: T:MDBX.MdbxDatabase
+  parent: MDBX
+  href: MDBX.MdbxDatabase.html
+  name: MdbxDatabase
+  nameWithType: MdbxDatabase
+  fullName: MDBX.MdbxDatabase
+- uid: MDBX.MdbxEnvironment.CloseDatabase*
+  commentId: Overload:MDBX.MdbxEnvironment.CloseDatabase
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_CloseDatabase_System_UInt32_
+  name: CloseDatabase
+  nameWithType: MdbxEnvironment.CloseDatabase
+  fullName: MDBX.MdbxEnvironment.CloseDatabase
+- uid: MDBX.MdbxEnvironment.DropDatabase*
+  commentId: Overload:MDBX.MdbxEnvironment.DropDatabase
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_DropDatabase_System_UInt32_System_Boolean_
+  name: DropDatabase
+  nameWithType: MdbxEnvironment.DropDatabase
+  fullName: MDBX.MdbxEnvironment.DropDatabase
+- uid: MDBX.MdbxEnvironment.RenameDatabase*
+  commentId: Overload:MDBX.MdbxEnvironment.RenameDatabase
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_RenameDatabase_System_UInt32_System_String_
+  name: RenameDatabase
+  nameWithType: MdbxEnvironment.RenameDatabase
+  fullName: MDBX.MdbxEnvironment.RenameDatabase
+- uid: MDBX.MdbxEnvironment.EnumerateTables*
+  commentId: Overload:MDBX.MdbxEnvironment.EnumerateTables
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_EnumerateTables_System_Action_System_String_MDBX_Native_Types_MdbxDbFlags_System_UInt32__
+  name: EnumerateTables
+  nameWithType: MdbxEnvironment.EnumerateTables
+  fullName: MDBX.MdbxEnvironment.EnumerateTables
+- uid: System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32}
+  commentId: T:System.Action{System.String,MDBX.Native.Types.MdbxDbFlags,System.UInt32}
+  parent: System
+  definition: System.Action`3
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<string, MdbxDbFlags, uint>
+  nameWithType: Action<string, MdbxDbFlags, uint>
+  fullName: System.Action<string, MDBX.Native.Types.MdbxDbFlags, uint>
+  nameWithType.vb: Action(Of String, MdbxDbFlags, UInteger)
+  fullName.vb: System.Action(Of String, MDBX.Native.Types.MdbxDbFlags, UInteger)
+  name.vb: Action(Of String, MdbxDbFlags, UInteger)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxDbFlags
+    name: MdbxDbFlags
+    href: MDBX.Native.Types.MdbxDbFlags.html
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxDbFlags
+    name: MdbxDbFlags
+    href: MDBX.Native.Types.MdbxDbFlags.html
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: System.Action`3
+  commentId: T:System.Action`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<T1, T2, T3>
+  nameWithType: Action<T1, T2, T3>
+  fullName: System.Action<T1, T2, T3>
+  nameWithType.vb: Action(Of T1, T2, T3)
+  fullName.vb: System.Action(Of T1, T2, T3)
+  name.vb: Action(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: MDBX.MdbxEnvironment.CheckReaders*
+  commentId: Overload:MDBX.MdbxEnvironment.CheckReaders
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_CheckReaders_System_Int32__
+  name: CheckReaders
+  nameWithType: MdbxEnvironment.CheckReaders
+  fullName: MDBX.MdbxEnvironment.CheckReaders
+- uid: MDBX.MdbxEnvironment.EnumerateReaders*
+  commentId: Overload:MDBX.MdbxEnvironment.EnumerateReaders
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_EnumerateReaders_System_Action_System_Int32_System_Int32_System_UInt32_System_UInt32_System_UInt64_System_UInt64_System_String__
+  name: EnumerateReaders
+  nameWithType: MdbxEnvironment.EnumerateReaders
+  fullName: MDBX.MdbxEnvironment.EnumerateReaders
+- uid: System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String}
+  commentId: T:System.Action{System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt64,System.String}
+  parent: System
+  definition: System.Action`7
+  href: https://learn.microsoft.com/dotnet/api/system.action-7
+  name: Action<int, int, uint, uint, ulong, ulong, string>
+  nameWithType: Action<int, int, uint, uint, ulong, ulong, string>
+  fullName: System.Action<int, int, uint, uint, ulong, ulong, string>
+  nameWithType.vb: Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String)
+  fullName.vb: System.Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String)
+  name.vb: Action(Of Integer, Integer, UInteger, UInteger, ULong, ULong, String)
+  spec.csharp:
+  - uid: System.Action`7
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-7
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: ','
+  - name: " "
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`7
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-7
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: ','
+  - name: " "
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Action`7
+  commentId: T:System.Action`7
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-7
+  name: Action<T1, T2, T3, T4, T5, T6, T7>
+  nameWithType: Action<T1, T2, T3, T4, T5, T6, T7>
+  fullName: System.Action<T1, T2, T3, T4, T5, T6, T7>
+  nameWithType.vb: Action(Of T1, T2, T3, T4, T5, T6, T7)
+  fullName.vb: System.Action(Of T1, T2, T3, T4, T5, T6, T7)
+  name.vb: Action(Of T1, T2, T3, T4, T5, T6, T7)
+  spec.csharp:
+  - uid: System.Action`7
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-7
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`7
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-7
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: )
+- uid: MDBX.MdbxEnvironment.RegisterThread*
+  commentId: Overload:MDBX.MdbxEnvironment.RegisterThread
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_RegisterThread
+  name: RegisterThread
+  nameWithType: MdbxEnvironment.RegisterThread
+  fullName: MDBX.MdbxEnvironment.RegisterThread
+- uid: MDBX.MdbxEnvironment.UnregisterThread*
+  commentId: Overload:MDBX.MdbxEnvironment.UnregisterThread
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_UnregisterThread
+  name: UnregisterThread
+  nameWithType: MdbxEnvironment.UnregisterThread
+  fullName: MDBX.MdbxEnvironment.UnregisterThread
+- uid: MDBX.MdbxEnvironment.LockTransaction*
+  commentId: Overload:MDBX.MdbxEnvironment.LockTransaction
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_LockTransaction_System_Boolean_
+  name: LockTransaction
+  nameWithType: MdbxEnvironment.LockTransaction
+  fullName: MDBX.MdbxEnvironment.LockTransaction
+- uid: MDBX.MdbxEnvironment.UnlockTransaction*
+  commentId: Overload:MDBX.MdbxEnvironment.UnlockTransaction
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_UnlockTransaction
+  name: UnlockTransaction
+  nameWithType: MdbxEnvironment.UnlockTransaction
+  fullName: MDBX.MdbxEnvironment.UnlockTransaction
+- uid: MDBX.MdbxEnvironment.SetupDebug*
+  commentId: Overload:MDBX.MdbxEnvironment.SetupDebug
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetupDebug_MDBX_Native_Types_MdbxLogLevel_MDBX_Native_Types_MdbxDebugFlags_MDBX_Native_Types_MdbxDebugFunc_
+  name: SetupDebug
+  nameWithType: MdbxEnvironment.SetupDebug
+  fullName: MDBX.MdbxEnvironment.SetupDebug
+- uid: MDBX.Native.Types.MdbxLogLevel
+  commentId: T:MDBX.Native.Types.MdbxLogLevel
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: MdbxLogLevel
+  nameWithType: MdbxLogLevel
+  fullName: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MdbxDebugFlags
+  commentId: T:MDBX.Native.Types.MdbxDebugFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFlags.html
+  name: MdbxDebugFlags
+  nameWithType: MdbxDebugFlags
+  fullName: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MdbxDebugFunc
+  commentId: T:MDBX.Native.Types.MdbxDebugFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFunc.html
+  name: MdbxDebugFunc
+  nameWithType: MdbxDebugFunc
+  fullName: MDBX.Native.Types.MdbxDebugFunc
+- uid: MDBX.MdbxEnvironment.SetupDebugNoFormat*
+  commentId: Overload:MDBX.MdbxEnvironment.SetupDebugNoFormat
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_SetupDebugNoFormat_MDBX_Native_Types_MdbxLogLevel_MDBX_Native_Types_MdbxDebugFlags_MDBX_Native_Types_MdbxDebugFuncNofmt_System_Byte__System_UIntPtr_
+  name: SetupDebugNoFormat
+  nameWithType: MdbxEnvironment.SetupDebugNoFormat
+  fullName: MDBX.MdbxEnvironment.SetupDebugNoFormat
+- uid: MDBX.Native.Types.MdbxDebugFuncNofmt
+  commentId: T:MDBX.Native.Types.MdbxDebugFuncNofmt
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFuncNofmt.html
+  name: MdbxDebugFuncNofmt
+  nameWithType: MdbxDebugFuncNofmt
+  fullName: MDBX.Native.Types.MdbxDebugFuncNofmt
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: MDBX.MdbxEnvironment.GetErrorMessage*
+  commentId: Overload:MDBX.MdbxEnvironment.GetErrorMessage
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_GetErrorMessage_System_Int32_
+  name: GetErrorMessage
+  nameWithType: MdbxEnvironment.GetErrorMessage
+  fullName: MDBX.MdbxEnvironment.GetErrorMessage
+- uid: MDBX.MdbxEnvironment.NativeEnv*
+  commentId: Overload:MDBX.MdbxEnvironment.NativeEnv
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_NativeEnv
+  name: NativeEnv
+  nameWithType: MdbxEnvironment.NativeEnv
+  fullName: MDBX.MdbxEnvironment.NativeEnv
+- uid: MDBX.Native.Types.MDBX_env*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_env.html
+  name: MDBX_env*
+  nameWithType: MDBX_env*
+  fullName: MDBX.Native.Types.MDBX_env*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+- uid: MDBX.MdbxEnvironment.Dispose*
+  commentId: Overload:MDBX.MdbxEnvironment.Dispose
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Dispose
+  name: Dispose
+  nameWithType: MdbxEnvironment.Dispose
+  fullName: MDBX.MdbxEnvironment.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: MDBX.MdbxEnvironment.Finalize*
+  commentId: Overload:MDBX.MdbxEnvironment.Finalize
+  href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Finalize
+  name: ~MdbxEnvironment
+  nameWithType: MdbxEnvironment.~MdbxEnvironment
+  fullName: MDBX.MdbxEnvironment.~MdbxEnvironment
+  spec.csharp:
+  - name: "~"
+  - uid: MDBX.MdbxEnvironment.Finalize*
+    name: MdbxEnvironment
+    href: MDBX.MdbxEnvironment.html#MDBX_MdbxEnvironment_Finalize

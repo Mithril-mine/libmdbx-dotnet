@@ -1,0 +1,1905 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Settings.NativeMdbx
+  id: NativeMdbx
+  parent: MDBX.Native.Bindings.Settings
+  children:
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*,System.IntPtr*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*,System.UInt32*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr(MDBX.Native.Types.MDBX_env*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize(MDBX.Native.Types.MDBX_env*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*,System.Byte**)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*,System.Char**)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx(MDBX.Native.Types.MDBX_env*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*,)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*,System.Void*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo(System.IntPtr*,System.IntPtr*,System.IntPtr*)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax(System.IntPtr)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin(System.IntPtr)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax(System.IntPtr)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin(MDBX.Native.Types.MdbxDbFlags)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits(System.UInt64,System.UInt64,System.Int32,System.Byte*,System.UIntPtr)
+  - MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents(System.UInt64,System.UInt64,System.Byte*,System.UIntPtr)
+  langs:
+  - csharp
+  - vb
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx
+  type: Class
+  source:
+    remote:
+      path: MDBX/Bindings/Settings/NativeMdbx.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeMdbx
+    path: ../MDBX/Bindings/Settings/NativeMdbx.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Частичный класс для нативных методов настроек libmdbx.
+  example: []
+  syntax:
+    content: public static class NativeMdbx
+    content.vb: Public Module NativeMdbx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64)
+  id: MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvSetOption(MDBX_env*, MdbxOption, ulong)
+  nameWithType: NativeMdbx.MdbxEnvSetOption(MDBX_env*, MdbxOption, ulong)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxOption, ulong)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Устанавливает параметр окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvSetOption(MDBX_env* env, MdbxOption option, ulong value)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: option
+      type: MDBX.Native.Types.MdbxOption
+      description: Параметр.
+    - id: value
+      type: System.UInt64
+      description: Значение.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvSetOption(env As MDBX_env*, [option] As MdbxOption, value As ULong) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption*
+  nameWithType.vb: NativeMdbx.MdbxEnvSetOption(MDBX_env*, MdbxOption, ULong)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxOption, ULong)
+  name.vb: MdbxEnvSetOption(MDBX_env*, MdbxOption, ULong)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64*)
+  id: MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxOption,System.UInt64*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetOption(MDBX_env*, MdbxOption, ulong*)
+  nameWithType: NativeMdbx.MdbxEnvGetOption(MDBX_env*, MdbxOption, ulong*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxOption, ulong*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает параметр окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetOption(MDBX_env* env, MdbxOption option, ulong* pValue)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: option
+      type: MDBX.Native.Types.MdbxOption
+      description: Параметр.
+    - id: pValue
+      type: System.UInt64*
+      description: Указатель для значения.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvGetOption(env As MDBX_env*, [option] As MdbxOption, pValue As ULong*) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption*
+  nameWithType.vb: NativeMdbx.MdbxEnvGetOption(MDBX_env*, MdbxOption, ULong*)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxOption, ULong*)
+  name.vb: MdbxEnvGetOption(MDBX_env*, MdbxOption, ULong*)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  id: MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxEnvFlags,System.Boolean)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvSetFlags(MDBX_env*, MdbxEnvFlags, bool)
+  nameWithType: NativeMdbx.MdbxEnvSetFlags(MDBX_env*, MdbxEnvFlags, bool)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxEnvFlags, bool)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Устанавливает флаги окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvSetFlags(MDBX_env* env, MdbxEnvFlags flags, bool onoff)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxEnvFlags
+      description: Флаги.
+    - id: onoff
+      type: System.Boolean
+      description: Включить или выключить.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvSetFlags(env As MDBX_env*, flags As MdbxEnvFlags, onoff As Boolean) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags*
+  nameWithType.vb: NativeMdbx.MdbxEnvSetFlags(MDBX_env*, MdbxEnvFlags, Boolean)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxEnvFlags, Boolean)
+  name.vb: MdbxEnvSetFlags(MDBX_env*, MdbxEnvFlags, Boolean)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*,System.UInt32*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*,System.UInt32*)
+  id: MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*,System.UInt32*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetFlags(MDBX_env*, uint*)
+  nameWithType: NativeMdbx.MdbxEnvGetFlags(MDBX_env*, uint*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*, uint*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает флаги окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetFlags(MDBX_env* env, uint* flags)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: flags
+      type: System.UInt32*
+      description: Указатель для флагов.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvGetFlags(env As MDBX_env*, flags As UInteger*) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags*
+  nameWithType.vb: NativeMdbx.MdbxEnvGetFlags(MDBX_env*, UInteger*)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags(MDBX.Native.Types.MDBX_env*, UInteger*)
+  name.vb: MdbxEnvGetFlags(MDBX_env*, UInteger*)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
+  id: MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvSetGeometry(MDBX_env*, nint, nint, nint, nint, nint, nint)
+  nameWithType: NativeMdbx.MdbxEnvSetGeometry(MDBX_env*, nint, nint, nint, nint, nint, nint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*, nint, nint, nint, nint, nint, nint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Устанавливает геометрию окружения (размеры файлов).
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvSetGeometry(MDBX_env* env, nint sizeLower, nint sizeNow, nint sizeUpper, nint growthStep, nint shrinkThreshold, nint pagesize)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: sizeLower
+      type: System.IntPtr
+      description: Нижний предел размера.
+    - id: sizeNow
+      type: System.IntPtr
+      description: Текущий размер.
+    - id: sizeUpper
+      type: System.IntPtr
+      description: Верхний предел размера.
+    - id: growthStep
+      type: System.IntPtr
+      description: Шаг роста.
+    - id: shrinkThreshold
+      type: System.IntPtr
+      description: Порог сжатия.
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvSetGeometry(env As MDBX_env*, sizeLower As IntPtr, sizeNow As IntPtr, sizeUpper As IntPtr, growthStep As IntPtr, shrinkThreshold As IntPtr, pagesize As IntPtr) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry*
+  nameWithType.vb: NativeMdbx.MdbxEnvSetGeometry(MDBX_env*, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry(MDBX.Native.Types.MDBX_env*, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr)
+  name.vb: MdbxEnvSetGeometry(MDBX_env*, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*,)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*,)
+  id: MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*,)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvSetHsr(MDBX_env*, delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int>)
+  nameWithType: NativeMdbx.MdbxEnvSetHsr(MDBX_env*, delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int>)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*, delegate* unmanaged[Cdecl]<MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, uint, uint, ulong, uint, nuint, int>)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Устанавливает колбэк Handle-Slow-Readers.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvSetHsr(MDBX_env* env, delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int> hsrCallback)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: hsrCallback
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, uint, uint, ulong, uint, nuint, int>
+      description: Функция колбэка.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvSetHsr(env As MDBX_env*, hsrCallback As ) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr*
+  nameWithType.vb: NativeMdbx.MdbxEnvSetHsr(MDBX_env*, )
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr(MDBX.Native.Types.MDBX_env*, )
+  name.vb: MdbxEnvSetHsr(MDBX_env*, )
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr(MDBX.Native.Types.MDBX_env*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr(MDBX.Native.Types.MDBX_env*)
+  id: MdbxEnvGetHsr(MDBX.Native.Types.MDBX_env*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetHsr(MDBX_env*)
+  nameWithType: NativeMdbx.MdbxEnvGetHsr(MDBX_env*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr(MDBX.Native.Types.MDBX_env*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает колбэк Handle-Slow-Readers.
+  example: []
+  syntax:
+    content: public static extern delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int> MdbxEnvGetHsr(MDBX_env* env)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, uint, uint, ulong, uint, nuint, int>
+      description: Указатель на функцию колбэка.
+    content.vb: 'Public Shared Function MdbxEnvGetHsr(env As MDBX_env*) As '
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*,System.Void*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*,System.Void*)
+  id: MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*,System.Void*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvSetUserctx(MDBX_env*, void*)
+  nameWithType: NativeMdbx.MdbxEnvSetUserctx(MDBX_env*, void*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*, void*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Устанавливает пользовательский контекст окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvSetUserctx(MDBX_env* env, void* ctx)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: ctx
+      type: System.Void*
+      description: Пользовательский контекст.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvSetUserctx(env As MDBX_env*, ctx As Void*) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx*
+  nameWithType.vb: NativeMdbx.MdbxEnvSetUserctx(MDBX_env*, Void*)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx(MDBX.Native.Types.MDBX_env*, Void*)
+  name.vb: MdbxEnvSetUserctx(MDBX_env*, Void*)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx(MDBX.Native.Types.MDBX_env*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx(MDBX.Native.Types.MDBX_env*)
+  id: MdbxEnvGetUserctx(MDBX.Native.Types.MDBX_env*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetUserctx(MDBX_env*)
+  nameWithType: NativeMdbx.MdbxEnvGetUserctx(MDBX_env*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx(MDBX.Native.Types.MDBX_env*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает пользовательский контекст окружения.
+  example: []
+  syntax:
+    content: public static extern void* MdbxEnvGetUserctx(MDBX_env* env)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    return:
+      type: System.Void*
+      description: Указатель на пользовательский контекст.
+    content.vb: Public Shared Function MdbxEnvGetUserctx(env As MDBX_env*) As Void*
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*,System.Byte**)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*,System.Byte**)
+  id: MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*,System.Byte**)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetPath(MDBX_env*, byte**)
+  nameWithType: NativeMdbx.MdbxEnvGetPath(MDBX_env*, byte**)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*, byte**)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает путь к окружению.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetPath(MDBX_env* env, byte** dest)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: dest
+      type: System.Byte**
+      description: Буфер для пути.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvGetPath(env As MDBX_env*, dest As Byte**) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath*
+  nameWithType.vb: NativeMdbx.MdbxEnvGetPath(MDBX_env*, Byte**)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(MDBX.Native.Types.MDBX_env*, Byte**)
+  name.vb: MdbxEnvGetPath(MDBX_env*, Byte**)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*,System.Char**)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*,System.Char**)
+  id: MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*,System.Char**)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetPathW(MDBX_env*, char**)
+  nameWithType: NativeMdbx.MdbxEnvGetPathW(MDBX_env*, char**)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*, char**)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает путь к окружению (wide version).
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetPathW(MDBX_env* env, char** dest)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: dest
+      type: System.Char**
+      description: Буфер для пути.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvGetPathW(env As MDBX_env*, dest As Char**) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW*
+  nameWithType.vb: NativeMdbx.MdbxEnvGetPathW(MDBX_env*, Char**)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(MDBX.Native.Types.MDBX_env*, Char**)
+  name.vb: MdbxEnvGetPathW(MDBX_env*, Char**)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*,System.IntPtr*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*,System.IntPtr*)
+  id: MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*,System.IntPtr*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetFd(MDBX_env*, nint*)
+  nameWithType: NativeMdbx.MdbxEnvGetFd(MDBX_env*, nint*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*, nint*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает дескриптор файла окружения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetFd(MDBX_env* env, nint* fd)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: fd
+      type: System.IntPtr*
+      description: Указатель для дескриптора.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxEnvGetFd(env As MDBX_env*, fd As IntPtr*) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd*
+  nameWithType.vb: NativeMdbx.MdbxEnvGetFd(MDBX_env*, IntPtr*)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd(MDBX.Native.Types.MDBX_env*, System.IntPtr*)
+  name.vb: MdbxEnvGetFd(MDBX_env*, IntPtr*)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxEnvGetMaxkeysizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetMaxkeysizeEx(MDBX_env*, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxEnvGetMaxkeysizeEx(MDBX_env*, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер ключа.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetMaxkeysizeEx(MDBX_env* env, MdbxDbFlags flags)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+      description: Максимальный размер ключа.
+    content.vb: Public Shared Function MdbxEnvGetMaxkeysizeEx(env As MDBX_env*, flags As MdbxDbFlags) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize(MDBX.Native.Types.MDBX_env*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize(MDBX.Native.Types.MDBX_env*)
+  id: MdbxEnvGetMaxkeysize(MDBX.Native.Types.MDBX_env*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetMaxkeysize(MDBX_env*)
+  nameWithType: NativeMdbx.MdbxEnvGetMaxkeysize(MDBX_env*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize(MDBX.Native.Types.MDBX_env*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер ключа (устаревшая версия без флагов).
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetMaxkeysize(MDBX_env* env)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    return:
+      type: System.Int32
+      description: Максимальный размер ключа.
+    content.vb: Public Shared Function MdbxEnvGetMaxkeysize(env As MDBX_env*) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxEnvGetMaxvalsizeEx(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetMaxvalsizeEx(MDBX_env*, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxEnvGetMaxvalsizeEx(MDBX_env*, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер значения.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetMaxvalsizeEx(MDBX_env* env, MdbxDbFlags flags)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+      description: Максимальный размер значения.
+    content.vb: Public Shared Function MdbxEnvGetMaxvalsizeEx(env As MDBX_env*, flags As MdbxDbFlags) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxEnvGetPairsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetPairsize4pageMax(MDBX_env*, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxEnvGetPairsize4pageMax(MDBX_env*, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер пары ключ-значение для страницы.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetPairsize4pageMax(MDBX_env* env, MdbxDbFlags flags)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+      description: Максимальный размер пары.
+    content.vb: Public Shared Function MdbxEnvGetPairsize4pageMax(env As MDBX_env*, flags As MdbxDbFlags) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxEnvGetValsize4pageMax(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxEnvGetValsize4pageMax(MDBX_env*, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxEnvGetValsize4pageMax(MDBX_env*, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax(MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер значения для страницы.
+  example: []
+  syntax:
+    content: public static extern int MdbxEnvGetValsize4pageMax(MDBX_env* env, MdbxDbFlags flags)
+    parameters:
+    - id: env
+      type: MDBX.Native.Types.MDBX_env*
+      description: Окружение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.Int32
+      description: Максимальный размер значения.
+    content.vb: Public Shared Function MdbxEnvGetValsize4pageMax(env As MDBX_env*, flags As MdbxDbFlags) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize
+  id: MdbxDefaultPagesize
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxDefaultPagesize()
+  nameWithType: NativeMdbx.MdbxDefaultPagesize()
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize()
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает размер страницы по умолчанию.
+  example: []
+  syntax:
+    content: public static extern nuint MdbxDefaultPagesize()
+    return:
+      type: System.UIntPtr
+      description: Размер страницы в байтах.
+    content.vb: Public Shared Function MdbxDefaultPagesize() As UIntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo(System.IntPtr*,System.IntPtr*,System.IntPtr*)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo(System.IntPtr*,System.IntPtr*,System.IntPtr*)
+  id: MdbxGetSysraminfo(System.IntPtr*,System.IntPtr*,System.IntPtr*)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxGetSysraminfo(nint*, nint*, nint*)
+  nameWithType: NativeMdbx.MdbxGetSysraminfo(nint*, nint*, nint*)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo(nint*, nint*, nint*)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает информацию о системной RAM.
+  example: []
+  syntax:
+    content: public static extern int MdbxGetSysraminfo(nint* pageSize, nint* totalPages, nint* availPages)
+    parameters:
+    - id: pageSize
+      type: System.IntPtr*
+      description: Размер страницы.
+    - id: totalPages
+      type: System.IntPtr*
+      description: Общее количество страниц.
+    - id: availPages
+      type: System.IntPtr*
+      description: Доступное количество страниц.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxGetSysraminfo(pageSize As IntPtr*, totalPages As IntPtr*, availPages As IntPtr*) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo*
+  nameWithType.vb: NativeMdbx.MdbxGetSysraminfo(IntPtr*, IntPtr*, IntPtr*)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo(System.IntPtr*, System.IntPtr*, System.IntPtr*)
+  name.vb: MdbxGetSysraminfo(IntPtr*, IntPtr*, IntPtr*)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  id: MdbxIsReadaheadReasonable(System.UIntPtr,System.IntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxIsReadaheadReasonable(nuint, nint)
+  nameWithType: NativeMdbx.MdbxIsReadaheadReasonable(nuint, nint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable(nuint, nint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Проверяет, разумно ли использовать readahead для заданного объема.
+  example: []
+  syntax:
+    content: public static extern int MdbxIsReadaheadReasonable(nuint volume, nint redundancy)
+    parameters:
+    - id: volume
+      type: System.UIntPtr
+      description: Объем данных.
+    - id: redundancy
+      type: System.IntPtr
+      description: Избыточность.
+    return:
+      type: System.Int32
+      description: Код ошибки (0 при успехе).
+    content.vb: Public Shared Function MdbxIsReadaheadReasonable(volume As UIntPtr, redundancy As IntPtr) As Integer
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable*
+  nameWithType.vb: NativeMdbx.MdbxIsReadaheadReasonable(UIntPtr, IntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable(System.UIntPtr, System.IntPtr)
+  name.vb: MdbxIsReadaheadReasonable(UIntPtr, IntPtr)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin(System.IntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin(System.IntPtr)
+  id: MdbxLimitsDbsizeMin(System.IntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsDbsizeMin(nint)
+  nameWithType: NativeMdbx.MdbxLimitsDbsizeMin(nint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin(nint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает минимальный размер базы данных.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsDbsizeMin(nint pagesize)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.IntPtr
+      description: Минимальный размер.
+    content.vb: Public Shared Function MdbxLimitsDbsizeMin(pagesize As IntPtr) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin*
+  nameWithType.vb: NativeMdbx.MdbxLimitsDbsizeMin(IntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin(System.IntPtr)
+  name.vb: MdbxLimitsDbsizeMin(IntPtr)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax(System.IntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax(System.IntPtr)
+  id: MdbxLimitsDbsizeMax(System.IntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsDbsizeMax(nint)
+  nameWithType: NativeMdbx.MdbxLimitsDbsizeMax(nint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax(nint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер базы данных.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsDbsizeMax(nint pagesize)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.IntPtr
+      description: Максимальный размер.
+    content.vb: Public Shared Function MdbxLimitsDbsizeMax(pagesize As IntPtr) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax*
+  nameWithType.vb: NativeMdbx.MdbxLimitsDbsizeMax(IntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax(System.IntPtr)
+  name.vb: MdbxLimitsDbsizeMax(IntPtr)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin(MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxLimitsKeysizeMin(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsKeysizeMin(MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxLimitsKeysizeMin(MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает минимальный размер ключа.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsKeysizeMin(MdbxDbFlags flags)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+      description: Минимальный размер ключа.
+    content.vb: Public Shared Function MdbxLimitsKeysizeMin(flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxLimitsKeysizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsKeysizeMax(nint, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxLimitsKeysizeMax(nint, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер ключа.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsKeysizeMax(nint pagesize, MdbxDbFlags flags)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+      description: Максимальный размер ключа.
+    content.vb: Public Shared Function MdbxLimitsKeysizeMax(pagesize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax*
+  nameWithType.vb: NativeMdbx.MdbxLimitsKeysizeMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: MdbxLimitsKeysizeMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin(MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin(MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxLimitsValsizeMin(MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsValsizeMin(MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxLimitsValsizeMin(MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin(MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает минимальный размер значения.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsValsizeMin(MdbxDbFlags flags)
+    parameters:
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+      description: Минимальный размер значения.
+    content.vb: Public Shared Function MdbxLimitsValsizeMin(flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin*
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxLimitsValsizeMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsValsizeMax(nint, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxLimitsValsizeMax(nint, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер значения.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsValsizeMax(nint pagesize, MdbxDbFlags flags)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+      description: Максимальный размер значения.
+    content.vb: Public Shared Function MdbxLimitsValsizeMax(pagesize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax*
+  nameWithType.vb: NativeMdbx.MdbxLimitsValsizeMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: MdbxLimitsValsizeMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxLimitsPairsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsPairsize4pageMax(nint, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxLimitsPairsize4pageMax(nint, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер пары ключ-значение для страницы.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsPairsize4pageMax(nint pagesize, MdbxDbFlags flags)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+      description: Максимальный размер пары.
+    content.vb: Public Shared Function MdbxLimitsPairsize4pageMax(pagesize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax*
+  nameWithType.vb: NativeMdbx.MdbxLimitsPairsize4pageMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: MdbxLimitsPairsize4pageMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  id: MdbxLimitsValsize4pageMax(System.IntPtr,MDBX.Native.Types.MdbxDbFlags)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsValsize4pageMax(nint, MdbxDbFlags)
+  nameWithType: NativeMdbx.MdbxLimitsValsize4pageMax(nint, MdbxDbFlags)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax(nint, MDBX.Native.Types.MdbxDbFlags)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер значения для страницы.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsValsize4pageMax(nint pagesize, MdbxDbFlags flags)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    - id: flags
+      type: MDBX.Native.Types.MdbxDbFlags
+      description: Флаги таблицы.
+    return:
+      type: System.IntPtr
+      description: Максимальный размер значения.
+    content.vb: Public Shared Function MdbxLimitsValsize4pageMax(pagesize As IntPtr, flags As MdbxDbFlags) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax*
+  nameWithType.vb: NativeMdbx.MdbxLimitsValsize4pageMax(IntPtr, MdbxDbFlags)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax(System.IntPtr, MDBX.Native.Types.MdbxDbFlags)
+  name.vb: MdbxLimitsValsize4pageMax(IntPtr, MdbxDbFlags)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax(System.IntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax(System.IntPtr)
+  id: MdbxLimitsTxnsizeMax(System.IntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLimitsTxnsizeMax(nint)
+  nameWithType: NativeMdbx.MdbxLimitsTxnsizeMax(nint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax(nint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Получает максимальный размер транзакции.
+  example: []
+  syntax:
+    content: public static extern nint MdbxLimitsTxnsizeMax(nint pagesize)
+    parameters:
+    - id: pagesize
+      type: System.IntPtr
+      description: Размер страницы.
+    return:
+      type: System.IntPtr
+      description: Максимальный размер транзакции.
+    content.vb: Public Shared Function MdbxLimitsTxnsizeMax(pagesize As IntPtr) As IntPtr
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax*
+  nameWithType.vb: NativeMdbx.MdbxLimitsTxnsizeMax(IntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax(System.IntPtr)
+  name.vb: MdbxLimitsTxnsizeMax(IntPtr)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits(System.UInt64,System.UInt64,System.Int32,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits(System.UInt64,System.UInt64,System.Int32,System.Byte*,System.UIntPtr)
+  id: MdbxRatio2Digits(System.UInt64,System.UInt64,System.Int32,System.Byte*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxRatio2Digits(ulong, ulong, int, byte*, nuint)
+  nameWithType: NativeMdbx.MdbxRatio2Digits(ulong, ulong, int, byte*, nuint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits(ulong, ulong, int, byte*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Преобразует соотношение в строку с заданной точностью.
+  example: []
+  syntax:
+    content: public static extern byte* MdbxRatio2Digits(ulong numerator, ulong denominator, int precision, byte* buffer, nuint bufferSize)
+    parameters:
+    - id: numerator
+      type: System.UInt64
+      description: Числитель.
+    - id: denominator
+      type: System.UInt64
+      description: Знаменатель.
+    - id: precision
+      type: System.Int32
+      description: Точность.
+    - id: buffer
+      type: System.Byte*
+      description: Буфер для результата.
+    - id: bufferSize
+      type: System.UIntPtr
+      description: Размер буфера.
+    return:
+      type: System.Byte*
+      description: Указатель на строку.
+    content.vb: Public Shared Function MdbxRatio2Digits(numerator As ULong, denominator As ULong, precision As Integer, buffer As Byte*, bufferSize As UIntPtr) As Byte*
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits*
+  nameWithType.vb: NativeMdbx.MdbxRatio2Digits(ULong, ULong, Integer, Byte*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits(ULong, ULong, Integer, Byte*, System.UIntPtr)
+  name.vb: MdbxRatio2Digits(ULong, ULong, Integer, Byte*, UIntPtr)
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents(System.UInt64,System.UInt64,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents(System.UInt64,System.UInt64,System.Byte*,System.UIntPtr)
+  id: MdbxRatio2Percents(System.UInt64,System.UInt64,System.Byte*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxRatio2Percents(ulong, ulong, byte*, nuint)
+  nameWithType: NativeMdbx.MdbxRatio2Percents(ulong, ulong, byte*, nuint)
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents(ulong, ulong, byte*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.Settings
+  summary: Преобразует соотношение в проценты.
+  example: []
+  syntax:
+    content: public static extern byte* MdbxRatio2Percents(ulong value, ulong whole, byte* buffer, nuint bufferSize)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: Значение.
+    - id: whole
+      type: System.UInt64
+      description: Целое.
+    - id: buffer
+      type: System.Byte*
+      description: Буфер для результата.
+    - id: bufferSize
+      type: System.UIntPtr
+      description: Размер буфера.
+    return:
+      type: System.Byte*
+      description: Указатель на строку.
+    content.vb: Public Shared Function MdbxRatio2Percents(value As ULong, whole As ULong, buffer As Byte*, bufferSize As UIntPtr) As Byte*
+  overload: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents*
+  nameWithType.vb: NativeMdbx.MdbxRatio2Percents(ULong, ULong, Byte*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents(ULong, ULong, Byte*, System.UIntPtr)
+  name.vb: MdbxRatio2Percents(ULong, ULong, Byte*, UIntPtr)
+references:
+- uid: MDBX.Native.Bindings.Settings
+  commentId: N:MDBX.Native.Bindings.Settings
+  href: MDBX.html
+  name: MDBX.Native.Bindings.Settings
+  nameWithType: MDBX.Native.Bindings.Settings
+  fullName: MDBX.Native.Bindings.Settings
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Settings
+    name: Settings
+    href: MDBX.Native.Bindings.Settings.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.Settings
+    name: Settings
+    href: MDBX.Native.Bindings.Settings.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetOption_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxOption_System_UInt64_
+  name: MdbxEnvSetOption
+  nameWithType: NativeMdbx.MdbxEnvSetOption
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetOption
+- uid: MDBX.Native.Types.MDBX_env*
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_env.html
+  name: MDBX_env*
+  nameWithType: MDBX_env*
+  fullName: MDBX.Native.Types.MDBX_env*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+- uid: MDBX.Native.Types.MdbxOption
+  commentId: T:MDBX.Native.Types.MdbxOption
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxOption.html
+  name: MdbxOption
+  nameWithType: MdbxOption
+  fullName: MDBX.Native.Types.MdbxOption
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetOption_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxOption_System_UInt64__
+  name: MdbxEnvGetOption
+  nameWithType: NativeMdbx.MdbxEnvGetOption
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetOption
+- uid: System.UInt64*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong*
+  nameWithType: ulong*
+  fullName: ulong*
+  nameWithType.vb: ULong*
+  fullName.vb: ULong*
+  name.vb: ULong*
+  spec.csharp:
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '*'
+  spec.vb:
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetFlags_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxEnvFlags_System_Boolean_
+  name: MdbxEnvSetFlags
+  nameWithType: NativeMdbx.MdbxEnvSetFlags
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetFlags
+- uid: MDBX.Native.Types.MdbxEnvFlags
+  commentId: T:MDBX.Native.Types.MdbxEnvFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvFlags.html
+  name: MdbxEnvFlags
+  nameWithType: MdbxEnvFlags
+  fullName: MDBX.Native.Types.MdbxEnvFlags
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetFlags_MDBX_Native_Types_MDBX_env__System_UInt32__
+  name: MdbxEnvGetFlags
+  nameWithType: NativeMdbx.MdbxEnvGetFlags
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFlags
+- uid: System.UInt32*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint*
+  nameWithType: uint*
+  fullName: uint*
+  nameWithType.vb: UInteger*
+  fullName.vb: UInteger*
+  name.vb: UInteger*
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '*'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetGeometry_MDBX_Native_Types_MDBX_env__System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_
+  name: MdbxEnvSetGeometry
+  nameWithType: NativeMdbx.MdbxEnvSetGeometry
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetGeometry
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetHsr_MDBX_Native_Types_MDBX_env___
+  name: MdbxEnvSetHsr
+  nameWithType: NativeMdbx.MdbxEnvSetHsr
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetHsr
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, uint, uint, ulong, uint, nuint, int>
+  isExternal: true
+  href: MDBX.Native.Types.MDBX_env.html
+  name: delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int>
+  nameWithType: delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MDBX_env*, MDBX.Native.Types.MDBX_txn*, uint, uint, ulong, uint, nuint, int>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MDBX_env*,MDBX.Native.Types.MDBX_txn*,System.UInt32,System.UInt32,System.UInt64,System.UInt32,System.UIntPtr)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    href: MDBX.Native.Types.MDBX_env.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    href: MDBX.Native.Types.MDBX_txn.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetHsr_MDBX_Native_Types_MDBX_env__
+  name: MdbxEnvGetHsr
+  nameWithType: NativeMdbx.MdbxEnvGetHsr
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetHsr
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvSetUserctx_MDBX_Native_Types_MDBX_env__System_Void__
+  name: MdbxEnvSetUserctx
+  nameWithType: NativeMdbx.MdbxEnvSetUserctx
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvSetUserctx
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetUserctx_MDBX_Native_Types_MDBX_env__
+  name: MdbxEnvGetUserctx
+  nameWithType: NativeMdbx.MdbxEnvGetUserctx
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetUserctx
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPath_MDBX_Native_Types_MDBX_env__System_Byte___
+  name: MdbxEnvGetPath
+  nameWithType: NativeMdbx.MdbxEnvGetPath
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath
+- uid: System.Byte**
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte**
+  nameWithType: byte**
+  fullName: byte**
+  nameWithType.vb: Byte**
+  fullName.vb: Byte**
+  name.vb: Byte**
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPathW_MDBX_Native_Types_MDBX_env__System_Char___
+  name: MdbxEnvGetPathW
+  nameWithType: NativeMdbx.MdbxEnvGetPathW
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW
+- uid: System.Char**
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char**
+  nameWithType: char**
+  fullName: char**
+  nameWithType.vb: Char**
+  fullName.vb: Char**
+  name.vb: Char**
+  spec.csharp:
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '*'
+  - name: '*'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '*'
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetFd_MDBX_Native_Types_MDBX_env__System_IntPtr__
+  name: MdbxEnvGetFd
+  nameWithType: NativeMdbx.MdbxEnvGetFd
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetFd
+- uid: System.IntPtr*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint*
+  nameWithType: nint*
+  fullName: nint*
+  nameWithType.vb: IntPtr*
+  fullName.vb: System.IntPtr*
+  name.vb: IntPtr*
+  spec.csharp:
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: '*'
+  spec.vb:
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxkeysizeEx_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxEnvGetMaxkeysizeEx
+  nameWithType: NativeMdbx.MdbxEnvGetMaxkeysizeEx
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysizeEx
+- uid: MDBX.Native.Types.MdbxDbFlags
+  commentId: T:MDBX.Native.Types.MdbxDbFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDbFlags.html
+  name: MdbxDbFlags
+  nameWithType: MdbxDbFlags
+  fullName: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxkeysize_MDBX_Native_Types_MDBX_env__
+  name: MdbxEnvGetMaxkeysize
+  nameWithType: NativeMdbx.MdbxEnvGetMaxkeysize
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxkeysize
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetMaxvalsizeEx_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxEnvGetMaxvalsizeEx
+  nameWithType: NativeMdbx.MdbxEnvGetMaxvalsizeEx
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetMaxvalsizeEx
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetPairsize4pageMax_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxEnvGetPairsize4pageMax
+  nameWithType: NativeMdbx.MdbxEnvGetPairsize4pageMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPairsize4pageMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxEnvGetValsize4pageMax_MDBX_Native_Types_MDBX_env__MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxEnvGetValsize4pageMax
+  nameWithType: NativeMdbx.MdbxEnvGetValsize4pageMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxEnvGetValsize4pageMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxDefaultPagesize
+  name: MdbxDefaultPagesize
+  nameWithType: NativeMdbx.MdbxDefaultPagesize
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxDefaultPagesize
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxGetSysraminfo_System_IntPtr__System_IntPtr__System_IntPtr__
+  name: MdbxGetSysraminfo
+  nameWithType: NativeMdbx.MdbxGetSysraminfo
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxGetSysraminfo
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxIsReadaheadReasonable_System_UIntPtr_System_IntPtr_
+  name: MdbxIsReadaheadReasonable
+  nameWithType: NativeMdbx.MdbxIsReadaheadReasonable
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxIsReadaheadReasonable
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsDbsizeMin_System_IntPtr_
+  name: MdbxLimitsDbsizeMin
+  nameWithType: NativeMdbx.MdbxLimitsDbsizeMin
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMin
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsDbsizeMax_System_IntPtr_
+  name: MdbxLimitsDbsizeMax
+  nameWithType: NativeMdbx.MdbxLimitsDbsizeMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsDbsizeMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsKeysizeMin_MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxLimitsKeysizeMin
+  nameWithType: NativeMdbx.MdbxLimitsKeysizeMin
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMin
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsKeysizeMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxLimitsKeysizeMax
+  nameWithType: NativeMdbx.MdbxLimitsKeysizeMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsKeysizeMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsizeMin_MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxLimitsValsizeMin
+  nameWithType: NativeMdbx.MdbxLimitsValsizeMin
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMin
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsizeMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxLimitsValsizeMax
+  nameWithType: NativeMdbx.MdbxLimitsValsizeMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsizeMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsPairsize4pageMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxLimitsPairsize4pageMax
+  nameWithType: NativeMdbx.MdbxLimitsPairsize4pageMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsPairsize4pageMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsValsize4pageMax_System_IntPtr_MDBX_Native_Types_MdbxDbFlags_
+  name: MdbxLimitsValsize4pageMax
+  nameWithType: NativeMdbx.MdbxLimitsValsize4pageMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsValsize4pageMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxLimitsTxnsizeMax_System_IntPtr_
+  name: MdbxLimitsTxnsizeMax
+  nameWithType: NativeMdbx.MdbxLimitsTxnsizeMax
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxLimitsTxnsizeMax
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxRatio2Digits_System_UInt64_System_UInt64_System_Int32_System_Byte__System_UIntPtr_
+  name: MdbxRatio2Digits
+  nameWithType: NativeMdbx.MdbxRatio2Digits
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Digits
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents*
+  commentId: Overload:MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents
+  isExternal: true
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html#MDBX_Native_Bindings_Settings_NativeMdbx_MdbxRatio2Percents_System_UInt64_System_UInt64_System_Byte__System_UIntPtr_
+  name: MdbxRatio2Percents
+  nameWithType: NativeMdbx.MdbxRatio2Percents
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx.MdbxRatio2Percents

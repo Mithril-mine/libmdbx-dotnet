@@ -1,0 +1,1518 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxOption
+  commentId: T:MDBX.Native.Types.MdbxOption
+  id: MdbxOption
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_DUPLIMIT_LIMIT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_LOOSE_LIMIT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_DB
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_READERS
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_NUM
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_NUMDBS
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHEBYTES
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHELINES
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHESIZE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_COMPAT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_DEBUG
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_FSLIMIT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_GC
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_IOBLK
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMPOLICY
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMTEMPLATE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_METASYNC
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MINCORE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_NOLOCK
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_PREFAULT_WRITE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_RP_REINVOKE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_SCHEDULER
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_TEST
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_THREADS
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UID
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UPCBLK
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUF
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFCOUNT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFPOLICY
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMMIT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMPRESS
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFLUSH
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFREE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALGROW
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALITEMS
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALMODE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGES
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGESIZE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPOLICY
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALRESET
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALREUSE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALROTATE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE_LIMIT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSLOTS
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSWITCH
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSYNC
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_RP_AUGMENT_LIMIT
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_BYTES
+  - MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_PERIOD
+  langs:
+  - csharp
+  - vb
+  name: MdbxOption
+  nameWithType: MdbxOption
+  fullName: MDBX.Native.Types.MdbxOption
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxOption
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 60
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Параметры окружения.
+  example: []
+  syntax:
+    content: public enum MdbxOption
+    content.vb: Public Enum MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_DB
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_DB
+  id: MDBX_OPT_MAX_DB
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_MAX_DB
+  nameWithType: MdbxOption.MDBX_OPT_MAX_DB
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_DB
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_MAX_DB
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 65
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Максимальное количество именованных таблиц для окружения.
+  example: []
+  syntax:
+    content: MDBX_OPT_MAX_DB = 0
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_READERS
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_READERS
+  id: MDBX_OPT_MAX_READERS
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_MAX_READERS
+  nameWithType: MdbxOption.MDBX_OPT_MAX_READERS
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_MAX_READERS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_MAX_READERS
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 70
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Максимальное количество потоков/слотов читателей.
+  example: []
+  syntax:
+    content: MDBX_OPT_MAX_READERS = 1
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_BYTES
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_BYTES
+  id: MDBX_OPT_SYNC_BYTES
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_SYNC_BYTES
+  nameWithType: MdbxOption.MDBX_OPT_SYNC_BYTES
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_BYTES
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_SYNC_BYTES
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 75
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Порог принудительного сброса буферов данных на диск.
+  example: []
+  syntax:
+    content: MDBX_OPT_SYNC_BYTES = 2
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_PERIOD
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_PERIOD
+  id: MDBX_OPT_SYNC_PERIOD
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_SYNC_PERIOD
+  nameWithType: MdbxOption.MDBX_OPT_SYNC_PERIOD
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_SYNC_PERIOD
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_SYNC_PERIOD
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 80
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Относительный период с момента последней нестабильной фиксации для принудительного сброса.
+  example: []
+  syntax:
+    content: MDBX_OPT_SYNC_PERIOD = 3
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_RP_AUGMENT_LIMIT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_RP_AUGMENT_LIMIT
+  id: MDBX_OPT_RP_AUGMENT_LIMIT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_RP_AUGMENT_LIMIT
+  nameWithType: MdbxOption.MDBX_OPT_RP_AUGMENT_LIMIT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_RP_AUGMENT_LIMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_RP_AUGMENT_LIMIT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 85
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Лимит наращивания списка освобожденных/рециклированных номеров страниц.
+  example: []
+  syntax:
+    content: MDBX_OPT_RP_AUGMENT_LIMIT = 4
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_LOOSE_LIMIT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_LOOSE_LIMIT
+  id: MDBX_OPT_LOOSE_LIMIT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_LOOSE_LIMIT
+  nameWithType: MdbxOption.MDBX_OPT_LOOSE_LIMIT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_LOOSE_LIMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_LOOSE_LIMIT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 90
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Лимит кэша грязных страниц для повторного использования в текущей транзакции.
+  example: []
+  syntax:
+    content: MDBX_OPT_LOOSE_LIMIT = 5
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_DUPLIMIT_LIMIT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_DUPLIMIT_LIMIT
+  id: MDBX_OPT_DUPLIMIT_LIMIT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_DUPLIMIT_LIMIT
+  nameWithType: MdbxOption.MDBX_OPT_DUPLIMIT_LIMIT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_DUPLIMIT_LIMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_DUPLIMIT_LIMIT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 95
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Лимит предварительно выделенных элементов памяти для грязных страниц.
+  example: []
+  syntax:
+    content: MDBX_OPT_DUPLIMIT_LIMIT = 6
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MINCORE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MINCORE
+  id: MDBX_OPT_OP_MINCORE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_MINCORE
+  nameWithType: MdbxOption.MDBX_OPT_OP_MINCORE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MINCORE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_MINCORE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 100
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить/отключить mincore().
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_MINCORE = 7
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_PREFAULT_WRITE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_PREFAULT_WRITE
+  id: MDBX_OPT_OP_PREFAULT_WRITE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_PREFAULT_WRITE
+  nameWithType: MdbxOption.MDBX_OPT_OP_PREFAULT_WRITE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_PREFAULT_WRITE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_PREFAULT_WRITE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 105
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить prefault запись.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_PREFAULT_WRITE = 8
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_METASYNC
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_METASYNC
+  id: MDBX_OPT_OP_METASYNC
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_METASYNC
+  nameWithType: MdbxOption.MDBX_OPT_OP_METASYNC
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_METASYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_METASYNC
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 110
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить метасинхронизацию.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_METASYNC = 9
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_NOLOCK
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_NOLOCK
+  id: MDBX_OPT_OP_NOLOCK
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_NOLOCK
+  nameWithType: MdbxOption.MDBX_OPT_OP_NOLOCK
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_NOLOCK
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_NOLOCK
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 115
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отключить файловую блокировку.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_NOLOCK = 10
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_COMPAT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_COMPAT
+  id: MDBX_OPT_OP_COMPAT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_COMPAT
+  nameWithType: MdbxOption.MDBX_OPT_OP_COMPAT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_COMPAT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_COMPAT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 120
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Совместимость со старым интерфейсом.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_COMPAT = 11
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_SCHEDULER
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_SCHEDULER
+  id: MDBX_OPT_OP_SCHEDULER
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_SCHEDULER
+  nameWithType: MdbxOption.MDBX_OPT_OP_SCHEDULER
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_SCHEDULER
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_SCHEDULER
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 125
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Настройка планировщика.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_SCHEDULER = 12
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_FSLIMIT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_FSLIMIT
+  id: MDBX_OPT_OP_FSLIMIT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_FSLIMIT
+  nameWithType: MdbxOption.MDBX_OPT_OP_FSLIMIT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_FSLIMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_FSLIMIT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 130
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Ограничение размера файла файловой системой.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_FSLIMIT = 13
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMTEMPLATE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMTEMPLATE
+  id: MDBX_OPT_OP_MEMTEMPLATE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_MEMTEMPLATE
+  nameWithType: MdbxOption.MDBX_OPT_OP_MEMTEMPLATE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMTEMPLATE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_MEMTEMPLATE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 135
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Шаблон памяти.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_MEMTEMPLATE = 14
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_NUMDBS
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_NUMDBS
+  id: MDBX_OPT_NUMDBS
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_NUMDBS
+  nameWithType: MdbxOption.MDBX_OPT_NUMDBS
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_NUMDBS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_NUMDBS
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 140
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество таблиц.
+  example: []
+  syntax:
+    content: MDBX_OPT_NUMDBS = 15
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_RP_REINVOKE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_RP_REINVOKE
+  id: MDBX_OPT_OP_RP_REINVOKE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_RP_REINVOKE
+  nameWithType: MdbxOption.MDBX_OPT_OP_RP_REINVOKE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_RP_REINVOKE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_RP_REINVOKE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 145
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика повторного использования читательских слотов.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_RP_REINVOKE = 16
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UID
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UID
+  id: MDBX_OPT_OP_UID
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_UID
+  nameWithType: MdbxOption.MDBX_OPT_OP_UID
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UID
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_UID
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 150
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить уникальные идентификаторы.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_UID = 17
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UPCBLK
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UPCBLK
+  id: MDBX_OPT_OP_UPCBLK
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_UPCBLK
+  nameWithType: MdbxOption.MDBX_OPT_OP_UPCBLK
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_UPCBLK
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_UPCBLK
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 155
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить Unified Page Cache блоки.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_UPCBLK = 18
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_IOBLK
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_IOBLK
+  id: MDBX_OPT_OP_IOBLK
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_IOBLK
+  nameWithType: MdbxOption.MDBX_OPT_OP_IOBLK
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_IOBLK
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_IOBLK
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 160
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Включить блокировку IO.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_IOBLK = 19
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHELINES
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHELINES
+  id: MDBX_OPT_OP_CACHELINES
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_CACHELINES
+  nameWithType: MdbxOption.MDBX_OPT_OP_CACHELINES
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHELINES
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_CACHELINES
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 165
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер кэш-линии.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_CACHELINES = 20
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHESIZE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHESIZE
+  id: MDBX_OPT_OP_CACHESIZE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_CACHESIZE
+  nameWithType: MdbxOption.MDBX_OPT_OP_CACHESIZE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHESIZE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_CACHESIZE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 170
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер кэша в мегабайтах.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_CACHESIZE = 21
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHEBYTES
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHEBYTES
+  id: MDBX_OPT_OP_CACHEBYTES
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_CACHEBYTES
+  nameWithType: MdbxOption.MDBX_OPT_OP_CACHEBYTES
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_CACHEBYTES
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_CACHEBYTES
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 175
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер кэша в байтах.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_CACHEBYTES = 22
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMPOLICY
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMPOLICY
+  id: MDBX_OPT_OP_MEMPOLICY
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_MEMPOLICY
+  nameWithType: MdbxOption.MDBX_OPT_OP_MEMPOLICY
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_MEMPOLICY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_MEMPOLICY
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 180
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика управления памятью.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_MEMPOLICY = 23
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_THREADS
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_THREADS
+  id: MDBX_OPT_OP_THREADS
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_THREADS
+  nameWithType: MdbxOption.MDBX_OPT_OP_THREADS
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_THREADS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_THREADS
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 185
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика потоков.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_THREADS = 24
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_GC
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_GC
+  id: MDBX_OPT_OP_GC
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_GC
+  nameWithType: MdbxOption.MDBX_OPT_OP_GC
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_GC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_GC
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 190
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика GC.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_GC = 25
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE
+  id: MDBX_OPT_OP_WALSIZE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALSIZE
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALSIZE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALSIZE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 195
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALSIZE = 26
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPOLICY
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPOLICY
+  id: MDBX_OPT_OP_WALPOLICY
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALPOLICY
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALPOLICY
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPOLICY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALPOLICY
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 200
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALPOLICY = 27
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALITEMS
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALITEMS
+  id: MDBX_OPT_OP_WALITEMS
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALITEMS
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALITEMS
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALITEMS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALITEMS
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 205
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество элементов WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALITEMS = 28
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGES
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGES
+  id: MDBX_OPT_OP_WALPAGES
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALPAGES
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALPAGES
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGES
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALPAGES
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 210
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество страниц WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALPAGES = 29
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALGROW
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALGROW
+  id: MDBX_OPT_OP_WALGROW
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALGROW
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALGROW
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALGROW
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALGROW
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 215
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика роста WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALGROW = 30
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFLUSH
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFLUSH
+  id: MDBX_OPT_OP_WALFLUSH
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALFLUSH
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALFLUSH
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFLUSH
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALFLUSH
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 220
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика сброса WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALFLUSH = 31
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUF
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUF
+  id: MDBX_OPT_OP_WALBUF
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALBUF
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALBUF
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUF
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALBUF
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 225
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер буфера WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALBUF = 32
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFPOLICY
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFPOLICY
+  id: MDBX_OPT_OP_WALBUFPOLICY
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALBUFPOLICY
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALBUFPOLICY
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFPOLICY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALBUFPOLICY
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 230
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика буферизации WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALBUFPOLICY = 33
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFCOUNT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFCOUNT
+  id: MDBX_OPT_OP_WALBUFCOUNT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALBUFCOUNT
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALBUFCOUNT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALBUFCOUNT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALBUFCOUNT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 235
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество буферов WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALBUFCOUNT = 34
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALMODE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALMODE
+  id: MDBX_OPT_OP_WALMODE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALMODE
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALMODE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALMODE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALMODE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 240
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Режим WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALMODE = 35
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALREUSE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALREUSE
+  id: MDBX_OPT_OP_WALREUSE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALREUSE
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALREUSE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALREUSE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALREUSE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 245
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика повторного использования WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALREUSE = 36
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE_LIMIT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE_LIMIT
+  id: MDBX_OPT_OP_WALSIZE_LIMIT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALSIZE_LIMIT
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALSIZE_LIMIT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSIZE_LIMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALSIZE_LIMIT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 250
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Ограничение размера WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALSIZE_LIMIT = 37
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMPRESS
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMPRESS
+  id: MDBX_OPT_OP_WALCOMPRESS
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALCOMPRESS
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALCOMPRESS
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMPRESS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALCOMPRESS
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 255
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Сжатие WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALCOMPRESS = 38
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGESIZE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGESIZE
+  id: MDBX_OPT_OP_WALPAGESIZE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALPAGESIZE
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALPAGESIZE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALPAGESIZE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALPAGESIZE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 260
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер страницы WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALPAGESIZE = 39
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSLOTS
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSLOTS
+  id: MDBX_OPT_OP_WALSLOTS
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALSLOTS
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALSLOTS
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSLOTS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALSLOTS
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 265
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество слотов WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALSLOTS = 40
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFREE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFREE
+  id: MDBX_OPT_OP_WALFREE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALFREE
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALFREE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALFREE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALFREE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 270
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика освобождения WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALFREE = 41
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMMIT
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMMIT
+  id: MDBX_OPT_OP_WALCOMMIT
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALCOMMIT
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALCOMMIT
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALCOMMIT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALCOMMIT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 275
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика фиксации WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALCOMMIT = 42
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSYNC
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSYNC
+  id: MDBX_OPT_OP_WALSYNC
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALSYNC
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALSYNC
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALSYNC
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 280
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика синхронизации WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALSYNC = 43
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALRESET
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALRESET
+  id: MDBX_OPT_OP_WALRESET
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALRESET
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALRESET
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALRESET
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALRESET
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 285
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика сброса WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALRESET = 44
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSWITCH
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSWITCH
+  id: MDBX_OPT_OP_WALSWITCH
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALSWITCH
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALSWITCH
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALSWITCH
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALSWITCH
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 290
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика переключения WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALSWITCH = 45
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALROTATE
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALROTATE
+  id: MDBX_OPT_OP_WALROTATE
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_WALROTATE
+  nameWithType: MdbxOption.MDBX_OPT_OP_WALROTATE
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_WALROTATE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_WALROTATE
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 295
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Политика ротации WAL.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_WALROTATE = 46
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_DEBUG
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_DEBUG
+  id: MDBX_OPT_OP_DEBUG
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_DEBUG
+  nameWithType: MdbxOption.MDBX_OPT_OP_DEBUG
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_DEBUG
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_DEBUG
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 300
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Режим отладки.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_DEBUG = 75
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_TEST
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_TEST
+  id: MDBX_OPT_OP_TEST
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_OP_TEST
+  nameWithType: MdbxOption.MDBX_OPT_OP_TEST
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_OP_TEST
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_OP_TEST
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 305
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Режим тестирования.
+  example: []
+  syntax:
+    content: MDBX_OPT_OP_TEST = 76
+    return:
+      type: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxOption.MDBX_OPT_NUM
+  commentId: F:MDBX.Native.Types.MdbxOption.MDBX_OPT_NUM
+  id: MDBX_OPT_NUM
+  parent: MDBX.Native.Types.MdbxOption
+  langs:
+  - csharp
+  - vb
+  name: MDBX_OPT_NUM
+  nameWithType: MdbxOption.MDBX_OPT_NUM
+  fullName: MDBX.Native.Types.MdbxOption.MDBX_OPT_NUM
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_OPT_NUM
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 310
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество параметров.
+  example: []
+  syntax:
+    content: MDBX_OPT_NUM = 77
+    return:
+      type: MDBX.Native.Types.MdbxOption
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxOption
+  commentId: T:MDBX.Native.Types.MdbxOption
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxOption.html
+  name: MdbxOption
+  nameWithType: MdbxOption
+  fullName: MDBX.Native.Types.MdbxOption

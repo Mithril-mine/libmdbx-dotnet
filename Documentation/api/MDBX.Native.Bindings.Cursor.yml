@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Cursor
+  commentId: N:MDBX.Native.Bindings.Cursor
+  id: MDBX.Native.Bindings.Cursor
+  children:
+  - MDBX.Native.Bindings.Cursor.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MDBX.Native.Bindings.Cursor
+  nameWithType: MDBX.Native.Bindings.Cursor
+  fullName: MDBX.Native.Bindings.Cursor
+  type: Namespace
+  assemblies:
+  - mdbx-dotnet
+references:
+- uid: MDBX.Native.Bindings.Cursor.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Cursor.NativeMdbx
+  href: MDBX.Native.Bindings.Cursor.NativeMdbx.html
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Cursor.NativeMdbx

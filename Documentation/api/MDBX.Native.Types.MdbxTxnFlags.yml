@@ -1,0 +1,281 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxTxnFlags
+  commentId: T:MDBX.Native.Types.MdbxTxnFlags
+  id: MdbxTxnFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_DEFAULTS
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOMETASYNC
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOSYNC
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOWEAKING
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY_PREPARE
+  - MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_TRY
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnFlags
+  nameWithType: MdbxTxnFlags
+  fullName: MDBX.Native.Types.MdbxTxnFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxTxnFlags
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги транзакции.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxTxnFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxTxnFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_DEFAULTS
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_DEFAULTS
+  id: MDBX_TXN_DEFAULTS
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_DEFAULTS
+  nameWithType: MdbxTxnFlags.MDBX_TXN_DEFAULTS
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_DEFAULTS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_DEFAULTS
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги по умолчанию (read-write транзакция).
+  example: []
+  syntax:
+    content: MDBX_TXN_DEFAULTS = 0
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY
+  id: MDBX_TXN_RDONLY
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_RDONLY
+  nameWithType: MdbxTxnFlags.MDBX_TXN_RDONLY
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_RDONLY
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Только для чтения.
+  example: []
+  syntax:
+    content: MDBX_TXN_RDONLY = 131072
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY_PREPARE
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY_PREPARE
+  id: MDBX_TXN_RDONLY_PREPARE
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_RDONLY_PREPARE
+  nameWithType: MdbxTxnFlags.MDBX_TXN_RDONLY_PREPARE
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_RDONLY_PREPARE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_RDONLY_PREPARE
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Подготовить read-only транзакцию без запуска.
+  example: []
+  syntax:
+    content: MDBX_TXN_RDONLY_PREPARE = 16908288
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_TRY
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_TRY
+  id: MDBX_TXN_TRY
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_TRY
+  nameWithType: MdbxTxnFlags.MDBX_TXN_TRY
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_TRY
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_TRY
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 26
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Не блокировать при запуске write-транзакции.
+  example: []
+  syntax:
+    content: MDBX_TXN_TRY = 268435456
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOWEAKING
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOWEAKING
+  id: MDBX_TXN_NOWEAKING
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_NOWEAKING
+  nameWithType: MdbxTxnFlags.MDBX_TXN_NOWEAKING
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOWEAKING
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_NOWEAKING
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Использовать режим окружения для durability.
+  example: []
+  syntax:
+    content: MDBX_TXN_NOWEAKING = 0
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOMETASYNC
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOMETASYNC
+  id: MDBX_TXN_NOMETASYNC
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_NOMETASYNC
+  nameWithType: MdbxTxnFlags.MDBX_TXN_NOMETASYNC
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOMETASYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_NOMETASYNC
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 36
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Отключить метасинхронизацию для этой транзакции.
+  example: []
+  syntax:
+    content: MDBX_TXN_NOMETASYNC = 262144
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOSYNC
+  commentId: F:MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOSYNC
+  id: MDBX_TXN_NOSYNC
+  parent: MDBX.Native.Types.MdbxTxnFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_TXN_NOSYNC
+  nameWithType: MdbxTxnFlags.MDBX_TXN_NOSYNC
+  fullName: MDBX.Native.Types.MdbxTxnFlags.MDBX_TXN_NOSYNC
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_TXN_NOSYNC
+    path: ../MDBX/Types/MdbxTxnFlags.cs
+    startLine: 41
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Безопасный режим без синхронизации для этой транзакции.
+  example: []
+  syntax:
+    content: MDBX_TXN_NOSYNC = 65536
+    return:
+      type: MDBX.Native.Types.MdbxTxnFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxTxnFlags
+  commentId: T:MDBX.Native.Types.MdbxTxnFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxTxnFlags.html
+  name: MdbxTxnFlags
+  nameWithType: MdbxTxnFlags
+  fullName: MDBX.Native.Types.MdbxTxnFlags

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>libmdbx-dotnet | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="libmdbx-dotnet | Binding Documentation ">
+      
+      
+      <link rel="icon" href="images/favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="libmdbx-dotnet">libmdbx-dotnet</h1>
+
+<p><strong>libmdbx-dotnet</strong> — нативные P/Invoke-привязки для <a href="https://libmdbx.dqdkfa.ru/">libmdbx</a> и высокоуровневый API.</p>
+<h2 id="что-такое-libmdbx">Что такое libmdbx</h2>
+<p>libmdbx — исключительно быстрый, компактный и мощный встраиваемый транзакционный key-value движок без WAL. Он позволяет рою многопоточных процессов выполнять ACID-чтение и запись нескольких карт и мультикарт в локально разделяемой базе, обеспечивая экстраординарную производительность при минимальных накладных расходах за счёт отображения в память и операций O(log N) на B+ дереве. Не требует обслуживания и восстановления после сбоя, гарантирует целостность данных и свободно распространяется по лицензии Apache 2.0.</p>
+<ul>
+<li><p><strong>Полный ACID</strong> - Атомарные, согласованные, изолированные и долговечные транзакции на основе MVCC и copy-on-write. Целостность данных гарантируется даже после сбоя.</p>
+</li>
+<li><p><strong>Без WAL и восстановления</strong> - Нет журнала упреждающей записи и восстановления после сбоя. Благодаря теневой подкачке страниц база не требует обслуживания и не растёт бесконтрольно.</p>
+</li>
+<li><p><strong>Высокая производительность</strong> - Данные отображаются в память (memory-mapped) и читаются напрямую без копирования. Операции поиска, вставки, обновления и удаления — O(log N) благодаря B+ дереву.</p>
+</li>
+<li><p><strong>Параллельный доступ</strong> -  Рой многопоточных процессов выполняет ACID-чтение и запись в общую базу. Читатели не блокируются и не требуют атомарных операций, масштабируясь по ядрам</p>
+</li>
+<li><p><strong>Строго последовательные изменения</strong> -  Изменения вносятся строго последовательно через единственный мьютекс — исключены конфликты транзакций и взаимоблокировки. Писатели не блокируют читателей и наоборот.</p>
+</li>
+<li><p><strong>Несколько таблиц key-value</strong> -  Множество таблиц key-value в одном файле данных, включая эффективные multimap: упорядоченные, искомые и обходимые множества значений без дублирования ключей.</p>
+</li>
+<li><p><strong>Кроссплатформенность</strong> - Поддержка Linux, Windows, macOS, Android, iOS, FreeBSD, Solaris и других систем, совместимых с POSIX.1-2008.</p>
+</li>
+<li><p><strong>Компактность и встраивание</strong> - Всего несколько плоских файлов исходного кода, никаких внутренних потоков и серверных процессов. Полностью пригодно для глубокого встраивания.</p>
+</li>
+</ul>
+<h2 id="license">License</h2>
+<p>This project is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>.</p>
+<p>libmdbx native library is not shipped with this assembly. The assembly will load <code>libmdbx</code> from the location below according to your platform and OS:</p>
+<ul>
+<li><strong>Windows</strong>: <code>native/windows/x64/mdbx.dll</code></li>
+<li><strong>Linux</strong>: <code>native/linux/x64/libmdbx.so</code></li>
+</ul>
+<h2 id="быстрый-старт">Быстрый старт</h2>
+<h3 id="установка">Установка</h3>
+<h4 id="добавить-источник">Добавить источник</h4>
+<pre><code class="lang-bash">dotnet nuget add source https://nexus.amsoft.spb.ru/repository/nuget-public/ --name amsoft-nexus
+</code></pre>
+<h4 id="установка-пакета">Установка пакета</h4>
+<pre><code class="lang-bash">dotnet add package mdbx --version 0.14.3-39-8-develop
+</code></pre>
+<h4 id="установка-одной-командой-без-добавления-источника">Установка одной командой без добавления источника</h4>
+<pre><code class="lang-bash">dotnet add package mdbx --version 0.14.3-39-8-develop --source https://nexus.amsoft.spb.ru/repository/nuget-public/
+</code></pre>
+<h4 id="посмотреть-список-всех-доступных-версий"><a href="https://public.amsoft.spb.ru/libmdbx/downloads/libmdbx-dotnet/">Посмотреть список всех доступных версий</a></h4>
+<h4 id="посмотреть-в-nexus"><a href="https://nexus.amsoft.spb.ru/#browse/browse:nuget-public:mdbx">Посмотреть в Nexus</a></h4>
+<h3 id="crud-операции">CRUD операции</h3>
+<pre><code class="lang-csharp">using MDBX;
+
+using var env = MdbxEnvironment.Open(&quot;data.mdbx&quot;, maxDatabases: 4);
+using var db = env.OpenDatabaseEx(&quot;users&quot;);
+
+using (var txn = env.BeginTransaction())
+{
+    db.Put(txn, &quot;user:1&quot;, &quot;{\&quot;name\&quot;:\&quot;Alice\&quot;,\&quot;role\&quot;:\&quot;admin\&quot;}&quot;);
+    db.Put(txn, &quot;user:2&quot;, &quot;{\&quot;name\&quot;:\&quot;Bob\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}&quot;);
+    txn.Commit();
+}
+
+using (var readTxn = env.BeginTransaction())
+{
+    var alice = db.Get(readTxn, &quot;user:1&quot;);
+    Console.WriteLine(alice); // {&quot;name&quot;:&quot;Alice&quot;,&quot;role&quot;:&quot;admin&quot;}
+}
+
+using (var txn = env.BeginTransaction())
+{
+    var deleted = db.Delete(txn, &quot;user:1&quot;);
+    Console.WriteLine(deleted); // True
+    txn.Commit();
+}
+
+using (var readTxn = env.BeginTransaction())
+{
+    var alice = db.Get(readTxn, &quot;user:1&quot;);
+    Console.WriteLine(alice); // null
+}
+</code></pre>
+<h3 id="linq-запросы-find">LINQ-запросы (Find)</h3>
+<pre><code class="lang-csharp">using (var txn = env.BeginTransaction())
+{
+    var allValues = db.Find(txn).Select(e =&gt; Encoding.UTF8.GetString(e.Value));
+
+    var userNames = db.Find(txn, Encoding.UTF8.GetString).Where(n =&gt; n.StartsWith(&quot;A&quot;));
+
+    var entries = db.Find(txn, Encoding.UTF8.GetString, Encoding.UTF8.GetString);
+
+    var rawValues = db.FindValues(txn);
+
+    var typed = db.Find(txn, Encoding.UTF8.GetString).First();
+
+    txn.Commit();
+}
+</code></pre>
+<h3 id="удаление-элементов">Удаление элементов</h3>
+<pre><code class="lang-csharp">using var env = MdbxEnvironment.Open(&quot;data.mdbx&quot;, maxDatabases: 4);
+using var db = env.OpenDatabaseEx(&quot;users&quot;);
+
+using (var txn = env.BeginTransaction())
+{
+    db.Put(txn, &quot;user:1&quot;, &quot;Alice&quot;);
+    db.Put(txn, &quot;user:2&quot;, &quot;Bob&quot;);
+    db.Put(txn, &quot;user:3&quot;, &quot;Charlie&quot;);
+
+    using (var cursor = txn.OpenCursor(db))
+    {
+        cursor.GetFirst(out var key, out var value);
+        cursor.Delete();
+    }
+
+    cursor.GetFirst(out var firstKey, out _);
+    Console.WriteLine(firstKey); // user:2
+
+    txn.Commit();
+}
+
+MdbxEnvironment.Delete(&quot;data.mdbx&quot;);
+</code></pre>
+<h3 id="удаление-таблиц-dbi">Удаление таблиц (DBI)</h3>
+<pre><code class="lang-csharp">using var env = MdbxEnvironment.Open(&quot;data.mdbx&quot;, maxDatabases: 4);
+using var usersDb = env.OpenDatabaseEx(&quot;users&quot;);
+using var logsDb = env.OpenDatabaseEx(&quot;logs&quot;);
+
+using (var txn = env.BeginTransaction())
+{
+    logsDb.DropDatabase(logsDb.Dbi, deleteData: true);
+    txn.Commit();
+}
+</code></pre>
+<h3 id="курсоры-и-итерация">Курсоры и итерация</h3>
+<pre><code class="lang-csharp">using (var txn = env.BeginTransaction())
+using (var cursor = txn.OpenCursor(db))
+{
+    cursor.GetFirst(out var key, out var value);
+    while (!cursor.IsEof())
+    {
+        Console.WriteLine($&quot;{key} = {value}&quot;);
+        cursor.GetNext(out key, out value);
+    }
+
+    cursor.GetLast(out var lastKey);
+    var current = cursor.GetCurrent(out var currentKey);
+    nuint count = cursor.Count();
+    bool onFirst = cursor.IsOnFirst();
+    bool onLast = cursor.IsOnLast();
+    cursor.GetNextDup(out var dupKey);
+    cursor.Renew(txn);
+    cursor.Put(&quot;key&quot;, &quot;value&quot;);
+}
+</code></pre>
+<h3 id="дубликаты-dupsort">Дубликаты (Dupsort)</h3>
+<pre><code class="lang-csharp">using var env = MdbxEnvironment.Open(&quot;dup.mdbx&quot;, maxDatabases: 2);
+using var db = env.OpenDatabaseEx(&quot;dup_table&quot;, MdbxDbFlags.MDBX_DUPSORT | MdbxDbFlags.MDBX_CREATE);
+
+using (var txn = env.BeginTransaction())
+{
+    db.Put(txn, &quot;fruit&quot;, &quot;apple&quot;);
+    db.Put(txn, &quot;fruit&quot;, &quot;banana&quot;);
+    db.Put(txn, &quot;fruit&quot;, &quot;cherry&quot;);
+    txn.Commit();
+}
+
+using (var readTxn = env.BeginTransaction())
+using (var cursor = readTxn.OpenCursor(db))
+{
+    cursor.GetFirst(out var key);
+    cursor.GetNextDup(out var nextVal);
+}
+</code></pre>
+<h3 id="несколько-таблиц-dbi">Несколько таблиц (DBI)</h3>
+<pre><code class="lang-csharp">using var usersDb = env.OpenDatabaseEx(&quot;users&quot;);
+using var logsDb = env.OpenDatabaseEx(&quot;logs&quot;);
+using var defaultDb = env.OpenDatabaseEx();
+
+using (var txn = env.BeginTransaction())
+{
+    usersDb.Put(txn, &quot;u:1&quot;, &quot;Alice&quot;);
+    logsDb.Put(txn, &quot;l:1&quot;, &quot;created&quot;);
+    defaultDb.Put(txn, &quot;default_key&quot;, &quot;default_value&quot;);
+
+    var u1 = usersDb.Get(txn, &quot;u:1&quot;);
+    var l1 = logsDb.Get(txn, &quot;l:1&quot;);
+
+    txn.Commit();
+}
+</code></pre>
+<h3 id="флаги-и-продвинутые-сценарии">Флаги и продвинутые сценарии</h3>
+<pre><code class="lang-csharp">using var env = MdbxEnvironment.Open(&quot;cache.mdbx&quot;, maxDatabases: 2);
+
+env.SetOption(MdbxOption.MDBX_OPT_MAX_DB, 4);
+env.SetGeometry(sizeLower: -1, sizeNow: -1, sizeUpper: -1);
+
+var stat = env.GetStat();
+var info = env.GetInfo();
+
+env.Defrag(progressCallback: (result) =&gt;
+{
+    Console.WriteLine($&quot;Pages compacted: {result-&gt;pages}&quot;);
+    return 0;
+});
+
+using var db = env.OpenDatabaseEx(&quot;flags_demo&quot;);
+using var txn = env.BeginTransaction();
+db.Put(txn, &quot;counter&quot;, Encoding.UTF8.GetBytes(&quot;1&quot;));
+db.Put(txn, &quot;counter&quot;, Encoding.UTF8.GetBytes(&quot;2&quot;), MdbxPutFlags.MDBX_CURRENT);
+txn.Commit();
+</code></pre>
+<h3 id="обнаружение-проблем-с-медленными-читателями-hsr">Обнаружение проблем с медленными читателями (HSR)</h3>
+<pre><code class="lang-csharp">env.SetHsr((envPtr, txnPtr, laggard, readers, total, dead, retryNum) =&gt;
+{
+    Console.WriteLine($&quot;Slow reader detected: txn={txnPtr-&gt;txn_id}, lag={laggard}&quot;);
+    return 0;
+});
+</code></pre>
+<h2 id="полный-список-низкоуровневых-привязок-libmdbx_api">Полный список низкоуровневых привязок (LIBMDBX_API)</h2>
+<p>Каждая функция libmdbx имеет соответствующее P/Invoke-объявление в пространстве имен <code>MDBX.Native.Bindings.*</code>.</p>
+<h3 id="окружение-env">Окружение (Env)</h3>
+<ul>
+<li><code>mdbx_env_create</code> — создать окружение</li>
+<li><code>mdbx_env_open</code> / <code>mdbx_env_openW</code> — открыть окружение (ANSI/Unicode)</li>
+<li><code>mdbx_env_close</code> / <code>mdbx_env_close_ex</code> — закрыть окружение</li>
+<li><code>mdbx_env_delete</code> / <code>mdbx_env_deleteW</code> — удалить окружение</li>
+<li><code>mdbx_env_copy</code> / <code>mdbx_env_copyW</code> / <code>mdbx_env_copy2fd</code> — копирование окружения</li>
+<li><code>mdbx_env_open_for_recovery</code> / <code>mdbx_env_open_for_recoveryW</code> — открыть для восстановления</li>
+<li><code>mdbx_env_turn_for_recovery</code> — переключить мета-страницу для восстановления</li>
+<li><code>mdbx_env_resurrect_after_fork</code> — восстановить после fork</li>
+<li><code>mdbx_env_warmup</code> — прогрев (предзагрузка страниц в память)</li>
+<li><code>mdbx_env_defrag</code> — дефрагментация</li>
+<li><code>mdbx_env_get_fd</code> — получить файловый дескриптор</li>
+<li><code>mdbx_env_get_path</code> / <code>mdbx_env_get_pathW</code> — получить путь</li>
+<li><code>mdbx_env_get_option</code> / <code>mdbx_env_set_option</code> — получить/установить параметр</li>
+<li><code>mdbx_env_get_flags</code> / <code>mdbx_env_set_flags</code> — получить/установить флаги</li>
+<li><code>mdbx_env_set_geometry</code> — установить геометрию (размеры файлов)</li>
+<li><code>mdbx_env_get_hsr</code> / <code>mdbx_env_set_hsr</code> — Handle-Slow-Readers колбэк</li>
+<li><code>mdbx_env_get_userctx</code> / <code>mdbx_env_set_userctx</code> — пользовательский контекст</li>
+<li><code>mdbx_env_get_maxkeysize</code> / <code>mdbx_env_get_maxkeysize_ex</code> — максимальный размер ключа</li>
+<li><code>mdbx_env_get_maxvalsize_ex</code> — максимальный размер значения</li>
+<li><code>mdbx_env_get_pairsize4page_max</code> — максимальный размер пары для страницы</li>
+<li><code>mdbx_env_get_valsize4page_max</code> — максимальный размер значения для страницы</li>
+<li><code>mdbx_env_info_ex</code> — информация об окружении</li>
+<li><code>mdbx_env_stat_ex</code> — статистика окружения</li>
+<li><code>mdbx_env_sync_ex</code> — синхронизация</li>
+<li><code>mdbx_preopen_snapinfo</code> / <code>mdbx_preopen_snapinfoW</code> — снапшот информации</li>
+<li><code>mdbx_txn_copy2pathname</code> / <code>mdbx_txn_copy2pathnameW</code> / <code>mdbx_txn_copy2fd</code> — копирование транзакции</li>
+</ul>
+<h3 id="транзакции-txn">Транзакции (Txn)</h3>
+<ul>
+<li><code>mdbx_txn_begin_ex</code> — начать транзакцию</li>
+<li><code>mdbx_txn_commit_ex</code> — зафиксировать транзакцию</li>
+<li><code>mdbx_txn_commit_embark_read</code> — зафиксировать для embark read</li>
+<li><code>mdbx_txn_rollback</code> — откатить транзакцию</li>
+<li><code>mdbx_txn_abort_ex</code> — отменить транзакцию</li>
+<li><code>mdbx_txn_amend</code> — превратить read-транзакцию в write</li>
+<li><code>mdbx_txn_clone</code> — клонировать транзакцию</li>
+<li><code>mdbx_txn_reset</code> — сбросить транзакцию (освободить ресурсы)</li>
+<li><code>mdbx_txn_renew</code> — обновить (renew) транзакцию</li>
+<li><code>mdbx_txn_refresh</code> — обновить (refresh) транзакцию</li>
+<li><code>mdbx_txn_break</code> — прервать транзакцию</li>
+<li><code>mdbx_txn_park</code> / <code>mdbx_txn_unpark</code> — парковка/распарковка транзакции</li>
+<li><code>mdbx_txn_info</code> — информация о транзакции</li>
+<li><code>mdbx_txn_env</code> — получить окружение транзакции</li>
+<li><code>mdbx_txn_flags</code> — получить флаги транзакции</li>
+<li><code>mdbx_txn_id</code> — получить ID транзакции</li>
+<li><code>mdbx_txn_checkpoint</code> — checkpoint транзакции</li>
+<li><code>mdbx_txn_get_userctx</code> / <code>mdbx_txn_set_userctx</code> — пользовательский контекст</li>
+<li><code>mdbx_txn_release_all_cursors_ex</code> — освободить все курсоры</li>
+<li><code>mdbx_txn_straggler</code> — информация о «стragler» транзакции</li>
+<li><code>mdbx_txn_lock</code> / <code>mdbx_txn_unlock</code> — блокировка окружения для транзакции</li>
+</ul>
+<h3 id="таблицы-dbi">Таблицы (DBI)</h3>
+<ul>
+<li><code>mdbx_dbi_open</code> / <code>mdbx_dbi_open2</code> — открыть таблицу по имени/значению</li>
+<li><code>mdbx_dbi_open_ex</code> / <code>mdbx_dbi_open_ex2</code> — открыть с кастомными функциями сравнения</li>
+<li><code>mdbx_dbi_close</code> — закрыть таблицу</li>
+<li><code>mdbx_dbi_rename</code> / <code>mdbx_dbi_rename2</code> — переименовать таблицу</li>
+<li><code>mdbx_dbi_stat</code> — статистика таблицы</li>
+<li><code>mdbx_dbi_flags_ex</code> — флаги и состояние таблицы</li>
+<li><code>mdbx_dbi_dupsort_depthmask</code> — маска глубины дубликатов</li>
+<li><code>mdbx_dbi_sequence</code> — последовательность таблицы</li>
+<li><code>mdbx_drop</code> — удалить таблицу</li>
+</ul>
+<h3 id="crud-операции-1">CRUD операции</h3>
+<ul>
+<li><code>mdbx_get</code> / <code>mdbx_get_ex</code> — получить значение</li>
+<li><code>mdbx_put</code> — записать значение</li>
+<li><code>mdbx_replace</code> / <code>mdbx_replace_ex</code> — заменить значение</li>
+<li><code>mdbx_del</code> — удалить элемент</li>
+<li><code>mdbx_get_equal_or_great</code> — получить значение или ближайший больший ключ</li>
+</ul>
+<h3 id="курсоры-cursor">Курсоры (Cursor)</h3>
+<ul>
+<li><code>mdbx_cursor_create</code> — создать курсор</li>
+<li><code>mdbx_cursor_open</code> — открыть курсор для таблицы</li>
+<li><code>mdbx_cursor_close</code> / <code>mdbx_cursor_close2</code> — закрыть курсор</li>
+<li><code>mdbx_cursor_bind</code> / <code>mdbx_cursor_unbind</code> — привязать/отвязать от таблицы</li>
+<li><code>mdbx_cursor_renew</code> — обновить для новой транзакции</li>
+<li><code>mdbx_cursor_reset</code> — сбросить курсор</li>
+<li><code>mdbx_cursor_copy</code> — скопировать курсор</li>
+<li><code>mdbx_cursor_compare</code> — сравнить два курсора</li>
+<li><code>mdbx_cursor_get</code> / <code>mdbx_cursor_get_batch</code> — получить элемент/пакет</li>
+<li><code>mdbx_cursor_put</code> — записать через курсор</li>
+<li><code>mdbx_cursor_del</code> — удалить через курсор</li>
+<li><code>mdbx_cursor_delete_range</code> — удалить диапазон</li>
+<li><code>mdbx_cursor_count</code> / <code>mdbx_cursor_count_ex</code> — количество элементов</li>
+<li><code>mdbx_cursor_distance</code> — расстояние между курсорами</li>
+<li><code>mdbx_cursor_scroll</code> — прокрутка</li>
+<li><code>mdbx_cursor_distribute</code> — распределение элементов между курсорами</li>
+<li><code>mdbx_cursor_bunch_delete</code> — пакетное удаление</li>
+<li><code>mdbx_cursor_eof</code> — достигнут ли конец таблицы</li>
+<li><code>mdbx_cursor_on_first</code> / <code>mdbx_cursor_on_last</code> — позиция на первом/последнем</li>
+<li><code>mdbx_cursor_on_first_dup</code> / <code>mdbx_cursor_on_last_dup</code> — позиция на первом/последнем дубликате</li>
+<li><code>mdbx_cursor_txn</code> / <code>mdbx_cursor_dbi</code> — получить транзакцию/DBI курсора</li>
+<li><code>mdbx_cursor_get_userctx</code> / <code>mdbx_cursor_set_userctx</code> — пользовательский контекст</li>
+<li><code>mdbx_cursor_ignord</code> — игнорировать дубликаты</li>
+<li><code>mdbx_cursor_scan</code> / <code>mdbx_cursor_scan_from</code> — сканирование с предикатом</li>
+</ul>
+<h3 id="настройки-settings">Настройки (Settings)</h3>
+<ul>
+<li><code>mdbx_env_set_option</code> / <code>mdbx_env_get_option</code> — параметры окружения</li>
+<li><code>mdbx_env_set_flags</code> / <code>mdbx_env_get_flags</code> — флаги окружения</li>
+<li><code>mdbx_env_set_geometry</code> — геометрия окружения</li>
+<li><code>mdbx_env_set_hsr</code> / <code>mdbx_env_get_hsr</code> — HSR колбэк</li>
+<li><code>mdbx_env_set_userctx</code> / <code>mdbx_env_get_userctx</code> — пользовательский контекст</li>
+<li><code>mdbx_default_pagesize</code> — размер страницы по умолчанию</li>
+<li><code>mdbx_get_sysraminfo</code> — информация о системной RAM</li>
+<li><code>mdbx_is_readahead_reasonable</code> — проверка readahead</li>
+<li><code>mdbx_limits_dbsize_min</code> / <code>mdbx_limits_dbsize_max</code> — лимиты размера БД</li>
+<li><code>mdbx_limits_keysize_min</code> / <code>mdbx_limits_keysize_max</code> — лимиты размера ключа</li>
+<li><code>mdbx_limits_valsize_min</code> / <code>mdbx_limits_valsize_max</code> — лимиты размера значения</li>
+<li><code>mdbx_limits_pairsize4page_max</code> — максимальный размер пары для страницы</li>
+<li><code>mdbx_limits_valsize4page_max</code> — максимальный размер значения для страницы</li>
+<li><code>mdbx_limits_txnsize_max</code> — максимальный размер транзакции</li>
+<li><code>mdbx_ratio2digits</code> / <code>mdbx_ratio2percents</code> — форматирование соотношений</li>
+</ul>
+<h3 id="обработка-ошибок-error-handling">Обработка ошибок (Error Handling)</h3>
+<ul>
+<li><code>mdbx_strerror</code> / <code>mdbx_strerror_r</code> — описание ошибки</li>
+<li><code>mdbx_liberr2str</code> — описание ошибки (только libmdbx)</li>
+<li><code>mdbx_strerror_ANSI2OEM</code> / <code>mdbx_strerror_r_ANSI2OEM</code> — ANSI/OEM версии</li>
+<li><code>mdbx_assert_fail</code> — аварийное завершение при assert</li>
+<li><code>mdbx_set_panic</code> — функция обработки паники</li>
+</ul>
+<h3 id="дополнительные-возможности-extra">Дополнительные возможности (Extra)</h3>
+<ul>
+<li><code>mdbx_cmp</code> / <code>mdbx_dcmp</code> — сравнение ключей/значений</li>
+<li><code>mdbx_get_keycmp</code> / <code>mdbx_get_datacmp</code> — получить функцию сравнения</li>
+<li><code>mdbx_key_from_jsonInteger</code> / <code>mdbx_jsonInteger_from_key</code> — JSON integer ключи</li>
+<li><code>mdbx_key_from_double</code> / <code>mdbx_double_from_key</code> — double ключи</li>
+<li><code>mdbx_key_from_float</code> / <code>mdbx_float_from_key</code> — float ключи</li>
+<li><code>mdbx_key_from_ptrdouble</code> / <code>mdbx_key_from_ptrfloat</code> — указатели на float/double</li>
+<li><code>mdbx_int32_from_key</code> / <code>mdbx_int64_from_key</code> — int32/int64 из ключа</li>
+<li><code>mdbx_enumerate_tables</code> — перечисление таблиц</li>
+<li><code>mdbx_reader_list</code> / <code>mdbx_reader_check</code> — работа с читателями</li>
+<li><code>mdbx_thread_register</code> / <code>mdbx_thread_unregister</code> — регистрация потоков</li>
+<li><code>mdbx_txn_lock</code> / <code>mdbx_txn_unlock</code> — блокировка окружения</li>
+<li><code>mdbx_estimate_distance</code> / <code>mdbx_estimate_move</code> / <code>mdbx_estimate_range</code> — оценки</li>
+<li><code>mdbx_cache_get</code> / <code>mdbx_cache_get_SingleThreaded</code> — кэширование</li>
+<li><code>mdbx_env_chk</code> / <code>mdbx_env_chk_encount_problem</code> — проверка целостности</li>
+<li><code>mdbx_is_dirty</code> — проверка «грязных» страниц</li>
+<li><code>mdbx_gc_info</code> — информация о GC и использовании страниц</li>
+<li><code>mdbx_dump_val</code> — форматирование значения в строку</li>
+</ul>
+<h3 id="статистика-stat">Статистика (Stat)</h3>
+<ul>
+<li><code>mdbx_env_stat_ex</code> — статистика окружения</li>
+<li><code>mdbx_env_info_ex</code> — информация об окружении</li>
+<li><code>mdbx_env_sync_ex</code> — синхронизация окружения</li>
+</ul>
+<h3 id="отладка-debug">Отладка (Debug)</h3>
+<ul>
+<li><code>mdbx_setup_debug</code> / <code>mdbx_setup_debug_nofmt</code> — настройка логирования</li>
+<li><code>mdbx_canary_put</code> / <code>mdbx_canary_get</code> — структура-маяк</li>
+</ul>
+<h2 id="покрытие-тестами">Покрытие тестами</h2>
+<p>Проект содержит модульные тесты для большинства низкоуровневых привязок и высокоуровневых сценариев использования.</p>
+<h3 id="-хорошее-покрытие">✅ Хорошее покрытие</h3>
+<table>
+<thead>
+<tr>
+<th>Модуль</th>
+<th>Что покрыто</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cursor (Native)</strong></td>
+<td>Open/Close/Create/Bind/Copy, Get/Put/Del, навигация (First/Last/Next/Prev), Count/CountEx, Distance, DeleteRange, DupSort (OnFirstDup/OnLastDup, Ignord), Batch, Userctx, Renew/Reset/Unbind, Compare, Txn/Dbi accessors</td>
+</tr>
+<tr>
+<td><strong>CRUD (Native)</strong></td>
+<td>Put (<code>MDBX_UPSERT</code>, <code>MDBX_CURRENT</code>), Get, GetEx, Replace, ReplaceEx, Del, GetEqualOrGreat</td>
+</tr>
+<tr>
+<td><strong>DBI (Native)</strong></td>
+<td>Open/Open2/OpenEx/OpenEx2, Close, Drop, Rename/Rename2, Stat, FlagsEx, DupsortDepthmask, Sequence</td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td>SetOption/GetOption, SetFlags/GetFlags, GetMaxkeysize/Ex, GetMaxvalsize/Ex, GetPath/GetPathW, GetFd, SetUserctx/GetUserctx, DefaultPagesize, SetGeometry, SetHsr/GetHsr, все Limits* функции, Ratio2Digits, Ratio2Percents</td>
+</tr>
+<tr>
+<td><strong>Extra (Native)</strong></td>
+<td>Cmp, GetKeycmp, GetDatacmp, KeyFrom* конвертации, Float/Double/Int32/Int64/JsonInteger извлечение, IsDirty, GcInfo, CacheGet/SingleThreaded, ReaderList/Check, ThreadRegister/Unregister, EstimateDistance/EstimateMove, EnumerateTables, TxnLock/Unlock, EnvChk</td>
+</tr>
+<tr>
+<td><strong>Txn (Native)</strong></td>
+<td>BeginEx, CommitEx, Rollback, AbortEx, Clone, Reset, Renew, Refresh, Info, Id, Env, Flags, SetUserctx/GetUserctx, Checkpoint, Break, Park/Unpark, ReleaseAllCursorsEx, Straggler</td>
+</tr>
+<tr>
+<td><strong>Env (Native)</strong></td>
+<td>Create, Open/OpenW, Close/CloseEx, Delete/DeleteW, Copy/CopyW/Copy2Fd, OpenForRecovery/OpenForRecoveryW, TurnForRecovery, Warmup, Defrag, PreopenSnapinfo/PreopenSnapinfoW</td>
+</tr>
+<tr>
+<td><strong>ErrorHandling</strong></td>
+<td>Strerror, StrerrorR, Liberr2Str, ANSI2OEM версии, SetPanic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-ограниченное-покрытие">⚠️ Ограниченное покрытие</h3>
+<table>
+<thead>
+<tr>
+<th>Модуль</th>
+<th>Что не покрыто</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Query (High-level)</strong></td>
+<td>Только 4 базовых теста; нет тестов для range queries, <code>First/Single/Any/Count</code>, cursor navigation внутри query, сложных предикатов</td>
+</tr>
+<tr>
+<td><strong>Stat</strong></td>
+<td>Только 3 функции (<code>EnvStatEx</code>, <code>EnvInfoEx</code>, <code>EnvSyncEx</code>); нет <code>DbiStat</code> в isolation, нет non-Ex variants</td>
+</tr>
+<tr>
+<td><strong>CRUD (High-level)</strong></td>
+<td>Нет тестов для dupsort/multiple-value; нет тестов флагов <code>MDBX_APPEND</code>, <code>MDBX_APPENDDUP</code>, <code>MDBX_NOOVERWRITE</code>, <code>MDBX_MULTIPLE</code>; нет concurrency-тестов</td>
+</tr>
+<tr>
+<td><strong>Debug</strong></td>
+<td>Только 4 функции (<code>SetupDebug</code>, <code>SetupDebugNofmt</code>, <code>CanaryPut/Get</code>, <code>DumpVal</code>)</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Служат integration-level smoke-тестами, но не покрывают edge-cases</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-не-покрыто">❌ Не покрыто</h3>
+<ul>
+<li><strong>Многопоточность</strong> — нет тестов для concurrent readers/writers, deadlock detection</li>
+<li><strong>Transaction Nesting</strong> — нет тестов для вложенных транзакций</li>
+<li><strong>Dupsort/Многозначение (High-level)</strong> — нет high-level тестов для дубликатов, append, multi-value</li>
+<li><strong>Восстановление после повреждений</strong> — <code>OpenForRecoverage</code> тестируется, но нет actual corruption/recovery validation</li>
+<li><strong>HSR (Handle-Slow-Readers)</strong> — только SetHsr/GetHsr с null; нет реальных HSR behavior тестов</li>
+<li><strong>Checkpoint</strong> — только вызов с null; нет LSN/TWN validation</li>
+<li><strong>Large values / overflow pages</strong> — нет тестов для значений превышающих размер страницы</li>
+</ul>
+<h2 id="документация">Документация</h2>
+<p>Сгенерировать документацию:</p>
+<pre><code class="lang-bash">docfx docfx.json --serve
+</code></pre>
+<h2 id="сборка">Сборка</h2>
+<pre><code class="lang-bash">dotnet build libmdbx-dotnet.sln
+</code></pre>
+<h2 id="тестирование">Тестирование</h2>
+<pre><code class="lang-bash">dotnet test libmdbx-dotnet.sln
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

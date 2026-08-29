@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native
+  commentId: N:MDBX.Native
+  id: MDBX.Native
+  children:
+  - MDBX.Native.NativeLibraryLoader
+  langs:
+  - csharp
+  - vb
+  name: MDBX.Native
+  nameWithType: MDBX.Native
+  fullName: MDBX.Native
+  type: Namespace
+  assemblies:
+  - mdbx-dotnet
+references:
+- uid: MDBX.Native.NativeLibraryLoader
+  commentId: T:MDBX.Native.NativeLibraryLoader
+  href: MDBX.Native.NativeLibraryLoader.html
+  name: NativeLibraryLoader
+  nameWithType: NativeLibraryLoader
+  fullName: MDBX.Native.NativeLibraryLoader

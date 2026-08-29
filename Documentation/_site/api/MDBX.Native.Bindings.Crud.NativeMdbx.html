@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NativeMdbx | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NativeMdbx | Binding Documentation ">
+      
+      <meta name="description" content="Частичный класс для нативных методов CRUD операций libmdbx.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MDBX.Native.Bindings.Crud.NativeMdbx">
+
+
+
+  <h1 id="MDBX_Native_Bindings_Crud_NativeMdbx" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx" class="text-break">
+Class NativeMdbx  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MDBX.html">MDBX</a>.<a class="xref" href="MDBX.Native.html">Native</a>.<a class="xref" href="MDBX.Native.Bindings.html">Bindings</a>.<a class="xref" href="MDBX.Native.Bindings.Crud.html">Crud</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>mdbx-dotnet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Частичный класс для нативных методов CRUD операций libmdbx.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NativeMdbx</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NativeMdbx</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxDel_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxDel_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxDel(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)">
+  MdbxDel(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxDel(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение (опционально).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGet_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGet_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGet(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)">
+  MdbxGet(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает значение по ключу.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxGet(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGetEqualOrGreat_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGetEqualOrGreat_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEqualOrGreat(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)">
+  MdbxGetEqualOrGreat(MDBX_txn*, uint, MdbxVal*, MdbxVal*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает значение по ключу или ближайному большему ключу.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxGetEqualOrGreat(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ (на вход: искомый ключ, на выходе: найденный ключ).</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе, MDBX_NOTFOUND если не найдено).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGetEx_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxGetEx_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__System_UIntPtr__" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxGetEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,System.UIntPtr*)">
+  MdbxGetEx(MDBX_txn*, uint, MdbxVal*, MdbxVal*, nuint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Получает значение по ключу с расширенными опциями.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxGetEx(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data, nuint* valuesCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение.</p>
+</dd>
+    <dt><code>valuesCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>*</dt>
+    <dd><p>Количество значений.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxPut_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxPut_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxPut(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)">
+  MdbxPut(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Записывает значение.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxPut(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* data, MdbxPutFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Значение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxReplace_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxReplace_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplace(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags)">
+  MdbxReplace(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Заменяет значение.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxReplace(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* newData, MdbxVal* oldData, MdbxPutFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>newData</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Новое значение.</p>
+</dd>
+    <dt><code>oldData</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Старое значение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxReplaceEx_" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx*"></a>
+
+  <h3 id="MDBX_Native_Bindings_Crud_NativeMdbx_MdbxReplaceEx_MDBX_Native_Types_MDBX_txn__System_UInt32_MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxVal__MDBX_Native_Types_MdbxPutFlags_MDBX_Native_Types_MdbxPreserveFunc_System_Void__" data-uid="MDBX.Native.Bindings.Crud.NativeMdbx.MdbxReplaceEx(MDBX.Native.Types.MDBX_txn*,System.UInt32,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxPutFlags,MDBX.Native.Types.MdbxPreserveFunc,System.Void*)">
+  MdbxReplaceEx(MDBX_txn*, uint, MdbxVal*, MdbxVal*, MdbxVal*, MdbxPutFlags, MdbxPreserveFunc?, void*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Заменяет значение с расширенными опциями.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int MdbxReplaceEx(MDBX_txn* txn, uint dbi, MdbxVal* key, MdbxVal* newData, MdbxVal* oldData, MdbxPutFlags flags, MdbxPreserveFunc? preserver, void* preserver_context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>txn</code> <a class="xref" href="MDBX.Native.Types.MDBX_txn.html">MDBX_txn</a>*</dt>
+    <dd><p>Транзакция.</p>
+</dd>
+    <dt><code>dbi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>DBI.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Ключ.</p>
+</dd>
+    <dt><code>newData</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Новое значение.</p>
+</dd>
+    <dt><code>oldData</code> <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*</dt>
+    <dd><p>Старое значение.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="MDBX.Native.Types.MdbxPutFlags.html">MdbxPutFlags</a></dt>
+    <dd><p>Флаги.</p>
+</dd>
+    <dt><code>preserver</code> <a class="xref" href="MDBX.Native.Types.MdbxPreserveFunc.html">MdbxPreserveFunc</a></dt>
+    <dd><p>Функция сохранения данных.</p>
+</dd>
+    <dt><code>preserver_context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Контекст для функции сохранения.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Код ошибки (0 при успехе).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

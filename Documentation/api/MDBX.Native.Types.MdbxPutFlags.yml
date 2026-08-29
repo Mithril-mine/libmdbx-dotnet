@@ -1,0 +1,339 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  id: MdbxPutFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_ALLDUPS
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_APPEND
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_APPENDDUP
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_CURRENT
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_MULTIPLE
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_NODUPDATA
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_NOOVERWRITE
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_RESERVE
+  - MDBX.Native.Types.MdbxPutFlags.MDBX_UPSERT
+  langs:
+  - csharp
+  - vb
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxPutFlags
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги операции вставки/обновления.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxPutFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxPutFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_UPSERT
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_UPSERT
+  id: MDBX_UPSERT
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_UPSERT
+  nameWithType: MdbxPutFlags.MDBX_UPSERT
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_UPSERT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_UPSERT
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Вставить или обновить (UPSERT) — поведение по умолчанию.
+  example: []
+  syntax:
+    content: MDBX_UPSERT = 0
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_NOOVERWRITE
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_NOOVERWRITE
+  id: MDBX_NOOVERWRITE
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NOOVERWRITE
+  nameWithType: MdbxPutFlags.MDBX_NOOVERWRITE
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_NOOVERWRITE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NOOVERWRITE
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Вставить только если ключа нет.
+  example: []
+  syntax:
+    content: MDBX_NOOVERWRITE = 16
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_NODUPDATA
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_NODUPDATA
+  id: MDBX_NODUPDATA
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_NODUPDATA
+  nameWithType: MdbxPutFlags.MDBX_NODUPDATA
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_NODUPDATA
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_NODUPDATA
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 21
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Не записывать, если пара ключ-значение уже существует.
+  example: []
+  syntax:
+    content: MDBX_NODUPDATA = 32
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_CURRENT
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_CURRENT
+  id: MDBX_CURRENT
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CURRENT
+  nameWithType: MdbxPutFlags.MDBX_CURRENT
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_CURRENT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CURRENT
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 26
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Текущее значение (обновить существующий ключ).
+  example: []
+  syntax:
+    content: MDBX_CURRENT = 64
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_ALLDUPS
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_ALLDUPS
+  id: MDBX_ALLDUPS
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_ALLDUPS
+  nameWithType: MdbxPutFlags.MDBX_ALLDUPS
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_ALLDUPS
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_ALLDUPS
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 31
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Все дубликаты (заменить все значения для ключа).
+  example: []
+  syntax:
+    content: MDBX_ALLDUPS = 128
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_RESERVE
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_RESERVE
+  id: MDBX_RESERVE
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_RESERVE
+  nameWithType: MdbxPutFlags.MDBX_RESERVE
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_RESERVE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_RESERVE
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 36
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Только зарезервировать место для данных, не копировать их.
+  example: []
+  syntax:
+    content: MDBX_RESERVE = 65536
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_APPEND
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_APPEND
+  id: MDBX_APPEND
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_APPEND
+  nameWithType: MdbxPutFlags.MDBX_APPEND
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_APPEND
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_APPEND
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 41
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Добавить элемент в начало (для неуникальных ключей).
+  example: []
+  syntax:
+    content: MDBX_APPEND = 131072
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_APPENDDUP
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_APPENDDUP
+  id: MDBX_APPENDDUP
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_APPENDDUP
+  nameWithType: MdbxPutFlags.MDBX_APPENDDUP
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_APPENDDUP
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_APPENDDUP
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 46
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Добавить дубликат в начало.
+  example: []
+  syntax:
+    content: MDBX_APPENDDUP = 262144
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxPutFlags.MDBX_MULTIPLE
+  commentId: F:MDBX.Native.Types.MdbxPutFlags.MDBX_MULTIPLE
+  id: MDBX_MULTIPLE
+  parent: MDBX.Native.Types.MdbxPutFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_MULTIPLE
+  nameWithType: MdbxPutFlags.MDBX_MULTIPLE
+  fullName: MDBX.Native.Types.MdbxPutFlags.MDBX_MULTIPLE
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxPutFlags.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_MULTIPLE
+    path: ../MDBX/Types/MdbxPutFlags.cs
+    startLine: 51
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Сохранить существующее значение при неудачной вставке.
+  example: []
+  syntax:
+    content: MDBX_MULTIPLE = 524288
+    return:
+      type: MDBX.Native.Types.MdbxPutFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPutFlags.html
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags

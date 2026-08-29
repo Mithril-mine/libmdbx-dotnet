@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxCopyFlags
+  commentId: T:MDBX.Native.Types.MdbxCopyFlags
+  id: MdbxCopyFlags
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_COMPACT
+  - MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_DEFAULT
+  langs:
+  - csharp
+  - vb
+  name: MdbxCopyFlags
+  nameWithType: MdbxCopyFlags
+  fullName: MDBX.Native.Types.MdbxCopyFlags
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxCopyFlags
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 5
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Флаги копирования окружения.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MdbxCopyFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MdbxCopyFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_DEFAULT
+  commentId: F:MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_DEFAULT
+  id: MDBX_CP_DEFAULT
+  parent: MDBX.Native.Types.MdbxCopyFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CP_DEFAULT
+  nameWithType: MdbxCopyFlags.MDBX_CP_DEFAULT
+  fullName: MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_DEFAULT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CP_DEFAULT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 11
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Копировать без сжатия.
+  example: []
+  syntax:
+    content: MDBX_CP_DEFAULT = 0
+    return:
+      type: MDBX.Native.Types.MdbxCopyFlags
+- uid: MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_COMPACT
+  commentId: F:MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_COMPACT
+  id: MDBX_CP_COMPACT
+  parent: MDBX.Native.Types.MdbxCopyFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX_CP_COMPACT
+  nameWithType: MdbxCopyFlags.MDBX_CP_COMPACT
+  fullName: MDBX.Native.Types.MdbxCopyFlags.MDBX_CP_COMPACT
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxOption.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_CP_COMPACT
+    path: ../MDBX/Types/MdbxOption.cs
+    startLine: 16
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Сжимать данные при копировании.
+  example: []
+  syntax:
+    content: MDBX_CP_COMPACT = 1
+    return:
+      type: MDBX.Native.Types.MdbxCopyFlags
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxCopyFlags
+  commentId: T:MDBX.Native.Types.MdbxCopyFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCopyFlags.html
+  name: MdbxCopyFlags
+  nameWithType: MdbxCopyFlags
+  fullName: MDBX.Native.Types.MdbxCopyFlags

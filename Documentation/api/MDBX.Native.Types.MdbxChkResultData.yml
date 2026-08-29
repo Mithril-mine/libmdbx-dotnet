@@ -1,0 +1,1035 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkResultData
+  commentId: T:MDBX.Native.Types.MdbxChkResultData
+  id: MdbxChkResultData
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkResultData.AllocPages
+  - MDBX.Native.Types.MdbxChkResultData.BackedPages
+  - MDBX.Native.Types.MdbxChkResultData.GcPages
+  - MDBX.Native.Types.MdbxChkResultData.GcTreeProblems
+  - MDBX.Native.Types.MdbxChkResultData.HistogramPageAge
+  - MDBX.Native.Types.MdbxChkResultData.HistogramPgnoPayload
+  - MDBX.Native.Types.MdbxChkResultData.HistogramPgnoRetained
+  - MDBX.Native.Types.MdbxChkResultData.KvTreeProblems
+  - MDBX.Native.Types.MdbxChkResultData.ProblemsGc
+  - MDBX.Native.Types.MdbxChkResultData.ProblemsKv
+  - MDBX.Native.Types.MdbxChkResultData.ProblemsMeta
+  - MDBX.Native.Types.MdbxChkResultData.ProcessedPages
+  - MDBX.Native.Types.MdbxChkResultData.RecentTxnid
+  - MDBX.Native.Types.MdbxChkResultData.ReclaimablePages
+  - MDBX.Native.Types.MdbxChkResultData.SteadyTxnid
+  - MDBX.Native.Types.MdbxChkResultData.TableProcessed
+  - MDBX.Native.Types.MdbxChkResultData.TableTotal
+  - MDBX.Native.Types.MdbxChkResultData.Tables
+  - MDBX.Native.Types.MdbxChkResultData.TotalPayloadBytes
+  - MDBX.Native.Types.MdbxChkResultData.TotalProblems
+  - MDBX.Native.Types.MdbxChkResultData.TotalUnusedBytes
+  - MDBX.Native.Types.MdbxChkResultData.TreeProblems
+  - MDBX.Native.Types.MdbxChkResultData.UnusedPages
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkResultData
+  nameWithType: MdbxChkResultData
+  fullName: MDBX.Native.Types.MdbxChkResultData
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkResultData
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 576
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Данные результата проверки.
+  example: []
+  syntax:
+    content: public struct MdbxChkResultData
+    content.vb: Public Structure MdbxChkResultData
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxChkResultData.TotalPayloadBytes
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.TotalPayloadBytes
+  id: TotalPayloadBytes
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: TotalPayloadBytes
+  nameWithType: MdbxChkResultData.TotalPayloadBytes
+  fullName: MDBX.Native.Types.MdbxChkResultData.TotalPayloadBytes
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TotalPayloadBytes
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 582
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общий объем полезной нагрузки в байтах.
+  example: []
+  syntax:
+    content: public nuint TotalPayloadBytes
+    return:
+      type: System.UIntPtr
+    content.vb: Public TotalPayloadBytes As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.TableTotal
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.TableTotal
+  id: TableTotal
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: TableTotal
+  nameWithType: MdbxChkResultData.TableTotal
+  fullName: MDBX.Native.Types.MdbxChkResultData.TableTotal
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TableTotal
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 587
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее и обработанное количество таблиц.
+  example: []
+  syntax:
+    content: public nuint TableTotal
+    return:
+      type: System.UIntPtr
+    content.vb: Public TableTotal As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.TableProcessed
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.TableProcessed
+  id: TableProcessed
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: TableProcessed
+  nameWithType: MdbxChkResultData.TableProcessed
+  fullName: MDBX.Native.Types.MdbxChkResultData.TableProcessed
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TableProcessed
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 587
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее и обработанное количество таблиц.
+  example: []
+  syntax:
+    content: public nuint TableProcessed
+    return:
+      type: System.UIntPtr
+    content.vb: Public TableProcessed As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.TotalUnusedBytes
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.TotalUnusedBytes
+  id: TotalUnusedBytes
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: TotalUnusedBytes
+  nameWithType: MdbxChkResultData.TotalUnusedBytes
+  fullName: MDBX.Native.Types.MdbxChkResultData.TotalUnusedBytes
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TotalUnusedBytes
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 592
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее количество потерянных байт и страниц.
+  example: []
+  syntax:
+    content: public nuint TotalUnusedBytes
+    return:
+      type: System.UIntPtr
+    content.vb: Public TotalUnusedBytes As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.UnusedPages
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.UnusedPages
+  id: UnusedPages
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: UnusedPages
+  nameWithType: MdbxChkResultData.UnusedPages
+  fullName: MDBX.Native.Types.MdbxChkResultData.UnusedPages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: UnusedPages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 592
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее количество потерянных байт и страниц.
+  example: []
+  syntax:
+    content: public nuint UnusedPages
+    return:
+      type: System.UIntPtr
+    content.vb: Public UnusedPages As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.ProcessedPages
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.ProcessedPages
+  id: ProcessedPages
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: ProcessedPages
+  nameWithType: MdbxChkResultData.ProcessedPages
+  fullName: MDBX.Native.Types.MdbxChkResultData.ProcessedPages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ProcessedPages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 598
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Обработанные страницы, возвращаемые страницы, страницы GC,
+
+    выделенные страницы, сопоставленные страницы.
+  example: []
+  syntax:
+    content: public nuint ProcessedPages
+    return:
+      type: System.UIntPtr
+    content.vb: Public ProcessedPages As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.ReclaimablePages
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.ReclaimablePages
+  id: ReclaimablePages
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: ReclaimablePages
+  nameWithType: MdbxChkResultData.ReclaimablePages
+  fullName: MDBX.Native.Types.MdbxChkResultData.ReclaimablePages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ReclaimablePages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 598
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Обработанные страницы, возвращаемые страницы, страницы GC,
+
+    выделенные страницы, сопоставленные страницы.
+  example: []
+  syntax:
+    content: public nuint ReclaimablePages
+    return:
+      type: System.UIntPtr
+    content.vb: Public ReclaimablePages As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.GcPages
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.GcPages
+  id: GcPages
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: GcPages
+  nameWithType: MdbxChkResultData.GcPages
+  fullName: MDBX.Native.Types.MdbxChkResultData.GcPages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GcPages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 598
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Обработанные страницы, возвращаемые страницы, страницы GC,
+
+    выделенные страницы, сопоставленные страницы.
+  example: []
+  syntax:
+    content: public nuint GcPages
+    return:
+      type: System.UIntPtr
+    content.vb: Public GcPages As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.AllocPages
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.AllocPages
+  id: AllocPages
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: AllocPages
+  nameWithType: MdbxChkResultData.AllocPages
+  fullName: MDBX.Native.Types.MdbxChkResultData.AllocPages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: AllocPages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 598
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Обработанные страницы, возвращаемые страницы, страницы GC,
+
+    выделенные страницы, сопоставленные страницы.
+  example: []
+  syntax:
+    content: public nuint AllocPages
+    return:
+      type: System.UIntPtr
+    content.vb: Public AllocPages As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.BackedPages
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.BackedPages
+  id: BackedPages
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: BackedPages
+  nameWithType: MdbxChkResultData.BackedPages
+  fullName: MDBX.Native.Types.MdbxChkResultData.BackedPages
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: BackedPages
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 598
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Обработанные страницы, возвращаемые страницы, страницы GC,
+
+    выделенные страницы, сопоставленные страницы.
+  example: []
+  syntax:
+    content: public nuint BackedPages
+    return:
+      type: System.UIntPtr
+    content.vb: Public BackedPages As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.ProblemsMeta
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.ProblemsMeta
+  id: ProblemsMeta
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: ProblemsMeta
+  nameWithType: MdbxChkResultData.ProblemsMeta
+  fullName: MDBX.Native.Types.MdbxChkResultData.ProblemsMeta
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ProblemsMeta
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint ProblemsMeta
+    return:
+      type: System.UIntPtr
+    content.vb: Public ProblemsMeta As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.TreeProblems
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.TreeProblems
+  id: TreeProblems
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: TreeProblems
+  nameWithType: MdbxChkResultData.TreeProblems
+  fullName: MDBX.Native.Types.MdbxChkResultData.TreeProblems
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TreeProblems
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint TreeProblems
+    return:
+      type: System.UIntPtr
+    content.vb: Public TreeProblems As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.GcTreeProblems
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.GcTreeProblems
+  id: GcTreeProblems
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: GcTreeProblems
+  nameWithType: MdbxChkResultData.GcTreeProblems
+  fullName: MDBX.Native.Types.MdbxChkResultData.GcTreeProblems
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: GcTreeProblems
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint GcTreeProblems
+    return:
+      type: System.UIntPtr
+    content.vb: Public GcTreeProblems As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.KvTreeProblems
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.KvTreeProblems
+  id: KvTreeProblems
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: KvTreeProblems
+  nameWithType: MdbxChkResultData.KvTreeProblems
+  fullName: MDBX.Native.Types.MdbxChkResultData.KvTreeProblems
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: KvTreeProblems
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint KvTreeProblems
+    return:
+      type: System.UIntPtr
+    content.vb: Public KvTreeProblems As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.ProblemsGc
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.ProblemsGc
+  id: ProblemsGc
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: ProblemsGc
+  nameWithType: MdbxChkResultData.ProblemsGc
+  fullName: MDBX.Native.Types.MdbxChkResultData.ProblemsGc
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ProblemsGc
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint ProblemsGc
+    return:
+      type: System.UIntPtr
+    content.vb: Public ProblemsGc As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.ProblemsKv
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.ProblemsKv
+  id: ProblemsKv
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: ProblemsKv
+  nameWithType: MdbxChkResultData.ProblemsKv
+  fullName: MDBX.Native.Types.MdbxChkResultData.ProblemsKv
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ProblemsKv
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint ProblemsKv
+    return:
+      type: System.UIntPtr
+    content.vb: Public ProblemsKv As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.TotalProblems
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.TotalProblems
+  id: TotalProblems
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: TotalProblems
+  nameWithType: MdbxChkResultData.TotalProblems
+  fullName: MDBX.Native.Types.MdbxChkResultData.TotalProblems
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TotalProblems
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 603
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: 'Проблемы: метаданные, дерево, GC, KV, общие.'
+  example: []
+  syntax:
+    content: public nuint TotalProblems
+    return:
+      type: System.UIntPtr
+    content.vb: Public TotalProblems As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkResultData.SteadyTxnid
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.SteadyTxnid
+  id: SteadyTxnid
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: SteadyTxnid
+  nameWithType: MdbxChkResultData.SteadyTxnid
+  fullName: MDBX.Native.Types.MdbxChkResultData.SteadyTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: SteadyTxnid
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 608
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID транзакций.
+  example: []
+  syntax:
+    content: public ulong SteadyTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public SteadyTxnid As ULong
+- uid: MDBX.Native.Types.MdbxChkResultData.RecentTxnid
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.RecentTxnid
+  id: RecentTxnid
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: RecentTxnid
+  nameWithType: MdbxChkResultData.RecentTxnid
+  fullName: MDBX.Native.Types.MdbxChkResultData.RecentTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: RecentTxnid
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 608
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID транзакций.
+  example: []
+  syntax:
+    content: public ulong RecentTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public RecentTxnid As ULong
+- uid: MDBX.Native.Types.MdbxChkResultData.HistogramPageAge
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.HistogramPageAge
+  id: HistogramPageAge
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: HistogramPageAge
+  nameWithType: MdbxChkResultData.HistogramPageAge
+  fullName: MDBX.Native.Types.MdbxChkResultData.HistogramPageAge
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: HistogramPageAge
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 613
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Гистограмма возраста страниц.
+  example: []
+  syntax:
+    content: public MdbxChkHistogramData HistogramPageAge
+    return:
+      type: MDBX.Native.Types.MdbxChkHistogramData
+    content.vb: Public HistogramPageAge As MdbxChkHistogramData
+- uid: MDBX.Native.Types.MdbxChkResultData.HistogramPgnoPayload
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.HistogramPgnoPayload
+  id: HistogramPgnoPayload
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: HistogramPgnoPayload
+  nameWithType: MdbxChkResultData.HistogramPgnoPayload
+  fullName: MDBX.Native.Types.MdbxChkResultData.HistogramPgnoPayload
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: HistogramPgnoPayload
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 618
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Гистограмма pgno удерживаемого читателями.
+  example: []
+  syntax:
+    content: public MdbxChkHistogramData HistogramPgnoPayload
+    return:
+      type: MDBX.Native.Types.MdbxChkHistogramData
+    content.vb: Public HistogramPgnoPayload As MdbxChkHistogramData
+- uid: MDBX.Native.Types.MdbxChkResultData.HistogramPgnoRetained
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.HistogramPgnoRetained
+  id: HistogramPgnoRetained
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: HistogramPgnoRetained
+  nameWithType: MdbxChkResultData.HistogramPgnoRetained
+  fullName: MDBX.Native.Types.MdbxChkResultData.HistogramPgnoRetained
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: HistogramPgnoRetained
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 623
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Гистограмма pgno, используемого всей полезной нагрузкой.
+  example: []
+  syntax:
+    content: public MdbxChkHistogramData HistogramPgnoRetained
+    return:
+      type: MDBX.Native.Types.MdbxChkHistogramData
+    content.vb: Public HistogramPgnoRetained As MdbxChkHistogramData
+- uid: MDBX.Native.Types.MdbxChkResultData.Tables
+  commentId: F:MDBX.Native.Types.MdbxChkResultData.Tables
+  id: Tables
+  parent: MDBX.Native.Types.MdbxChkResultData
+  langs:
+  - csharp
+  - vb
+  name: Tables
+  nameWithType: MdbxChkResultData.Tables
+  fullName: MDBX.Native.Types.MdbxChkResultData.Tables
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Tables
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 628
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Указатель на массив указателей на структуры MDBX_chk_table_t.
+  example: []
+  syntax:
+    content: public MdbxChkTable* Tables
+    return:
+      type: MDBX.Native.Types.MdbxChkTable*
+    content.vb: Public Tables As MdbxChkTable*
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: MDBX.Native.Types.MdbxChkHistogramData
+  commentId: T:MDBX.Native.Types.MdbxChkHistogramData
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkHistogramData.html
+  name: MdbxChkHistogramData
+  nameWithType: MdbxChkHistogramData
+  fullName: MDBX.Native.Types.MdbxChkHistogramData
+- uid: MDBX.Native.Types.MdbxChkTable*
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkTable.html
+  name: MdbxChkTable*
+  nameWithType: MdbxChkTable*
+  fullName: MDBX.Native.Types.MdbxChkTable*
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxChkTable
+    name: MdbxChkTable
+    href: MDBX.Native.Types.MdbxChkTable.html
+  - name: '*'
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxChkTable
+    name: MdbxChkTable
+    href: MDBX.Native.Types.MdbxChkTable.html
+  - name: '*'

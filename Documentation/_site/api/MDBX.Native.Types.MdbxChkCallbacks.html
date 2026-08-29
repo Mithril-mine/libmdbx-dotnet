@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct MdbxChkCallbacks | Binding Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct MdbxChkCallbacks | Binding Documentation ">
+      
+      <meta name="description" content="Набор функций обратного вызова, используемых для проверки целостности базы данных.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="libmdbx-dotnet">
+            libmdbx-dotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MDBX.Native.Types.MdbxChkCallbacks">
+
+
+
+  <h1 id="MDBX_Native_Types_MdbxChkCallbacks" data-uid="MDBX.Native.Types.MdbxChkCallbacks" class="text-break">
+Struct MdbxChkCallbacks  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MDBX.html">MDBX</a>.<a class="xref" href="MDBX.Native.html">Native</a>.<a class="xref" href="MDBX.Native.Types.html">Types</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>mdbx-dotnet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Набор функций обратного вызова, используемых для проверки целостности базы данных.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct MdbxChkCallbacks</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="MDBX_Native_Types_MdbxChkCallbacks_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Соответствует структуре MDBX_chk_callbacks_t из заголовочного файла mdbx.h.
+Все функции обратного вызова опциональны, неиспользуемые должны быть nullptr.
+Содержит 16 полей-указателей на функции. 3 функции используют va_list,
+поэтому для них используется void*.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_CheckBreak" data-uid="MDBX.Native.Types.MdbxChkCallbacks.CheckBreak">
+  CheckBreak
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Функция проверки прерывания.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, bool&gt; CheckBreak</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_Issue" data-uid="MDBX.Native.Types.MdbxChkCallbacks.Issue">
+  Issue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Функция обработки проблемы (использует va_list, поэтому void*).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void* Issue</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_PrintBegin" data-uid="MDBX.Native.Types.MdbxChkCallbacks.PrintBegin">
+  PrintBegin
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Начало печати.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkSeverity, MdbxChkLine*&gt; PrintBegin</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkSeverity.html">MdbxChkSeverity</a>, <a class="xref" href="MDBX.Native.Types.MdbxChkLine.html">MdbxChkLine</a>*&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_PrintChars" data-uid="MDBX.Native.Types.MdbxChkCallbacks.PrintChars">
+  PrintChars
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печать символов.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkLine*, byte*, nuint, void&gt; PrintChars</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkLine.html">MdbxChkLine</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_PrintDone" data-uid="MDBX.Native.Types.MdbxChkCallbacks.PrintDone">
+  PrintDone
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Завершение печати.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkLine*, void&gt; PrintDone</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkLine.html">MdbxChkLine</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_PrintFlush" data-uid="MDBX.Native.Types.MdbxChkCallbacks.PrintFlush">
+  PrintFlush
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сброс печати.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkLine*, void&gt; PrintFlush</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkLine.html">MdbxChkLine</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_PrintFormat" data-uid="MDBX.Native.Types.MdbxChkCallbacks.PrintFormat">
+  PrintFormat
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печать форматированной строки (использует va_list, поэтому void*).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void* PrintFormat</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_PrintSize" data-uid="MDBX.Native.Types.MdbxChkCallbacks.PrintSize">
+  PrintSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печать размера.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkLine*, byte*, ulong, byte*, void&gt; PrintSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkLine.html">MdbxChkLine</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_ScopeConclude" data-uid="MDBX.Native.Types.MdbxChkCallbacks.ScopeConclude">
+  ScopeConclude
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Функция завершения области.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, int&gt; ScopeConclude</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkScope.html">MdbxChkScope</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkScope.html">MdbxChkScope</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_ScopePop" data-uid="MDBX.Native.Types.MdbxChkCallbacks.ScopePop">
+  ScopePop
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Функция выхода из области.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, void&gt; ScopePop</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkScope.html">MdbxChkScope</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkScope.html">MdbxChkScope</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_ScopePush" data-uid="MDBX.Native.Types.MdbxChkCallbacks.ScopePush">
+  ScopePush
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Функция входа в область (использует va_list, поэтому void*).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void* ScopePush</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_StageBegin" data-uid="MDBX.Native.Types.MdbxChkCallbacks.StageBegin">
+  StageBegin
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Начало этапа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkStage&gt; StageBegin</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkStage.html">MdbxChkStage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_StageEnd" data-uid="MDBX.Native.Types.MdbxChkCallbacks.StageEnd">
+  StageEnd
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Конец этапа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkStage, int&gt; StageEnd</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkStage.html">MdbxChkStage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_TableConclude" data-uid="MDBX.Native.Types.MdbxChkCallbacks.TableConclude">
+  TableConclude
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Завершение таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkTable*, MDBX_cursor*, int&gt; TableConclude</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkTable.html">MdbxChkTable</a>*, <a class="xref" href="MDBX.Native.Types.MDBX_cursor.html">MDBX_cursor</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_TableDispose" data-uid="MDBX.Native.Types.MdbxChkCallbacks.TableDispose">
+  TableDispose
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Освобождение таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkTable*, void&gt; TableDispose</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkTable.html">MdbxChkTable</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_TableFilter" data-uid="MDBX.Native.Types.MdbxChkCallbacks.TableFilter">
+  TableFilter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Фильтр таблицы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxVal*, uint, MdbxChkUserTableCookie*&gt; TableFilter</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="MDBX.Native.Types.MdbxChkUserTableCookie.html">MdbxChkUserTableCookie</a>*&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MDBX_Native_Types_MdbxChkCallbacks_TableHandleKv" data-uid="MDBX.Native.Types.MdbxChkCallbacks.TableHandleKv">
+  TableHandleKv
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Обработка пары ключ-значение.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate* unmanaged[Cdecl]&lt;MdbxChkContext*, MdbxChkTable*, nuint, MdbxVal*, MdbxVal*, int&gt; TableHandleKv</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt>delegate* unmanaged[<span class="xref">Cdecl</span>]&lt;<a class="xref" href="MDBX.Native.Types.MdbxChkContext.html">MdbxChkContext</a>*, <a class="xref" href="MDBX.Native.Types.MdbxChkTable.html">MdbxChkTable</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="MDBX.Native.Types.MdbxVal.html">MdbxVal</a>*, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

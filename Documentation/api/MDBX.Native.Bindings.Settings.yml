@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.Settings
+  commentId: N:MDBX.Native.Bindings.Settings
+  id: MDBX.Native.Bindings.Settings
+  children:
+  - MDBX.Native.Bindings.Settings.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MDBX.Native.Bindings.Settings
+  nameWithType: MDBX.Native.Bindings.Settings
+  fullName: MDBX.Native.Bindings.Settings
+  type: Namespace
+  assemblies:
+  - mdbx-dotnet
+references:
+- uid: MDBX.Native.Bindings.Settings.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.Settings.NativeMdbx
+  href: MDBX.Native.Bindings.Settings.NativeMdbx.html
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.Settings.NativeMdbx

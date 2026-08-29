@@ -7,3 +7,6 @@ MDBX/bin
 docs/_site
 docs/api/*.yml
 */*.lscache
+.continue/*
+.claude/*
+.kilo/*

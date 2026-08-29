@@ -1,0 +1,1462 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.MdbxDatabase
+  commentId: T:MDBX.MdbxDatabase
+  id: MdbxDatabase
+  parent: MDBX
+  children:
+  - MDBX.MdbxDatabase.Dbi
+  - MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction,System.Byte[])
+  - MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction,System.String)
+  - MDBX.MdbxDatabase.Dispose
+  - MDBX.MdbxDatabase.Finalize
+  - MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction)
+  - MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction,System.Text.Encoding)
+  - MDBX.MdbxDatabase.FindValues(MDBX.MdbxTransaction)
+  - MDBX.MdbxDatabase.Find``1(MDBX.MdbxTransaction,System.Func{System.Byte[],``0})
+  - MDBX.MdbxDatabase.Find``2(MDBX.MdbxTransaction,System.Func{System.Byte[],``0},System.Func{System.Byte[],``1})
+  - MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction,System.Byte[])
+  - MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction,System.String)
+  - MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.String,System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  - MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  langs:
+  - csharp
+  - vb
+  name: MdbxDatabase
+  nameWithType: MdbxDatabase
+  fullName: MDBX.MdbxDatabase
+  type: Class
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxDatabase
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 10
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Высокоуровневая обертка таблицы (DBI) MDBX.
+  example: []
+  syntax:
+    content: 'public sealed class MdbxDatabase : IDisposable'
+    content.vb: Public NotInheritable Class MdbxDatabase Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.MdbxDatabase.Dbi
+  commentId: P:MDBX.MdbxDatabase.Dbi
+  id: Dbi
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Dbi
+  nameWithType: MdbxDatabase.Dbi
+  fullName: MDBX.MdbxDatabase.Dbi
+  type: Property
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Dbi
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 25
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает идентификатор таблицы (DBI).
+  example: []
+  syntax:
+    content: public uint Dbi { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property Dbi As UInteger
+  overload: MDBX.MdbxDatabase.Dbi*
+- uid: MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction,System.Byte[])
+  commentId: M:MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction,System.Byte[])
+  id: Get(MDBX.MdbxTransaction,System.Byte[])
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Get(MdbxTransaction, byte[])
+  nameWithType: MdbxDatabase.Get(MdbxTransaction, byte[])
+  fullName: MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction, byte[])
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Get
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 33
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает значение по ключу.
+  example: []
+  syntax:
+    content: public byte[]? Get(MdbxTransaction txn, byte[] key)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.Byte[]
+      description: Ключ.
+    return:
+      type: System.Byte[]
+      description: Значение или null если ключ не найден.
+    content.vb: Public Function [Get](txn As MdbxTransaction, key As Byte()) As Byte()
+  overload: MDBX.MdbxDatabase.Get*
+  nameWithType.vb: MdbxDatabase.Get(MdbxTransaction, Byte())
+  fullName.vb: MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction, Byte())
+  name.vb: Get(MdbxTransaction, Byte())
+- uid: MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction,System.String)
+  commentId: M:MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction,System.String)
+  id: Get(MDBX.MdbxTransaction,System.String)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Get(MdbxTransaction, string)
+  nameWithType: MdbxDatabase.Get(MdbxTransaction, string)
+  fullName: MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction, string)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Get
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 61
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Получает значение по строковому ключу.
+  example: []
+  syntax:
+    content: public byte[]? Get(MdbxTransaction txn, string key)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.String
+      description: Строковый ключ (UTF-8).
+    return:
+      type: System.Byte[]
+      description: Значение или null если ключ не найден.
+    content.vb: Public Function [Get](txn As MdbxTransaction, key As String) As Byte()
+  overload: MDBX.MdbxDatabase.Get*
+  nameWithType.vb: MdbxDatabase.Get(MdbxTransaction, String)
+  fullName.vb: MDBX.MdbxDatabase.Get(MDBX.MdbxTransaction, String)
+  name.vb: Get(MdbxTransaction, String)
+- uid: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  id: Put(MDBX.MdbxTransaction,System.Byte[],System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Put(MdbxTransaction, byte[], byte[], MdbxPutFlags)
+  nameWithType: MdbxDatabase.Put(MdbxTransaction, byte[], byte[], MdbxPutFlags)
+  fullName: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction, byte[], byte[], MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Put
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 75
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Записывает значение по ключу.
+  example: []
+  syntax:
+    content: public void Put(MdbxTransaction txn, byte[] key, byte[] value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.Byte[]
+      description: Ключ.
+    - id: value
+      type: System.Byte[]
+      description: Значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги записи.
+    content.vb: Public Sub Put(txn As MdbxTransaction, key As Byte(), value As Byte(), flags As MdbxPutFlags = MdbxPutFlags.MDBX_UPSERT)
+  overload: MDBX.MdbxDatabase.Put*
+  nameWithType.vb: MdbxDatabase.Put(MdbxTransaction, Byte(), Byte(), MdbxPutFlags)
+  fullName.vb: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction, Byte(), Byte(), MDBX.Native.Types.MdbxPutFlags)
+  name.vb: Put(MdbxTransaction, Byte(), Byte(), MdbxPutFlags)
+- uid: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.String,System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.String,System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  id: Put(MDBX.MdbxTransaction,System.String,System.Byte[],MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Put(MdbxTransaction, string, byte[], MdbxPutFlags)
+  nameWithType: MdbxDatabase.Put(MdbxTransaction, string, byte[], MdbxPutFlags)
+  fullName: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction, string, byte[], MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Put
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 100
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Записывает значение по строковому ключу.
+  example: []
+  syntax:
+    content: public void Put(MdbxTransaction txn, string key, byte[] value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.String
+      description: Строковый ключ (UTF-8).
+    - id: value
+      type: System.Byte[]
+      description: Значение.
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги записи.
+    content.vb: Public Sub Put(txn As MdbxTransaction, key As String, value As Byte(), flags As MdbxPutFlags = MdbxPutFlags.MDBX_UPSERT)
+  overload: MDBX.MdbxDatabase.Put*
+  nameWithType.vb: MdbxDatabase.Put(MdbxTransaction, String, Byte(), MdbxPutFlags)
+  fullName.vb: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction, String, Byte(), MDBX.Native.Types.MdbxPutFlags)
+  name.vb: Put(MdbxTransaction, String, Byte(), MdbxPutFlags)
+- uid: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  commentId: M:MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction,System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  id: Put(MDBX.MdbxTransaction,System.String,System.String,MDBX.Native.Types.MdbxPutFlags)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Put(MdbxTransaction, string, string, MdbxPutFlags)
+  nameWithType: MdbxDatabase.Put(MdbxTransaction, string, string, MdbxPutFlags)
+  fullName: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction, string, string, MDBX.Native.Types.MdbxPutFlags)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Put
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 126
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Записывает строковое значение по строковому ключу.
+  example: []
+  syntax:
+    content: public void Put(MdbxTransaction txn, string key, string value, MdbxPutFlags flags = MdbxPutFlags.MDBX_UPSERT)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.String
+      description: Строковый ключ (UTF-8).
+    - id: value
+      type: System.String
+      description: Строковое значение (UTF-8).
+    - id: flags
+      type: MDBX.Native.Types.MdbxPutFlags
+      description: Флаги записи.
+    content.vb: Public Sub Put(txn As MdbxTransaction, key As String, value As String, flags As MdbxPutFlags = MdbxPutFlags.MDBX_UPSERT)
+  overload: MDBX.MdbxDatabase.Put*
+  nameWithType.vb: MdbxDatabase.Put(MdbxTransaction, String, String, MdbxPutFlags)
+  fullName.vb: MDBX.MdbxDatabase.Put(MDBX.MdbxTransaction, String, String, MDBX.Native.Types.MdbxPutFlags)
+  name.vb: Put(MdbxTransaction, String, String, MdbxPutFlags)
+- uid: MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction,System.Byte[])
+  commentId: M:MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction,System.Byte[])
+  id: Delete(MDBX.MdbxTransaction,System.Byte[])
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Delete(MdbxTransaction, byte[])
+  nameWithType: MdbxDatabase.Delete(MdbxTransaction, byte[])
+  fullName: MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction, byte[])
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Delete
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 141
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Удаляет значение по ключу.
+  example: []
+  syntax:
+    content: public bool Delete(MdbxTransaction txn, byte[] key)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.Byte[]
+      description: Ключ.
+    return:
+      type: System.Boolean
+      description: True если элемент был удален, false если не найден.
+    content.vb: Public Function Delete(txn As MdbxTransaction, key As Byte()) As Boolean
+  overload: MDBX.MdbxDatabase.Delete*
+  nameWithType.vb: MdbxDatabase.Delete(MdbxTransaction, Byte())
+  fullName.vb: MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction, Byte())
+  name.vb: Delete(MdbxTransaction, Byte())
+- uid: MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction,System.String)
+  commentId: M:MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction,System.String)
+  id: Delete(MDBX.MdbxTransaction,System.String)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Delete(MdbxTransaction, string)
+  nameWithType: MdbxDatabase.Delete(MdbxTransaction, string)
+  fullName: MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction, string)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Delete
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 165
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Удаляет значение по строковому ключу.
+  example: []
+  syntax:
+    content: public bool Delete(MdbxTransaction txn, string key)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: key
+      type: System.String
+      description: Строковый ключ (UTF-8).
+    return:
+      type: System.Boolean
+      description: True если элемент был удален, false если не найден.
+    content.vb: Public Function Delete(txn As MdbxTransaction, key As String) As Boolean
+  overload: MDBX.MdbxDatabase.Delete*
+  nameWithType.vb: MdbxDatabase.Delete(MdbxTransaction, String)
+  fullName.vb: MDBX.MdbxDatabase.Delete(MDBX.MdbxTransaction, String)
+  name.vb: Delete(MdbxTransaction, String)
+- uid: MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction)
+  commentId: M:MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction)
+  id: Find(MDBX.MdbxTransaction)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Find(MdbxTransaction)
+  nameWithType: MdbxDatabase.Find(MdbxTransaction)
+  fullName: MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Find
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 179
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: >-
+    Возвращает отложенный (lazy) запрос поверх курсора, перебирающий все записи таблицы.
+
+    Каждый вызов <xref href="MDBX.MdbxQuery.GetEnumerator" data-throw-if-not-resolved="false"></xref> открывает новый курсор, а перебор
+
+    выполняется лениво и совместим с LINQ (Where, Select, First, ToList и т.д.).
+  example: []
+  syntax:
+    content: public MdbxQuery Find(MdbxTransaction txn)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    return:
+      type: MDBX.MdbxQuery
+      description: Запрос на основе курсора.
+    content.vb: Public Function Find(txn As MdbxTransaction) As MdbxQuery
+  overload: MDBX.MdbxDatabase.Find*
+- uid: MDBX.MdbxDatabase.FindValues(MDBX.MdbxTransaction)
+  commentId: M:MDBX.MdbxDatabase.FindValues(MDBX.MdbxTransaction)
+  id: FindValues(MDBX.MdbxTransaction)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: FindValues(MdbxTransaction)
+  nameWithType: MdbxDatabase.FindValues(MdbxTransaction)
+  fullName: MDBX.MdbxDatabase.FindValues(MDBX.MdbxTransaction)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: FindValues
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 191
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Возвращает отложенный перечислитель "сырых" значений таблицы (без ключей).
+  example: []
+  syntax:
+    content: public IEnumerable<byte[]> FindValues(MdbxTransaction txn)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Byte[]}
+      description: Последовательность значений.
+    content.vb: Public Function FindValues(txn As MdbxTransaction) As IEnumerable(Of Byte())
+  overload: MDBX.MdbxDatabase.FindValues*
+- uid: MDBX.MdbxDatabase.Find``1(MDBX.MdbxTransaction,System.Func{System.Byte[],``0})
+  commentId: M:MDBX.MdbxDatabase.Find``1(MDBX.MdbxTransaction,System.Func{System.Byte[],``0})
+  id: Find``1(MDBX.MdbxTransaction,System.Func{System.Byte[],``0})
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Find<TValue>(MdbxTransaction, Func<byte[], TValue>)
+  nameWithType: MdbxDatabase.Find<TValue>(MdbxTransaction, Func<byte[], TValue>)
+  fullName: MDBX.MdbxDatabase.Find<TValue>(MDBX.MdbxTransaction, System.Func<byte[], TValue>)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Find
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 207
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: >-
+    Возвращает отложенный перечислитель значений таблицы, преобразованных в <code class="typeparamref">TValue</code>.
+
+    Позволяет писать LINQ-запросы, где параметр предиката — это значение:
+
+    <code>db.Find(txn, Encoding.UTF8.GetString).Where(x =&gt; x == "Some Value")</code>.
+  example: []
+  syntax:
+    content: public IEnumerable<TValue> Find<TValue>(MdbxTransaction txn, Func<byte[], TValue> valueSelector)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: valueSelector
+      type: System.Func{System.Byte[],{TValue}}
+      description: Преобразование "сырых" байтов значения в TValue.
+    typeParameters:
+    - id: TValue
+      description: Целевой тип значения.
+    return:
+      type: System.Collections.Generic.IEnumerable{{TValue}}
+      description: Последовательность преобразованных значений.
+    content.vb: Public Function Find(Of TValue)(txn As MdbxTransaction, valueSelector As Func(Of Byte(), TValue)) As IEnumerable(Of TValue)
+  overload: MDBX.MdbxDatabase.Find*
+  nameWithType.vb: MdbxDatabase.Find(Of TValue)(MdbxTransaction, Func(Of Byte(), TValue))
+  fullName.vb: MDBX.MdbxDatabase.Find(Of TValue)(MDBX.MdbxTransaction, System.Func(Of Byte(), TValue))
+  name.vb: Find(Of TValue)(MdbxTransaction, Func(Of Byte(), TValue))
+- uid: MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction,System.Text.Encoding)
+  commentId: M:MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction,System.Text.Encoding)
+  id: Find(MDBX.MdbxTransaction,System.Text.Encoding)
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Find(MdbxTransaction, Encoding?)
+  nameWithType: MdbxDatabase.Find(MdbxTransaction, Encoding?)
+  fullName: MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction, System.Text.Encoding?)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Find
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 221
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Возвращает отложенный перечислитель строковых значений таблицы (декодируются как UTF-8).
+  example: []
+  syntax:
+    content: public IEnumerable<string> Find(MdbxTransaction txn, Encoding? encoding = null)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: encoding
+      type: System.Text.Encoding
+      description: Кодировка для декодирования значений (по умолчанию UTF-8).
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Последовательность строковых значений.
+    content.vb: Public Function Find(txn As MdbxTransaction, encoding As Encoding = Nothing) As IEnumerable(Of String)
+  overload: MDBX.MdbxDatabase.Find*
+  nameWithType.vb: MdbxDatabase.Find(MdbxTransaction, Encoding)
+  fullName.vb: MDBX.MdbxDatabase.Find(MDBX.MdbxTransaction, System.Text.Encoding)
+  name.vb: Find(MdbxTransaction, Encoding)
+- uid: MDBX.MdbxDatabase.Find``2(MDBX.MdbxTransaction,System.Func{System.Byte[],``0},System.Func{System.Byte[],``1})
+  commentId: M:MDBX.MdbxDatabase.Find``2(MDBX.MdbxTransaction,System.Func{System.Byte[],``0},System.Func{System.Byte[],``1})
+  id: Find``2(MDBX.MdbxTransaction,System.Func{System.Byte[],``0},System.Func{System.Byte[],``1})
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Find<TKey, TValue>(MdbxTransaction, Func<byte[], TKey>, Func<byte[], TValue>)
+  nameWithType: MdbxDatabase.Find<TKey, TValue>(MdbxTransaction, Func<byte[], TKey>, Func<byte[], TValue>)
+  fullName: MDBX.MdbxDatabase.Find<TKey, TValue>(MDBX.MdbxTransaction, System.Func<byte[], TKey>, System.Func<byte[], TValue>)
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Find
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 238
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Возвращает отложенный перечислитель пар ключ-значение, преобразованных в заданные типы.
+  example: []
+  syntax:
+    content: public IEnumerable<KeyValuePair<TKey, TValue>> Find<TKey, TValue>(MdbxTransaction txn, Func<byte[], TKey> keySelector, Func<byte[], TValue> valueSelector)
+    parameters:
+    - id: txn
+      type: MDBX.MdbxTransaction
+      description: Транзакция.
+    - id: keySelector
+      type: System.Func{System.Byte[],{TKey}}
+      description: Преобразование "сырых" байтов ключа в TKey.
+    - id: valueSelector
+      type: System.Func{System.Byte[],{TValue}}
+      description: Преобразование "сырых" байтов значения в TValue.
+    typeParameters:
+    - id: TKey
+      description: Целевой тип ключа.
+    - id: TValue
+      description: Целевой тип значения.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+      description: Последовательность пар ключ-значение.
+    content.vb: Public Function Find(Of TKey, TValue)(txn As MdbxTransaction, keySelector As Func(Of Byte(), TKey), valueSelector As Func(Of Byte(), TValue)) As IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  overload: MDBX.MdbxDatabase.Find*
+  nameWithType.vb: MdbxDatabase.Find(Of TKey, TValue)(MdbxTransaction, Func(Of Byte(), TKey), Func(Of Byte(), TValue))
+  fullName.vb: MDBX.MdbxDatabase.Find(Of TKey, TValue)(MDBX.MdbxTransaction, System.Func(Of Byte(), TKey), System.Func(Of Byte(), TValue))
+  name.vb: Find(Of TKey, TValue)(MdbxTransaction, Func(Of Byte(), TKey), Func(Of Byte(), TValue))
+- uid: MDBX.MdbxDatabase.Dispose
+  commentId: M:MDBX.MdbxDatabase.Dispose
+  id: Dispose
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: MdbxDatabase.Dispose()
+  fullName: MDBX.MdbxDatabase.Dispose()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Dispose
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 253
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Освобождает ресурсы таблицы.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: MDBX.MdbxDatabase.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: MDBX.MdbxDatabase.Finalize
+  commentId: M:MDBX.MdbxDatabase.Finalize
+  id: Finalize
+  parent: MDBX.MdbxDatabase
+  langs:
+  - csharp
+  - vb
+  name: ~MdbxDatabase()
+  nameWithType: MdbxDatabase.~MdbxDatabase()
+  fullName: MDBX.MdbxDatabase.~MdbxDatabase()
+  type: Method
+  source:
+    remote:
+      path: MDBX/Database/MdbxDatabase.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Finalize
+    path: ../MDBX/Database/MdbxDatabase.cs
+    startLine: 262
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX
+  summary: Финализатор.
+  example: []
+  syntax:
+    content: protected ~MdbxDatabase()
+    content.vb: 'Protected '
+  overload: MDBX.MdbxDatabase.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: MDBX
+  commentId: N:MDBX
+  href: MDBX.html
+  name: MDBX
+  nameWithType: MDBX
+  fullName: MDBX
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.MdbxDatabase.Dbi*
+  commentId: Overload:MDBX.MdbxDatabase.Dbi
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Dbi
+  name: Dbi
+  nameWithType: MdbxDatabase.Dbi
+  fullName: MDBX.MdbxDatabase.Dbi
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.MdbxDatabase.Get*
+  commentId: Overload:MDBX.MdbxDatabase.Get
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Get_MDBX_MdbxTransaction_System_Byte___
+  name: Get
+  nameWithType: MdbxDatabase.Get
+  fullName: MDBX.MdbxDatabase.Get
+- uid: MDBX.MdbxTransaction
+  commentId: T:MDBX.MdbxTransaction
+  parent: MDBX
+  href: MDBX.MdbxTransaction.html
+  name: MdbxTransaction
+  nameWithType: MdbxTransaction
+  fullName: MDBX.MdbxTransaction
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MDBX.MdbxDatabase.Put*
+  commentId: Overload:MDBX.MdbxDatabase.Put
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Put_MDBX_MdbxTransaction_System_Byte___System_Byte___MDBX_Native_Types_MdbxPutFlags_
+  name: Put
+  nameWithType: MdbxDatabase.Put
+  fullName: MDBX.MdbxDatabase.Put
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPutFlags.html
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.MdbxDatabase.Delete*
+  commentId: Overload:MDBX.MdbxDatabase.Delete
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Delete_MDBX_MdbxTransaction_System_Byte___
+  name: Delete
+  nameWithType: MdbxDatabase.Delete
+  fullName: MDBX.MdbxDatabase.Delete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MDBX.MdbxQuery.GetEnumerator
+  commentId: M:MDBX.MdbxQuery.GetEnumerator
+  href: MDBX.MdbxQuery.html#MDBX_MdbxQuery_GetEnumerator
+  name: GetEnumerator()
+  nameWithType: MdbxQuery.GetEnumerator()
+  fullName: MDBX.MdbxQuery.GetEnumerator()
+  spec.csharp:
+  - uid: MDBX.MdbxQuery.GetEnumerator
+    name: GetEnumerator
+    href: MDBX.MdbxQuery.html#MDBX_MdbxQuery_GetEnumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MDBX.MdbxQuery.GetEnumerator
+    name: GetEnumerator
+    href: MDBX.MdbxQuery.html#MDBX_MdbxQuery_GetEnumerator
+  - name: (
+  - name: )
+- uid: MDBX.MdbxDatabase.Find*
+  commentId: Overload:MDBX.MdbxDatabase.Find
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Find_MDBX_MdbxTransaction_
+  name: Find
+  nameWithType: MdbxDatabase.Find
+  fullName: MDBX.MdbxDatabase.Find
+- uid: MDBX.MdbxQuery
+  commentId: T:MDBX.MdbxQuery
+  parent: MDBX
+  href: MDBX.MdbxQuery.html
+  name: MdbxQuery
+  nameWithType: MdbxQuery
+  fullName: MDBX.MdbxQuery
+- uid: MDBX.MdbxDatabase.FindValues*
+  commentId: Overload:MDBX.MdbxDatabase.FindValues
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_FindValues_MDBX_MdbxTransaction_
+  name: FindValues
+  nameWithType: MdbxDatabase.FindValues
+  fullName: MDBX.MdbxDatabase.FindValues
+- uid: System.Collections.Generic.IEnumerable{System.Byte[]}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Byte[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<byte[]>
+  nameWithType: IEnumerable<byte[]>
+  fullName: System.Collections.Generic.IEnumerable<byte[]>
+  nameWithType.vb: IEnumerable(Of Byte())
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Byte())
+  name.vb: IEnumerable(Of Byte())
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Func{System.Byte[],{TValue}}
+  commentId: T:System.Func{System.Byte[],``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<byte[], TValue>
+  nameWithType: Func<byte[], TValue>
+  fullName: System.Func<byte[], TValue>
+  nameWithType.vb: Func(Of Byte(), TValue)
+  fullName.vb: System.Func(Of Byte(), TValue)
+  name.vb: Func(Of Byte(), TValue)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{TValue}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TValue>
+  nameWithType: IEnumerable<TValue>
+  fullName: System.Collections.Generic.IEnumerable<TValue>
+  nameWithType.vb: IEnumerable(Of TValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TValue)
+  name.vb: IEnumerable(Of TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.encoding
+  name: Encoding
+  nameWithType: Encoding
+  fullName: System.Text.Encoding
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: System.Func{System.Byte[],{TKey}}
+  commentId: T:System.Func{System.Byte[],``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<byte[], TKey>
+  nameWithType: Func<byte[], TKey>
+  fullName: System.Func<byte[], TKey>
+  nameWithType.vb: Func(Of Byte(), TKey)
+  fullName.vb: System.Func(Of Byte(), TKey)
+  name.vb: Func(Of Byte(), TKey)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<KeyValuePair<TKey, TValue>>
+  nameWithType: IEnumerable<KeyValuePair<TKey, TValue>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: MDBX.MdbxDatabase.Dispose*
+  commentId: Overload:MDBX.MdbxDatabase.Dispose
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Dispose
+  name: Dispose
+  nameWithType: MdbxDatabase.Dispose
+  fullName: MDBX.MdbxDatabase.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: MDBX.MdbxDatabase.Finalize*
+  commentId: Overload:MDBX.MdbxDatabase.Finalize
+  href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Finalize
+  name: ~MdbxDatabase
+  nameWithType: MdbxDatabase.~MdbxDatabase
+  fullName: MDBX.MdbxDatabase.~MdbxDatabase
+  spec.csharp:
+  - name: "~"
+  - uid: MDBX.MdbxDatabase.Finalize*
+    name: MdbxDatabase
+    href: MDBX.MdbxDatabase.html#MDBX_MdbxDatabase_Finalize

@@ -1,0 +1,683 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  id: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MDBX_cursor
+  - MDBX.Native.Types.MDBX_defrag_result
+  - MDBX.Native.Types.MDBX_env
+  - MDBX.Native.Types.MDBX_envinfo
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  - MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  - MDBX.Native.Types.MDBX_txn
+  - MDBX.Native.Types.MdbxBunchAction
+  - MDBX.Native.Types.MdbxCacheEntry
+  - MDBX.Native.Types.MdbxCacheResult
+  - MDBX.Native.Types.MdbxCacheStatus
+  - MDBX.Native.Types.MdbxCanary
+  - MDBX.Native.Types.MdbxChkCallbacks
+  - MDBX.Native.Types.MdbxChkContext
+  - MDBX.Native.Types.MdbxChkFlags
+  - MDBX.Native.Types.MdbxChkGc
+  - MDBX.Native.Types.MdbxChkHistogram
+  - MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+  - MDBX.Native.Types.MdbxChkHistogramData
+  - MDBX.Native.Types.MdbxChkIssue
+  - MDBX.Native.Types.MdbxChkLine
+  - MDBX.Native.Types.MdbxChkMain
+  - MDBX.Native.Types.MdbxChkMeta
+  - MDBX.Native.Types.MdbxChkResultData
+  - MDBX.Native.Types.MdbxChkScope
+  - MDBX.Native.Types.MdbxChkSeverity
+  - MDBX.Native.Types.MdbxChkStage
+  - MDBX.Native.Types.MdbxChkTable
+  - MDBX.Native.Types.MdbxChkTableHistograms
+  - MDBX.Native.Types.MdbxChkTablePages
+  - MDBX.Native.Types.MdbxChkUserTableCookie
+  - MDBX.Native.Types.MdbxCmpFunc
+  - MDBX.Native.Types.MdbxCommitLatency
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  - MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  - MDBX.Native.Types.MdbxCopyFlags
+  - MDBX.Native.Types.MdbxCursorOp
+  - MDBX.Native.Types.MdbxDbFlags
+  - MDBX.Native.Types.MdbxDebugFlags
+  - MDBX.Native.Types.MdbxDebugFunc
+  - MDBX.Native.Types.MdbxDebugFuncNofmt
+  - MDBX.Native.Types.MdbxDefragProgressFunc
+  - MDBX.Native.Types.MdbxDefragStoppingReasons
+  - MDBX.Native.Types.MdbxEnvDeleteMode
+  - MDBX.Native.Types.MdbxEnvFlags
+  - MDBX.Native.Types.MdbxGcInfo
+  - MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+  - MDBX.Native.Types.MdbxGcIterFunc
+  - MDBX.Native.Types.MdbxHsrFunc
+  - MDBX.Native.Types.MdbxLogLevel
+  - MDBX.Native.Types.MdbxOption
+  - MDBX.Native.Types.MdbxPanicFunc
+  - MDBX.Native.Types.MdbxPredicateFunc
+  - MDBX.Native.Types.MdbxPreserveFunc
+  - MDBX.Native.Types.MdbxPutFlags
+  - MDBX.Native.Types.MdbxReaderListFunc
+  - MDBX.Native.Types.MdbxStat
+  - MDBX.Native.Types.MdbxTableEnumFunc
+  - MDBX.Native.Types.MdbxTxnFlags
+  - MDBX.Native.Types.MdbxTxnInfo
+  - MDBX.Native.Types.MdbxVal
+  - MDBX.Native.Types.MdbxWarmupFlags
+  langs:
+  - csharp
+  - vb
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  type: Namespace
+  assemblies:
+  - mdbx-dotnet
+references:
+- uid: MDBX.Native.Types.MdbxBunchAction
+  commentId: T:MDBX.Native.Types.MdbxBunchAction
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxBunchAction.html
+  name: MdbxBunchAction
+  nameWithType: MdbxBunchAction
+  fullName: MDBX.Native.Types.MdbxBunchAction
+- uid: MDBX.Native.Types.MdbxCacheStatus
+  commentId: T:MDBX.Native.Types.MdbxCacheStatus
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCacheStatus.html
+  name: MdbxCacheStatus
+  nameWithType: MdbxCacheStatus
+  fullName: MDBX.Native.Types.MdbxCacheStatus
+- uid: MDBX.Native.Types.MdbxCacheEntry
+  commentId: T:MDBX.Native.Types.MdbxCacheEntry
+  href: MDBX.Native.Types.MdbxCacheEntry.html
+  name: MdbxCacheEntry
+  nameWithType: MdbxCacheEntry
+  fullName: MDBX.Native.Types.MdbxCacheEntry
+- uid: MDBX.Native.Types.MdbxCacheResult
+  commentId: T:MDBX.Native.Types.MdbxCacheResult
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCacheResult.html
+  name: MdbxCacheResult
+  nameWithType: MdbxCacheResult
+  fullName: MDBX.Native.Types.MdbxCacheResult
+- uid: MDBX.Native.Types.MdbxCanary
+  commentId: T:MDBX.Native.Types.MdbxCanary
+  href: MDBX.Native.Types.MdbxCanary.html
+  name: MdbxCanary
+  nameWithType: MdbxCanary
+  fullName: MDBX.Native.Types.MdbxCanary
+- uid: MDBX.Native.Types.MdbxChkHistogram
+  commentId: T:MDBX.Native.Types.MdbxChkHistogram
+  href: MDBX.Native.Types.MdbxChkHistogram.html
+  name: MdbxChkHistogram
+  nameWithType: MdbxChkHistogram
+  fullName: MDBX.Native.Types.MdbxChkHistogram
+- uid: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+  commentId: T:MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+  href: MDBX.Native.Types.MdbxChkHistogram.html
+  name: MdbxChkHistogram.MdbxChkHistogramRange
+  nameWithType: MdbxChkHistogram.MdbxChkHistogramRange
+  fullName: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxChkHistogram
+    name: MdbxChkHistogram
+    href: MDBX.Native.Types.MdbxChkHistogram.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+    name: MdbxChkHistogramRange
+    href: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxChkHistogram
+    name: MdbxChkHistogram
+    href: MDBX.Native.Types.MdbxChkHistogram.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+    name: MdbxChkHistogramRange
+    href: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange.html
+- uid: MDBX.Native.Types.MdbxChkFlags
+  commentId: T:MDBX.Native.Types.MdbxChkFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkFlags.html
+  name: MdbxChkFlags
+  nameWithType: MdbxChkFlags
+  fullName: MDBX.Native.Types.MdbxChkFlags
+- uid: MDBX.Native.Types.MdbxChkSeverity
+  commentId: T:MDBX.Native.Types.MdbxChkSeverity
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkSeverity.html
+  name: MdbxChkSeverity
+  nameWithType: MdbxChkSeverity
+  fullName: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkStage
+  commentId: T:MDBX.Native.Types.MdbxChkStage
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkStage.html
+  name: MdbxChkStage
+  nameWithType: MdbxChkStage
+  fullName: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkLine
+  commentId: T:MDBX.Native.Types.MdbxChkLine
+  href: MDBX.Native.Types.MdbxChkLine.html
+  name: MdbxChkLine
+  nameWithType: MdbxChkLine
+  fullName: MDBX.Native.Types.MdbxChkLine
+- uid: MDBX.Native.Types.MdbxChkIssue
+  commentId: T:MDBX.Native.Types.MdbxChkIssue
+  href: MDBX.Native.Types.MdbxChkIssue.html
+  name: MdbxChkIssue
+  nameWithType: MdbxChkIssue
+  fullName: MDBX.Native.Types.MdbxChkIssue
+- uid: MDBX.Native.Types.MdbxChkScope
+  commentId: T:MDBX.Native.Types.MdbxChkScope
+  href: MDBX.Native.Types.MdbxChkScope.html
+  name: MdbxChkScope
+  nameWithType: MdbxChkScope
+  fullName: MDBX.Native.Types.MdbxChkScope
+- uid: MDBX.Native.Types.MdbxChkUserTableCookie
+  commentId: T:MDBX.Native.Types.MdbxChkUserTableCookie
+  href: MDBX.Native.Types.MdbxChkUserTableCookie.html
+  name: MdbxChkUserTableCookie
+  nameWithType: MdbxChkUserTableCookie
+  fullName: MDBX.Native.Types.MdbxChkUserTableCookie
+- uid: MDBX.Native.Types.MdbxChkHistogramData
+  commentId: T:MDBX.Native.Types.MdbxChkHistogramData
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkHistogramData.html
+  name: MdbxChkHistogramData
+  nameWithType: MdbxChkHistogramData
+  fullName: MDBX.Native.Types.MdbxChkHistogramData
+- uid: MDBX.Native.Types.MdbxChkTable
+  commentId: T:MDBX.Native.Types.MdbxChkTable
+  href: MDBX.Native.Types.MdbxChkTable.html
+  name: MdbxChkTable
+  nameWithType: MdbxChkTable
+  fullName: MDBX.Native.Types.MdbxChkTable
+- uid: MDBX.Native.Types.MdbxChkMain
+  commentId: T:MDBX.Native.Types.MdbxChkMain
+  href: MDBX.Native.Types.MdbxChkMain.html
+  name: MdbxChkMain
+  nameWithType: MdbxChkMain
+  fullName: MDBX.Native.Types.MdbxChkMain
+- uid: MDBX.Native.Types.MdbxChkGc
+  commentId: T:MDBX.Native.Types.MdbxChkGc
+  href: MDBX.Native.Types.MdbxChkGc.html
+  name: MdbxChkGc
+  nameWithType: MdbxChkGc
+  fullName: MDBX.Native.Types.MdbxChkGc
+- uid: MDBX.Native.Types.MdbxChkMeta
+  commentId: T:MDBX.Native.Types.MdbxChkMeta
+  href: MDBX.Native.Types.MdbxChkMeta.html
+  name: MdbxChkMeta
+  nameWithType: MdbxChkMeta
+  fullName: MDBX.Native.Types.MdbxChkMeta
+- uid: MDBX.Native.Types.MdbxChkTablePages
+  commentId: T:MDBX.Native.Types.MdbxChkTablePages
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkTablePages.html
+  name: MdbxChkTablePages
+  nameWithType: MdbxChkTablePages
+  fullName: MDBX.Native.Types.MdbxChkTablePages
+- uid: MDBX.Native.Types.MdbxChkTableHistograms
+  commentId: T:MDBX.Native.Types.MdbxChkTableHistograms
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkTableHistograms.html
+  name: MdbxChkTableHistograms
+  nameWithType: MdbxChkTableHistograms
+  fullName: MDBX.Native.Types.MdbxChkTableHistograms
+- uid: MDBX.Native.Types.MdbxChkContext
+  commentId: T:MDBX.Native.Types.MdbxChkContext
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: MdbxChkContext
+  nameWithType: MdbxChkContext
+  fullName: MDBX.Native.Types.MdbxChkContext
+- uid: MDBX.Native.Types.MdbxChkResultData
+  commentId: T:MDBX.Native.Types.MdbxChkResultData
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkResultData.html
+  name: MdbxChkResultData
+  nameWithType: MdbxChkResultData
+  fullName: MDBX.Native.Types.MdbxChkResultData
+- uid: MDBX.Native.Types.MdbxChkCallbacks
+  commentId: T:MDBX.Native.Types.MdbxChkCallbacks
+  href: MDBX.Native.Types.MdbxChkCallbacks.html
+  name: MdbxChkCallbacks
+  nameWithType: MdbxChkCallbacks
+  fullName: MDBX.Native.Types.MdbxChkCallbacks
+- uid: MDBX.Native.Types.MdbxCommitLatency
+  commentId: T:MDBX.Native.Types.MdbxCommitLatency
+  href: MDBX.Native.Types.MdbxCommitLatency.html
+  name: MdbxCommitLatency
+  nameWithType: MdbxCommitLatency
+  fullName: MDBX.Native.Types.MdbxCommitLatency
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  commentId: T:MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCommitLatency.html
+  name: MdbxCommitLatency.MdbxGcProf
+  nameWithType: MdbxCommitLatency.MdbxGcProf
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+    name: MdbxGcProf
+    href: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+    name: MdbxGcProf
+    href: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf.html
+- uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  commentId: T:MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCommitLatency.html
+  name: MdbxCommitLatency.MdbxPnlMerge
+  nameWithType: MdbxCommitLatency.MdbxPnlMerge
+  fullName: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    name: MdbxPnlMerge
+    href: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    href: MDBX.Native.Types.MdbxCommitLatency.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    name: MdbxPnlMerge
+    href: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge.html
+- uid: MDBX.Native.Types.MdbxCursorOp
+  commentId: T:MDBX.Native.Types.MdbxCursorOp
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCursorOp.html
+  name: MdbxCursorOp
+  nameWithType: MdbxCursorOp
+  fullName: MDBX.Native.Types.MdbxCursorOp
+- uid: MDBX.Native.Types.MdbxDbFlags
+  commentId: T:MDBX.Native.Types.MdbxDbFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDbFlags.html
+  name: MdbxDbFlags
+  nameWithType: MdbxDbFlags
+  fullName: MDBX.Native.Types.MdbxDbFlags
+- uid: MDBX.Native.Types.MdbxDebugFlags
+  commentId: T:MDBX.Native.Types.MdbxDebugFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFlags.html
+  name: MdbxDebugFlags
+  nameWithType: MdbxDebugFlags
+  fullName: MDBX.Native.Types.MdbxDebugFlags
+- uid: MDBX.Native.Types.MDBX_defrag_result
+  commentId: T:MDBX.Native.Types.MDBX_defrag_result
+  href: MDBX.Native.Types.MDBX_defrag_result.html
+  name: MDBX_defrag_result
+  nameWithType: MDBX_defrag_result
+  fullName: MDBX.Native.Types.MDBX_defrag_result
+- uid: MDBX.Native.Types.MdbxDefragStoppingReasons
+  commentId: T:MDBX.Native.Types.MdbxDefragStoppingReasons
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDefragStoppingReasons.html
+  name: MdbxDefragStoppingReasons
+  nameWithType: MdbxDefragStoppingReasons
+  fullName: MDBX.Native.Types.MdbxDefragStoppingReasons
+- uid: MDBX.Native.Types.MdbxPanicFunc
+  commentId: T:MDBX.Native.Types.MdbxPanicFunc
+  href: MDBX.Native.Types.MdbxPanicFunc.html
+  name: MdbxPanicFunc
+  nameWithType: MdbxPanicFunc
+  fullName: MDBX.Native.Types.MdbxPanicFunc
+- uid: MDBX.Native.Types.MdbxHsrFunc
+  commentId: T:MDBX.Native.Types.MdbxHsrFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxHsrFunc.html
+  name: MdbxHsrFunc
+  nameWithType: MdbxHsrFunc
+  fullName: MDBX.Native.Types.MdbxHsrFunc
+- uid: MDBX.Native.Types.MdbxDefragProgressFunc
+  commentId: T:MDBX.Native.Types.MdbxDefragProgressFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDefragProgressFunc.html
+  name: MdbxDefragProgressFunc
+  nameWithType: MdbxDefragProgressFunc
+  fullName: MDBX.Native.Types.MdbxDefragProgressFunc
+- uid: MDBX.Native.Types.MdbxCmpFunc
+  commentId: T:MDBX.Native.Types.MdbxCmpFunc
+  href: MDBX.Native.Types.MdbxCmpFunc.html
+  name: MdbxCmpFunc
+  nameWithType: MdbxCmpFunc
+  fullName: MDBX.Native.Types.MdbxCmpFunc
+- uid: MDBX.Native.Types.MdbxTableEnumFunc
+  commentId: T:MDBX.Native.Types.MdbxTableEnumFunc
+  href: MDBX.Native.Types.MdbxTableEnumFunc.html
+  name: MdbxTableEnumFunc
+  nameWithType: MdbxTableEnumFunc
+  fullName: MDBX.Native.Types.MdbxTableEnumFunc
+- uid: MDBX.Native.Types.MdbxPredicateFunc
+  commentId: T:MDBX.Native.Types.MdbxPredicateFunc
+  href: MDBX.Native.Types.MdbxPredicateFunc.html
+  name: MdbxPredicateFunc
+  nameWithType: MdbxPredicateFunc
+  fullName: MDBX.Native.Types.MdbxPredicateFunc
+- uid: MDBX.Native.Types.MdbxReaderListFunc
+  commentId: T:MDBX.Native.Types.MdbxReaderListFunc
+  href: MDBX.Native.Types.MdbxReaderListFunc.html
+  name: MdbxReaderListFunc
+  nameWithType: MdbxReaderListFunc
+  fullName: MDBX.Native.Types.MdbxReaderListFunc
+- uid: MDBX.Native.Types.MdbxDebugFunc
+  commentId: T:MDBX.Native.Types.MdbxDebugFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFunc.html
+  name: MdbxDebugFunc
+  nameWithType: MdbxDebugFunc
+  fullName: MDBX.Native.Types.MdbxDebugFunc
+- uid: MDBX.Native.Types.MdbxDebugFuncNofmt
+  commentId: T:MDBX.Native.Types.MdbxDebugFuncNofmt
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxDebugFuncNofmt.html
+  name: MdbxDebugFuncNofmt
+  nameWithType: MdbxDebugFuncNofmt
+  fullName: MDBX.Native.Types.MdbxDebugFuncNofmt
+- uid: MDBX.Native.Types.MdbxGcIterFunc
+  commentId: T:MDBX.Native.Types.MdbxGcIterFunc
+  href: MDBX.Native.Types.MdbxGcIterFunc.html
+  name: MdbxGcIterFunc
+  nameWithType: MdbxGcIterFunc
+  fullName: MDBX.Native.Types.MdbxGcIterFunc
+- uid: MDBX.Native.Types.MdbxPreserveFunc
+  commentId: T:MDBX.Native.Types.MdbxPreserveFunc
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPreserveFunc.html
+  name: MdbxPreserveFunc
+  nameWithType: MdbxPreserveFunc
+  fullName: MDBX.Native.Types.MdbxPreserveFunc
+- uid: MDBX.Native.Types.MdbxEnvFlags
+  commentId: T:MDBX.Native.Types.MdbxEnvFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvFlags.html
+  name: MdbxEnvFlags
+  nameWithType: MdbxEnvFlags
+  fullName: MDBX.Native.Types.MdbxEnvFlags
+- uid: MDBX.Native.Types.MDBX_envinfo
+  commentId: T:MDBX.Native.Types.MDBX_envinfo
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo
+  nameWithType: MDBX_envinfo
+  fullName: MDBX.Native.Types.MDBX_envinfo
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_geo
+  nameWithType: MDBX_envinfo.MDBX_geo
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+    name: MDBX_geo
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_geo.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+    name: MDBX_geo
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_geo.html
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_bootid
+  nameWithType: MDBX_envinfo.MDBX_bootid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+    name: MDBX_bootid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+    name: MDBX_bootid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.html
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_bootid_pair
+  nameWithType: MDBX_envinfo.MDBX_bootid_pair
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+    name: MDBX_bootid_pair
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+    name: MDBX_bootid_pair
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair.html
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_pgop_stat
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+    name: MDBX_pgop_stat
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+    name: MDBX_pgop_stat
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.html
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_dxbid
+  nameWithType: MDBX_envinfo.MDBX_dxbid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+    name: MDBX_dxbid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+    name: MDBX_dxbid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.html
+- uid: MDBX.Native.Types.MdbxGcInfo
+  commentId: T:MDBX.Native.Types.MdbxGcInfo
+  href: MDBX.Native.Types.MdbxGcInfo.html
+  name: MdbxGcInfo
+  nameWithType: MdbxGcInfo
+  fullName: MDBX.Native.Types.MdbxGcInfo
+- uid: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+  commentId: T:MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxGcInfo.html
+  name: MdbxGcInfo.MdbxGcReclaimable
+  nameWithType: MdbxGcInfo.MdbxGcReclaimable
+  fullName: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+  spec.csharp:
+  - uid: MDBX.Native.Types.MdbxGcInfo
+    name: MdbxGcInfo
+    href: MDBX.Native.Types.MdbxGcInfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+    name: MdbxGcReclaimable
+    href: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MdbxGcInfo
+    name: MdbxGcInfo
+    href: MDBX.Native.Types.MdbxGcInfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+    name: MdbxGcReclaimable
+    href: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable.html
+- uid: MDBX.Native.Types.MdbxLogLevel
+  commentId: T:MDBX.Native.Types.MdbxLogLevel
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: MdbxLogLevel
+  nameWithType: MdbxLogLevel
+  fullName: MDBX.Native.Types.MdbxLogLevel
+- uid: MDBX.Native.Types.MDBX_env
+  commentId: T:MDBX.Native.Types.MDBX_env
+  href: MDBX.Native.Types.MDBX_env.html
+  name: MDBX_env
+  nameWithType: MDBX_env
+  fullName: MDBX.Native.Types.MDBX_env
+- uid: MDBX.Native.Types.MDBX_txn
+  commentId: T:MDBX.Native.Types.MDBX_txn
+  href: MDBX.Native.Types.MDBX_txn.html
+  name: MDBX_txn
+  nameWithType: MDBX_txn
+  fullName: MDBX.Native.Types.MDBX_txn
+- uid: MDBX.Native.Types.MDBX_cursor
+  commentId: T:MDBX.Native.Types.MDBX_cursor
+  href: MDBX.Native.Types.MDBX_cursor.html
+  name: MDBX_cursor
+  nameWithType: MDBX_cursor
+  fullName: MDBX.Native.Types.MDBX_cursor
+- uid: MDBX.Native.Types.MdbxCopyFlags
+  commentId: T:MDBX.Native.Types.MdbxCopyFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxCopyFlags.html
+  name: MdbxCopyFlags
+  nameWithType: MdbxCopyFlags
+  fullName: MDBX.Native.Types.MdbxCopyFlags
+- uid: MDBX.Native.Types.MdbxEnvDeleteMode
+  commentId: T:MDBX.Native.Types.MdbxEnvDeleteMode
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxEnvDeleteMode.html
+  name: MdbxEnvDeleteMode
+  nameWithType: MdbxEnvDeleteMode
+  fullName: MDBX.Native.Types.MdbxEnvDeleteMode
+- uid: MDBX.Native.Types.MdbxWarmupFlags
+  commentId: T:MDBX.Native.Types.MdbxWarmupFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxWarmupFlags.html
+  name: MdbxWarmupFlags
+  nameWithType: MdbxWarmupFlags
+  fullName: MDBX.Native.Types.MdbxWarmupFlags
+- uid: MDBX.Native.Types.MdbxOption
+  commentId: T:MDBX.Native.Types.MdbxOption
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxOption.html
+  name: MdbxOption
+  nameWithType: MdbxOption
+  fullName: MDBX.Native.Types.MdbxOption
+- uid: MDBX.Native.Types.MdbxPutFlags
+  commentId: T:MDBX.Native.Types.MdbxPutFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxPutFlags.html
+  name: MdbxPutFlags
+  nameWithType: MdbxPutFlags
+  fullName: MDBX.Native.Types.MdbxPutFlags
+- uid: MDBX.Native.Types.MdbxStat
+  commentId: T:MDBX.Native.Types.MdbxStat
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxStat.html
+  name: MdbxStat
+  nameWithType: MdbxStat
+  fullName: MDBX.Native.Types.MdbxStat
+- uid: MDBX.Native.Types.MdbxTxnFlags
+  commentId: T:MDBX.Native.Types.MdbxTxnFlags
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxTxnFlags.html
+  name: MdbxTxnFlags
+  nameWithType: MdbxTxnFlags
+  fullName: MDBX.Native.Types.MdbxTxnFlags
+- uid: MDBX.Native.Types.MdbxTxnInfo
+  commentId: T:MDBX.Native.Types.MdbxTxnInfo
+  href: MDBX.Native.Types.MdbxTxnInfo.html
+  name: MdbxTxnInfo
+  nameWithType: MdbxTxnInfo
+  fullName: MDBX.Native.Types.MdbxTxnInfo
+- uid: MDBX.Native.Types.MdbxVal
+  commentId: T:MDBX.Native.Types.MdbxVal
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxVal.html
+  name: MdbxVal
+  nameWithType: MdbxVal
+  fullName: MDBX.Native.Types.MdbxVal
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html

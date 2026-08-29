@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkSeverity
+  commentId: T:MDBX.Native.Types.MdbxChkSeverity
+  id: MdbxChkSeverity
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_details
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_error
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_extra
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_fatal
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_info
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_notice
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_processing
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_resolution
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_result
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_kind_mask
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_prio_shift
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_verbose
+  - MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_warning
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkSeverity
+  nameWithType: MdbxChkSeverity
+  fullName: MDBX.Native.Types.MdbxChkSeverity
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkSeverity
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 49
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Уровни логирования и детализации информации, передаваемые через
+
+    функции обратного вызова во время проверки целостности базы данных.
+  remarks: Значения соответствуют перечислению MDBX_chk_severity_t из заголовочного файла mdbx.h.
+  example: []
+  syntax:
+    content: 'public enum MdbxChkSeverity : uint'
+    content.vb: Public Enum MdbxChkSeverity As UInteger
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_prio_shift
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_prio_shift
+  id: MDBX_chk_severity_prio_shift
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_severity_prio_shift
+  nameWithType: MdbxChkSeverity.MDBX_chk_severity_prio_shift
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_prio_shift
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_severity_prio_shift
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 54
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Сдвиг приоритета для определения категории severitу.
+  example: []
+  syntax:
+    content: MDBX_chk_severity_prio_shift = 4
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_kind_mask
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_kind_mask
+  id: MDBX_chk_severity_kind_mask
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_severity_kind_mask
+  nameWithType: MdbxChkSeverity.MDBX_chk_severity_kind_mask
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_severity_kind_mask
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_severity_kind_mask
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 59
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Маска для извлечения категории severity.
+  example: []
+  syntax:
+    content: MDBX_chk_severity_kind_mask = 15
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_fatal
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_fatal
+  id: MDBX_chk_fatal
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_fatal
+  nameWithType: MdbxChkSeverity.MDBX_chk_fatal
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_fatal
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_fatal
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 64
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Фатальная ошибка.
+  example: []
+  syntax:
+    content: MDBX_chk_fatal = 0
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_error
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_error
+  id: MDBX_chk_error
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_error
+  nameWithType: MdbxChkSeverity.MDBX_chk_error
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_error
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_error
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 69
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Ошибка.
+  example: []
+  syntax:
+    content: MDBX_chk_error = 17
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_warning
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_warning
+  id: MDBX_chk_warning
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_warning
+  nameWithType: MdbxChkSeverity.MDBX_chk_warning
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_warning
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_warning
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 74
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Предупреждение.
+  example: []
+  syntax:
+    content: MDBX_chk_warning = 34
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_notice
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_notice
+  id: MDBX_chk_notice
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_notice
+  nameWithType: MdbxChkSeverity.MDBX_chk_notice
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_notice
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_notice
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 79
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Уведомление.
+  example: []
+  syntax:
+    content: MDBX_chk_notice = 51
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_result
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_result
+  id: MDBX_chk_result
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_result
+  nameWithType: MdbxChkSeverity.MDBX_chk_result
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_result
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_result
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 84
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Результат проверки.
+  example: []
+  syntax:
+    content: MDBX_chk_result = 68
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_resolution
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_resolution
+  id: MDBX_chk_resolution
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_resolution
+  nameWithType: MdbxChkSeverity.MDBX_chk_resolution
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_resolution
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_resolution
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 89
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Разрешение проблемы.
+  example: []
+  syntax:
+    content: MDBX_chk_resolution = 85
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_processing
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_processing
+  id: MDBX_chk_processing
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_processing
+  nameWithType: MdbxChkSeverity.MDBX_chk_processing
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_processing
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_processing
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 94
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Обработка.
+  example: []
+  syntax:
+    content: MDBX_chk_processing = 86
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_info
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_info
+  id: MDBX_chk_info
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_info
+  nameWithType: MdbxChkSeverity.MDBX_chk_info
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_info
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_info
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 99
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Информационное сообщение.
+  example: []
+  syntax:
+    content: MDBX_chk_info = 103
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_verbose
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_verbose
+  id: MDBX_chk_verbose
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_verbose
+  nameWithType: MdbxChkSeverity.MDBX_chk_verbose
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_verbose
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_verbose
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 104
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Подробное логирование.
+  example: []
+  syntax:
+    content: MDBX_chk_verbose = 120
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_details
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_details
+  id: MDBX_chk_details
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_details
+  nameWithType: MdbxChkSeverity.MDBX_chk_details
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_details
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_details
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 109
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Детали.
+  example: []
+  syntax:
+    content: MDBX_chk_details = 137
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+- uid: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_extra
+  commentId: F:MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_extra
+  id: MDBX_chk_extra
+  parent: MDBX.Native.Types.MdbxChkSeverity
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_extra
+  nameWithType: MdbxChkSeverity.MDBX_chk_extra
+  fullName: MDBX.Native.Types.MdbxChkSeverity.MDBX_chk_extra
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_extra
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 114
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Дополнительная детализация.
+  example: []
+  syntax:
+    content: MDBX_chk_extra = 154
+    return:
+      type: MDBX.Native.Types.MdbxChkSeverity
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxChkSeverity
+  commentId: T:MDBX.Native.Types.MdbxChkSeverity
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkSeverity.html
+  name: MdbxChkSeverity
+  nameWithType: MdbxChkSeverity
+  fullName: MDBX.Native.Types.MdbxChkSeverity

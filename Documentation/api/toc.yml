@@ -1,0 +1,310 @@
+### YamlMime:TableOfContent
+items:
+- uid: MDBX
+  name: MDBX
+  type: Namespace
+  items:
+  - uid: MDBX.MdbxCursor
+    name: MdbxCursor
+    type: Class
+  - uid: MDBX.MdbxDatabase
+    name: MdbxDatabase
+    type: Class
+  - uid: MDBX.MdbxEntry
+    name: MdbxEntry
+    type: Class
+  - uid: MDBX.MdbxEnvironment
+    name: MdbxEnvironment
+    type: Class
+  - uid: MDBX.MdbxErrorCodes
+    name: MdbxErrorCodes
+    type: Class
+  - uid: MDBX.MdbxException
+    name: MdbxException
+    type: Class
+  - uid: MDBX.MdbxQuery
+    name: MdbxQuery
+    type: Class
+  - uid: MDBX.MdbxQueryExtensions
+    name: MdbxQueryExtensions
+    type: Class
+  - uid: MDBX.MdbxTransaction
+    name: MdbxTransaction
+    type: Class
+- uid: MDBX.Native
+  name: MDBX.Native
+  type: Namespace
+  items:
+  - uid: MDBX.Native.NativeLibraryLoader
+    name: NativeLibraryLoader
+    type: Class
+- uid: MDBX.Native.Bindings.Crud
+  name: MDBX.Native.Bindings.Crud
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Crud.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Cursor
+  name: MDBX.Native.Bindings.Cursor
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Cursor.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Dbi
+  name: MDBX.Native.Bindings.Dbi
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Dbi.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Debug
+  name: MDBX.Native.Bindings.Debug
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Debug.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Env
+  name: MDBX.Native.Bindings.Env
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Env.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.ErrorHandling
+  name: MDBX.Native.Bindings.ErrorHandling
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Extra
+  name: MDBX.Native.Bindings.Extra
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Extra.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Settings
+  name: MDBX.Native.Bindings.Settings
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Settings.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Stat
+  name: MDBX.Native.Bindings.Stat
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Stat.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Bindings.Txn
+  name: MDBX.Native.Bindings.Txn
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Bindings.Txn.NativeMdbx
+    name: NativeMdbx
+    type: Class
+- uid: MDBX.Native.Types
+  name: MDBX.Native.Types
+  type: Namespace
+  items:
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_defrag_result
+    name: MDBX_defrag_result
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_env
+    name: MDBX_env
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+    name: MDBX_envinfo.MDBX_bootid
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid_pair
+    name: MDBX_envinfo.MDBX_bootid_pair
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+    name: MDBX_envinfo.MDBX_dxbid
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+    name: MDBX_envinfo.MDBX_geo
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+    name: MDBX_envinfo.MDBX_pgop_stat
+    type: Struct
+  - uid: MDBX.Native.Types.MDBX_txn
+    name: MDBX_txn
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxBunchAction
+    name: MdbxBunchAction
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxCacheEntry
+    name: MdbxCacheEntry
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxCacheResult
+    name: MdbxCacheResult
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxCacheStatus
+    name: MdbxCacheStatus
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxCanary
+    name: MdbxCanary
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkCallbacks
+    name: MdbxChkCallbacks
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkFlags
+    name: MdbxChkFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxChkGc
+    name: MdbxChkGc
+    type: Class
+  - uid: MDBX.Native.Types.MdbxChkHistogram
+    name: MdbxChkHistogram
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkHistogram.MdbxChkHistogramRange
+    name: MdbxChkHistogram.MdbxChkHistogramRange
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkHistogramData
+    name: MdbxChkHistogramData
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkIssue
+    name: MdbxChkIssue
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkLine
+    name: MdbxChkLine
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkMain
+    name: MdbxChkMain
+    type: Class
+  - uid: MDBX.Native.Types.MdbxChkMeta
+    name: MdbxChkMeta
+    type: Class
+  - uid: MDBX.Native.Types.MdbxChkResultData
+    name: MdbxChkResultData
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkSeverity
+    name: MdbxChkSeverity
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxChkStage
+    name: MdbxChkStage
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxChkTable
+    name: MdbxChkTable
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkTableHistograms
+    name: MdbxChkTableHistograms
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkTablePages
+    name: MdbxChkTablePages
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxChkUserTableCookie
+    name: MdbxChkUserTableCookie
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxCmpFunc
+    name: MdbxCmpFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxCommitLatency
+    name: MdbxCommitLatency
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxGcProf
+    name: MdbxCommitLatency.MdbxGcProf
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxCommitLatency.MdbxPnlMerge
+    name: MdbxCommitLatency.MdbxPnlMerge
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxCopyFlags
+    name: MdbxCopyFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxCursorOp
+    name: MdbxCursorOp
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxDbFlags
+    name: MdbxDbFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxDebugFlags
+    name: MdbxDebugFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxDebugFunc
+    name: MdbxDebugFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxDebugFuncNofmt
+    name: MdbxDebugFuncNofmt
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxDefragProgressFunc
+    name: MdbxDefragProgressFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxDefragStoppingReasons
+    name: MdbxDefragStoppingReasons
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxEnvDeleteMode
+    name: MdbxEnvDeleteMode
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxEnvFlags
+    name: MdbxEnvFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxGcInfo
+    name: MdbxGcInfo
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxGcInfo.MdbxGcReclaimable
+    name: MdbxGcInfo.MdbxGcReclaimable
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxGcIterFunc
+    name: MdbxGcIterFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxHsrFunc
+    name: MdbxHsrFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxLogLevel
+    name: MdbxLogLevel
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxOption
+    name: MdbxOption
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxPanicFunc
+    name: MdbxPanicFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxPredicateFunc
+    name: MdbxPredicateFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxPreserveFunc
+    name: MdbxPreserveFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxPutFlags
+    name: MdbxPutFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxReaderListFunc
+    name: MdbxReaderListFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxStat
+    name: MdbxStat
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxTableEnumFunc
+    name: MdbxTableEnumFunc
+    type: Delegate
+  - uid: MDBX.Native.Types.MdbxTxnFlags
+    name: MdbxTxnFlags
+    type: Enum
+  - uid: MDBX.Native.Types.MdbxTxnInfo
+    name: MdbxTxnInfo
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    type: Struct
+  - uid: MDBX.Native.Types.MdbxWarmupFlags
+    name: MdbxWarmupFlags
+    type: Enum
+memberLayout: SamePage

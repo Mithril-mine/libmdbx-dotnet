@@ -1,0 +1,578 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxTxnInfo
+  commentId: T:MDBX.Native.Types.MdbxTxnInfo
+  id: MdbxTxnInfo
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxTxnInfo.TxnId
+  - MDBX.Native.Types.MdbxTxnInfo.TxnPget
+  - MDBX.Native.Types.MdbxTxnInfo.TxnReaderLag
+  - MDBX.Native.Types.MdbxTxnInfo.TxnSpaceDirty
+  - MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLeftover
+  - MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitHard
+  - MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitSoft
+  - MDBX.Native.Types.MdbxTxnInfo.TxnSpaceRetired
+  - MDBX.Native.Types.MdbxTxnInfo.TxnSpaceUsed
+  langs:
+  - csharp
+  - vb
+  name: MdbxTxnInfo
+  nameWithType: MdbxTxnInfo
+  fullName: MDBX.Native.Types.MdbxTxnInfo
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxTxnInfo
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Информация о транзакции MDBX.
+  example: []
+  syntax:
+    content: public struct MdbxTxnInfo
+    content.vb: Public Structure MdbxTxnInfo
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnId
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnId
+  id: TxnId
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnId
+  nameWithType: MdbxTxnInfo.TxnId
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnId
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnId
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 13
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID транзакции. Для READ-ONLY транзакции соответствует снимку MVCC, который читается.
+  example: []
+  syntax:
+    content: public ulong TxnId
+    return:
+      type: System.UInt64
+    content.vb: Public TxnId As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnReaderLag
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnReaderLag
+  id: TxnReaderLag
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnReaderLag
+  nameWithType: MdbxTxnInfo.TxnReaderLag
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnReaderLag
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnReaderLag
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 19
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Для READ-ONLY транзакции: отставание от последнего MVCC-снимка.
+
+    Для WRITE транзакции (при scan_rlt=true): отставание самого старого читателя от текущей транзакции.
+  example: []
+  syntax:
+    content: public ulong TxnReaderLag
+    return:
+      type: System.UInt64
+    content.vb: Public TxnReaderLag As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceUsed
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnSpaceUsed
+  id: TxnSpaceUsed
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnSpaceUsed
+  nameWithType: MdbxTxnInfo.TxnSpaceUsed
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceUsed
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnSpaceUsed
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 24
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Используемое пространство данной транзакцией.
+  example: []
+  syntax:
+    content: public ulong TxnSpaceUsed
+    return:
+      type: System.UInt64
+    content.vb: Public TxnSpaceUsed As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitSoft
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitSoft
+  id: TxnSpaceLimitSoft
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnSpaceLimitSoft
+  nameWithType: MdbxTxnInfo.TxnSpaceLimitSoft
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitSoft
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnSpaceLimitSoft
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 29
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Текущий размер файла базы данных.
+  example: []
+  syntax:
+    content: public ulong TxnSpaceLimitSoft
+    return:
+      type: System.UInt64
+    content.vb: Public TxnSpaceLimitSoft As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitHard
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitHard
+  id: TxnSpaceLimitHard
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnSpaceLimitHard
+  nameWithType: MdbxTxnInfo.TxnSpaceLimitHard
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLimitHard
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnSpaceLimitHard
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 34
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Верхняя граница размера файла базы данных.
+  example: []
+  syntax:
+    content: public ulong TxnSpaceLimitHard
+    return:
+      type: System.UInt64
+    content.vb: Public TxnSpaceLimitHard As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceRetired
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnSpaceRetired
+  id: TxnSpaceRetired
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnSpaceRetired
+  nameWithType: MdbxTxnInfo.TxnSpaceRetired
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceRetired
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnSpaceRetired
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 40
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Для READ-ONLY: общий размер страниц, удаленных зафиксированными write-транзакциями.
+
+    Для WRITE: обобщенный размер удаленных страниц из-за Copy-On-Write.
+  example: []
+  syntax:
+    content: public ulong TxnSpaceRetired
+    return:
+      type: System.UInt64
+    content.vb: Public TxnSpaceRetired As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLeftover
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLeftover
+  id: TxnSpaceLeftover
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnSpaceLeftover
+  nameWithType: MdbxTxnInfo.TxnSpaceLeftover
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceLeftover
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnSpaceLeftover
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 46
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Для READ-ONLY: пространство, доступное для writer(s).
+
+    Для WRITE: пространство внутри транзакции до ошибки MDBX_TXN_FULL.
+  example: []
+  syntax:
+    content: public ulong TxnSpaceLeftover
+    return:
+      type: System.UInt64
+    content.vb: Public TxnSpaceLeftover As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceDirty
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnSpaceDirty
+  id: TxnSpaceDirty
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnSpaceDirty
+  nameWithType: MdbxTxnInfo.TxnSpaceDirty
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnSpaceDirty
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnSpaceDirty
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 52
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Для READ-ONLY: пространство, которое станет доступно после завершения транзакции.
+
+    Для WRITE: обобщенный размер грязных страниц, созданных в транзакции.
+  example: []
+  syntax:
+    content: public ulong TxnSpaceDirty
+    return:
+      type: System.UInt64
+    content.vb: Public TxnSpaceDirty As ULong
+- uid: MDBX.Native.Types.MdbxTxnInfo.TxnPget
+  commentId: F:MDBX.Native.Types.MdbxTxnInfo.TxnPget
+  id: TxnPget
+  parent: MDBX.Native.Types.MdbxTxnInfo
+  langs:
+  - csharp
+  - vb
+  name: TxnPget
+  nameWithType: MdbxTxnInfo.TxnPget
+  fullName: MDBX.Native.Types.MdbxTxnInfo.TxnPget
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxTxnInfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TxnPget
+    path: ../MDBX/Types/MdbxTxnInfo.cs
+    startLine: 57
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество операций получения страниц в транзакции.
+  example: []
+  syntax:
+    content: public ulong TxnPget
+    return:
+      type: System.UInt64
+    content.vb: Public TxnPget As ULong
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

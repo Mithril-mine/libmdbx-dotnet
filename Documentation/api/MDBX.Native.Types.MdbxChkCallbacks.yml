@@ -1,0 +1,1308 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkCallbacks
+  commentId: T:MDBX.Native.Types.MdbxChkCallbacks
+  id: MdbxChkCallbacks
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkCallbacks.CheckBreak
+  - MDBX.Native.Types.MdbxChkCallbacks.Issue
+  - MDBX.Native.Types.MdbxChkCallbacks.PrintBegin
+  - MDBX.Native.Types.MdbxChkCallbacks.PrintChars
+  - MDBX.Native.Types.MdbxChkCallbacks.PrintDone
+  - MDBX.Native.Types.MdbxChkCallbacks.PrintFlush
+  - MDBX.Native.Types.MdbxChkCallbacks.PrintFormat
+  - MDBX.Native.Types.MdbxChkCallbacks.PrintSize
+  - MDBX.Native.Types.MdbxChkCallbacks.ScopeConclude
+  - MDBX.Native.Types.MdbxChkCallbacks.ScopePop
+  - MDBX.Native.Types.MdbxChkCallbacks.ScopePush
+  - MDBX.Native.Types.MdbxChkCallbacks.StageBegin
+  - MDBX.Native.Types.MdbxChkCallbacks.StageEnd
+  - MDBX.Native.Types.MdbxChkCallbacks.TableConclude
+  - MDBX.Native.Types.MdbxChkCallbacks.TableDispose
+  - MDBX.Native.Types.MdbxChkCallbacks.TableFilter
+  - MDBX.Native.Types.MdbxChkCallbacks.TableHandleKv
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkCallbacks
+  nameWithType: MdbxChkCallbacks
+  fullName: MDBX.Native.Types.MdbxChkCallbacks
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkCallbacks
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 640
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Набор функций обратного вызова, используемых для проверки целостности базы данных.
+  remarks: >-
+    Соответствует структуре MDBX_chk_callbacks_t из заголовочного файла mdbx.h.
+
+    Все функции обратного вызова опциональны, неиспользуемые должны быть nullptr.
+
+    Содержит 16 полей-указателей на функции. 3 функции используют va_list,
+
+    поэтому для них используется void*.
+  example: []
+  syntax:
+    content: public struct MdbxChkCallbacks
+    content.vb: Public Structure MdbxChkCallbacks
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxChkCallbacks.CheckBreak
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.CheckBreak
+  id: CheckBreak
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: CheckBreak
+  nameWithType: MdbxChkCallbacks.CheckBreak
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.CheckBreak
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: CheckBreak
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 646
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция проверки прерывания.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, bool> CheckBreak
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, bool>
+    content.vb: 'Public CheckBreak As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.ScopePush
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.ScopePush
+  id: ScopePush
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: ScopePush
+  nameWithType: MdbxChkCallbacks.ScopePush
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.ScopePush
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ScopePush
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 651
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция входа в область (использует va_list, поэтому void*).
+  example: []
+  syntax:
+    content: public void* ScopePush
+    return:
+      type: System.Void*
+    content.vb: Public ScopePush As Void*
+- uid: MDBX.Native.Types.MdbxChkCallbacks.ScopeConclude
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.ScopeConclude
+  id: ScopeConclude
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: ScopeConclude
+  nameWithType: MdbxChkCallbacks.ScopeConclude
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.ScopeConclude
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ScopeConclude
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 656
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция завершения области.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, int> ScopeConclude
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkScope*, MDBX.Native.Types.MdbxChkScope*, int>
+    content.vb: 'Public ScopeConclude As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.ScopePop
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.ScopePop
+  id: ScopePop
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: ScopePop
+  nameWithType: MdbxChkCallbacks.ScopePop
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.ScopePop
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: ScopePop
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 661
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция выхода из области.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, void> ScopePop
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkScope*, MDBX.Native.Types.MdbxChkScope*, void>
+    content.vb: 'Public ScopePop As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.Issue
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.Issue
+  id: Issue
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: Issue
+  nameWithType: MdbxChkCallbacks.Issue
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.Issue
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Issue
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 666
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция обработки проблемы (использует va_list, поэтому void*).
+  example: []
+  syntax:
+    content: public void* Issue
+    return:
+      type: System.Void*
+    content.vb: Public Issue As Void*
+- uid: MDBX.Native.Types.MdbxChkCallbacks.TableFilter
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.TableFilter
+  id: TableFilter
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: TableFilter
+  nameWithType: MdbxChkCallbacks.TableFilter
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.TableFilter
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TableFilter
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 671
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Фильтр таблицы.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxVal*, uint, MdbxChkUserTableCookie*> TableFilter
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxVal*, uint, MDBX.Native.Types.MdbxChkUserTableCookie*>
+    content.vb: 'Public TableFilter As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.TableConclude
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.TableConclude
+  id: TableConclude
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: TableConclude
+  nameWithType: MdbxChkCallbacks.TableConclude
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.TableConclude
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TableConclude
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 676
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Завершение таблицы.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, MDBX_cursor*, int> TableConclude
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, MDBX.Native.Types.MDBX_cursor*, int>
+    content.vb: 'Public TableConclude As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.TableDispose
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.TableDispose
+  id: TableDispose
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: TableDispose
+  nameWithType: MdbxChkCallbacks.TableDispose
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.TableDispose
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TableDispose
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 681
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Освобождение таблицы.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, void> TableDispose
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, void>
+    content.vb: 'Public TableDispose As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.TableHandleKv
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.TableHandleKv
+  id: TableHandleKv
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: TableHandleKv
+  nameWithType: MdbxChkCallbacks.TableHandleKv
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.TableHandleKv
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: TableHandleKv
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 686
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Обработка пары ключ-значение.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, nuint, MdbxVal*, MdbxVal*, int> TableHandleKv
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, nuint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, int>
+    content.vb: 'Public TableHandleKv As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.StageBegin
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.StageBegin
+  id: StageBegin
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: StageBegin
+  nameWithType: MdbxChkCallbacks.StageBegin
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.StageBegin
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: StageBegin
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 691
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Начало этапа.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkStage> StageBegin
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkStage>
+    content.vb: 'Public StageBegin As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.StageEnd
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.StageEnd
+  id: StageEnd
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: StageEnd
+  nameWithType: MdbxChkCallbacks.StageEnd
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.StageEnd
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: StageEnd
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 696
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Конец этапа.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkStage, int> StageEnd
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkStage, int>
+    content.vb: 'Public StageEnd As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.PrintBegin
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.PrintBegin
+  id: PrintBegin
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: PrintBegin
+  nameWithType: MdbxChkCallbacks.PrintBegin
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.PrintBegin
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PrintBegin
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 701
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Начало печати.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkSeverity, MdbxChkLine*> PrintBegin
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkSeverity, MDBX.Native.Types.MdbxChkLine*>
+    content.vb: 'Public PrintBegin As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.PrintFlush
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.PrintFlush
+  id: PrintFlush
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: PrintFlush
+  nameWithType: MdbxChkCallbacks.PrintFlush
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.PrintFlush
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PrintFlush
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 706
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Сброс печати.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkLine*, void> PrintFlush
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, void>
+    content.vb: 'Public PrintFlush As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.PrintDone
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.PrintDone
+  id: PrintDone
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: PrintDone
+  nameWithType: MdbxChkCallbacks.PrintDone
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.PrintDone
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PrintDone
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 711
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Завершение печати.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkLine*, void> PrintDone
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, void>
+    content.vb: 'Public PrintDone As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.PrintChars
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.PrintChars
+  id: PrintChars
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: PrintChars
+  nameWithType: MdbxChkCallbacks.PrintChars
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.PrintChars
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PrintChars
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 716
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Печать символов.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkLine*, byte*, nuint, void> PrintChars
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, byte*, nuint, void>
+    content.vb: 'Public PrintChars As '
+- uid: MDBX.Native.Types.MdbxChkCallbacks.PrintFormat
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.PrintFormat
+  id: PrintFormat
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: PrintFormat
+  nameWithType: MdbxChkCallbacks.PrintFormat
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.PrintFormat
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PrintFormat
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 721
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Печать форматированной строки (использует va_list, поэтому void*).
+  example: []
+  syntax:
+    content: public void* PrintFormat
+    return:
+      type: System.Void*
+    content.vb: Public PrintFormat As Void*
+- uid: MDBX.Native.Types.MdbxChkCallbacks.PrintSize
+  commentId: F:MDBX.Native.Types.MdbxChkCallbacks.PrintSize
+  id: PrintSize
+  parent: MDBX.Native.Types.MdbxChkCallbacks
+  langs:
+  - csharp
+  - vb
+  name: PrintSize
+  nameWithType: MdbxChkCallbacks.PrintSize
+  fullName: MDBX.Native.Types.MdbxChkCallbacks.PrintSize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: PrintSize
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 726
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Печать размера.
+  example: []
+  syntax:
+    content: public delegate* unmanaged[Cdecl]<MdbxChkLine*, byte*, ulong, byte*, void> PrintSize
+    return:
+      type: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, byte*, ulong, byte*, void>
+    content.vb: 'Public PrintSize As '
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, bool>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, bool>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, bool>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, bool>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkScope*, MDBX.Native.Types.MdbxChkScope*, int>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, int>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, int>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkScope*, MDBX.Native.Types.MdbxChkScope*, int>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkScope*,MDBX.Native.Types.MdbxChkScope*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    href: MDBX.Native.Types.MdbxChkScope.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    href: MDBX.Native.Types.MdbxChkScope.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkScope*, MDBX.Native.Types.MdbxChkScope*, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkScope*, MdbxChkScope*, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkScope*, MDBX.Native.Types.MdbxChkScope*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkScope*,MDBX.Native.Types.MdbxChkScope*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    href: MDBX.Native.Types.MdbxChkScope.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkScope
+    name: MdbxChkScope
+    href: MDBX.Native.Types.MdbxChkScope.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxVal*, uint, MDBX.Native.Types.MdbxChkUserTableCookie*>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxVal*, uint, MdbxChkUserTableCookie*>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxVal*, uint, MdbxChkUserTableCookie*>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxVal*, uint, MDBX.Native.Types.MdbxChkUserTableCookie*>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxVal*,System.UInt32)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkUserTableCookie
+    name: MdbxChkUserTableCookie
+    href: MDBX.Native.Types.MdbxChkUserTableCookie.html
+  - name: '*'
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, MDBX.Native.Types.MDBX_cursor*, int>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, MDBX_cursor*, int>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, MDBX_cursor*, int>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, MDBX.Native.Types.MDBX_cursor*, int>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkTable*,MDBX.Native.Types.MDBX_cursor*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkTable
+    name: MdbxChkTable
+    href: MDBX.Native.Types.MdbxChkTable.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MDBX_cursor
+    name: MDBX_cursor
+    href: MDBX.Native.Types.MDBX_cursor.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkTable*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkTable
+    name: MdbxChkTable
+    href: MDBX.Native.Types.MdbxChkTable.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, nuint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, int>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, nuint, MdbxVal*, MdbxVal*, int>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkTable*, nuint, MdbxVal*, MdbxVal*, int>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkTable*, nuint, MDBX.Native.Types.MdbxVal*, MDBX.Native.Types.MdbxVal*, int>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkTable*,System.UIntPtr,MDBX.Native.Types.MdbxVal*,MDBX.Native.Types.MdbxVal*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkTable
+    name: MdbxChkTable
+    href: MDBX.Native.Types.MdbxChkTable.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxVal
+    name: MdbxVal
+    href: MDBX.Native.Types.MdbxVal.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkStage>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkStage>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkStage>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkStage>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkStage
+    name: MdbxChkStage
+    href: MDBX.Native.Types.MdbxChkStage.html
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkStage, int>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkStage, int>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkStage, int>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkStage, int>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkStage)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkStage
+    name: MdbxChkStage
+    href: MDBX.Native.Types.MdbxChkStage.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkSeverity, MDBX.Native.Types.MdbxChkLine*>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkContext.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkSeverity, MdbxChkLine*>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkContext*, MdbxChkSeverity, MdbxChkLine*>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkContext*, MDBX.Native.Types.MdbxChkSeverity, MDBX.Native.Types.MdbxChkLine*>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkContext*,MDBX.Native.Types.MdbxChkSeverity)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkContext
+    name: MdbxChkContext
+    href: MDBX.Native.Types.MdbxChkContext.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkSeverity
+    name: MdbxChkSeverity
+    href: MDBX.Native.Types.MdbxChkSeverity.html
+  - name: ','
+  - name: " "
+  - uid: MDBX.Native.Types.MdbxChkLine
+    name: MdbxChkLine
+    href: MDBX.Native.Types.MdbxChkLine.html
+  - name: '*'
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkLine.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkLine*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkLine*, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkLine*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkLine
+    name: MdbxChkLine
+    href: MDBX.Native.Types.MdbxChkLine.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, byte*, nuint, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkLine.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkLine*, byte*, nuint, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkLine*, byte*, nuint, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, byte*, nuint, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkLine*,System.Byte*,System.UIntPtr)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkLine
+    name: MdbxChkLine
+    href: MDBX.Native.Types.MdbxChkLine.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UIntPtr
+    name: nuint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'
+- uid: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, byte*, ulong, byte*, void>
+  isExternal: true
+  href: MDBX.Native.Types.MdbxChkLine.html
+  name: delegate* unmanaged[Cdecl]<MdbxChkLine*, byte*, ulong, byte*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<MdbxChkLine*, byte*, ulong, byte*, void>
+  fullName: delegate* unmanaged[Cdecl]<MDBX.Native.Types.MdbxChkLine*, byte*, ulong, byte*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(MDBX.Native.Types.MdbxChkLine*,System.Byte*,System.UInt64,System.Byte*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: MDBX.Native.Types.MdbxChkLine
+    name: MdbxChkLine
+    href: MDBX.Native.Types.MdbxChkLine.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'

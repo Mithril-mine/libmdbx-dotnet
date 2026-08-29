@@ -1,0 +1,1170 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MDBX_envinfo
+  commentId: T:MDBX.Native.Types.MDBX_envinfo
+  id: MDBX_envinfo
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MDBX_envinfo.MiAutosyncPeriodSeconds16Dot16
+  - MDBX.Native.Types.MDBX_envinfo.MiAutosyncThreshold
+  - MDBX.Native.Types.MDBX_envinfo.MiBootid
+  - MDBX.Native.Types.MDBX_envinfo.MiDxbFallocated
+  - MDBX.Native.Types.MDBX_envinfo.MiDxbFsize
+  - MDBX.Native.Types.MDBX_envinfo.MiDxbPagesize
+  - MDBX.Native.Types.MDBX_envinfo.MiDxbid
+  - MDBX.Native.Types.MDBX_envinfo.MiGeo
+  - MDBX.Native.Types.MDBX_envinfo.MiLastPgno
+  - MDBX.Native.Types.MDBX_envinfo.MiLatterReaderTxnid
+  - MDBX.Native.Types.MDBX_envinfo.MiMapsize
+  - MDBX.Native.Types.MDBX_envinfo.MiMaxreaders
+  - MDBX.Native.Types.MDBX_envinfo.MiMetaSign
+  - MDBX.Native.Types.MDBX_envinfo.MiMetaTxnid
+  - MDBX.Native.Types.MDBX_envinfo.MiMode
+  - MDBX.Native.Types.MDBX_envinfo.MiNumreaders
+  - MDBX.Native.Types.MDBX_envinfo.MiPgopStat
+  - MDBX.Native.Types.MDBX_envinfo.MiRecentTxnid
+  - MDBX.Native.Types.MDBX_envinfo.MiSelfLatterReaderTxnid
+  - MDBX.Native.Types.MDBX_envinfo.MiSinceReaderCheckSeconds16Dot16
+  - MDBX.Native.Types.MDBX_envinfo.MiSinceSyncSeconds16Dot16
+  - MDBX.Native.Types.MDBX_envinfo.MiSysIoblk
+  - MDBX.Native.Types.MDBX_envinfo.MiSysPagesize
+  - MDBX.Native.Types.MDBX_envinfo.MiSysUpcblk
+  - MDBX.Native.Types.MDBX_envinfo.MiUnsyncVolume
+  langs:
+  - csharp
+  - vb
+  name: MDBX_envinfo
+  nameWithType: MDBX_envinfo
+  fullName: MDBX.Native.Types.MDBX_envinfo
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_envinfo
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Информация об окружении MDBX.
+  example: []
+  syntax:
+    content: public struct MDBX_envinfo
+    content.vb: Public Structure MDBX_envinfo
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MDBX_envinfo.MiGeo
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiGeo
+  id: MiGeo
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiGeo
+  nameWithType: MDBX_envinfo.MiGeo
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiGeo
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiGeo
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 13
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Геометрия файлов.
+  example: []
+  syntax:
+    content: public MDBX_envinfo.MDBX_geo MiGeo
+    return:
+      type: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+    content.vb: Public MiGeo As MDBX_envinfo.MDBX_geo
+- uid: MDBX.Native.Types.MDBX_envinfo.MiMapsize
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiMapsize
+  id: MiMapsize
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiMapsize
+  nameWithType: MDBX_envinfo.MiMapsize
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiMapsize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiMapsize
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 18
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер memory map.
+  example: []
+  syntax:
+    content: public ulong MiMapsize
+    return:
+      type: System.UInt64
+    content.vb: Public MiMapsize As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiDxbFsize
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiDxbFsize
+  id: MiDxbFsize
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiDxbFsize
+  nameWithType: MDBX_envinfo.MiDxbFsize
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiDxbFsize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiDxbFsize
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 23
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Текущий размер файла БД.
+  example: []
+  syntax:
+    content: public ulong MiDxbFsize
+    return:
+      type: System.UInt64
+    content.vb: Public MiDxbFsize As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiDxbFallocated
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiDxbFallocated
+  id: MiDxbFallocated
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiDxbFallocated
+  nameWithType: MDBX_envinfo.MiDxbFallocated
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiDxbFallocated
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiDxbFallocated
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 28
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Выделенный размер файла БД.
+  example: []
+  syntax:
+    content: public ulong MiDxbFallocated
+    return:
+      type: System.UInt64
+    content.vb: Public MiDxbFallocated As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiLastPgno
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiLastPgno
+  id: MiLastPgno
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiLastPgno
+  nameWithType: MDBX_envinfo.MiLastPgno
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiLastPgno
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiLastPgno
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 33
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Номер последней использованной страницы.
+  example: []
+  syntax:
+    content: public ulong MiLastPgno
+    return:
+      type: System.UInt64
+    content.vb: Public MiLastPgno As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiRecentTxnid
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiRecentTxnid
+  id: MiRecentTxnid
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiRecentTxnid
+  nameWithType: MDBX_envinfo.MiRecentTxnid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiRecentTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiRecentTxnid
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 38
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID последней зафиксированной транзакции.
+  example: []
+  syntax:
+    content: public ulong MiRecentTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public MiRecentTxnid As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiLatterReaderTxnid
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiLatterReaderTxnid
+  id: MiLatterReaderTxnid
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiLatterReaderTxnid
+  nameWithType: MDBX_envinfo.MiLatterReaderTxnid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiLatterReaderTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiLatterReaderTxnid
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 43
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID последней reader транзакции.
+  example: []
+  syntax:
+    content: public ulong MiLatterReaderTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public MiLatterReaderTxnid As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiSelfLatterReaderTxnid
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiSelfLatterReaderTxnid
+  id: MiSelfLatterReaderTxnid
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiSelfLatterReaderTxnid
+  nameWithType: MDBX_envinfo.MiSelfLatterReaderTxnid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiSelfLatterReaderTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiSelfLatterReaderTxnid
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 48
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: ID последней reader транзакции текущего процесса.
+  example: []
+  syntax:
+    content: public ulong MiSelfLatterReaderTxnid
+    return:
+      type: System.UInt64
+    content.vb: Public MiSelfLatterReaderTxnid As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiMetaTxnid
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiMetaTxnid
+  id: MiMetaTxnid
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiMetaTxnid
+  nameWithType: MDBX_envinfo.MiMetaTxnid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiMetaTxnid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiMetaTxnid
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 53
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Мета-информация.
+  example: []
+  syntax:
+    content: public ulong* MiMetaTxnid
+    return:
+      type: System.UInt64*
+    content.vb: Public MiMetaTxnid As ULong*
+- uid: MDBX.Native.Types.MDBX_envinfo.MiMetaSign
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiMetaSign
+  id: MiMetaSign
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiMetaSign
+  nameWithType: MDBX_envinfo.MiMetaSign
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiMetaSign
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiMetaSign
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 58
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Сигнатуры мета-информации.
+  example: []
+  syntax:
+    content: public ulong* MiMetaSign
+    return:
+      type: System.UInt64*
+    content.vb: Public MiMetaSign As ULong*
+- uid: MDBX.Native.Types.MDBX_envinfo.MiMaxreaders
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiMaxreaders
+  id: MiMaxreaders
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiMaxreaders
+  nameWithType: MDBX_envinfo.MiMaxreaders
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiMaxreaders
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiMaxreaders
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 63
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Максимальное количество reader слотов.
+  example: []
+  syntax:
+    content: public uint MiMaxreaders
+    return:
+      type: System.UInt32
+    content.vb: Public MiMaxreaders As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiNumreaders
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiNumreaders
+  id: MiNumreaders
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiNumreaders
+  nameWithType: MDBX_envinfo.MiNumreaders
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiNumreaders
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiNumreaders
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 68
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество используемых reader слотов.
+  example: []
+  syntax:
+    content: public uint MiNumreaders
+    return:
+      type: System.UInt32
+    content.vb: Public MiNumreaders As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiDxbPagesize
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiDxbPagesize
+  id: MiDxbPagesize
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiDxbPagesize
+  nameWithType: MDBX_envinfo.MiDxbPagesize
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiDxbPagesize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiDxbPagesize
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 73
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер страницы БД.
+  example: []
+  syntax:
+    content: public uint MiDxbPagesize
+    return:
+      type: System.UInt32
+    content.vb: Public MiDxbPagesize As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiSysPagesize
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiSysPagesize
+  id: MiSysPagesize
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiSysPagesize
+  nameWithType: MDBX_envinfo.MiSysPagesize
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiSysPagesize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiSysPagesize
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 78
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Системный размер страницы.
+  example: []
+  syntax:
+    content: public uint MiSysPagesize
+    return:
+      type: System.UInt32
+    content.vb: Public MiSysPagesize As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiSysUpcblk
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiSysUpcblk
+  id: MiSysUpcblk
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiSysUpcblk
+  nameWithType: MDBX_envinfo.MiSysUpcblk
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiSysUpcblk
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiSysUpcblk
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 83
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер блока Unified Page Cache.
+  example: []
+  syntax:
+    content: public uint MiSysUpcblk
+    return:
+      type: System.UInt32
+    content.vb: Public MiSysUpcblk As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiSysIoblk
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiSysIoblk
+  id: MiSysIoblk
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiSysIoblk
+  nameWithType: MDBX_envinfo.MiSysIoblk
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiSysIoblk
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiSysIoblk
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 88
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер блока IO.
+  example: []
+  syntax:
+    content: public uint MiSysIoblk
+    return:
+      type: System.UInt32
+    content.vb: Public MiSysIoblk As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiBootid
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiBootid
+  id: MiBootid
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiBootid
+  nameWithType: MDBX_envinfo.MiBootid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiBootid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiBootid
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 93
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Идентификатор загрузки.
+  example: []
+  syntax:
+    content: public MDBX_envinfo.MDBX_bootid MiBootid
+    return:
+      type: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+    content.vb: Public MiBootid As MDBX_envinfo.MDBX_bootid
+- uid: MDBX.Native.Types.MDBX_envinfo.MiUnsyncVolume
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiUnsyncVolume
+  id: MiUnsyncVolume
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiUnsyncVolume
+  nameWithType: MDBX_envinfo.MiUnsyncVolume
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiUnsyncVolume
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiUnsyncVolume
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 98
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Несинхронизированный объем.
+  example: []
+  syntax:
+    content: public ulong MiUnsyncVolume
+    return:
+      type: System.UInt64
+    content.vb: Public MiUnsyncVolume As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiAutosyncThreshold
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiAutosyncThreshold
+  id: MiAutosyncThreshold
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiAutosyncThreshold
+  nameWithType: MDBX_envinfo.MiAutosyncThreshold
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiAutosyncThreshold
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiAutosyncThreshold
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 103
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Порог автосинхронизации.
+  example: []
+  syntax:
+    content: public ulong MiAutosyncThreshold
+    return:
+      type: System.UInt64
+    content.vb: Public MiAutosyncThreshold As ULong
+- uid: MDBX.Native.Types.MDBX_envinfo.MiSinceSyncSeconds16Dot16
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiSinceSyncSeconds16Dot16
+  id: MiSinceSyncSeconds16Dot16
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiSinceSyncSeconds16Dot16
+  nameWithType: MDBX_envinfo.MiSinceSyncSeconds16Dot16
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiSinceSyncSeconds16Dot16
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiSinceSyncSeconds16Dot16
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 108
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Время с последней нестабильной фиксации (1/65536 сек).
+  example: []
+  syntax:
+    content: public uint MiSinceSyncSeconds16Dot16
+    return:
+      type: System.UInt32
+    content.vb: Public MiSinceSyncSeconds16Dot16 As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiAutosyncPeriodSeconds16Dot16
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiAutosyncPeriodSeconds16Dot16
+  id: MiAutosyncPeriodSeconds16Dot16
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiAutosyncPeriodSeconds16Dot16
+  nameWithType: MDBX_envinfo.MiAutosyncPeriodSeconds16Dot16
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiAutosyncPeriodSeconds16Dot16
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiAutosyncPeriodSeconds16Dot16
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 113
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Период автосинхронизации (1/65536 сек).
+  example: []
+  syntax:
+    content: public uint MiAutosyncPeriodSeconds16Dot16
+    return:
+      type: System.UInt32
+    content.vb: Public MiAutosyncPeriodSeconds16Dot16 As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiSinceReaderCheckSeconds16Dot16
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiSinceReaderCheckSeconds16Dot16
+  id: MiSinceReaderCheckSeconds16Dot16
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiSinceReaderCheckSeconds16Dot16
+  nameWithType: MDBX_envinfo.MiSinceReaderCheckSeconds16Dot16
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiSinceReaderCheckSeconds16Dot16
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiSinceReaderCheckSeconds16Dot16
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 118
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Время с последней проверки читателей (1/65536 сек).
+  example: []
+  syntax:
+    content: public uint MiSinceReaderCheckSeconds16Dot16
+    return:
+      type: System.UInt32
+    content.vb: Public MiSinceReaderCheckSeconds16Dot16 As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiMode
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiMode
+  id: MiMode
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiMode
+  nameWithType: MDBX_envinfo.MiMode
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiMode
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiMode
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 123
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Текущий режим окружения.
+  example: []
+  syntax:
+    content: public uint MiMode
+    return:
+      type: System.UInt32
+    content.vb: Public MiMode As UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MiPgopStat
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiPgopStat
+  id: MiPgopStat
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiPgopStat
+  nameWithType: MDBX_envinfo.MiPgopStat
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiPgopStat
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiPgopStat
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 128
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Статистика операций со страницами.
+  example: []
+  syntax:
+    content: public MDBX_envinfo.MDBX_pgop_stat MiPgopStat
+    return:
+      type: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+    content.vb: Public MiPgopStat As MDBX_envinfo.MDBX_pgop_stat
+- uid: MDBX.Native.Types.MDBX_envinfo.MiDxbid
+  commentId: F:MDBX.Native.Types.MDBX_envinfo.MiDxbid
+  id: MiDxbid
+  parent: MDBX.Native.Types.MDBX_envinfo
+  langs:
+  - csharp
+  - vb
+  name: MiDxbid
+  nameWithType: MDBX_envinfo.MiDxbid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MiDxbid
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxEnvinfo.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MiDxbid
+    path: ../MDBX/Types/MdbxEnvinfo.cs
+    startLine: 133
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Идентификатор файла БД.
+  example: []
+  syntax:
+    content: public MDBX_envinfo.MDBX_dxbid MiDxbid
+    return:
+      type: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+    content.vb: Public MiDxbid As MDBX_envinfo.MDBX_dxbid
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_geo
+  nameWithType: MDBX_envinfo.MDBX_geo
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+    name: MDBX_geo
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_geo.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_geo
+    name: MDBX_geo
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_geo.html
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.UInt64*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong*
+  nameWithType: ulong*
+  fullName: ulong*
+  nameWithType.vb: ULong*
+  fullName.vb: ULong*
+  name.vb: ULong*
+  spec.csharp:
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '*'
+  spec.vb:
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '*'
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_bootid
+  nameWithType: MDBX_envinfo.MDBX_bootid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+    name: MDBX_bootid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid
+    name: MDBX_bootid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_bootid.html
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_pgop_stat
+  nameWithType: MDBX_envinfo.MDBX_pgop_stat
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+    name: MDBX_pgop_stat
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat
+    name: MDBX_pgop_stat
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_pgop_stat.html
+- uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  commentId: T:MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MDBX_envinfo.html
+  name: MDBX_envinfo.MDBX_dxbid
+  nameWithType: MDBX_envinfo.MDBX_dxbid
+  fullName: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+  spec.csharp:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+    name: MDBX_dxbid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.html
+  spec.vb:
+  - uid: MDBX.Native.Types.MDBX_envinfo
+    name: MDBX_envinfo
+    href: MDBX.Native.Types.MDBX_envinfo.html
+  - name: .
+  - uid: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid
+    name: MDBX_dxbid
+    href: MDBX.Native.Types.MDBX_envinfo.MDBX_dxbid.html

@@ -1,0 +1,420 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkStage
+  commentId: T:MDBX.Native.Types.MdbxChkStage
+  id: MdbxChkStage
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_conclude
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_finalize
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_gc
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_init
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_lock
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_maindb
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_meta
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_none
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_space
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_tables
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_tree
+  - MDBX.Native.Types.MdbxChkStage.MDBX_chk_unlock
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkStage
+  nameWithType: MdbxChkStage
+  fullName: MDBX.Native.Types.MdbxChkStage
+  type: Enum
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkStage
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 124
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Этапы проверки, сообщаемые через функции обратного вызова
+
+    во время проверки целостности базы данных.
+  remarks: Значения соответствуют перечислению MDBX_chk_stage_t из заголовочного файла mdbx.h.
+  example: []
+  syntax:
+    content: public enum MdbxChkStage
+    content.vb: Public Enum MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_none
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_none
+  id: MDBX_chk_none
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_none
+  nameWithType: MdbxChkStage.MDBX_chk_none
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_none
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_none
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 129
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Нет этапа.
+  example: []
+  syntax:
+    content: MDBX_chk_none = 0
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_init
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_init
+  id: MDBX_chk_init
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_init
+  nameWithType: MdbxChkStage.MDBX_chk_init
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_init
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_init
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 134
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Инициализация.
+  example: []
+  syntax:
+    content: MDBX_chk_init = 1
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_lock
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_lock
+  id: MDBX_chk_lock
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_lock
+  nameWithType: MdbxChkStage.MDBX_chk_lock
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_lock
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_lock
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 139
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Блокировка.
+  example: []
+  syntax:
+    content: MDBX_chk_lock = 2
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_meta
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_meta
+  id: MDBX_chk_meta
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_meta
+  nameWithType: MdbxChkStage.MDBX_chk_meta
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_meta
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_meta
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 144
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Проверка метаданных.
+  example: []
+  syntax:
+    content: MDBX_chk_meta = 3
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_tree
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_tree
+  id: MDBX_chk_tree
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_tree
+  nameWithType: MdbxChkStage.MDBX_chk_tree
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_tree
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_tree
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 149
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Обход дерева.
+  example: []
+  syntax:
+    content: MDBX_chk_tree = 4
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_gc
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_gc
+  id: MDBX_chk_gc
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_gc
+  nameWithType: MdbxChkStage.MDBX_chk_gc
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_gc
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_gc
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 154
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Проверка сборщика мусора.
+  example: []
+  syntax:
+    content: MDBX_chk_gc = 5
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_space
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_space
+  id: MDBX_chk_space
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_space
+  nameWithType: MdbxChkStage.MDBX_chk_space
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_space
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_space
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 159
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Проверка пространства.
+  example: []
+  syntax:
+    content: MDBX_chk_space = 6
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_maindb
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_maindb
+  id: MDBX_chk_maindb
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_maindb
+  nameWithType: MdbxChkStage.MDBX_chk_maindb
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_maindb
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_maindb
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 164
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Проверка MainDB.
+  example: []
+  syntax:
+    content: MDBX_chk_maindb = 7
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_tables
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_tables
+  id: MDBX_chk_tables
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_tables
+  nameWithType: MdbxChkStage.MDBX_chk_tables
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_tables
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_tables
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 169
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Проверка таблиц.
+  example: []
+  syntax:
+    content: MDBX_chk_tables = 8
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_conclude
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_conclude
+  id: MDBX_chk_conclude
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_conclude
+  nameWithType: MdbxChkStage.MDBX_chk_conclude
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_conclude
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_conclude
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 174
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Завершение.
+  example: []
+  syntax:
+    content: MDBX_chk_conclude = 9
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_unlock
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_unlock
+  id: MDBX_chk_unlock
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_unlock
+  nameWithType: MdbxChkStage.MDBX_chk_unlock
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_unlock
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_unlock
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 179
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Снятие блокировки.
+  example: []
+  syntax:
+    content: MDBX_chk_unlock = 10
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+- uid: MDBX.Native.Types.MdbxChkStage.MDBX_chk_finalize
+  commentId: F:MDBX.Native.Types.MdbxChkStage.MDBX_chk_finalize
+  id: MDBX_chk_finalize
+  parent: MDBX.Native.Types.MdbxChkStage
+  langs:
+  - csharp
+  - vb
+  name: MDBX_chk_finalize
+  nameWithType: MdbxChkStage.MDBX_chk_finalize
+  fullName: MDBX.Native.Types.MdbxChkStage.MDBX_chk_finalize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MDBX_chk_finalize
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 184
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Финализация.
+  example: []
+  syntax:
+    content: MDBX_chk_finalize = 11
+    return:
+      type: MDBX.Native.Types.MdbxChkStage
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxChkStage
+  commentId: T:MDBX.Native.Types.MdbxChkStage
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxChkStage.html
+  name: MdbxChkStage
+  nameWithType: MdbxChkStage
+  fullName: MDBX.Native.Types.MdbxChkStage

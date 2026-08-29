@@ -1,0 +1,697 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  commentId: T:MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  id: NativeMdbx
+  parent: MDBX.Native.Bindings.ErrorHandling
+  children:
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail(System.Byte*,System.Byte*,System.UInt32)
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str(System.Int32)
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic()
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror(System.Int32)
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem(System.Int32)
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR(System.Int32,System.Byte*,System.UIntPtr)
+  - MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem(System.Int32,System.Byte*,System.UIntPtr)
+  langs:
+  - csharp
+  - vb
+  name: NativeMdbx
+  nameWithType: NativeMdbx
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  type: Class
+  source:
+    remote:
+      path: MDBX/Bindings/ErrorHandling/NativeMdbx.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: NativeMdbx
+    path: ../MDBX/Bindings/ErrorHandling/NativeMdbx.cs
+    startLine: 7
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Частичный класс для нативных методов обработки ошибок libmdbx.
+  example: []
+  syntax:
+    content: public static class NativeMdbx
+    content.vb: Public Module NativeMdbx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror(System.Int32)
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror(System.Int32)
+  id: MdbxStrerror(System.Int32)
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxStrerror(int)
+  nameWithType: NativeMdbx.MdbxStrerror(int)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror(int)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Возвращает строковое описание кода ошибки libmdbx.
+  example: []
+  syntax:
+    content: public static extern byte* MdbxStrerror(int errnum)
+    parameters:
+    - id: errnum
+      type: System.Int32
+      description: Код ошибки.
+    return:
+      type: System.Byte*
+      description: Указатель на статическую строку с описанием ошибки.
+    content.vb: Public Shared Function MdbxStrerror(errnum As Integer) As Byte*
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror*
+  nameWithType.vb: NativeMdbx.MdbxStrerror(Integer)
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror(Integer)
+  name.vb: MdbxStrerror(Integer)
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR(System.Int32,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR(System.Int32,System.Byte*,System.UIntPtr)
+  id: MdbxStrerrorR(System.Int32,System.Byte*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxStrerrorR(int, byte*, nuint)
+  nameWithType: NativeMdbx.MdbxStrerrorR(int, byte*, nuint)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR(int, byte*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Копирует строковое описание кода ошибки в предоставленный буфер.
+  example: []
+  syntax:
+    content: public static extern byte* MdbxStrerrorR(int errnum, byte* buf, nuint buflen)
+    parameters:
+    - id: errnum
+      type: System.Int32
+      description: Код ошибки.
+    - id: buf
+      type: System.Byte*
+      description: Буфер для копирования строки.
+    - id: buflen
+      type: System.UIntPtr
+      description: Размер буфера в байтах.
+    return:
+      type: System.Byte*
+      description: Указатель на буфер с строкой описания ошибки.
+    content.vb: Public Shared Function MdbxStrerrorR(errnum As Integer, buf As Byte*, buflen As UIntPtr) As Byte*
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR*
+  nameWithType.vb: NativeMdbx.MdbxStrerrorR(Integer, Byte*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR(Integer, Byte*, System.UIntPtr)
+  name.vb: MdbxStrerrorR(Integer, Byte*, UIntPtr)
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str(System.Int32)
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str(System.Int32)
+  id: MdbxLiberr2Str(System.Int32)
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxLiberr2Str(int)
+  nameWithType: NativeMdbx.MdbxLiberr2Str(int)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str(int)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Возвращает строковое описание кода ошибки libmdbx (версия только для ошибок libmdbx).
+  example: []
+  syntax:
+    content: public static extern byte* MdbxLiberr2Str(int errnum)
+    parameters:
+    - id: errnum
+      type: System.Int32
+      description: Код ошибки.
+    return:
+      type: System.Byte*
+      description: Указатель на статическую строку с описанием ошибки.
+    content.vb: Public Shared Function MdbxLiberr2Str(errnum As Integer) As Byte*
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str*
+  nameWithType.vb: NativeMdbx.MdbxLiberr2Str(Integer)
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str(Integer)
+  name.vb: MdbxLiberr2Str(Integer)
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem(System.Int32)
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem(System.Int32)
+  id: MdbxStrerrorAnsi2Oem(System.Int32)
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxStrerrorAnsi2Oem(int)
+  nameWithType: NativeMdbx.MdbxStrerrorAnsi2Oem(int)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem(int)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Возвращает строковое описание кода ошибки в кодировке ANSI/OEM (Windows).
+  example: []
+  syntax:
+    content: public static extern byte* MdbxStrerrorAnsi2Oem(int errnum)
+    parameters:
+    - id: errnum
+      type: System.Int32
+      description: Код ошибки.
+    return:
+      type: System.Byte*
+      description: Указатель на статическую строку с описанием ошибки.
+    content.vb: Public Shared Function MdbxStrerrorAnsi2Oem(errnum As Integer) As Byte*
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem*
+  nameWithType.vb: NativeMdbx.MdbxStrerrorAnsi2Oem(Integer)
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem(Integer)
+  name.vb: MdbxStrerrorAnsi2Oem(Integer)
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem(System.Int32,System.Byte*,System.UIntPtr)
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem(System.Int32,System.Byte*,System.UIntPtr)
+  id: MdbxStrerrorRAnsi2Oem(System.Int32,System.Byte*,System.UIntPtr)
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxStrerrorRAnsi2Oem(int, byte*, nuint)
+  nameWithType: NativeMdbx.MdbxStrerrorRAnsi2Oem(int, byte*, nuint)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem(int, byte*, nuint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Копирует строковое описание кода ошибки в предоставленный буфер (ANSI/OEM версия).
+  example: []
+  syntax:
+    content: public static extern byte* MdbxStrerrorRAnsi2Oem(int errnum, byte* buf, nuint buflen)
+    parameters:
+    - id: errnum
+      type: System.Int32
+      description: Код ошибки.
+    - id: buf
+      type: System.Byte*
+      description: Буфер для копирования строки.
+    - id: buflen
+      type: System.UIntPtr
+      description: Размер буфера в байтах.
+    return:
+      type: System.Byte*
+      description: Указатель на буфер с строкой описания ошибки.
+    content.vb: Public Shared Function MdbxStrerrorRAnsi2Oem(errnum As Integer, buf As Byte*, buflen As UIntPtr) As Byte*
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem*
+  nameWithType.vb: NativeMdbx.MdbxStrerrorRAnsi2Oem(Integer, Byte*, UIntPtr)
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem(Integer, Byte*, System.UIntPtr)
+  name.vb: MdbxStrerrorRAnsi2Oem(Integer, Byte*, UIntPtr)
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail(System.Byte*,System.Byte*,System.UInt32)
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail(System.Byte*,System.Byte*,System.UInt32)
+  id: MdbxAssertFail(System.Byte*,System.Byte*,System.UInt32)
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxAssertFail(byte*, byte*, uint)
+  nameWithType: NativeMdbx.MdbxAssertFail(byte*, byte*, uint)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail(byte*, byte*, uint)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Функция аварийного завершения при ошибке (assert).
+  example: []
+  syntax:
+    content: public static extern void MdbxAssertFail(byte* msg, byte* func, uint line)
+    parameters:
+    - id: msg
+      type: System.Byte*
+      description: Сообщение об ошибке.
+    - id: func
+      type: System.Byte*
+      description: Имя функции, в которой произошла ошибка.
+    - id: line
+      type: System.UInt32
+      description: Номер строки.
+    content.vb: Public Shared Sub MdbxAssertFail(msg As Byte*, func As Byte*, line As UInteger)
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail*
+  nameWithType.vb: NativeMdbx.MdbxAssertFail(Byte*, Byte*, UInteger)
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail(Byte*, Byte*, UInteger)
+  name.vb: MdbxAssertFail(Byte*, Byte*, UInteger)
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic()
+  commentId: M:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic()
+  id: MdbxSetPanic()
+  parent: MDBX.Native.Bindings.ErrorHandling.NativeMdbx
+  langs:
+  - csharp
+  - vb
+  name: MdbxSetPanic(delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>)
+  nameWithType: NativeMdbx.MdbxSetPanic(delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>)
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic(delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>)
+  type: Method
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Bindings.ErrorHandling
+  summary: Устанавливает функцию обработки паники (критических ошибок).
+  example: []
+  syntax:
+    content: public static extern void MdbxSetPanic(delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void> func)
+    parameters:
+    - id: func
+      type: delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>
+      description: Указатель на функцию обработки паники.
+    content.vb: Public Shared Sub MdbxSetPanic(func As )
+  overload: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic*
+  nameWithType.vb: NativeMdbx.MdbxSetPanic()
+  fullName.vb: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic()
+  name.vb: MdbxSetPanic()
+references:
+- uid: MDBX.Native.Bindings.ErrorHandling
+  commentId: N:MDBX.Native.Bindings.ErrorHandling
+  href: MDBX.html
+  name: MDBX.Native.Bindings.ErrorHandling
+  nameWithType: MDBX.Native.Bindings.ErrorHandling
+  fullName: MDBX.Native.Bindings.ErrorHandling
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.ErrorHandling
+    name: ErrorHandling
+    href: MDBX.Native.Bindings.ErrorHandling.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Bindings
+    name: Bindings
+    href: MDBX.Native.Bindings.html
+  - name: .
+  - uid: MDBX.Native.Bindings.ErrorHandling
+    name: ErrorHandling
+    href: MDBX.Native.Bindings.ErrorHandling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxStrerror_System_Int32_
+  name: MdbxStrerror
+  nameWithType: NativeMdbx.MdbxStrerror
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerror
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxStrerrorR_System_Int32_System_Byte__System_UIntPtr_
+  name: MdbxStrerrorR
+  nameWithType: NativeMdbx.MdbxStrerrorR
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorR
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxLiberr2Str_System_Int32_
+  name: MdbxLiberr2Str
+  nameWithType: NativeMdbx.MdbxLiberr2Str
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxLiberr2Str
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxStrerrorAnsi2Oem_System_Int32_
+  name: MdbxStrerrorAnsi2Oem
+  nameWithType: NativeMdbx.MdbxStrerrorAnsi2Oem
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxStrerrorRAnsi2Oem_System_Int32_System_Byte__System_UIntPtr_
+  name: MdbxStrerrorRAnsi2Oem
+  nameWithType: NativeMdbx.MdbxStrerrorRAnsi2Oem
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorRAnsi2Oem
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxAssertFail_System_Byte__System_Byte__System_UInt32_
+  name: MdbxAssertFail
+  nameWithType: NativeMdbx.MdbxAssertFail
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxAssertFail
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic*
+  commentId: Overload:MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic
+  isExternal: true
+  href: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.html#MDBX_Native_Bindings_ErrorHandling_NativeMdbx_MdbxSetPanic__
+  name: MdbxSetPanic
+  nameWithType: NativeMdbx.MdbxSetPanic
+  fullName: MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxSetPanic
+- uid: delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>
+  nameWithType: delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>
+  fullName: delegate* unmanaged[Cdecl]<byte*, byte*, uint, void*, void>
+  spec.csharp:
+  - name: delegate
+  - name: '*'
+  - name: " "
+  - name: unmanaged
+  - name: '['
+  - uid: .(System.Byte*,System.Byte*,System.UInt32,System.Void*)
+    name: Cdecl
+    isExternal: true
+  - name: ']'
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '>'

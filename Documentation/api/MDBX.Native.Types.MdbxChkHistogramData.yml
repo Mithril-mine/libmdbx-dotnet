@@ -1,0 +1,515 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxChkHistogramData
+  commentId: T:MDBX.Native.Types.MdbxChkHistogramData
+  id: MdbxChkHistogramData
+  parent: MDBX.Native.Types
+  children:
+  - MDBX.Native.Types.MdbxChkHistogramData.Amount
+  - MDBX.Native.Types.MdbxChkHistogramData.Count
+  - MDBX.Native.Types.MdbxChkHistogramData.Le1Amount
+  - MDBX.Native.Types.MdbxChkHistogramData.Le1Count
+  - MDBX.Native.Types.MdbxChkHistogramData.RangeSize
+  - MDBX.Native.Types.MdbxChkHistogramData.Ranges
+  langs:
+  - csharp
+  - vb
+  name: MdbxChkHistogramData
+  nameWithType: MdbxChkHistogramData
+  fullName: MDBX.Native.Types.MdbxChkHistogramData
+  type: Struct
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxChkHistogramData
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 330
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: >-
+    Гистограмма для проверки целостности базы данных (управляемая версия для использования вне unsafe контекста).
+
+    Осуществляет сопоставление с нативной структурой MDBX_chk_histogram.
+
+    Используует фиксированный буфер для массива диапазонов, что позволяет
+
+    использовать указатели на структуры, содержащие эту гистограмму.
+  example: []
+  syntax:
+    content: public struct MdbxChkHistogramData
+    content.vb: Public Structure MdbxChkHistogramData
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MDBX.Native.Types.MdbxChkHistogramData.RangeSize
+  commentId: F:MDBX.Native.Types.MdbxChkHistogramData.RangeSize
+  id: RangeSize
+  parent: MDBX.Native.Types.MdbxChkHistogramData
+  langs:
+  - csharp
+  - vb
+  name: RangeSize
+  nameWithType: MdbxChkHistogramData.RangeSize
+  fullName: MDBX.Native.Types.MdbxChkHistogramData.RangeSize
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: RangeSize
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 336
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Размер одного диапазона гистограммы в байтах (4 * sizeof(nuint) = 32 на x64).
+  example: []
+  syntax:
+    content: public const int RangeSize = 32
+    return:
+      type: System.Int32
+    content.vb: Public Const RangeSize As Integer = 32
+- uid: MDBX.Native.Types.MdbxChkHistogramData.Amount
+  commentId: F:MDBX.Native.Types.MdbxChkHistogramData.Amount
+  id: Amount
+  parent: MDBX.Native.Types.MdbxChkHistogramData
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: MdbxChkHistogramData.Amount
+  fullName: MDBX.Native.Types.MdbxChkHistogramData.Amount
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Amount
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 341
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Общее количество элементов.
+  example: []
+  syntax:
+    content: public nuint Amount
+    return:
+      type: System.UIntPtr
+    content.vb: Public Amount As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkHistogramData.Count
+  commentId: F:MDBX.Native.Types.MdbxChkHistogramData.Count
+  id: Count
+  parent: MDBX.Native.Types.MdbxChkHistogramData
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: MdbxChkHistogramData.Count
+  fullName: MDBX.Native.Types.MdbxChkHistogramData.Count
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Count
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 346
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество интервалов.
+  example: []
+  syntax:
+    content: public nuint Count
+    return:
+      type: System.UIntPtr
+    content.vb: Public Count As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkHistogramData.Le1Amount
+  commentId: F:MDBX.Native.Types.MdbxChkHistogramData.Le1Amount
+  id: Le1Amount
+  parent: MDBX.Native.Types.MdbxChkHistogramData
+  langs:
+  - csharp
+  - vb
+  name: Le1Amount
+  nameWithType: MdbxChkHistogramData.Le1Amount
+  fullName: MDBX.Native.Types.MdbxChkHistogramData.Le1Amount
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Le1Amount
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 351
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество элементов &lt;= 1.
+  example: []
+  syntax:
+    content: public nuint Le1Amount
+    return:
+      type: System.UIntPtr
+    content.vb: Public Le1Amount As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkHistogramData.Le1Count
+  commentId: F:MDBX.Native.Types.MdbxChkHistogramData.Le1Count
+  id: Le1Count
+  parent: MDBX.Native.Types.MdbxChkHistogramData
+  langs:
+  - csharp
+  - vb
+  name: Le1Count
+  nameWithType: MdbxChkHistogramData.Le1Count
+  fullName: MDBX.Native.Types.MdbxChkHistogramData.Le1Count
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Le1Count
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 356
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Количество интервалов &lt;= 1.
+  example: []
+  syntax:
+    content: public nuint Le1Count
+    return:
+      type: System.UIntPtr
+    content.vb: Public Le1Count As UIntPtr
+- uid: MDBX.Native.Types.MdbxChkHistogramData.Ranges
+  commentId: F:MDBX.Native.Types.MdbxChkHistogramData.Ranges
+  id: Ranges
+  parent: MDBX.Native.Types.MdbxChkHistogramData
+  langs:
+  - csharp
+  - vb
+  name: Ranges
+  nameWithType: MdbxChkHistogramData.Ranges
+  fullName: MDBX.Native.Types.MdbxChkHistogramData.Ranges
+  type: Field
+  source:
+    remote:
+      path: MDBX/Types/MdbxChkTypes.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: Ranges
+    path: ../MDBX/Types/MdbxChkTypes.cs
+    startLine: 361
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Диапазоны гистограммы (9 штук), как фиксированный буфер байт.
+  example: []
+  syntax:
+    content: public byte* Ranges
+    return:
+      type: System.Byte*
+    content.vb: Public Ranges As Byte*
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'

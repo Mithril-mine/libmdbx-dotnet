@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: MDBX.Native.Types.MdbxDebugFuncNofmt
+  commentId: T:MDBX.Native.Types.MdbxDebugFuncNofmt
+  id: MdbxDebugFuncNofmt
+  parent: MDBX.Native.Types
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MdbxDebugFuncNofmt
+  nameWithType: MdbxDebugFuncNofmt
+  fullName: MDBX.Native.Types.MdbxDebugFuncNofmt
+  type: Delegate
+  source:
+    remote:
+      path: MDBX/Types/MdbxDelegates.cs
+      branch: feature/modern-rework
+      repo: https://public.git.amsoft.spb.ru/libmdbx/libmdbx-dotnet.git
+    id: MdbxDebugFuncNofmt
+    path: ../MDBX/Types/MdbxDelegates.cs
+    startLine: 93
+  assemblies:
+  - mdbx-dotnet
+  namespace: MDBX.Native.Types
+  summary: Функция отладки без формата.
+  example: []
+  syntax:
+    content: public delegate void MdbxDebugFuncNofmt(MdbxLogLevel logLevel, byte* function, int line, byte* msg)
+    parameters:
+    - id: logLevel
+      type: MDBX.Native.Types.MdbxLogLevel
+      description: Уровень логирования.
+    - id: function
+      type: System.Byte*
+      description: Имя функции.
+    - id: line
+      type: System.Int32
+      description: Номер строки.
+    - id: msg
+      type: System.Byte*
+      description: Сообщение.
+    content.vb: Public Delegate Sub MdbxDebugFuncNofmt(logLevel As MdbxLogLevel, [function] As Byte*, line As Integer, msg As Byte*)
+references:
+- uid: MDBX.Native.Types
+  commentId: N:MDBX.Native.Types
+  href: MDBX.html
+  name: MDBX.Native.Types
+  nameWithType: MDBX.Native.Types
+  fullName: MDBX.Native.Types
+  spec.csharp:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+  spec.vb:
+  - uid: MDBX
+    name: MDBX
+    href: MDBX.html
+  - name: .
+  - uid: MDBX.Native
+    name: Native
+    href: MDBX.Native.html
+  - name: .
+  - uid: MDBX.Native.Types
+    name: Types
+    href: MDBX.Native.Types.html
+- uid: MDBX.Native.Types.MdbxLogLevel
+  commentId: T:MDBX.Native.Types.MdbxLogLevel
+  parent: MDBX.Native.Types
+  href: MDBX.Native.Types.MdbxLogLevel.html
+  name: MdbxLogLevel
+  nameWithType: MdbxLogLevel
+  fullName: MDBX.Native.Types.MdbxLogLevel
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

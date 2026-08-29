@@ -1,0 +1,19 @@
+global using MDBX_cache_result_t = MDBX.Native.Types.MdbxCacheResult;
+global using MDBX_copy_flags_t = MDBX.Native.Types.MdbxCopyFlags;
+global using MDBX_cursor = MDBX.Native.Types.MDBX_cursor;
+global using MDBX_cursor_op = MDBX.Native.Types.MdbxCursorOp;
+global using MDBX_db_flags_t = MDBX.Native.Types.MdbxDbFlags;
+global using MDBX_debug_flags_t = MDBX.Native.Types.MdbxDebugFlags;
+global using MDBX_env = MDBX.Native.Types.MDBX_env;
+global using MDBX_env_delete_mode_t = MDBX.Native.Types.MdbxEnvDeleteMode;
+global using MDBX_env_flags_t = MDBX.Native.Types.MdbxEnvFlags;
+global using MDBX_envinfo = MDBX.Native.Types.MDBX_envinfo;
+global using MDBX_log_level_t = MDBX.Native.Types.MdbxLogLevel;
+global using MDBX_option_t = MDBX.Native.Types.MdbxOption;
+global using MDBX_put_flags_t = MDBX.Native.Types.MdbxPutFlags;
+global using MDBX_txn = MDBX.Native.Types.MDBX_txn;
+global using MDBX_txn_flags_t = MDBX.Native.Types.MdbxTxnFlags;
+global using MDBX_txn_info = MDBX.Native.Types.MdbxTxnInfo;
+global using MDBX_val = MDBX.Native.Types.MdbxVal;
+global using MDBX_warmup_flags_t = MDBX.Native.Types.MdbxWarmupFlags;
+
