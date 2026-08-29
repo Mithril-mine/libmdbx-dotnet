@@ -110,7 +110,7 @@ public class NativeMdbxSettingsTests
         MDBX.Native.Bindings.Env.NativeMdbx.MdbxEnvClose(env);
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxEnvGetPathW_ReturnsValidPath()
     {
         MDBX_env* env;

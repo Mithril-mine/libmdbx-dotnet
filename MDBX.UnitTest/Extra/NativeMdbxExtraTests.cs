@@ -624,7 +624,7 @@ public class NativeMdbxExtraTests
         MDBX.Native.Bindings.Env.NativeMdbx.MdbxEnvClose(env);
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxTxnCopy2PathnameW_ReturnsResult()
     {
         MDBX_env* env;

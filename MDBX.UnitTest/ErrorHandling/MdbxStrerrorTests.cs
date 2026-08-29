@@ -52,7 +52,7 @@ public class NativeMdbxTests
         Assert.False(string.IsNullOrEmpty(msg2));
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxStrerrorAnsi2Oem_ReturnsErrorMessage()
     {
         byte* errorMsg = MDBX.Native.Bindings.ErrorHandling.NativeMdbx.MdbxStrerrorAnsi2Oem(0);
@@ -61,7 +61,7 @@ public class NativeMdbxTests
         Assert.False(string.IsNullOrEmpty(msg));
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxStrerrorRAnsi2Oem_ReturnsErrorMessage()
     {
         byte[] buffer = new byte[256];

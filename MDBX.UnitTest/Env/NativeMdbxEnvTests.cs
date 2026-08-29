@@ -49,7 +49,7 @@ public class NativeMdbxEnvTests
         Assert.Equal(0, MDBX.Native.Bindings.Env.NativeMdbx.MdbxEnvClose(env));
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxEnvOpenW_And_MdbxEnvClose_Works()
     {
         MDBX_env* env;
@@ -87,7 +87,7 @@ public class NativeMdbxEnvTests
         MDBX.Native.Bindings.Env.NativeMdbx.MdbxEnvClose(env);
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxEnvCopyW_ReturnsResult()
     {
         MDBX_env* env;
@@ -167,7 +167,7 @@ public class NativeMdbxEnvTests
         MDBX.Native.Bindings.Env.NativeMdbx.MdbxEnvClose(env);
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxEnvDeleteW_ReturnsResult()
     {
         MDBX_env* env;
@@ -202,7 +202,7 @@ public class NativeMdbxEnvTests
         }
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxEnvOpenForRecoveryW_OpensEnv()
     {
         MDBX_env* env;
@@ -290,7 +290,7 @@ public class NativeMdbxEnvTests
         }
     }
 
-    [Fact]
+    [WindowsOnlyFact]
     public unsafe void MdbxPreopenSnapinfoW_ReturnsResult()
     {
         MDBX_env* env;

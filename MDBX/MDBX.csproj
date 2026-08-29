@@ -46,6 +46,7 @@
 	</PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="" />
     <None Include="native\windows\x64\mdbx.dll" Pack="true" PackagePath="runtimes\win-x64\native" />
     <None Include="native\linux\x64\libmdbx.so" Pack="true" PackagePath="runtimes\linux-x64\native" />
   </ItemGroup>

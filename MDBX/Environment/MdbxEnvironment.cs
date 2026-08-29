@@ -60,13 +60,21 @@ public sealed unsafe class MdbxEnvironment : IDisposable
     public void OpenInternal(string path, MdbxEnvFlags flags = MdbxEnvFlags.MDBX_ENV_DEFAULTS, ushort mode = 0x700)
     {
         ThrowIfDisposed();
-        byte[] pathBytes = StringToNullTerminatedBytes(path);
-        fixed (byte* pathPtr = pathBytes)
+        int rc;
+        if (OperatingSystem.IsWindows())
         {
-            int rc = Native.Bindings.Env.NativeMdbx.MdbxEnvOpen(_env, pathPtr, flags, mode);
-            if (rc != 0)
-                throw new MdbxException(rc);
+            char[] pathChars = StringToNullTerminatedChars(path);
+            fixed (char* pathPtr = pathChars)
+                rc = Native.Bindings.Env.NativeMdbx.MdbxEnvOpenW(_env, pathPtr, flags, mode);
         }
+        else
+        {
+            byte[] pathBytes = StringToNullTerminatedBytes(path);
+            fixed (byte* pathPtr = pathBytes)
+                rc = Native.Bindings.Env.NativeMdbx.MdbxEnvOpen(_env, pathPtr, flags, mode);
+        }
+        if (rc != 0)
+            throw new MdbxException(rc);
     }
 
     /// <summary>
@@ -146,13 +154,21 @@ public sealed unsafe class MdbxEnvironment : IDisposable
     public void OpenForRecovery(string path, uint targetMeta, bool writable)
     {
         ThrowIfDisposed();
-        byte[] pathBytes = StringToNullTerminatedBytes(path);
-        fixed (byte* pathPtr = pathBytes)
+        int rc;
+        if (OperatingSystem.IsWindows())
         {
-            int rc = Native.Bindings.Env.NativeMdbx.MdbxEnvOpenForRecovery(_env, pathPtr, targetMeta, writable);
-            if (rc != 0)
-                throw new MdbxException(rc);
+            char[] pathChars = StringToNullTerminatedChars(path);
+            fixed (char* pathPtr = pathChars)
+                rc = Native.Bindings.Env.NativeMdbx.MdbxEnvOpenForRecoveryW(_env, pathPtr, targetMeta, writable);
         }
+        else
+        {
+            byte[] pathBytes = StringToNullTerminatedBytes(path);
+            fixed (byte* pathPtr = pathBytes)
+                rc = Native.Bindings.Env.NativeMdbx.MdbxEnvOpenForRecovery(_env, pathPtr, targetMeta, writable);
+        }
+        if (rc != 0)
+            throw new MdbxException(rc);
     }
 
     /// <summary>
@@ -413,13 +429,27 @@ public sealed unsafe class MdbxEnvironment : IDisposable
         get
         {
             ThrowIfDisposed();
-            byte* pathPtr = null;
-            int rc = Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(_env, &pathPtr);
-            if (rc != 0)
-                throw new MdbxException(rc);
-            if (pathPtr == null)
-                return string.Empty;
-            return Marshal.PtrToStringUTF8((IntPtr)pathPtr)!;
+            int rc;
+            if (OperatingSystem.IsWindows())
+            {
+                char* pathPtr = null;
+                rc = Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPathW(_env, &pathPtr);
+                if (rc != 0)
+                    throw new MdbxException(rc);
+                if (pathPtr == null)
+                    return string.Empty;
+                return Marshal.PtrToStringUni((IntPtr)pathPtr)!;
+            }
+            else
+            {
+                byte* pathPtr = null;
+                rc = Native.Bindings.Settings.NativeMdbx.MdbxEnvGetPath(_env, &pathPtr);
+                if (rc != 0)
+                    throw new MdbxException(rc);
+                if (pathPtr == null)
+                    return string.Empty;
+                return Marshal.PtrToStringUTF8((IntPtr)pathPtr)!;
+            }
         }
     }
 
@@ -938,6 +968,14 @@ public sealed unsafe class MdbxEnvironment : IDisposable
         System.Text.Encoding.UTF8.GetBytes(s, 0, s.Length, bytes, 0);
         bytes[byteCount] = 0;
         return bytes;
+    }
+
+    private static char[] StringToNullTerminatedChars(string s)
+    {
+        char[] chars = new char[s.Length + 1];
+        s.CopyTo(0, chars, 0, s.Length);
+        chars[s.Length] = '\0';
+        return chars;
     }
 
     private static delegate* unmanaged[Cdecl]<MDBX_env*, MDBX_txn*, uint, uint, ulong, uint, nuint, int> MarshalGetFunctionPointerForDelegate(MdbxHsrFunc func)
